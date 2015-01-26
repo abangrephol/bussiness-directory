@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
+    Route::get('/login','SiteController@login');
+    Route::group(array(),function(){
+        Route::get('/','SiteController@index');
+    });
 });

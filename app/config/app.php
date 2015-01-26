@@ -94,6 +94,10 @@ return array(
 	*/
 
 	'providers' => array(
+        'Cartalyst\Sentry\SentryServiceProvider',
+        'Teepluss\Theme\ThemeServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider',
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -188,7 +192,8 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-
+        'Sentry'            => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+        'Theme' => 'Teepluss\Theme\Facades\Theme',
 	),
 
 );
