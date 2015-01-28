@@ -98,6 +98,7 @@ return array(
         'Teepluss\Theme\ThemeServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
+        'Chumper\Datatable\DatatableServiceProvider',
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -194,6 +195,7 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
         'Sentry'            => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'Theme' => 'Teepluss\Theme\Facades\Theme',
+        'Datatable' => 'Chumper\Datatable\Facades\DatatableFacade',
 	),
 
 );

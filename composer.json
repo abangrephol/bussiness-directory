@@ -17,7 +17,9 @@
 		"laravel/framework": "4.2.*",
 		"teepluss/theme": "1.2.1",
         "cartalyst/sentry": "v2.1.4",
-        "barryvdh/laravel-ide-helper": "~1.11"
+        "barryvdh/laravel-ide-helper": "~1.11",
+        "laravelbook/ardent": "2.*",
+        "chumper/datatable": "2.3"
 	},
 	"scripts":{
 		"post-update-cmd":[

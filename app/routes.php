@@ -10,10 +10,31 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+HTML::macro('clever_link', function($route, $text,$iconClass) {
+    if(Request::is($route) || Request::is($route."/*")) { //
+        $active = "class = 'active'";
+    }
+    else {
+        $active = '';
+    }
+    /*<li class=""><a href=""><i class="fa fa-envelope-o"></i> <span>Email</span></a></li>*/
+    return '<li ' . $active . '><a href="' . URL::route($route).'"><i class="'.$iconClass.'"></i><span>' . $text
+        . '</span></a></li>';
+});
+Route::get('/',function(){
+    return Redirect::to('admin/dashboard');
+});
 Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
+    Route::get('/',function(){
+        return Redirect::to('admin/dashboard');
+    });
     Route::get('/login','SiteController@login');
     Route::group(array(),function(){
-        Route::get('/','SiteController@index');
+        Route::get('dashboard',array('as'=>'admin/dashboard','uses'=>'SiteController@index'));
+        Route::resource('companies','CompaniesController',array('names' => array('index'=>'admin/companies')));
+        Route::group(array('prefix'=>'dt'),function(){
+            Route::get('company',array('as'=>'dt.company','uses'=>'CompaniesController@getDatatableAll'));
+        });
     });
+
 });

@@ -33,17 +33,29 @@ return array(
             $asset->cook('bootstrap',function($asset){
                 $asset->usePath()->add('default-css','css/style.default.css');
 
-                $asset->container('footer')->usePath()->add('jquery','js/jquery-1.10.2.min.js');
+                $asset->usePath()->add('jquery','js/jquery-1.10.2.min.js');
                 $asset->container('footer')->usePath()->add('jquery-migrate','js/jquery-migrate-1.2.1.min.js');
                 $asset->container('footer')->usePath()->add('jquery-ui','js/jquery-ui-1.10.3.min.js');
                 $asset->container('footer')->usePath()->add('jquery-cookie','js/jquery.cookies.js');
                 $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
                 $asset->container('footer')->usePath()->add('modernizr','js/modernizr.min.js');
                 $asset->container('footer')->usePath()->add('toggles','js/toggles.min.js');
-
+                $asset->container('footer')->usePath()->add('validate','js/jquery.validate.min.js');
 
                 $asset->container('footer')->usePath()->add('modernizr','js/custom.js');
 
+            });
+            $asset->cook('datatable',function($asset){
+                $asset->container('style-after')->usePath()->add('datatable-css','css/jquery.datatables.css');
+                $asset->container('footer-after')->usePath()->add('datatable','js/jquery.datatables.min.js');
+            });
+            $asset->cook('tags',function($asset){
+                $asset->container('style-after')->usePath()->add('datatable-css','css/jquery.tagsinput.css');
+                $asset->container('footer-after')->usePath()->add('datatable','js/jquery.tagsinput.min.js');
+            });
+            $asset->cook('ckeditor',function($asset){
+                $asset->container('footer-after')->usePath()->add('ckeditor','js/ckeditor/ckeditor.js');
+                $asset->container('footer-after')->usePath()->add('ckeditor-jquery','js/ckeditor/adapters/jquery.js');
             });
         },
         // Before event inherit from package config and the theme that call before,
@@ -52,7 +64,7 @@ return array(
         'before' => function($theme)
         {
             // You can remove this line anytime.
-            $theme->setTitle('Copyright ©  2013 - Laravel.in.th');
+            $theme->setTitle('Business Directory');
 
             // Breadcrumb template.
             // $theme->breadcrumb()->setTemplate('
@@ -66,6 +78,18 @@ return array(
             //     @endforeach
             //     </ul>
             // ');
+
+            $theme->breadcrumb()->setTemplate('
+                <ol class="breadcrumb">
+                @foreach ($crumbs as $i => $crumb)
+                     @if ($i != (count($crumbs) - 1))
+                     <li><a href="{{ $crumb["url"] }}">{{ $crumb["label"] }}</a></li>
+                     @else
+                     <li class="active">{{ $crumb["label"] }}</li>
+                     @endif
+                @endforeach
+                </ol>
+            ');
         },
 
         // Listen on event before render a theme,
@@ -91,8 +115,13 @@ return array(
 
             'default' => function($theme)
             {
+                $theme->asset()->serve('bootstrap');
                 // $theme->asset()->usePath()->add('ipad', 'css/layouts/ipad.css');
-            }
+            },
+            'login' => function($theme)
+            {
+                $theme->asset()->serve('bootstrap');
+            },
 
         )
 
