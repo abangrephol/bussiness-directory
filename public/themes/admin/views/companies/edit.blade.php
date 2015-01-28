@@ -25,7 +25,7 @@
             <div class="col-sm-6">
                 {{ Theme::widget('inputForm',array('id'=>'postcode','label'=>'Postcode','right'=>true,'type'=>'text','required'=>true))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'city','label'=>'City','right'=>true,'type'=>'text','required'=>true))->render() }}
-                {{ Theme::widget('inputForm',array('id'=>'state_id','label'=>'State','right'=>true,'type'=>'select','required'=>true , 'value'=>$state))->render() }}
+                {{ Theme::widget('inputForm',array('id'=>'state_id','label'=>'State','right'=>true,'type'=>'select','required'=>true , 'value'=>$state,'selected'=>$data->state_id))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'country','label'=>'Country','right'=>true,'type'=>'text','value'=>'Malaysia','readonly'=>'readonly'))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'website','label'=>'Website','right'=>true,'type'=>'text'))->render() }}
 
