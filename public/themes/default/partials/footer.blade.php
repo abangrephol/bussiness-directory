@@ -9,7 +9,7 @@
                         <h3>About Globo</h3>
 
                         <div class="footer-logo">
-                            <a href="#"><img src="themes/default/assets/img/footer_logo.png" alt=""></a>
+                            <a href="#"><img src="{{URL::to('/')}}/themes/default/assets/img/footer_logo.png" alt=""></a>
                             <span></span> <!-- This content for overlay effect -->
                         </div>
 
@@ -24,7 +24,7 @@
 
                     <div class="latest-post clearfix">
                         <div class="post-image">
-                            <img src="themes/default/assets/img/content/latest_post_1.jpg" alt="">
+                            <img src="{{URL::to('/')}}/themes/default/assets/img/content/latest_post_1.jpg" alt="">
 
                             <p><span>12</span>Sep</p>
                         </div>
@@ -36,7 +36,7 @@
 
                     <div class="latest-post clearfix">
                         <div class="post-image">
-                            <img src="themes/default/assets/img/content/latest_post_2.jpg" alt="">
+                            <img src="{{URL::to('/')}}/themes/default/assets/img/content/latest_post_2.jpg" alt="">
 
                             <p><span>09</span>Sep</p>
                         </div>

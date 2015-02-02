@@ -79,7 +79,7 @@
 <!-- END .HEADER-TOP-BAR -->
 
 <!-- HEADER SEARCH SECTION -->
-<div class="header-search slider-home">
+<div class="header-search map">
     <div class="header-search-bar">
         <form action="#">
 
@@ -133,6 +133,7 @@
                 </div>
             </div>  <!-- END .search-toggle -->
 
+
             <div class="container">
                 <button class="toggle-btn" type="submit"><i class="fa fa-bars"></i></button>
 
@@ -165,32 +166,15 @@
         </form>
     </div> <!-- END .header-search-bar -->
 
-    <div class="slider-content">
+    <div class="map-section">
 
-        <div id="home-slider" class="owl-carousel owl-theme">
+        <div id="map_canvas"></div>
 
-            <div class="item"><img src="{{URL::to('/')}}/themes/default/assets/img/content/home-slide-img.jpg" alt="">
-                <div class="slide-content">
-                    <a href="#"><img src="{{URL::to('/')}}/themes/default/assets/img/slider-logo.png" alt=""></a>
-                    <h1>The <span>Right</span> Place</h1>
-                    <h2>For Business</h2>
+    </div>
+</div> <!-- END .SEARCH-MAP -->
 
-                </div>
-
-
-            </div>
-        </div>
-
-        <div class="customNavigation">
-            <a class="btn prev"><i class="fa fa-angle-left"></i></a>
-            <a class="btn next"><i class="fa fa-angle-right"></i></a>
-        </div>
-
-    </div> <!-- END .slider-content -->
-</div> <!-- END .SEARCH and slide-section -->
-
-<div class="container">
-    <div class="header-nav-bar home-slide">
+<div class="header-nav-bar">
+    <div class="container">
         <nav>
 
             <button><i class="fa fa-bars"></i></button>
@@ -204,6 +188,6 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-    </div> <!-- end .header-nav-bar -->
-</div> <!-- end .container -->
+    </div> <!-- end .container -->
+</div> <!-- end .header-nav-bar -->
 </header> <!-- end #header -->

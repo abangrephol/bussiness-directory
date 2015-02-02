@@ -22,8 +22,15 @@ HTML::macro('clever_link', function($route, $text,$iconClass) {
         . '</span></a></li>';
 });
 
+Route::get('/','HomeController@index');
+Route::group(array('prefix'=>'companies'),function(){
+    Route::get('/','CategoriesController@index');
+    Route::get('{categorySlug}','CategoriesController@slug');
+    Route::get('detail/{id}','CompaniesController@index');
+});
 //Route::group('/',function(){
-    Route::get('/','HomeController@index');
+
+
 //});
 Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
     Route::get('/',function(){

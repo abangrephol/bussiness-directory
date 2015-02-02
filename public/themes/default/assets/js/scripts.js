@@ -213,38 +213,7 @@
     maptype: 'ROADMAP',
     scrollwheel: false,
     zoom: 6,
-    markers: [{
-        latitude: 46.454889270677576,
-        longitude: 7.45697021484375,
-        icon: 'img/content/map-marker.png',
-        html: 'Globo'
-      },{
-        latitude: 49.31079887964633,
-        longitude: 4.361572265625,
-        icon: 'img/content/map-derection-100.png',
-        html: 'Globo'
-      },{
-        latitude: 44.96479793033104,
-        longitude: 4.691162109375,
-        icon: 'img/content/map-direction-1000.png',
-        html: 'Globo'
-      },{
-        latitude: 45.39844997630408,
-        longitude: 11.019287109375,
-        icon: 'img/content/map-direction-20.png',
-        html: 'Globo'
-
-      },{
-        latitude: 45.69083283645816,
-        longitude: 16.336669921875,
-        icon: 'img/content/map-direction-8.png',
-        html: 'Globo'
-      },{
-        latitude: 47.56170075451973,
-        longitude: 14.315185546875,
-        icon: 'img/content/map-direction-50.png',
-        html: 'Globo'
-    }]
+    markers: []
   });
 
 

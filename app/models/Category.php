@@ -29,4 +29,7 @@ class Category extends \Kalnoy\Nestedset\Node implements SluggableInterface {
         }
         return  $tree;
     }
+    public function companies(){
+        return Category::belongsToMany('Company')->withPivot('id');
+    }
 }

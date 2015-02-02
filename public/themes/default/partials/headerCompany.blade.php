@@ -79,7 +79,7 @@
 <!-- END .HEADER-TOP-BAR -->
 
 <!-- HEADER SEARCH SECTION -->
-<div class="header-search slider-home">
+<div class="header-search company-profile-height">
     <div class="header-search-bar">
         <form action="#">
 
@@ -133,6 +133,7 @@
                 </div>
             </div>  <!-- END .search-toggle -->
 
+
             <div class="container">
                 <button class="toggle-btn" type="submit"><i class="fa fa-bars"></i></button>
 
@@ -165,45 +166,59 @@
         </form>
     </div> <!-- END .header-search-bar -->
 
-    <div class="slider-content">
-
-        <div id="home-slider" class="owl-carousel owl-theme">
-
-            <div class="item"><img src="{{URL::to('/')}}/themes/default/assets/img/content/home-slide-img.jpg" alt="">
-                <div class="slide-content">
-                    <a href="#"><img src="{{URL::to('/')}}/themes/default/assets/img/slider-logo.png" alt=""></a>
-                    <h1>The <span>Right</span> Place</h1>
-                    <h2>For Business</h2>
-
-                </div>
-
-
+    <div class="company-heading-view">
+        <div class="container">
+            <div class="button-content">
+                <button class="general-view-btn active"><i class="fa fa-newspaper-o"></i><span>General</span></button>
+                <button class="map-view-btn"><i class="fa fa-map-marker"></i><span>Map</span></button>
+                <button class="male-view-btn"><i class="fa fa-male"></i><span>Street</span></button>
             </div>
         </div>
 
-        <div class="customNavigation">
-            <a class="btn prev"><i class="fa fa-angle-left"></i></a>
-            <a class="btn next"><i class="fa fa-angle-right"></i></a>
-        </div>
+        <div class="company-slider-content">
 
-    </div> <!-- END .slider-content -->
+            <div class="general-view">
+                <span></span> <!-- for dark-overlay on the bg -->
+                <div class="container">
+
+                    <div class="logo-image">
+                        <img src="{{URL::to('/') }}/themes/default/assets/img/content/company-logo.jpg" alt="">
+                    </div>
+
+                    <h1>{{Theme::getCompanyName()}}</h1>
+                </div>
+            </div> <!-- END .general-view -->
+
+            <div class="company-map-view">
+                <div id="company_map_canvas"></div>
+            </div> <!-- END .company-map-view -->
+
+            <div class="company-map-street">
+                <div id="company_map_canvas_street"></div>
+            </div> <!-- END .company-map-view-street -->
+
+        </div> <!-- END .company-slider-content -->
+
+    </div> <!-- END .about-us-heading -->
+
 </div> <!-- END .SEARCH and slide-section -->
 
-<div class="container">
-    <div class="header-nav-bar home-slide">
+
+<div class="header-nav-bar">
+    <div class="container">
         <nav>
 
             <button><i class="fa fa-bars"></i></button>
 
             <ul class="primary-nav list-unstyled">
-                <li class="bg-color"><a href="{{ URL::to('/') }}">Home<i class="fa fa-angle-down"></i></a></li>
+                <li ><a href="{{ URL::to('/') }}">Home<i class="fa fa-angle-down"></i></a></li>
 
-                <li class=""><a href="{{ URL::to('/companies') }}">Companies<i class="fa fa-angle-down"></i></a></li>
+                <li class="bg-color"><a href="{{ URL::to('/companies') }}">Companies<i class="fa fa-angle-down"></i></a></li>
                 <li><a href="#">Price Listing</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-    </div> <!-- end .header-nav-bar -->
-</div> <!-- end .container -->
-</header> <!-- end #header -->
+    </div> <!-- end .container -->
+</div> <!-- end .header-nav-bar -->
+</header>
