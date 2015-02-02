@@ -5,7 +5,7 @@
             <div class="col-md-9 col-md-push-3">
                 <div class="page-content company-profile">
                 <div class="tab-pane active" id="company-profile">
-                <h2>Company Name</h2>
+                <h2>{{$company->name}}</h2>
                 <h5>
                     @foreach($company->categories()->get() as $category)
                     <a href="#">{{$category->name}}</a>
