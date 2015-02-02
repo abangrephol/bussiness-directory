@@ -13,7 +13,7 @@
     </head>
     <body>
         <div id="main-wrapper">
-            {{ Theme::partial('header') }}
+            {{ Theme::partial('headerMap') }}
             {{ Theme::content() }}
             {{ Theme::partial('footer') }}
         </div>

@@ -37,3 +37,21 @@
         </div>
     </div>
 </div>
+<script>
+    jQuery(document).ready(function(){
+        $("#company_map_canvas").goMap({
+
+            maptype: 'ROADMAP',
+            zoom: 15,
+            scrollwheel: false,
+            address: '{{ $company->address_1 }},{{$company->address_2}}, {{$company->city}} ',
+            markers: [{
+                address: '{{ $company->address_1 }},{{$company->address_2}}, {{$company->city}} ',
+                icon: '{{URL::to("/themes/default/assets")}}/img/content/map-marker-company.png',
+                html: '{{$company->name}}'
+            }]
+        });
+    });
+
+
+</script>

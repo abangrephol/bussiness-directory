@@ -18,7 +18,8 @@ class CompaniesController extends BaseController {
     public function index($id)
     {
 
-        $companies = Company::find($id)->first();
+        $companies = Company::find($id);
+        //dd($companies->name);
         Theme::setCompanyName($companies->name);
         Theme::setCompany($companies);
         $data = array('company'=>$companies);

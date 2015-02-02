@@ -8,7 +8,7 @@
             </li>
             @foreach (Category::withDepth()->having('depth', '=', 0)->get() as $category)
                 <li class="">
-                    <a href="#cat-{{ $category->id }}" role="tab" data-toggle="tab">
+                    <a href="#{{ $category->slug }}" role="tab" data-toggle="tab">
                         {{ $category->name }}
                     </a>
                 </li>

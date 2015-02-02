@@ -212,31 +212,15 @@
 
     maptype: 'ROADMAP',
     scrollwheel: false,
-    zoom: 6,
+    zoom: 10,
+    address : 'sengalor',
     markers: []
   });
 
 
   // company map initialization
 
-  $("#company_map_canvas").goMap({
 
-    maptype: 'ROADMAP',
-    zoom: 15,
-    scrollwheel: false,
-    address: '26-98 U.S. 101, San Francisco, CA 94103, USA',
-    markers: [{
-        latitude: 37.7762546,
-        longitude: -122.43277669999998,
-        icon: 'img/content/map-marker-company.png',
-        html: 'Globo'
-      },{
-        latitude: 37.77013804160774,
-        longitude: -122.40819811820984,
-        icon: 'img/content/map-marker-company.png',
-        html: 'Globo'
-    }]
-  });
 
   // company-map-street
 

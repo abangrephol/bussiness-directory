@@ -6,7 +6,7 @@
             <a href="#company-profile" role="tab" data-toggle="tab"><i class="fa fa-newspaper-o"></i> Profile</a>
         </li>
 
-        <li>
+        <!--li>
             <a href="#company-product" role="tab" data-toggle="tab"><i class="fa fa-cubes"></i>Product</a>
         </li>
 
@@ -24,7 +24,7 @@
 
         <li>
             <a href="#company-contact" role="tab" data-toggle="tab"><i class="fa fa-envelope-o"></i>Contact</a>
-        </li>
+        </li-->
     </ul>
 
     <div class="own-company">
