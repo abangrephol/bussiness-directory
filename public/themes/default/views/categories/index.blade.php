@@ -73,7 +73,7 @@
                                                 </figcaption>
                                             </figure>
 
-                                            <h4><a href="detail/{{ $company->id }}">{{ $company->name }}</a></h4>
+                                            <h4><a href="{{ URL::to('/companies/detail/'.$company->id)}}">{{ $company->name }}</a></h4>
 
                                             <h5><a href="#">Category</a>, <a href="#">Another Category</a></h5>
 
