@@ -88,6 +88,10 @@
                             </div>
                             @endforeach
                         </div>
+                        <div class="advertisement">
+                            <p>Advertisement</p>
+                            <img src="{{ URL::to('/themes/default/assets')}}/img/add.jpg" alt="">
+                        </div>
                     </div>
                 </div>
 

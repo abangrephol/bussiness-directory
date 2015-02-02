@@ -11,7 +11,7 @@
                     <div class="product-details-list">
                         <div class="tab-content">
                             <div class="tab-pane active" id="all">
-                                <h3>Globo <span>Categories</span></h3>
+                                <h3>All <span>Categories</span></h3>
                                 <div class="row clearfix">
                                     @foreach (\Category::withDepth()->having('depth','>',0)->get() as $subcategory )
 
@@ -159,3 +159,22 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $("#map_canvas").goMap({
+
+            maptype: 'ROADMAP',
+            scrollwheel: false,
+            zoom: 6,
+            markers: [
+                @foreach(Company::all() as $company)
+                {
+                    address : '{{$company->address_1}},{{$company->city}}',//'39B, Jalan Kuning 2,Taman Perlangi,80400 Johor Bahru,Johor, Malaysia',
+                    icon: '{{URL::to("/themes/default/assets")}}/img/content/map-marker-company.png',
+                    html: '{{ $company->name }}'
+                },
+                @endforeach
+            ]
+        });
+    })
+</script>

@@ -8,7 +8,7 @@
                 <h2>{{$company->name}}</h2>
                 <h5>
                     @foreach($company->categories()->get() as $category)
-                    <a href="#">{{$category->name}}</a>
+                    <a href="#">{{$category->name}} ,</a>
                     @endforeach
                 </h5>
 
@@ -51,6 +51,14 @@
                 html: '{{$company->name}}'
             }]
         });
+
+        // gmap for street view
+        panorama = GMaps.createPanorama({
+            el: '#company_map_canvas_street',
+            lat : 37.7762546,
+            lng : -122.43277669999998,
+        });
+
     });
 
 

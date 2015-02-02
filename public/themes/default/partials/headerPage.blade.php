@@ -34,7 +34,7 @@
 
         <!-- HEADER-LOG0 -->
         <div class="header-logo text-center">
-            <h2><a href="index.html">WN<i class="fa fa-globe"></i>DIRECTORY</a></h2>
+            <h2><a href="index.html">GL<i class="fa fa-globe"></i>BO</a></h2>
         </div>
         <!-- END HEADER LOGO -->
 
@@ -79,7 +79,7 @@
 <!-- END .HEADER-TOP-BAR -->
 
 <!-- HEADER SEARCH SECTION -->
-<div class="header-search slider-home">
+<div class="header-search fixed-height">
     <div class="header-search-bar">
         <form action="#">
 
@@ -133,6 +133,7 @@
                 </div>
             </div>  <!-- END .search-toggle -->
 
+
             <div class="container">
                 <button class="toggle-btn" type="submit"><i class="fa fa-bars"></i></button>
 
@@ -165,32 +166,28 @@
         </form>
     </div> <!-- END .header-search-bar -->
 
-    <div class="slider-content">
+    <div class="page-heading contact-us-heading">
+        <span></span> <!-- for dark-overlay on the bg -->
 
-        <div id="home-slider" class="owl-carousel owl-theme">
+        <div class="container">
+            <h1>{{ Theme::getPageTitle() }}</h1>
 
-            <div class="item"><img src="{{URL::to('/')}}/themes/default/assets/img/content/home-slide-img.jpg" alt="">
-                <div class="slide-content">
-                    <a href="#"><img src="{{URL::to('/')}}/themes/default/assets/img/slider-logo.png" alt=""></a>
-                    <h1>The <span>Right</span> Place</h1>
-                    <h2>For Business</h2>
+            <div class="heading-link">
+                <a href="#">Home</a>
 
-                </div>
+                <i>/</i>
 
-
+                <a href="#">{{ Theme::getPageTitle() }}</a>
             </div>
-        </div>
 
-        <div class="customNavigation">
-            <a class="btn prev"><i class="fa fa-angle-left"></i></a>
-            <a class="btn next"><i class="fa fa-angle-right"></i></a>
-        </div>
+        </div> <!-- END .container-->
+    </div> <!-- END .about-us-heading -->
 
-    </div> <!-- END .slider-content -->
 </div> <!-- END .SEARCH and slide-section -->
 
-<div class="container">
-    <div class="header-nav-bar home-slide">
+
+<div class="header-nav-bar">
+    <div class="container">
         <nav>
 
             <button><i class="fa fa-bars"></i></button>
@@ -203,7 +200,8 @@
                 <li><a href="{{ URL::to('/about-us') }}">About Us</a></li>
                 <li><a href="{{ URL::to('/contact-us') }}">Contact Us</a></li>
             </ul>
+
         </nav>
-    </div> <!-- end .header-nav-bar -->
-</div> <!-- end .container -->
+    </div> <!-- end .container -->
+</div> <!-- end .header-nav-bar -->
 </header> <!-- end #header -->

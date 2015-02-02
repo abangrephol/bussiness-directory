@@ -37,7 +37,7 @@
         <ul class="list-unstyled">
             <li>
                 <strong>Name</strong>
-                <span>{{ Theme::getCompany()->name }}</span>
+                <span>{{ Theme::getCompany()->contact_name }}</span>
             </li>
 
             <li>

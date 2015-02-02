@@ -17,7 +17,24 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+
         return $this->theme->scope('home.index')->render();
 	}
+    public function about()
+    {
+        Theme::setPageTitle('ABOUT US');
+        return $this->theme->layout('page')->scope('home.about')->render();
+    }
+    public function contact()
+    {
+        Theme::setPageTitle('CONTACT US');
+        return $this->theme->layout('page')->scope('home.contact')->render();
+    }
+    public function pricelisting()
+    {
+        Theme::setPageTitle('PRICE LISTING');
+        return $this->theme->layout('page')->scope('home.pricelisting')->render();
+    }
+
 
 }

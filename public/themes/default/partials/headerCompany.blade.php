@@ -34,7 +34,7 @@
 
         <!-- HEADER-LOG0 -->
         <div class="header-logo text-center">
-            <h2><a href="index.html">GL<i class="fa fa-globe"></i>BO</a></h2>
+            <h2><a href="index.html">WN<i class="fa fa-globe"></i>DIRECTORY</a></h2>
         </div>
         <!-- END HEADER LOGO -->
 
@@ -213,10 +213,10 @@
             <ul class="primary-nav list-unstyled">
                 <li ><a href="{{ URL::to('/') }}">Home<i class="fa fa-angle-down"></i></a></li>
 
-                <li class="bg-color"><a href="{{ URL::to('/companies') }}">Companies<i class="fa fa-angle-down"></i></a></li>
-                <li><a href="#">Price Listing</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="{{ URL::to('/companies') }}">Companies<i class="fa fa-angle-down"></i></a></li>
+                <li><a href="{{ URL::to('/price-listing') }}">Price Listing</a></li>
+                <li><a href="{{ URL::to('/about-us') }}">About Us</a></li>
+                <li><a href="{{ URL::to('/contact-us') }}">Contact Us</a></li>
             </ul>
         </nav>
     </div> <!-- end .container -->

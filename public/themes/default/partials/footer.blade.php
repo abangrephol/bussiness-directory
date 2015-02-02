@@ -6,12 +6,12 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="about-globo">
-                        <h3>About Globo</h3>
+                        <h3>About WN Directory</h3>
 
-                        <div class="footer-logo">
+                        <!--div class="footer-logo">
                             <a href="#"><img src="{{URL::to('/')}}/themes/default/assets/img/footer_logo.png" alt=""></a>
-                            <span></span> <!-- This content for overlay effect -->
-                        </div>
+                            <span></span>
+                        </div-->
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue,
                             suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
@@ -87,15 +87,14 @@
 
     <div class="copyright">
         <div class="container">
-            <p>Copyright 2014 © globo. All rights reserved. Powered by  <a href="#">Uouapps</a></p>
+            <p>Copyright 2014 © WN Directory. All rights reserved. Powered by  <a href="#">Wirednest Pte Ltd</a></p>
 
             <ul class="list-inline">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Shortcodes</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{{URL::to('/')}}">Home</a></li>
+                <li><a href="{{URL::to('/companies')}}">Companies</a></li>
+                <li><a href="{{URL::to('/price-listing')}}">Pricing</a></li>
+                <li><a href="{{URL::to('/about-us')}}">About</a></li>
+                <li><a href="{{URL::to('/contact-us')}}">Contact</a></li>
             </ul>
         </div> <!-- END .container -->
     </div> <!-- end .copyright-->

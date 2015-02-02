@@ -208,14 +208,7 @@
 
   // home-map customization
 
-  $("#map_canvas").goMap({
 
-    maptype: 'ROADMAP',
-    scrollwheel: false,
-    zoom: 10,
-    address : 'sengalor',
-    markers: []
-  });
 
 
   // company map initialization
@@ -231,18 +224,7 @@
 
   // contact map
 
-  $("#contact_map_canvas").goMap({
-    maptype: 'ROADMAP',
-    zoom: 13,
-    scrollwheel: false,
 
-    markers: [{
-      latitude: 37.793100669930396,
-      longitude: -122.41769313812256,
-      icon: 'img/content/map-marker-company.png',
-      html: 'Globo'
-    }]
-  });
 
 
 

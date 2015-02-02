@@ -23,7 +23,11 @@ HTML::macro('clever_link', function($route, $text,$iconClass) {
 });
 
 Route::get('/','HomeController@index');
+Route::get('/contact-us','HomeController@contact');
+Route::get('/about-us','HomeController@about');
+Route::get('/price-listing','HomeController@pricelisting');
 Route::group(array('prefix'=>'companies'),function(){
+    Route::get('/','CategoriesController@index');
     Route::get('/','CategoriesController@index');
     Route::get('{categorySlug}','CategoriesController@slug');
     Route::get('detail/{id}','CompaniesController@index');
