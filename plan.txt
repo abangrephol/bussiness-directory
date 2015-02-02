@@ -1,0 +1,30 @@
+companies
+- name
+- contact name
+- phone
+- fax
+- email
+- business type
+- address
+- postcode
+- city
+- state
+- country
+- website
+- short description
+- description
+- tags
+
+categories
+- parent categories
+- name
+- slug
+
+products
+
+--user type
+superadmin
+admin
+member
+
+artisan generate:resource companies --fields="name:string(50), contact_name:string(50), phone:string(20), fax:string(20):nullable, email:string(50), address_1:string, address_2:string:nullable, postcode:string(10), city:string(50), website:string(70):nullable, short_description:text:nullable, description:text, tags:text:nullable"

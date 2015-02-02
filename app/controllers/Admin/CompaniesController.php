@@ -51,7 +51,13 @@ class CompaniesController extends BaseController {
         $this->theme->setPageTitle('Create New Company');
         $this->theme->asset()->serve('tags');
         $this->theme->asset()->serve('ckeditor');
-        $data = array('state'=> \State::getState(189));
+        $this->theme->asset()->serve('chosen');
+        $this->theme->asset()->serve('gmap');
+
+        $data = array(
+            'state'=> \State::getState(189),
+            'category'=>[''=>'']+\Category::treeBuild(\Category::withDepth()->having('depth','=',0)->get()),
+        );
 
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))
@@ -114,7 +120,20 @@ class CompaniesController extends BaseController {
 
         $this->theme->asset()->serve('tags');
         $this->theme->asset()->serve('ckeditor');
-        $data = array('state'=> \State::getState(189),'data'=>$company);
+        $this->theme->asset()->serve('chosen');
+        $this->theme->asset()->serve('gmap');
+
+        $categories = $company->categories()->get(['categories.id']);
+        $tmp = array();
+        foreach($categories as $category){
+            $tmp[] = $category->id;
+        }
+        $data = array(
+            'state'=> \State::getState(189),
+            'data'=>$company,
+            'category'=>[''=>'']+\Category::treeBuild(\Category::withDepth()->having('depth','=',0)->get()),
+            'categories'=>$tmp
+        );
 
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))
@@ -133,9 +152,11 @@ class CompaniesController extends BaseController {
 	 */
 	public function update($id)
 	{
+        //dd(\Input::get('categories'));
         $company = \Company::find($id);
         if($company->validate()){
             $company->save();
+            $company->categories()->withTimestamps()->sync(array_filter(\Input::get('categories')));
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully update company info');
             return \Redirect::route('admin.companies.edit',array('id'=>$id))->with('messages',$messages);

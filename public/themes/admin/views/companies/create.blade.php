@@ -26,7 +26,7 @@
                 {{ Theme::widget('inputForm',array('id'=>'state_id','label'=>'State','right'=>true,'type'=>'select','required'=>true , 'value'=>$state))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'country','label'=>'Country','right'=>true,'type'=>'text','value'=>'Malaysia','readonly'=>'readonly'))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'website','label'=>'Website','right'=>true,'type'=>'text'))->render() }}
-
+                {{ Theme::widget('inputForm',array('id'=>'categories[]','label'=>'Categories','right'=>true,'type'=>'select','required'=>true , 'value'=>$category,'multiple'=>true))->render() }}
             </div>
         </div>
         <div class="row">
@@ -54,7 +54,6 @@
         // Basic Form
         jQuery(".form").validate({
             highlight: function(element) {
-                console.log('er');
                 jQuery(element).closest('.form-group').removeClass('has-success').addClass('has-error');
             },
             success: function(element) {
@@ -86,5 +85,7 @@
         });
         jQuery('#tags').tagsInput({width:'auto'});
         jQuery('#description').ckeditor();
+        jQuery('#state_id').chosen({allow_single_deselect:true,width:'100%'});
+        jQuery('select[name^="categories"]').chosen({allow_single_deselect:true,width:'100%'});
     });
 </script>

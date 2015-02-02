@@ -99,6 +99,7 @@ return array(
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Chumper\Datatable\DatatableServiceProvider',
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -196,6 +197,8 @@ return array(
         'Sentry'            => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
         'Theme' => 'Teepluss\Theme\Facades\Theme',
         'Datatable' => 'Chumper\Datatable\Facades\DatatableFacade',
+        'NestedSet' => 'Kalnoy\Nestedset\NestedSet',
+        'Node' => 'Kalnoy\Nestedset\Node',
 	),
 
 );

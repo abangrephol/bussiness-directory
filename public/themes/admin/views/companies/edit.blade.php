@@ -28,11 +28,12 @@
                 {{ Theme::widget('inputForm',array('id'=>'state_id','label'=>'State','right'=>true,'type'=>'select','required'=>true , 'value'=>$state,'selected'=>$data->state_id))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'country','label'=>'Country','right'=>true,'type'=>'text','value'=>'Malaysia','readonly'=>'readonly'))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'website','label'=>'Website','right'=>true,'type'=>'text'))->render() }}
-
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
+                {{ Theme::widget('inputForm',array('id'=>'categories[]','label'=>'Categories','right'=>true,'type'=>'select','required'=>true,'singleRow'=>true , 'value'=>$category,'multiple'=>true,'selected'=>$categories))->render() }}
+                {{ Theme::widget('inputForm',array('id'=>'map','label'=>'Address on Map','type'=>'map','required'=>true,'singleRow'=>true))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'short_description','label'=>'Short Description','type'=>'textarea','singleRow'=>true))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'description','label'=>'Description','type'=>'textarea','required'=>true,'singleRow'=>true))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'tags','label'=>'Tags','type'=>'text','singleRow'=>true))->render() }}
@@ -88,5 +89,39 @@
         });
         jQuery('#tags').tagsInput({width:'auto'});
         jQuery('#description').ckeditor();
+        jQuery('#state_id').chosen({allow_single_deselect:true,width:'100%'});
+        jQuery('select[name^="categories"]').chosen({allow_single_deselect:true,width:'100%'});
+        /*map = new GMaps({
+            div: '#map',
+            lat: -12.043333,
+            lng: -77.028333
+        });*/
+        GMaps.geocode({
+            address: new Array($('#address_1').val(),
+                $('#city').val()+" "+$('#postcode').val()
+
+            ).join(',') ,
+            callback: function(results, status) {
+                if (status == 'OK') {
+                    var latlng = results[0].geometry.location;
+                    /*map.setCenter(latlng.lat(), latlng.lng());
+                    map.addMarker({
+                        lat: latlng.lat(),
+                        lng: latlng.lng()
+                    });*/
+                    url = GMaps.staticMapURL({
+                        size: [610, 300],
+                        lat: latlng.lat(),
+                        lng: latlng.lng(),
+                        markers: [
+                            {lat: latlng.lat(), lng: latlng.lng()}
+                        ]
+                    });
+
+                    $('<img/>').attr('src', url)
+                        .appendTo('#map');
+                }
+            }
+        });
     });
 </script>

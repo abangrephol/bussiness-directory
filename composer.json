@@ -19,7 +19,9 @@
         "cartalyst/sentry": "v2.1.4",
         "barryvdh/laravel-ide-helper": "~1.11",
         "laravelbook/ardent": "2.*",
-        "chumper/datatable": "2.3"
+        "chumper/datatable": "2.3",
+        "cviebrock/eloquent-sluggable": "~2.0",
+        "kalnoy/nestedset": "~2.0@beta"
 	},
 	"scripts":{
 		"post-update-cmd":[
@@ -28,5 +30,14 @@
 			"php artisan optimize"
 		]
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds"
+        ]
+    }
 }

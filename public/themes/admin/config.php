@@ -57,6 +57,14 @@ return array(
                 $asset->container('footer-after')->usePath()->add('ckeditor','js/ckeditor/ckeditor.js');
                 $asset->container('footer-after')->usePath()->add('ckeditor-jquery','js/ckeditor/adapters/jquery.js');
             });
+            $asset->cook('chosen',function($asset){
+                $asset->container('footer-after')->usePath()->add('chosen','js/chosen.jquery.min.js');
+            });
+            $asset->cook('gmap',function($asset){
+                $asset->container('footer-after')->add('gmap-api','//maps.google.com/maps/api/js?sensor=true');
+                $asset->container('footer-after')->usePath()->add('gmap','js/gmaps.js');
+
+            });
         },
         // Before event inherit from package config and the theme that call before,
         // you can use this event to set meta, breadcrumb template or anything

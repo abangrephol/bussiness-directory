@@ -1,7 +1,7 @@
 <?php
 /**
  * An helper file for Laravel 4, to provide autocomplete information to your IDE
- * Generated for Laravel 4.2.16 on 2015-01-28.
+ * Generated for Laravel 4.2.16 on 2015-01-31.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -13329,6 +13329,63 @@ namespace {
         public static function render($statusCode = 200){
             return \Teepluss\Theme\Theme::render($statusCode);
         }
+        
+    }
+
+
+    class Datatable extends \Chumper\Datatable\Facades\DatatableFacade{
+        
+        /**
+         * 
+         *
+         * @param $query
+         * @return \Chumper\Datatable\QueryEngine 
+         * @static 
+         */
+        public static function query($query){
+            return \Chumper\Datatable\Datatable::query($query);
+        }
+        
+        /**
+         * 
+         *
+         * @param $collection
+         * @return \Chumper\Datatable\CollectionEngine 
+         * @static 
+         */
+        public static function collection($collection){
+            return \Chumper\Datatable\Datatable::collection($collection);
+        }
+        
+        /**
+         * 
+         *
+         * @return \Chumper\Datatable\Table 
+         * @static 
+         */
+        public static function table(){
+            return \Chumper\Datatable\Datatable::table();
+        }
+        
+        /**
+         * 
+         *
+         * @return bool True if the plugin should handle this request, false otherwise
+         * @static 
+         */
+        public static function shouldHandle(){
+            return \Chumper\Datatable\Datatable::shouldHandle();
+        }
+        
+    }
+
+
+    class NestedSet extends \Kalnoy\Nestedset\NestedSet{
+        
+    }
+
+
+    class Node extends \Kalnoy\Nestedset\Node{
         
     }
 

@@ -29,7 +29,23 @@ return array(
     */
 
     'events' => array(
+        'asset' => function($asset){
+                $asset->cook('bootstrap',function($asset){
+                    $asset->usePath()->add('default-css','css/style.css');
 
+                    $asset->add('jquery','//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js');
+                    $asset->container('footer')->add('jquery-ui','//code.jquery.com/ui/1.11.1/jquery-ui.js');
+                    $asset->container('footer')->usePath()->add('jquery-ba','js/jquery.ba-outside-events.min.js');
+                    $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
+                    $asset->container('footer')->add('gmap-api','//maps.google.com/maps/api/js?sensor=true');
+                    $asset->container('footer')->usePath()->add('gomap','js/gomap.js');
+                    $asset->container('footer')->usePath()->add('gmaps','js/gmaps.js');
+                    $asset->container('footer')->usePath()->add('toggles','js/owl.carousel.js');
+                    $asset->container('footer')->usePath()->add('custom','js/scripts.js');
+
+
+                });
+        },
         // Before event inherit from package config and the theme that call before,
         // you can use this event to set meta, breadcrumb template or anything
         // you want inheriting.
@@ -75,6 +91,7 @@ return array(
 
             'default' => function($theme)
             {
+                $theme->asset()->serve('bootstrap');
                 // $theme->asset()->usePath()->add('ipad', 'css/layouts/ipad.css');
             }
 

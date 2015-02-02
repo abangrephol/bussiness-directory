@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'dev6_business_directory',
 			'username'  => 'dev6_business',
-			'password'  => 'bussinessdirectory',
+			'password'  => 'businessdirectory',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

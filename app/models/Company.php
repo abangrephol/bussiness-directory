@@ -12,7 +12,8 @@ class Company extends  Ardent {
     );
 
     public static $relationsData = array(
-        'state' => array(self::BELONGS_TO,'States')
+        'state' => array(self::BELONGS_TO,'States'),
+        'categories' => array(self::BELONGS_TO_MANY,'Category','table'=>'category_company')
     );
     public static $rules = array(
         'name'                  => 'required|between:4,50',

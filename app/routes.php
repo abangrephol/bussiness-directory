@@ -21,9 +21,10 @@ HTML::macro('clever_link', function($route, $text,$iconClass) {
     return '<li ' . $active . '><a href="' . URL::route($route).'"><i class="'.$iconClass.'"></i><span>' . $text
         . '</span></a></li>';
 });
-Route::get('/',function(){
-    return Redirect::to('admin/dashboard');
-});
+
+//Route::group('/',function(){
+    Route::get('/','HomeController@index');
+//});
 Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
     Route::get('/',function(){
         return Redirect::to('admin/dashboard');
@@ -32,9 +33,12 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
     Route::group(array(),function(){
         Route::get('dashboard',array('as'=>'admin/dashboard','uses'=>'SiteController@index'));
         Route::resource('companies','CompaniesController',array('names' => array('index'=>'admin/companies')));
+        Route::resource('categories','CategoriesController',array('names' => array('index'=>'admin/categories')));
         Route::group(array('prefix'=>'dt'),function(){
             Route::get('company',array('as'=>'dt.company','uses'=>'CompaniesController@getDatatableAll'));
+            Route::get('category',array('as'=>'dt.category','uses'=>'CategoriesController@getDatatableAll'));
         });
+
     });
 
 });
