@@ -21,7 +21,8 @@
         "laravelbook/ardent": "2.*",
         "chumper/datatable": "2.3",
         "cviebrock/eloquent-sluggable": "~2.0",
-        "kalnoy/nestedset": "~2.0@beta"
+        "kalnoy/nestedset": "~2.0@beta",
+        "pingpong/widget": "1.2.0"
 	},
 	"scripts":{
 		"post-update-cmd":[

@@ -5,12 +5,12 @@
 
         <div class="col-md-6 col-md-offset-3">
 
-            <form method="post" action="index.html">
+            <form method="post">
                 <h4 class="nomargin">Sign In</h4>
                 <p class="mt5 mb20">Login to access your account.</p>
 
-                <input type="text" class="form-control uname" placeholder="Username">
-                <input type="password" class="form-control pword" placeholder="Password">
+                <input type="text" class="form-control uname" placeholder="Username" name="email">
+                <input type="password" class="form-control pword" placeholder="Password" name="password">
                 <a href=""><small>Forgot Your Password?</small></a>
                 <button class="btn btn-success btn-block">Sign In</button>
 

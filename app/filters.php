@@ -13,7 +13,9 @@
 
 App::before(function($request)
 {
-	//
+	if(Request::server('HTTP_HOST')=="bussiness.app"){
+        //return Redirect::to('/');
+    }
 });
 
 
@@ -43,6 +45,13 @@ Route::filter('auth', function()
 		}
 		return Redirect::guest('login');
 	}
+});
+
+Route::filter('admin_auth',function(){
+//If already logged in go to dashboard or else login
+    if(!Sentry::check()){
+        return Redirect::route('admin/login',array('ref'=>URL::previous()));
+    }
 });
 
 

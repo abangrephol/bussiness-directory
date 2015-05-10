@@ -8,7 +8,7 @@
         <h5 class="subtitle mb5">{{ Theme::get('pageTitle') }} list</h5>
         <p class="text-muted">...</p>
         <div class="table-responsive">
-            {{ Theme::widget('datatable', array('columns' => $usersColumn, 'routeUrl' => $routeUrl))->render() }}
+            {{ Theme::partialWithLayout('datatable', array('columns' => $usersColumn, 'routeUrl' => $routeUrl)) }}
         </div>
     </div>
 </div>

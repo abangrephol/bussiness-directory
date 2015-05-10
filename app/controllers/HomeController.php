@@ -17,8 +17,17 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-
-        return $this->theme->scope('home.index')->render();
+        $companies = Company::all();
+        $mapMarker = array();
+        foreach($companies as $company){
+            $mapMarker [] = '{ address : "'.$company->address_1.' , '.$company->city.'",'
+                            .'icon: "'.URL::to("/themes/default/assets").'/img/content/map-marker-company.png",'
+                            .'html: "'.$company->name.'",'
+                            .'title: "'.$company->name .'",'
+                            .'id : "company-'.$company->id .'" }';
+        }
+        $mapMarker = join(',',$mapMarker);
+        return $this->theme->scope('home.index',array('marker'=>$mapMarker))->render();
 	}
     public function about()
     {

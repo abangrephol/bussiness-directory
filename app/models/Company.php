@@ -18,4 +18,7 @@ class Company extends  Ardent {
     public static $rules = array(
         'name'                  => 'required|between:4,50',
     );
+    public static function getCompanyLists(){
+        return Company::all()->lists('name','id');
+    }
 }

@@ -14,9 +14,13 @@
         <div class="row mb20">
             <div class="col-sm-12">
                 {{ Theme::widget('inputForm',array('id'=>'name','label'=>'Category Name','type'=>'text','required'=>true))->render() }}
+                {{ Theme::widget('inputForm',array('id'=>'icon','label'=>'Icon'
+                ,'type'=>'select', 'value'=>$icons
+                ,'placeholder'=>'Select one icon or leave it default'))->render() }}
                 {{ Theme::widget('inputForm',array('id'=>'parent_id','label'=>'Parent Category'
-                    ,'type'=>'select','required'=>true , 'value'=>$selectValue
+                    ,'type'=>'select', 'value'=>$selectValue
                     ,'placeholder'=>'Select one Parent Category or leave it empty as Parent Category'))->render() }}
+
             </div>
         </div>
 
@@ -43,9 +47,32 @@
                 jQuery(element).closest('.form-group').removeClass('has-error');
             }
         });
-        jQuery('select').prepend('<option value=""></option>').val('');
-        jQuery('select').chosen({allow_single_deselect:true});
+        jQuery('#parent_id').select2({
+            placeholder: "Select a parent",
+            width:'100%',
+            allowClear:true
+        });
+        function formatResult(item) {
+            if(!item.id) {
+                // return `text` for optgroup
+                return item.text;
+            }
+            // return item template
 
+            return '<i class="fa '+item.id+' mr10"></i>' + item.text + '';
+        }
+        function formatSelection(item) {
+            // return selection template
+            return '<i class="fa '+item.id+' mr10"></i>' + item.text + '';
+        }
+        jQuery('#icon').select2({
+            width:'100%',
+            allowClear:true,
+            // Specify format function for dropdown item
+            formatResult: formatResult,
+            // Specify format function for selected item
+            formatSelection: formatSelection
+        });
 
     });
 </script>

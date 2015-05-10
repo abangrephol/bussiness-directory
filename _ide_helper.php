@@ -1,7 +1,7 @@
 <?php
 /**
  * An helper file for Laravel 4, to provide autocomplete information to your IDE
- * Generated for Laravel 4.2.16 on 2015-01-31.
+ * Generated for Laravel 4.2.17 on 2015-05-06.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -4266,6 +4266,20 @@ namespace {
         }
         
         /**
+         * Add a "where date" statement to the query.
+         *
+         * @param string $column
+         * @param string $operator
+         * @param int $value
+         * @param string $boolean
+         * @return \Illuminate\Database\Query\Builder|static 
+         * @static 
+         */
+        public static function whereDate($column, $operator, $value, $boolean = 'and'){
+            return \Illuminate\Database\Query\Builder::whereDate($column, $operator, $value, $boolean);
+        }
+        
+        /**
          * Add a "where day" statement to the query.
          *
          * @param string $column
@@ -5098,11 +5112,12 @@ namespace {
          *
          * @param string $path
          * @param string $contents
+         * @param bool $lock
          * @return int 
          * @static 
          */
-        public static function put($path, $contents){
-            return \Illuminate\Filesystem\Filesystem::put($path, $contents);
+        public static function put($path, $contents, $lock = false){
+            return \Illuminate\Filesystem\Filesystem::put($path, $contents, $lock);
         }
         
         /**
@@ -5528,6 +5543,7 @@ namespace {
          * Create a number input field.
          *
          * @param string $name
+         * @param string|null $value
          * @param array $options
          * @return string 
          * @static 
@@ -7758,7 +7774,7 @@ namespace {
          * Register an error_log handler.
          *
          * @param string $level
-         * @param integer $messageType
+         * @param int $messageType
          * @return void 
          * @static 
          */
@@ -13386,6 +13402,104 @@ namespace {
 
 
     class Node extends \Kalnoy\Nestedset\Node{
+        
+    }
+
+
+    class Widget extends \Pingpong\Widget\Facades\Widget{
+        
+        /**
+         * Register new widget.
+         *
+         * @param string $name
+         * @param string|callable $callback
+         * @return void 
+         * @static 
+         */
+        public static function register($name, $callback){
+            \Pingpong\Widget\Widget::register($name, $callback);
+        }
+        
+        /**
+         * Register widget using a specified handler class.
+         *
+         * @param string $subscriber
+         * @return void 
+         * @static 
+         */
+        public static function subscribe($subscriber){
+            \Pingpong\Widget\Widget::subscribe($subscriber);
+        }
+        
+        /**
+         * Determine whether a widget there or not.
+         *
+         * @param string $name
+         * @return boolean 
+         * @static 
+         */
+        public static function has($name){
+            return \Pingpong\Widget\Widget::has($name);
+        }
+        
+        /**
+         * Calling a specific widget.
+         *
+         * @param string $name
+         * @param array $parameters
+         * @return mixed 
+         * @static 
+         */
+        public static function call($name, $parameters = array()){
+            return \Pingpong\Widget\Widget::call($name, $parameters);
+        }
+        
+        /**
+         * Calling a specific widget.
+         *
+         * @param string $name
+         * @param array $parameters
+         * @return mixed 
+         * @static 
+         */
+        public static function get($name, $parameters = array()){
+            return \Pingpong\Widget\Widget::get($name, $parameters);
+        }
+        
+        /**
+         * Group some widgets.
+         *
+         * @param string $name
+         * @param array $widgets
+         * @return void 
+         * @static 
+         */
+        public static function group($name, $widgets){
+            \Pingpong\Widget\Widget::group($name, $widgets);
+        }
+        
+        /**
+         * Determine whether a group of widgets there or not.
+         *
+         * @param string $name
+         * @return boolean 
+         * @static 
+         */
+        public static function hasGroup($name){
+            return \Pingpong\Widget\Widget::hasGroup($name);
+        }
+        
+        /**
+         * Call a specific group of widgets.
+         *
+         * @param string $name
+         * @param array $parameters
+         * @return string 
+         * @static 
+         */
+        public static function callGroup($name, $parameters = array()){
+            return \Pingpong\Widget\Widget::callGroup($name, $parameters);
+        }
         
     }
 

@@ -100,6 +100,7 @@ return array(
         'Way\Generators\GeneratorsServiceProvider',
         'Chumper\Datatable\DatatableServiceProvider',
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+        'Pingpong\Widget\WidgetServiceProvider',
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -199,6 +200,7 @@ return array(
         'Datatable' => 'Chumper\Datatable\Facades\DatatableFacade',
         'NestedSet' => 'Kalnoy\Nestedset\NestedSet',
         'Node' => 'Kalnoy\Nestedset\Node',
+        'Widget' => 'Pingpong\Widget\Facades\Widget',
 	),
 
 );

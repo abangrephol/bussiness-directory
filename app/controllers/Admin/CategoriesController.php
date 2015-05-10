@@ -63,7 +63,10 @@ class CategoriesController extends BaseController {
 	{
         $this->theme->setPageTitle('Create New Category');
         $this->theme->asset()->serve('chosen');
-        $data = array('selectValue'=>\Category::withDepth()->having('depth','=',0)->lists('name','id'));
+        $data = array(
+            'selectValue'=>\Category::withDepth()->having('depth','=',0)->lists('name','id'),
+            'icons' => [''=>'']+\Category::$icons
+        );
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))
             ->add('Categories', \URL::route('admin/categories'))
@@ -131,7 +134,11 @@ class CategoriesController extends BaseController {
         $this->theme->setPageTitle('Update Category')->setPageSubTitle($category->name);
 
         $this->theme->asset()->serve('chosen');
-        $data = array('selectValue'=>[''=>'']+\Category::withDepth()->having('depth','=',0)->where('id','!=',$id)->lists('name','id'),'data'=>$category);
+        $data = array(
+            'selectValue'=>[''=>'']+\Category::withDepth()->having('depth','=',0)->where('id','!=',$id)->lists('name','id'),
+            'data'=>$category,
+            'icons' => [''=>'']+\Category::$icons
+        );
 
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))

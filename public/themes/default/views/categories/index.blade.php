@@ -102,3 +102,18 @@
         </div>
     </div>
 </div>
+<script>
+    $(window).ready(function(){
+        $("#map_canvas").goMap({
+            address : 'Singapore',
+            maptype: 'ROADMAP',
+            scrollwheel: false,
+            zoom: 6,
+            markers: [
+                {{ $marker }}
+        ]
+    });
+    $.goMap.fitBounds();
+
+    })
+</script>

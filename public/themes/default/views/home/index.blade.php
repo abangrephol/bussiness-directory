@@ -160,21 +160,17 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(){
+    $(window).ready(function(){
         $("#map_canvas").goMap({
 
             maptype: 'ROADMAP',
             scrollwheel: false,
             zoom: 6,
             markers: [
-                @foreach(Company::all() as $company)
-                {
-                    address : '{{$company->address_1}},{{$company->city}}',//'39B, Jalan Kuning 2,Taman Perlangi,80400 Johor Bahru,Johor, Malaysia',
-                    icon: '{{URL::to("/themes/default/assets")}}/img/content/map-marker-company.png',
-                    html: '{{ $company->name }}'
-                },
-                @endforeach
+                {{ $marker }}
             ]
         });
+        $.goMap.fitBounds();
+
     })
 </script>

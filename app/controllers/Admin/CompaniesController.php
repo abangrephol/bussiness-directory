@@ -56,7 +56,7 @@ class CompaniesController extends BaseController {
 
         $data = array(
             'state'=> \State::getState(189),
-            'category'=>[''=>'']+\Category::treeBuild(\Category::withDepth()->having('depth','=',0)->get()),
+            'category'=>\Category::treeBuild(\Category::withDepth()->having('depth','=',0)->get()),
         );
 
         $this->theme->breadcrumb()

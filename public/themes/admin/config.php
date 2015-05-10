@@ -32,7 +32,7 @@ return array(
         'asset' => function($asset){
             $asset->cook('bootstrap',function($asset){
                 $asset->usePath()->add('default-css','css/style.default.css');
-
+                $asset->add('fa','//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
                 $asset->usePath()->add('jquery','js/jquery-1.10.2.min.js');
                 $asset->container('footer')->usePath()->add('jquery-migrate','js/jquery-migrate-1.2.1.min.js');
                 $asset->container('footer')->usePath()->add('jquery-ui','js/jquery-ui-1.10.3.min.js');
@@ -58,12 +58,22 @@ return array(
                 $asset->container('footer-after')->usePath()->add('ckeditor-jquery','js/ckeditor/adapters/jquery.js');
             });
             $asset->cook('chosen',function($asset){
-                $asset->container('footer-after')->usePath()->add('chosen','js/chosen.jquery.min.js');
+                $asset->container('footer-after')->usePath()->add('chosen','js/select2.min.js');
             });
             $asset->cook('gmap',function($asset){
                 $asset->container('footer-after')->add('gmap-api','//maps.google.com/maps/api/js?sensor=true');
                 $asset->container('footer-after')->usePath()->add('gmap','js/gmaps.js');
+            });
 
+            $asset->cook('builder',function($asset){
+                //$asset->add('aloha-css','3rdparty/alohaeditor/css/aloha.css');
+                //$asset->container('footer-after')->usePath()->add('require','js/aloha-config.js');
+                //$asset->container('footer-after')->add('require','3rdparty/alohaeditor/lib/require.js');
+                //$asset->container('footer-after')->add('aloha','3rdparty/alohaeditor/lib/aloha.js',null,array('data-aloha-plugins'=>"common/ui,common/format,common/list,common/link,common/highlighteditables"));
+                $asset->container('footer-after')->usePath()->add('sticky','js/jquery.sticky.js');
+            });
+            $asset->cook('iframe',function($asset){
+                $asset->container('footer-after')->usePath()->add('iframe','js/iframeResizer.min.js');
             });
         },
         // Before event inherit from package config and the theme that call before,
@@ -72,7 +82,7 @@ return array(
         'before' => function($theme)
         {
             // You can remove this line anytime.
-            $theme->setTitle('Business Directory');
+            $theme->setTitle('Wirednest Business Directory');
 
             // Breadcrumb template.
             // $theme->breadcrumb()->setTemplate('

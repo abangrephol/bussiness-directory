@@ -1,7 +1,63 @@
 /*
-Created by: @themepixels
-URL: http://themepixels.com/
-*/
+ *  Created: @themepixels
+ *  Website: http://themepixels.com/
+ * 
+ *  ---------------------------------------
+ *  ---------- TABLE OF CONTENTS ----------
+ *  ---------------------------------------
+ *  
+ *  1.  FILE IMPORTS
+ *  2.  RESET STYLES
+ *  3.  HEADER PANEL
+ *          3.1     HEADER LEFT
+ *          3.2     HEADER RIGHT
+ *  4.  LEFT PANEL
+ *          4.1     NAVIGATION STYLES
+ *          4.2     INFO SUMMARY
+ *  5.  MAIN PANEL
+ *          5.1     DASHBOARD
+ *  6.  FORM STYLES
+ *          6.1     FORM WIZARD STYLES
+ *  7.  UI ELEMENTS
+ *  8.  EMAIL
+ *  9.  TABLES
+ *  10. PAGES
+ *          10.1    CALENDAR
+ *          10.2    MEDIA MANAGER
+ *          10.3    PROFILE
+ *          10.4    BLOG LIST
+ *          10.5    BLOG SINGLE
+ *          10.6    PEOPLE DIRECTORY
+ *          10.7    NOT FOUND PAGE
+ *          10.8    SEARCH RESULTS
+ *          10.9    INVOICE
+ *          10.10   TIMELINE
+ *          10.11   LOCKED SCREEN
+ *          10.12   SIGN IN
+ *          10.13   SIGN UP
+ *  11. LEFT PANEL COLLAPSED
+ *  12. RIGHT PANEL STYLES
+ *  13. HORIZONTAL MENU
+ *  14. FIXED WIDTH
+ *  15. MODALS
+ *  16. BUG TRACKER
+ *  17. ADDITIONAL STYLES
+ *          17.1    DROPDOWN
+ *          17.2    ICON
+ *          17.3    TIME PICKER
+ *          17.4    COLOR PICKER
+ *          17.5    STICKY HEADER
+ *          17.6    CUSTOM STYLES
+ *  18. MEDIA QUERIES
+ *  
+ */
+
+
+
+
+
+/********** 1. FILE IMPORTS **********/
+/*************************************/
 
 @import url('bootstrap.min.css');
 @import url('bootstrap-override.css');
@@ -11,16 +67,19 @@ URL: http://themepixels.com/
 @import url('animate.min.css');
 @import url('animate.delay.css');
 @import url('toggles.css');
-@import url('chosen.css');
+@import url('select2.css');
 @import url('lato.css');
 @import url('roboto.css');
+
+
+/********** 2. RESET STYLES **********/
+/*************************************/
 
 body {
     background: #1d2939;
     font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
     line-height: 21px;
     color: #636e7b;
-    overflow: hidden;
 }
 
 body.notfound,
@@ -67,9 +126,9 @@ strong {
 
 
 
+/********** 3. HEADER PANEL **********/
+/*************************************/
 
-/***** HEADER PANEL *****/
-/************************/
 
 .headerbar {
     border-left: 1px solid #eee;
@@ -81,6 +140,9 @@ strong {
     display: block;
     content: '';
 }
+
+
+/***** 3.1 HEADER LEFT *****/
 
 .menutoggle {
     float: left;
@@ -140,6 +202,10 @@ strong {
 .header-left {
     float: left;
 }
+
+
+
+/***** 3.2 HEADER RIGHT *****/
 
 .header-right {
     float: right;
@@ -384,8 +450,10 @@ strong {
 }
 
 
-/***** LEFT PANEL *****/
-/**********************/
+
+
+/********** 4. LEFT PANEL **********/
+/***********************************/
 
 .leftpanel {
     width: 240px;
@@ -479,6 +547,11 @@ strong {
     opacity: 0.5;
 }
 
+
+
+/***** 4.1 NAVIGATION STYLES *****/
+
+
 .sidebartitle {
     font-size: 11px;
     text-transform: uppercase;
@@ -506,7 +579,7 @@ strong {
 }
 
 .nav-bracket > li.nav-parent > a {
-    background: transparent url(../images/plus-white.png) no-repeat 96% center; 
+    background: transparent url(../images/plus-white.png) no-repeat 92% center; 
 }
 
 .nav-bracket > li.nav-parent > a:focus {
@@ -626,6 +699,11 @@ strong {
     border: 0;
 }
 
+
+
+/***** 4.2 INFO SUMMARY *****/
+
+
 .infosummary {
     margin: 30px 0;
 }
@@ -676,8 +754,8 @@ strong {
 
 
 
-/***** MAIN PANEL *****/
-/**********************/
+/********** 5. MAIN PANEL **********/
+/***********************************/
 
 .mainpanel {
     margin-left: 240px;
@@ -728,7 +806,7 @@ strong {
 }
 
 .pageheader .fa-file-text {
-    padding: 6px 10px;
+    padding: 6px 10px;`
 }
 
 .pageheader .fa-map-marker {
@@ -833,8 +911,9 @@ p {
 }
 
 
-/***** DASHBOARD *****/
-/*********************/
+
+/***** 5.1. DASHBOARD ******/
+
 
 .panel-stat {
     background: none;
@@ -891,13 +970,25 @@ p {
     margin-bottom: 2px;
 }
 
-.dashboard-datatable .dataTables_filter {
-    float: left;
+.ex-donut-chart {
+    text-align: center;
+    height: 298px;
+}
+
+.ex-line-chart {
+    height: 248px;
+}
+
+.ex-donut-chart > svg,
+.ex-line-chart > svg {
+    width: 100% !important;
 }
 
 
-/***** FORM STYLES *****/
-/***********************/
+
+/********** 6. FORM STYLES **********/
+/************************************/
+
 
 
 .ckbox,
@@ -1109,23 +1200,54 @@ div.error label.error:before {
 }
 
 /* CKEDITOR */
-.editable {
+.ck-editable {
     padding: 10px;
     border: 1px solid #fcfcfc;
     margin-bottom: 20px;
 }
 
-.editable:hover {
+.ck-editable:hover {
     border: 1px solid #ccc;
 }
 
-.editable h4 {
+.ck-editable h4 {
     color: #333;
 }
 
+/* X-EDITABLE */
 
-/***** FORM WIZARD STYLES *****/
-/**************************/
+.editable-input .form-control {
+    margin: 0;
+}
+
+.editable-input select.form-control {
+    padding: 8px 10px
+}
+
+.editable-list-group {
+    padding: 0;
+}
+
+.editableform .form-group {
+    margin: 0;
+}
+
+.editable-list-item {
+    border-bottom: 1px dotted #ddd;
+    padding: 12px 15px;
+}
+
+.editable-list-group .editable-list-item:last-child {
+    border-bottom: 0;
+}
+
+.editable-unsaved {
+    font-weight: normal;
+}
+
+
+
+/***** 6.1 FORM WIZARD STYLES *****/
 
 
 .basic-wizard .nav li a {
@@ -1228,8 +1350,11 @@ div.error label.error:before {
 }
 
 
-/***** UI ELEMENTS *****/
-/***********************/
+
+
+/********** 7. UI ELEMENTS **********/
+/*********************************/
+
 
 .btn-demo::after {
     clear: both;
@@ -1317,6 +1442,14 @@ div.error label.error:before {
     font-family: 'LatoBold';
     line-height: normal;
     font-size: 16px;
+}
+
+.panel-morris .body-chart {
+    height: 300px;
+}
+
+.panel-morris .body-chart > svg {
+    width: 100% !important;
 }
 
 .widget-quick-status-post .nav-tabs > li > a {
@@ -1691,8 +1824,12 @@ div.error label.error:before {
 }
 
 
-/***** EMAIL *****/
-/*****************/
+
+
+/********** 8. EMAIL **********/
+/******************************/
+
+
 
 .btn-compose-email {
     padding: 10px 0;
@@ -1822,8 +1959,12 @@ div.error label.error:before {
 }
 
 
-/***** TABLES *****/
-/******************/
+
+
+/********** 9. TABLES **********/
+/*******************************/
+
+
 
 .dataTables_length .chosen-container {
     min-width: 75px;
@@ -1858,8 +1999,56 @@ div.error label.error:before {
     margin-right: 0;
 }
 
-/***** PAGES *****/
-/*****************/
+.table-primary thead tr th {
+    background-color: #428BCA;
+}
+
+.table-success thead tr th {
+    background-color: #1CAF9A;
+}
+
+.table-warning thead tr th {
+    background-color: #F0AD4E;
+}
+
+.table-danger thead tr th {
+    background-color: #D9534F;
+}
+
+.table-info thead tr th {
+    background-color: #5BC0DE;
+}
+
+.table-dark thead tr th {
+    background-color: #1D2939;
+}
+
+.table.table-primary thead tr th,
+.table.table-success thead tr th,
+.table.table-danger thead tr th,
+.table.table-warning thead tr th,
+.table.table-info thead tr th,
+.table.table-dark thead tr th {
+    color: #fff;
+    border-bottom: 0;
+}
+
+.table-bordered.table-primary thead tr th,
+.table-bordered.table-success thead tr th,
+.table-bordered.table-warning thead tr th,
+.table-bordered.table-danger thead tr th,
+.table-bordered.table-info thead tr th,
+.table-bordered.table-dark thead tr th {
+    border-color: rgba(255,255,255,0.2);
+}
+
+
+
+/********** 10. PAGES **********/
+/*******************************/
+
+
+/***** 10.1 CALENDAR *****/
 
 .external-event {
     background: #428BCA;
@@ -1873,7 +2062,8 @@ div.error label.error:before {
 }
 
 
-/* mediamanager */
+/***** 10.2 MEDIA MANAGER *****/
+
 .filemanager-options {
     list-style: none;
     margin: 0;
@@ -2096,7 +2286,10 @@ div.error label.error:before {
     background: #428BCA;
 }
 
-/* profile */
+
+/****** 10.3 PROFILE *****/
+
+
 .profile-name {
     margin: 0;
     margin-bottom: 10px;
@@ -2279,7 +2472,10 @@ div.error label.error:before {
     line-height: normal;
 }
 
-/* bloglist */
+
+/****** 10.4 BLOG LIST ******/
+
+
 .blog-item {
     background: #fcfcfc;
     margin-bottom: 20px;
@@ -2433,7 +2629,11 @@ div.error label.error:before {
     background-color: #D43F3A;
 }
 
-/* blog single */
+
+
+/***** 10.5 BLOG SINGLE *****/
+
+
 .panel-blog .blog-img img {
     width: 100%;	
 }
@@ -2504,7 +2704,6 @@ div.error label.error:before {
     margin-right: 5px;
 }
 
-/* comment list */
 .comment-list .media {
     border-bottom: 1px solid #ddd;
 }
@@ -2542,7 +2741,10 @@ div.error label.error:before {
     border-bottom: 0;
 }
 
-/* people directory */
+
+/****** 10.6 PEOPLE DIRECTORY ******/
+
+
 .letter-list {
     list-style: none;
     padding: 0;
@@ -2670,6 +2872,10 @@ div.error label.error:before {
     margin-right: 0;
 }
 
+
+/***** 10.7 NOT FOUND PAGE *****/
+
+
 .notfoundpanel {
     text-align: center;
     margin-top: 10%;
@@ -2704,7 +2910,10 @@ div.error label.error:before {
     float: left;
 }
 
-/* search results */
+
+/***** 10.8 SEARCH RESULTS *****/
+
+
 .nav-sr li {
     border-bottom: 1px solid #ddd;  
 }
@@ -2742,7 +2951,10 @@ div.error label.error:before {
 }
 
 
-/* invoice */
+
+/***** 10.9 INVOICE *****/
+
+
 .table-invoice {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
@@ -2790,7 +3002,10 @@ div.error label.error:before {
     color: #333;
 }
 
-/* timeline */
+
+
+/****** 10.10. TIMELINE ******/
+
 
 .timeline-post .panel-body {
     padding: 0;
@@ -2913,7 +3128,10 @@ div.error label.error:before {
     left: 0;
 }
 
-/* locked screen */
+
+
+/***** 10.11 LOCKED SCREEN *****/
+
 
 .lockedpanel {
     width: 250px;
@@ -2957,7 +3175,10 @@ div.error label.error:before {
     margin-top: 10px;
 }
 
-/* sign in */
+
+
+/***** 10.12 SIGN IN *****/
+
 
 .signinpanel {
     width: 780px;
@@ -2975,10 +3196,6 @@ div.error label.error:before {
     list-style: none;
     padding: 0;
     margin: 20px 0;
-}
-
-.signinpanel .signin-info a {
-    color: #333;
 }
 
 .signinpanel .form-control {
@@ -3014,7 +3231,9 @@ div.error label.error:before {
     color: #666;
 }
 
-/* sign up */
+
+/***** 10.13 SIGN UP *****/
+
 
 .signuppanel {
     margin: 5% auto 0 auto;
@@ -3088,8 +3307,11 @@ div.error label.error:before {
 }
 
 
-/***** LEFT PANEL COLLAPSE *****/
-/*******************************/
+
+
+/********** 11. LEFT PANEL COLLAPSED **********/
+/**********************************************/
+
 
 
 .leftpanel-collapsed .logopanel {
@@ -3230,8 +3452,11 @@ div.error label.error:before {
 }
 
 
-/***** RIGHT PANEL STYLES *****/
-/**************************/
+
+
+/********** 12. RIGHT PANEL STYLES **********/
+/********************************************/
+
 
 .chat-view {
     margin-right: 240px;
@@ -3365,8 +3590,8 @@ div.error label.error:before {
 }
 
 
-/***** HORIZONTAL MENU *****/
-/***************************/
+/********** 13. HORIZONTAL MENU **********/
+/*****************************************/
 
 
 .horizontal-menu {
@@ -3468,8 +3693,11 @@ div.error label.error:before {
 
 
 
-/***** FIXED WIDTH *****/
-/***********************/
+
+/********** 14. FIXED WIDTH **********/
+/*************************************/
+
+
 
 .fixed {
     background: #c9cccf;
@@ -3507,8 +3735,10 @@ div.error label.error:before {
 }
 
 
-/***** MODALS *****/
-/******************/
+
+/********** 15. MODALS **********/
+/********************************/
+
 
 .bs-example-modal-panel .modal-content {
     background: none;
@@ -3598,55 +3828,9 @@ div.error label.error:before {
 }
 
 
-/***** TABLE STYLES ******/
-/*************************/
 
-.table-primary thead tr th {
-    background: #428BCA;
-}
-
-.table-success thead tr th {
-    background: #1CAF9A;
-}
-
-.table-warning thead tr th {
-    background: #F0AD4E;
-}
-
-.table-danger thead tr th {
-    background: #D9534F;
-}
-
-.table-info thead tr th {
-    background: #5BC0DE;
-}
-
-.table-dark thead tr th {
-    background: #1D2939;
-}
-
-.table.table-primary thead tr th,
-.table.table-success thead tr th,
-.table.table-danger thead tr th,
-.table.table-warning thead tr th,
-.table.table-info thead tr th,
-.table.table-dark thead tr th {
-    color: #fff;
-    border-bottom: 0;
-}
-
-.table-bordered.table-primary thead tr th,
-.table-bordered.table-success thead tr th,
-.table-bordered.table-warning thead tr th,
-.table-bordered.table-danger thead tr th,
-.table-bordered.table-info thead tr th,
-.table-bordered.table-dark thead tr th {
-    border-color: rgba(255,255,255,0.2);
-}
-
-
-/***** BUG TRACKER *****/
-/***********************/
+/********** 16. BUG TRACKER **********/
+/*************************************/
 
 .panel .panel-table {
     padding: 0;
@@ -3697,11 +3881,11 @@ div.error label.error:before {
 
 
 
-/***** ADDITIONAL STYLES *****/
-/*****************************/
+/********** 17. ADDITIONAL STYLES **********/
+/*******************************************/
 
 
-/* DROPDOWN */
+/***** 17.1 DROPDOWN *****/
 
 .dropdown-menu-head {
     background: #fff
@@ -3717,7 +3901,8 @@ div.error label.error:before {
 }
 
 
-/* ICON */
+/***** 17.2 ICON *****/
+
 
 .tp-icon {
     padding: 10px 20px;
@@ -3740,35 +3925,15 @@ div.error label.error:before {
     padding: 2px 5px;
 }
 
-/* CHOSEN OVERRIDE */
 
-.chosen-container-single .chosen-single div {
-    width: 30px;
-    border-left: 1px solid #ccc;
-    background: #e4e7ea;
-}
+/***** 17.3 TIME PICKER *****/
 
-.chosen-container-single .chosen-single div b {
-    background: url(../images/dropdown-arrow.png) no-repeat 8px 15px;
-}
-
-.chosen-container-active.chosen-with-drop .chosen-single div {
-    width: 30px;
-    border-left: 0;
-    background: #fff;
-}
-
-.chosen-container-active.chosen-with-drop .chosen-single div b {
-    background-position: 8px -33px;
-}
-
-/* TIME PICKER */
 
 .bootstrap-timepicker-widget.dropdown-menu {
     width: 230px;
 }
 
-/* COLOR PICKER */
+/***** 17.4 COLOR PICKER *****/
 
 .colorpicker-input {
     width: 200px;
@@ -3779,7 +3944,7 @@ div.error label.error:before {
     margin-top: 4px;
 }
 
-/* STICKY HEADER */
+/***** 17.5 STICKY HEADER */
 
 .stickyheader .logopanel {
     position: fixed;
@@ -3832,7 +3997,7 @@ div.error label.error:before {
 }
 
 
-/* CUSTOM STYLES */
+/***** 17.6 CUSTOM STYLES *****/
 
 .mb5 {
     margin-bottom: 5px;
@@ -3945,8 +4110,10 @@ div.error label.error:before {
 }
 
 
-/***** MEDIA QUERIES *****/
-/*************************/
+
+/********** 18. MEDIA QUERIES **********/
+/***************************************/
+
 
 @media screen and (max-width: 1024px) {
 

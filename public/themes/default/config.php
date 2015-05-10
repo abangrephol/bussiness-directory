@@ -38,8 +38,9 @@ return array(
                     $asset->container('footer')->usePath()->add('jquery-ba','js/jquery.ba-outside-events.min.js');
                     $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
                     $asset->container('footer')->add('gmap-api','//maps.google.com/maps/api/js?sensor=true');
-                    $asset->container('footer')->usePath()->add('gomap','js/gomap.js');
+                    $asset->container('footer')->usePath()->add('gomap','js/jquery.gomap-1.3.3.js');
                     $asset->container('footer')->usePath()->add('gmaps','js/gmaps.js');
+                    $asset->container('footer')->usePath()->add('gmaps-cluster','js/markerclusterer.js');
                     $asset->container('footer')->usePath()->add('toggles','js/owl.carousel.js');
                     $asset->container('footer')->usePath()->add('custom','js/scripts.js');
 
@@ -52,7 +53,7 @@ return array(
         'before' => function($theme)
         {
             // You can remove this line anytime.
-            $theme->setTitle('Copyright ©  2013 - Laravel.in.th');
+            $theme->setTitle('Wirednest Business Directory');
 
             // Breadcrumb template.
             // $theme->breadcrumb()->setTemplate('
