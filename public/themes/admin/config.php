@@ -71,8 +71,10 @@ return array(
                 //$asset->container('footer-after')->add('require','3rdparty/alohaeditor/lib/require.js');
                 //$asset->container('footer-after')->add('aloha','3rdparty/alohaeditor/lib/aloha.js',null,array('data-aloha-plugins'=>"common/ui,common/format,common/list,common/link,common/highlighteditables"));
                 $asset->container('footer-after')->usePath()->add('sticky','js/jquery.sticky.js');
+                $asset->container('footer-after')->usePath()->add('nestedSortable','js/jquery.mjs.nestedSortable.js');
             });
             $asset->cook('iframe',function($asset){
+
                 $asset->container('footer-after')->usePath()->add('iframe','js/iframeResizer.min.js');
             });
         },

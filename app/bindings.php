@@ -3,16 +3,15 @@
 Route::bind('projectSlug', function($value, $route)
 {
     $tld = $route->getParameter('tld');
-    dd($value);
 
-    $project = Project::where('slug', '=', $value)
-        ->where('tld', '=', $tld)
+    $project = CustomWebsite::where('domain',  $value)
+        ->where('tld',  $tld)
         ->first();
 
 
-    if(! $project)
+    if(!$project)
     {
-        App::abort(404);
+        return null;
     }
 
     return $project;

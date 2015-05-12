@@ -112,6 +112,9 @@
 ================================================== -->
 <div class="container" >
     <div  id="body">
+        @if (isset($data->content))
+        {{$data->content}}
+        @else
         <div class="row">
             <div class="col-sm-4 ">
                 <!-- Service -->
@@ -149,6 +152,7 @@
             <div class="clearfix"></div>
             <div class="margin-top-30"></div>
         </div>
+        @endif
     </div>
 
 

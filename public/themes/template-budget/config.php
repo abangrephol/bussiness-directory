@@ -30,47 +30,56 @@ return array(
 
     'events' => array(
         'asset' => function($asset){
-                $asset->cook('bootstrap',function($asset){
-                    $asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
-                    $asset->usePath()->add('default-css','css/style.css');
-                    //$asset->usePath()->add('green-css','css/colors/green.css');
+                //$asset->cook('bootstrap',function($asset){
 
-                    //$asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
+                    $asset->cook('editor',function($asset){
+                        $asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
+                        $asset->usePath()->add('default-css','css/style.css');
+                        //$asset->usePath()->add('green-css','css/colors/green.css');
 
-                    $asset->container('editor')->add('grid-css','3rdparty/gridmanager/css/jquery.gridmanager.css');
-                    $asset->container('editor')->add('jq','3rdparty/gridmanager/js/jquery.js');
-                    $asset->container('editor')->add('bs','3rdparty/gridmanager/js/bootstrap.js');
-                    $asset->container('editor')->add('jui','3rdparty/gridmanager/js/jquery-ui.js');
-                    $asset->container('editor')->add('grid','3rdparty/gridmanager/js/jquery.gridmanager.js');
+                        //$asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
 
-                    $asset->container('editor')->add('builder','3rdparty/alohaeditor/builder.js');
-                    $asset->container('editor')->add('tinymce','//cdnjs.cloudflare.com/ajax/libs/tinymce/4.1.2/tinymce.min.js');
-                    $asset->container('editor')->add('jquery-tinymce','//cdnjs.cloudflare.com/ajax/libs/tinymce/4.1.2/jquery.tinymce.min.js');
+                        $asset->container('editor')->add('grid-css','3rdparty/gridmanager/css/jquery.gridmanager.css');
+                        $asset->container('editor')->add('jq','3rdparty/gridmanager/js/jquery.js');
+                        $asset->container('editor')->add('bs','3rdparty/gridmanager/js/bootstrap.js');
+                        $asset->container('editor')->add('jui','3rdparty/gridmanager/js/jquery-ui.js');
+                        $asset->container('editor')->add('grid','3rdparty/gridmanager/js/jquery.gridmanager.js');
 
-                    $asset->container('footer')->add('jquery-migrate','//code.jquery.com/jquery-migrate-1.2.1.min.js');
-                    $asset->container('footer')->usePath()->add('jpanelmenu','scripts/jquery.jpanelmenu.js');
-                    $asset->container('footer')->usePath()->add('themepunch.plugins','scripts/jquery.themepunch.plugins.min.js');
-                    $asset->container('footer')->usePath()->add('themepunch.revolution','scripts/jquery.themepunch.revolution.min.js');
-                    $asset->container('footer')->usePath()->add('themepunch.showbizpro','scripts/jquery.themepunch.showbizpro.min.js');
-                    $asset->container('footer')->usePath()->add('magnific-popup','scripts/jquery.magnific-popup.min.js');
-                    $asset->container('footer')->usePath()->add('hoverIntent','scripts/hoverIntent.js');
-                    $asset->container('footer')->usePath()->add('superfish','scripts/superfish.js');
-                    $asset->container('footer')->usePath()->add('pureparallax','scripts/jquery.pureparallax.js');
-                    $asset->container('footer')->usePath()->add('pricefilter','scripts/jquery.pricefilter.js');
-                    $asset->container('footer')->usePath()->add('selectric','scripts/jquery.selectric.min.js');
-                    $asset->container('footer')->usePath()->add('royalslider','scripts/jquery.royalslider.min.js');
-                    $asset->container('footer')->usePath()->add('SelectBox','scripts/SelectBox.js');
-                    $asset->container('footer')->usePath()->add('modernizr','scripts/modernizr.custom.js');
-                    $asset->container('footer')->usePath()->add('waypoints','scripts/waypoints.min.js');
-                    $asset->container('footer')->usePath()->add('flexslider','scripts/jquery.flexslider-min.js');
-                    $asset->container('footer')->usePath()->add('counterup','scripts/jquery.counterup.min.js');
-                    $asset->container('footer')->usePath()->add('tooltips','scripts/jquery.tooltips.min.js');
-                    $asset->container('footer')->usePath()->add('isotope','scripts/jquery.isotope.min.js');
-                    $asset->container('footer')->usePath()->add('puregrid','scripts/puregrid.js');
-                    $asset->container('footer')->usePath()->add('stacktable','scripts/stacktable.js');
-                    $asset->container('footer')->usePath()->add('custom','scripts/custom.js');
+                        $asset->container('editor')->add('builder','3rdparty/alohaeditor/builder.js');
+                        $asset->container('editor')->add('tinymce','//cdnjs.cloudflare.com/ajax/libs/tinymce/4.1.2/tinymce.min.js');
+                        $asset->container('editor')->add('jquery-tinymce','//cdnjs.cloudflare.com/ajax/libs/tinymce/4.1.2/jquery.tinymce.min.js');
+                    });
+                    $asset->cook('website',function($asset){
+                        $asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
+                        $asset->usePath()->add('default-css','css/style.css');
+                        $asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
+                    });
+                    $asset->cook('bootstrap',function($asset){
+                        $asset->container('footer')->add('jquery-migrate','//code.jquery.com/jquery-migrate-1.2.1.min.js');
+                        $asset->container('footer')->usePath()->add('jpanelmenu','scripts/jquery.jpanelmenu.js');
+                        $asset->container('footer')->usePath()->add('themepunch.plugins','scripts/jquery.themepunch.plugins.min.js');
+                        $asset->container('footer')->usePath()->add('themepunch.revolution','scripts/jquery.themepunch.revolution.min.js');
+                        $asset->container('footer')->usePath()->add('themepunch.showbizpro','scripts/jquery.themepunch.showbizpro.min.js');
+                        $asset->container('footer')->usePath()->add('magnific-popup','scripts/jquery.magnific-popup.min.js');
+                        $asset->container('footer')->usePath()->add('hoverIntent','scripts/hoverIntent.js');
+                        $asset->container('footer')->usePath()->add('superfish','scripts/superfish.js');
+                        $asset->container('footer')->usePath()->add('pureparallax','scripts/jquery.pureparallax.js');
+                        $asset->container('footer')->usePath()->add('pricefilter','scripts/jquery.pricefilter.js');
+                        $asset->container('footer')->usePath()->add('selectric','scripts/jquery.selectric.min.js');
+                        $asset->container('footer')->usePath()->add('royalslider','scripts/jquery.royalslider.min.js');
+                        $asset->container('footer')->usePath()->add('SelectBox','scripts/SelectBox.js');
+                        $asset->container('footer')->usePath()->add('modernizr','scripts/modernizr.custom.js');
+                        $asset->container('footer')->usePath()->add('waypoints','scripts/waypoints.min.js');
+                        $asset->container('footer')->usePath()->add('flexslider','scripts/jquery.flexslider-min.js');
+                        $asset->container('footer')->usePath()->add('counterup','scripts/jquery.counterup.min.js');
+                        $asset->container('footer')->usePath()->add('tooltips','scripts/jquery.tooltips.min.js');
+                        $asset->container('footer')->usePath()->add('isotope','scripts/jquery.isotope.min.js');
+                        $asset->container('footer')->usePath()->add('puregrid','scripts/puregrid.js');
+                        $asset->container('footer')->usePath()->add('stacktable','scripts/stacktable.js');
+                        $asset->container('footer')->usePath()->add('custom','scripts/custom.js');
 
-                    $asset->container('footer')->usePath()->add('iframe','scripts/iframeResizer.contentWindow.min.js');
+                        $asset->container('footer')->usePath()->add('iframe','scripts/iframeResizer.contentWindow.min.js');
+                    });
                     /*
                     $asset->container('editor')->add('builder-config','3rdparty/alohaeditor/aloha-config.js');
                     $asset->container('editor')->add('aloha-css','3rdparty/alohaeditor/css/aloha.css');
@@ -95,7 +104,7 @@ return array(
 
 
 
-                });
+                //});
         },
         // Before event inherit from package config and the theme that call before,
         // you can use this event to set meta, breadcrumb template or anything

@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class=" pull-right">
+            <div class="btn-group">
+                <a class="btn btn-white" href="{{ URL::route('admin.custom-website.create') }}">Add New Custom Websites</a>
+            </div>
+        </div>
+        <h5 class="subtitle mb5">{{ Theme::get('pageTitle') }} list</h5>
+        <p class="text-muted">...</p>
+        <div class="table-responsive">
+            {{ Theme::widget('datatable', array('columns' => $columns, 'routeUrl' => $routeUrl,'dataRoute'=>array('id'=>$id)))->render() }}
+        </div>
+    </div>
+</div>
