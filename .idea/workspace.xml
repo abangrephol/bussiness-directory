@@ -29,19 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="4563" selection-end="4563" vertical-scroll-proportion="-35.346153" vertical-offset="560" max-vertical-offset="1853">
+            <state line="83" column="0" selection-start="4362" selection-end="4362" vertical-scroll-proportion="2.0018415" vertical-offset="324" max-vertical-offset="1853">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-0.37589929" vertical-offset="464" max-vertical-offset="1071">
+            <state line="16" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-9.615385" vertical-offset="5" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -354,8 +354,8 @@
         <option value="$PROJECT_DIR$/public/themes/template-budget/config.php" />
         <option value="$PROJECT_DIR$/app/bindings.php" />
         <option value="$PROJECT_DIR$/_ide_helper.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/filters.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
       </list>
     </option>
   </component>
@@ -1087,13 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="0" selection-start="4563" selection-end="4563" vertical-scroll-proportion="-35.346153" vertical-offset="560" max-vertical-offset="1853">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="0" selection-end="1687" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="935">
@@ -1103,7 +1096,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Admin/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-0.37589929" vertical-offset="464" max-vertical-offset="1071">
+        <state line="16" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-9.615385" vertical-offset="5" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="4362" selection-end="4362" vertical-scroll-proportion="2.0018415" vertical-offset="324" max-vertical-offset="1853">
           <folding />
         </state>
       </provider>
