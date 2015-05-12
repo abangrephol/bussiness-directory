@@ -18,6 +18,7 @@ class CustomWebsite extends  Ardent {
     public static $relationsData = array(
         'state' => array(self::BELONGS_TO,'States'),
         'company' => array(self::BELONGS_TO,'Company'),
+        'page' => array(self::HAS_MANY,'CustomWebsitePage'),
     );
     public static $rules = array(
         'name'                  => 'required|between:4,50',
@@ -25,4 +26,7 @@ class CustomWebsite extends  Ardent {
         'tld'                   => 'between:2,5',
         'company_id'            => 'required'
     );
+    public static function getMenu($id){
+        return \CustomWebsite::find($id)->page()->where('isHome',0)->get();
+    }
 }

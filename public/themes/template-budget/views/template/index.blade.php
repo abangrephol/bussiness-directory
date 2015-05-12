@@ -65,12 +65,11 @@
         <nav id="navigation">
             <ul class="menu" id="responsive">
 
-                <li><a href="index.html" class="current homepage" id="current">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="products.html">Our Products</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
+
+                <li><a href="/" class="current homepage" id="current">Home</a></li>
+                @foreach(CustomWebsite::getMenu($id) as $menu)
+                <li><a href="{{URL::to('/page/'.$menu->slug)}}" id="current">{{$menu->name}}</a></li>
+                @endforeach
             </ul>
         </nav>
     </div>
@@ -86,20 +85,20 @@
                 <!-- Slide 1  -->
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
                     <img src="{{ Theme::asset()->url('images/slider2.jpg') }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                    <div class="caption description sfb fadeout" data-x="right" data-y="bottom" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
+                    <!--div class="caption description sfb fadeout" data-x="right" data-y="bottom" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
                         <h3>The New Way To Success</h3>
                         <p>Donec scelerisque aliquet mi, non venenatis urnas iaculis. Utea id nila ante cras est massa, interdum  ateal imperdiet hendrerit posuere.</p>
-                    </div>
+                    </div-->
                 </li>
 
                 <!-- Slide 2  -->
                 <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
                     <img src="{{ Theme::asset()->url('images/slider.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                    <div class="caption dark sfb fadeout" style="text-align: center" data-x="center" data-y="165" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
+                    <!--div class="caption dark sfb fadeout" style="text-align: center" data-x="center" data-y="165" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
                         <h2>Pixel Perfect</h2>
                         <h3>High attention to Design and Code</h3>
                         <a href="shop-with-sidebar.html" class="caption-btn">Get This Theme</a>
-                    </div>
+                    </div-->
                 </li>
 
             </ul>

@@ -1,7 +1,7 @@
 <h5 class="sidebartitle">Navigation</h5>
 <ul class="nav nav-pills nav-stacked nav-bracket">
     <?php
-    $menus = array(
+    $menusAdmin = array(
         'dashboard' => array(
             'link' => 'dashboard',
             'icon' => 'fa-home',
@@ -50,6 +50,51 @@
             'title' => 'Categories'
         ),
     );
+    $menusUser = array(
+        'dashboard' => array(
+            'link' => 'dashboard',
+            'icon' => 'fa-home',
+            'title' => 'Dashboard',
+
+        ),
+        'companies' => array(
+            'link' => 'companies',
+            'icon' => 'fa-building',
+            'title' => 'Edit Companies'
+        ),
+        'custom-website' => array(
+            'link' => 'custom-website',
+            'icon' => 'fa-building',
+            'title' => 'Custom Websites',
+            'items' => array(
+                array(
+                    'link' => 'custom-website',
+                    'icon' => 'fa-building',
+                    'title' => 'Custom Websites List'
+                ),
+                array(
+                    'link' => 'custom-template',
+                    'icon' => 'fa-building',
+                    'title' => 'Templates List'
+                ),
+
+            )
+        ),
+        'categories' => array(
+            'link' => 'categories',
+            'icon' => 'fa-bookmark',
+            'title' => 'Categories'
+        ),
+    );
+    $user = Sentry::getUser();
+
+    // Get the user groups
+    $group = $user->getGroups()->first()->name;
+    if($group=='Admin'){
+        $menus = $menusAdmin;
+    }elseif($group=="User"){
+        $menus = $menusUser;
+    }
     foreach($menus as $menu){
         $childShow = 'display:none';
 

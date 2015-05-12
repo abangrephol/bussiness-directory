@@ -20,12 +20,29 @@ class WebsiteController extends BaseController {
         $website = CustomWebsite::find($id);
         $this->theme = \Theme::uses(\CustomTemplate::find($website->template_id)->theme_name)->layout('default');
         $this->theme->asset()->serve('website');
-        $pageId = \Input::get('pageId');
+
         $data = array(
             'id' => $id
         );
-        if(isset($pageId) && $pageId!=0){
-            $data['data'] = \CustomWebsitePage::find($pageId);
+
+        if(isset($id) && $id!=''){
+            $home =$website->page()->where('isHome',1)->first() ;
+            $data['data'] = $home;
+        }
+
+        return $this->theme->scope('template.index',$data)->render();
+    }
+    public function websitePage($id,$slug)
+    {
+        $website = CustomWebsite::find($id);
+        $this->theme = \Theme::uses(\CustomTemplate::find($website->template_id)->theme_name)->layout('default');
+        $this->theme->asset()->serve('website');
+
+        $data = array(
+            'id' => $id
+        );
+        if(isset($slug) && $slug!=''){
+            $data['data'] = \CustomWebsitePage::where('slug',$slug)->first();
         }
         return $this->theme->scope('template.index',$data)->render();
     }

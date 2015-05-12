@@ -27,7 +27,7 @@ Route::group(['domain' => '{projectSlug}.{tld}'], function()
 {
     // Routes within each website
 
-    Route::get('/', function($projectSlug) {
+    Route::get('/', function($projectSlug,$tld) {
         $app = app();
 
         if(gettype($projectSlug)=='object'){
@@ -41,12 +41,12 @@ Route::group(['domain' => '{projectSlug}.{tld}'], function()
 
 
 
-    Route::get('/page/{slug}', function($projectSlug,$slug) {
+    Route::get('/page/{slug}', function($projectSlug,$tld,$slug) {
         $app = app();
         if(gettype($projectSlug)=='object'){
 
             $controller = $app->make('WebsiteController');
-            return $controller->callAction('website', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
+            return $controller->callAction('websitePage', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
         }else{
             $controller = $app->make('HomeController');
             return $controller->callAction('index', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
