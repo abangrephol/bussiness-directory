@@ -2,7 +2,7 @@
     <div class="panel-body">
         <div class=" pull-right">
             <div class="btn-group">
-                <a class="btn btn-white" href="{{ URL::route('admin.custom-website.create') }}">Add New Custom Websites</a>
+                <a class="btn btn-white" href="{{ URL::route('custom-website.builder',array('id'=>$id,'templateId'=>$templateId)) }}">Add New Page</a>
             </div>
         </div>
         <h5 class="subtitle mb5">{{ Theme::get('pageTitle') }} list</h5>

@@ -106,6 +106,13 @@ class CustomWebsitesController extends BaseController {
             ));*/
     }
     public function chooseTemplates($id){
+        $templateId = \Input::get('templateId');
+        if(isset($templateId)){
+            $cw = \CustomWebsite::find($id);
+            $cw->template_id = $templateId;
+            $cw->save();
+            return \Redirect::route('custom-website.pages',array('id'=>$id));
+        }
         if(!isset($id))
             return \Redirect::route('admin.custom-website');
 
@@ -120,6 +127,7 @@ class CustomWebsitesController extends BaseController {
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
         return $this->theme->scope('custom-websites.choose-template',$data)->render();
     }
+
     public function pages($id){
         $this->theme->asset()->serve('datatable');
         $this->theme->setPageTitle('Custom Websites - Pages');
@@ -127,7 +135,7 @@ class CustomWebsitesController extends BaseController {
         $routeUrl = 'dt.custom-website-pages';
         $columns = array('Name','Title','Action');
 
-        $data = array("columns" => $columns,'routeUrl'=>$routeUrl,'id'=>$id);
+        $data = array("columns" => $columns,'routeUrl'=>$routeUrl,'id'=>$id,'templateId'=>\CustomWebsite::find($id)->template_id);
 
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
         return $this->theme->scope('custom-websites.pages',$data)->render();

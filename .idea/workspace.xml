@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b311f6-bf26-49e5-94ca-f165ff82b18e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-websites/choose-template.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-websites/choose-template.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bussiness-directory.iws" />
@@ -29,10 +31,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="0" selection-start="4362" selection-end="4362" vertical-scroll-proportion="2.0018415" vertical-offset="324" max-vertical-offset="1853">
+            <state line="68" column="155" selection-start="2945" selection-end="2945" vertical-scroll-proportion="-9.115385" vertical-offset="919" max-vertical-offset="1853">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="builder.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="115" column="107" selection-start="5955" selection-end="5955" vertical-scroll-proportion="-6.3076925" vertical-offset="1791" max-vertical-offset="2771">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pages.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="146" selection-start="279" selection-end="279" vertical-scroll-proportion="0.12523021" vertical-offset="0" max-vertical-offset="543">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="choose-template.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/choose-template.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="147" selection-start="2013" selection-end="2013" vertical-scroll-proportion="-12.384615" vertical-offset="256" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -43,6 +72,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="39" selection-start="373" selection-end="373" vertical-scroll-proportion="-9.615385" vertical-offset="5" max-vertical-offset="1071">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="128" selection-start="5238" selection-end="5238" vertical-scroll-proportion="-14.653846" vertical-offset="1948" max-vertical-offset="3740">
+              <folding>
+                <element signature="e#24#53#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,28 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/themes/template-budget/layouts/default.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.076923" vertical-offset="158" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bindings.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/bindings.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="20" selection-start="252" selection-end="252" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomWebsite.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/CustomWebsite.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="689" selection-end="696" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -99,26 +121,6 @@
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#div#5" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="8" selection-start="6202" selection-end="6241" vertical-scroll-proportion="-12.038462" vertical-offset="2339" max-vertical-offset="3604">
-              <folding>
-                <element signature="e#24#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomWebsitePage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/CustomWebsitePage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="429" selection-end="429" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="476">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -340,22 +342,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/choose-template.blade.php" />
         <option value="$PROJECT_DIR$/app/models/CustomWebsite.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/widgets/datatable.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/widgets/buttonColumnPages.blade.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/alohaeditor/builder.js" />
         <option value="$PROJECT_DIR$/app/models/CustomWebsitePage.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
         <option value="$PROJECT_DIR$/app/controllers/WebsiteController.php" />
         <option value="$PROJECT_DIR$/public/themes/template-budget/config.php" />
         <option value="$PROJECT_DIR$/app/bindings.php" />
         <option value="$PROJECT_DIR$/_ide_helper.php" />
         <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/choose-template.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php" />
       </list>
     </option>
   </component>
@@ -982,69 +984,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="51" selection-start="4160" selection-end="4199" vertical-scroll-proportion="-33.307693" vertical-offset="409" max-vertical-offset="2635">
-          <folding>
-            <marker date="1431368922151" expanded="true" signature="5333:5696" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/CustomWebsite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="689" selection-end="696" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="561">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="24" selection-start="4370" selection-end="4370" vertical-scroll-proportion="-75.19231" vertical-offset="0" max-vertical-offset="3638">
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#5" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.076923" vertical-offset="158" max-vertical-offset="714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="107" selection-start="5955" selection-end="5955" vertical-scroll-proportion="-6.3076925" vertical-offset="1791" max-vertical-offset="2771">
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1431383819545" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.9230769" vertical-offset="102" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="108" selection-start="2751" selection-end="2751" vertical-scroll-proportion="-16.961538" vertical-offset="477" max-vertical-offset="2856">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/bindings.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="20" selection-start="252" selection-end="252" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391">
@@ -1101,9 +1040,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CustomWebsitePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="429" selection-end="429" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CustomWebsite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="16" selection-start="689" selection-end="696" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="107" selection-start="5955" selection-end="5955" vertical-scroll-proportion="-6.3076925" vertical-offset="1791" max-vertical-offset="2771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.076923" vertical-offset="158" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="4362" selection-end="4362" vertical-scroll-proportion="2.0018415" vertical-offset="324" max-vertical-offset="1853">
+        <state line="68" column="155" selection-start="2945" selection-end="2945" vertical-scroll-proportion="-9.115385" vertical-offset="919" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/choose-template.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="147" selection-start="2013" selection-end="2013" vertical-scroll-proportion="-12.384615" vertical-offset="256" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="128" selection-start="5238" selection-end="5238" vertical-scroll-proportion="-14.653846" vertical-offset="1948" max-vertical-offset="3740">
+          <folding>
+            <element signature="e#24#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="146" selection-start="279" selection-end="279" vertical-scroll-proportion="0.12523021" vertical-offset="0" max-vertical-offset="543">
           <folding />
         </state>
       </provider>

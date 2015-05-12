@@ -32,7 +32,7 @@
                     </div>
                     <h5 class="fm-title">{{ $template->name }}</h5>
                     <small class="text-muted">Author: {{ $template->author }}</small>
-                    <a class="btn btn-primary btn-block" href="{{ route('custom-website.pages',array('id'=>$id)) }}">Choose</a>
+                    <a class="btn btn-primary btn-block" href="{{ route('custom-website.chooseTemplate',array('id'=>$id,'templateId'=>$template->id)) }}">Choose</a>
                 </div>
             </div>
             @endforeach
