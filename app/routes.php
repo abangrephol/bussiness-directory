@@ -27,7 +27,7 @@ Route::group(['domain' => '{projectSlug}.{tld}'], function()
 {
     // Routes within each website
 
-    Route::get('/', function($projectSlug,$tld) {
+    Route::get('/', function($projectSlug) {
         $app = app();
 
         if(gettype($projectSlug)=='object'){

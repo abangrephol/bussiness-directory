@@ -64,8 +64,6 @@
 
         <nav id="navigation">
             <ul class="menu" id="responsive">
-
-
                 <li><a href="/" class="current homepage" id="current">Home</a></li>
                 @foreach(CustomWebsite::getMenu($id) as $menu)
                 <li><a href="{{URL::to('/page/'.$menu->slug)}}" id="current">{{$menu->name}}</a></li>

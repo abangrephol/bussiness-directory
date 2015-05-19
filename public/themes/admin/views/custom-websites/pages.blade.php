@@ -1,4 +1,9 @@
 <div class="panel panel-default">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#page-editor" data-toggle="tab"><strong>Page List</strong></a></li>
+        <li><a href="#site-setting" data-toggle="tab"><strong>Site Setting</strong></a></li>
+        <li class="pull-right save"><a><i class="fa fa-file-text"></i>&nbsp;Save</a></li>
+    </ul>
     <div class="panel-body">
         <div class=" pull-right">
             <div class="btn-group">

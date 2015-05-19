@@ -39,9 +39,8 @@
                 array(
                     'link' => 'custom-template',
                     'icon' => 'fa-building',
-                    'title' => 'Templates List'
+                    'title' => 'Themes  List'
                 ),
-
             )
         ),
         'categories' => array(
@@ -65,26 +64,8 @@
         'custom-website' => array(
             'link' => 'custom-website',
             'icon' => 'fa-building',
-            'title' => 'Custom Websites',
-            'items' => array(
-                array(
-                    'link' => 'custom-website',
-                    'icon' => 'fa-building',
-                    'title' => 'Custom Websites List'
-                ),
-                array(
-                    'link' => 'custom-template',
-                    'icon' => 'fa-building',
-                    'title' => 'Templates List'
-                ),
-
-            )
-        ),
-        'categories' => array(
-            'link' => 'categories',
-            'icon' => 'fa-bookmark',
-            'title' => 'Categories'
-        ),
+            'title' => 'Custom Websites'
+        )
     );
     $user = Sentry::getUser();
 
