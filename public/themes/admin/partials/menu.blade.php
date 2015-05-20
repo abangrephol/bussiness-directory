@@ -1,6 +1,7 @@
 <h5 class="sidebartitle">Navigation</h5>
 <ul class="nav nav-pills nav-stacked nav-bracket">
     <?php
+    $user = Sentry::getUser();
     $menusAdmin = array(
         'dashboard' => array(
             'link' => 'dashboard',
@@ -67,7 +68,7 @@
             'title' => 'Custom Websites'
         )
     );
-    $user = Sentry::getUser();
+
 
     // Get the user groups
     $group = $user->getGroups()->first()->name;

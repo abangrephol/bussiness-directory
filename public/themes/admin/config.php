@@ -64,7 +64,14 @@ return array(
                 $asset->container('footer-after')->add('gmap-api','//maps.google.com/maps/api/js?sensor=true');
                 $asset->container('footer-after')->usePath()->add('gmap','js/gmaps.js');
             });
-
+            $asset->cook('color-picker',function($asset){
+                $asset->container('style-after')->usePath()->add('cp-css','css/colorpicker.css');
+                $asset->container('footer-after')->usePath()->add('cp','js/colorpicker.js');
+            });
+            $asset->cook('fileupload',function($asset){
+                $asset->container('style-after')->usePath()->add('fileupload-css','css/bootstrap-fileupload.min.css');
+                $asset->container('footer-after')->usePath()->add('fileupload-js','js/bootstrap-fileupload.min.js');
+            });
             $asset->cook('builder',function($asset){
                 //$asset->add('aloha-css','3rdparty/alohaeditor/css/aloha.css');
                 //$asset->container('footer-after')->usePath()->add('require','js/aloha-config.js');

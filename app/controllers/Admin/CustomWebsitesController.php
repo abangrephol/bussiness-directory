@@ -129,13 +129,23 @@ class CustomWebsitesController extends BaseController {
     }
 
     public function pages($id){
+        $this->theme->asset()->serve('chosen');
+        $this->theme->asset()->serve('color-picker');
+        $this->theme->asset()->serve('fileupload');
         $this->theme->asset()->serve('datatable');
         $this->theme->setPageTitle('Custom Websites - Pages');
 
         $routeUrl = 'dt.custom-website-pages';
         $columns = array('Name','Title','Action');
 
-        $data = array("columns" => $columns,'routeUrl'=>$routeUrl,'id'=>$id,'templateId'=>\CustomWebsite::find($id)->template_id);
+        $data = array(
+            "columns" => $columns,
+            'routeUrl'=>$routeUrl,
+            'id'=>$id,
+            'templateId'=>\CustomWebsite::find($id)->template_id,
+            'data' => isset($id)?\CustomWebsite::find($id):null,
+            'companies' => \Company::getCompanyLists()
+        );
 
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
         return $this->theme->scope('custom-websites.pages',$data)->render();
@@ -167,6 +177,10 @@ class CustomWebsitesController extends BaseController {
         $data = array(
             'id' => $id
         );
+        session_start();
+        $_SESSION["RF"]["subfolder"] = "$id";
+        $path = public_path().'/uploads/images/' . $id;
+        \File::makeDirectory($path, $mode = 0777, true, true);
         if(isset($pageId) && $pageId!=0){
             $data['data'] = \CustomWebsitePage::find($pageId);
         }

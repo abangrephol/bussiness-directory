@@ -1529,7 +1529,20 @@
               "searchreplace visualblocks code fullscreen",
               "insertdatetime media table contextmenu paste"
               ],
-              toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+              //toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                relative_urls: false,
+                browser_spellcheck : true ,
+                filemanager_title:"Responsive Filemanager",
+                external_filemanager_path:"/3rdparty/filemanager/",
+                external_plugins: { "filemanager" : "/3rdparty/filemanager/plugin.min.js"},
+                codemirror: {
+                    indentOnInit: true, // Whether or not to indent code on init.
+                    path: 'CodeMirror'
+                },
+
+                image_advtab: true,
+                toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+                toolbar2: "| responsivefilemanager | image | media | link unlink anchor | print preview code  | youtube | qrcode | flickr | picasa "
             }
         },
 
