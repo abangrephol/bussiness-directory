@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b311f6-bf26-49e5-94ca-f165ff82b18e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/WebsiteController.php" afterPath="$PROJECT_DIR$/app/controllers/WebsiteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebsiteController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WebsiteController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/WebsiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="59" selection-start="2103" selection-end="2135" vertical-scroll-proportion="0.5944954" vertical-offset="662" max-vertical-offset="1411">
+            <state line="58" column="59" selection-start="2103" selection-end="2135" vertical-scroll-proportion="-12.461538" vertical-offset="662" max-vertical-offset="1411">
               <folding />
             </state>
           </provider>
@@ -73,13 +73,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="18" selection-start="6869" selection-end="6869" vertical-scroll-proportion="-9.529411" vertical-offset="1418" max-vertical-offset="2210">
+            <state line="169" column="33" selection-start="9810" selection-end="9810" vertical-scroll-proportion="-0.17692308" vertical-offset="2965" max-vertical-offset="3876">
               <folding>
                 <element signature="n#style#0;n#section#1;n#!!top" expanded="true" />
-                <element signature="tag#footer#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,7 +96,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="8" selection-start="4727" selection-end="4795" vertical-scroll-proportion="-3.72549" vertical-offset="1816" max-vertical-offset="4114">
+            <state line="176" column="16" selection-start="6673" selection-end="6724" vertical-scroll-proportion="0.27450982" vertical-offset="3006" max-vertical-offset="4114">
               <folding />
             </state>
           </provider>
@@ -348,10 +347,10 @@
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/assets/css/style.css" />
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/assets/js/builder.js" />
-        <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
         <option value="$PROJECT_DIR$/app/controllers/WebsiteController.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
       </list>
     </option>
   </component>
@@ -950,7 +949,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1360" height="738" extended-state="0" />
+    <frame x="0" y="0" width="1360" height="738" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761577" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1072,30 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="1007" selection-end="1007" vertical-scroll-proportion="-1.3921568" vertical-offset="507" max-vertical-offset="2108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="8" selection-start="4727" selection-end="4795" vertical-scroll-proportion="-3.72549" vertical-offset="1816" max-vertical-offset="4114">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="18" selection-start="6869" selection-end="6869" vertical-scroll-proportion="-9.529411" vertical-offset="1418" max-vertical-offset="2210">
-          <folding>
-            <element signature="n#style#0;n#section#1;n#!!top" expanded="true" />
-            <element signature="tag#footer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/assets/js/builder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="33" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
@@ -1134,8 +1109,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/WebsiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="59" selection-start="2103" selection-end="2135" vertical-scroll-proportion="0.5944954" vertical-offset="662" max-vertical-offset="1411">
+        <state line="58" column="59" selection-start="2103" selection-end="2135" vertical-scroll-proportion="-12.461538" vertical-offset="662" max-vertical-offset="1411">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="16" selection-start="6673" selection-end="6724" vertical-scroll-proportion="0.27450982" vertical-offset="3006" max-vertical-offset="4114">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="16" selection-start="1007" selection-end="1007" vertical-scroll-proportion="-1.3921568" vertical-offset="507" max-vertical-offset="2108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="33" selection-start="9810" selection-end="9810" vertical-scroll-proportion="-0.17692308" vertical-offset="2965" max-vertical-offset="3876">
+          <folding>
+            <element signature="n#style#0;n#section#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

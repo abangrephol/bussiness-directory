@@ -121,14 +121,13 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="span3">
+                <div class="span4">
                     <div class="widget widget-about">
                         <h5 class="title">ABOUT AVENT</h5>
-                        <p>Important port of call in the Pacific, where<br> all the mail-steamers, and those carrying</p>
-                        <p>travellers between North America, China, Japan, and the Oriental islands put in.  It is situated in the bay of Yeddo, and at but a short distance from that second capital of </p>
+                        {{ CustomWebsiteData::get_key($id,'footer-about')}}
                     </div>
                 </div><!-- /.span3 -->
-                <div class="span3">
+                <!--div class="span3">
                     <div class="widget widget-recent-post">
                         <h5 class="title">RECENT POSTS</h5>
                         <ul>
@@ -148,8 +147,8 @@
                             </li>
                         </ul>
                     </div>
-                </div><!-- /.span3 -->
-                <div class="span3">
+                </div--><!-- /.span3 -->
+                <div class="span4">
                     <div class="widget widget-newsletter">
                         <h5 class="title">NEWSLETTER SIGNUP</h5>
                         <p>It is situated in the bay of Yeddo, and at<br> but a short distance from that second </p>
@@ -168,7 +167,7 @@
                         </div>
                     </div><!-- /.widget-newsletter -->
                 </div><!-- /.span3 -->
-                <div class="span3">
+                <div class="span4">
                     <div class="widget widget-recent-project">
                         <h5 class="title">RECENT PROJECTS</h5>
                         <ul>
