@@ -56,7 +56,7 @@ class WebsiteController extends BaseController {
             'id' => $id
         );
         if(isset($slug) && $slug!=''){
-            $page = \CustomWebsitePage::where('slug',$slug)->first();
+            $page = \CustomWebsitePage::where('slug',$slug)->where('custom_website_id',$id)->first();
             if(isset($page->custom_data)){
                 $custom_data = json_decode($page->custom_data);
                 if(isset($custom_data->body_font)){
