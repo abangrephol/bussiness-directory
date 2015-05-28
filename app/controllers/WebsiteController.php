@@ -18,7 +18,7 @@ class WebsiteController extends BaseController {
     public function website($id)
     {
         $website = CustomWebsite::find($id);
-        $this->theme = \Theme::uses(\CustomTheme::find($website->template_id)->theme_name)->layout('default');
+        $this->theme = \Theme::uses('theme-arvent')->layout('default');
 
 
         $this->theme->asset()->serve('website');

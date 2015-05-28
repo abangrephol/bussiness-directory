@@ -29,7 +29,7 @@ return array(
     */
 
     'events' => array(
-        'assets' => function($asset)
+        'asset' => function($asset)
         {
             $asset->cook('website',function($asset){
 
@@ -39,7 +39,7 @@ return array(
                 $asset->usePath()->add('bootstrap-css','css/bootstrap.css');
                 $asset->usePath()->add('default-css','css/style.css');
                 $asset->usePath()->add('animate-css','css/animate.css');
-                $asset->container('footer')->add('jquery','js/jquery.min.js');
+                $asset->container('footer')->usePath()->add('jquery','js/jquery.min.js');
                 $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
                 $asset->container('footer')->usePath()->add('j-easing','js/jquery.easing.js');
                 $asset->container('footer')->usePath()->add('j-waypoint','js/jquery-waypoints.js');

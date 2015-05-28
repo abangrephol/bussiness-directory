@@ -45,7 +45,7 @@ if($pageId!=0){
 
                                     <div class="block">
                                         <label>
-                                            {{ Form::checkbox('isHome', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page slug')) }}
+                                            {{ Form::checkbox('isHome', null ,null , array('required'=>'required')) }}
                                             &nbsp;Is Home page ?
                                         </label>
                                     </div>

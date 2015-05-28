@@ -9,102 +9,18 @@
         <div class="row">
             <div class="span2">
                 <div id="logo" class="logo">
-                    <a href="./" rel="home"><img src="images/logo.png" alt="LOGO" /></a>
+                    <a href="./" rel="home"><img src="{{ (CustomWebsiteData::get_key($id,'logo')) ?: Theme::asset()->url('images/logo.png')}}" alt="LOGO" /></a>
                 </div><!-- /.logo -->
             </div><!-- /.roll-col2 -->
             <div class="span10">
                 <div class="btn-menu"></div><!-- //mobile menu button -->
                 <nav id="mainnav" class="mainnav">
                     <ul class="menu">
-                        <li><a class="active" href="index.html">HOME</a>
-                            <ul class="sub-menu">
-                                <li><a href="index.html">Home 1</a></li>
-                                <li><a href="index-2.html">Home 2</a></li>
-                                <li><a href="index-3.html">Home 3</a></li>
-                                <li><a href="index-4.html">Home 4</a></li>
-                                <li><a href="index-5.html">Home 5</a></li>
-                                <li><a href="index-6.html">Home 6</a></li>
-                                <li><a href="index-7.html">Home 7</a></li>
-                                <li><a href="index-8.html">Home 8</a></li>
-                                <li><a href="index-9.html">Home 9</a></li>
-                                <li><a href="index-10.html">Home 10</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="blog.html">BLOG</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html">Blog 1</a></li>
-                                <li><a href="blog-2.html">Blog 2</a></li>
-                                <li><a href="blog-post.html">Blog Post</a></li>
-                                <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="portfolio.html">PORTFOLIO</a>
-                            <ul class="sub-menu">
-                                <li><a href="portfolio.html">Portfolio 1</a></li>
-                                <li><a href="portfolio-2.html">Portfolio 2</a></li>
-                                <li><a href="portfolio-3.html">Portfolio 3</a></li>
-                                <li><a href="portfolio-4.html">Portfolio 4</a></li>
-                                <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                <li><a href="portfolio-details-fullwidth.html">Portfolio Details Fullwidth</a></li>
-                                <li><a href="portfolio-details-small.html">Portfolio Details Small</a></li>
-                                <li><a href="portfolio-onepage.html">Portfolio Onepage</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="index-3.html">SHOP</a>
-                            <ul class="sub-menu">
-                                <li><a href="about.html">Product</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="product-list.html">Product List</a></li>
-                                        <li><a href="product-list-cartdown.html">Product List Cart</a></li>
-                                        <li><a href="product-list-dropdown.html">Product List Dropdown</a></li>
-                                        <li><a href="product-details.html">Product Details 1</a></li>
-                                        <li><a href="product-details-2.html">Product Details 2</a></li>
-                                    </ul><!-- /.submenu -->
-                                </li>
-                                <li><a href="account.html">Account</a></li>
-                                <li><a href="cart.html">Cart</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="cart-sticky.html">Cart Sticky</a></li>
-                                    </ul><!-- /.submenu -->
-                                </li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="#">PAGES</a>
-                            <ul class="sub-menu">
-                                <li><a href="404.html">404</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="help.html">Help</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="search-result.html">Search Result</a></li>
-                                <li><a href="sidenavigation.html">Side Navigation</a></li>
-                                <li><a href="single-page.html">Single Page</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="widget.html">Widget</a></li>
-                                <li><a href="shortcode.html">Shortcode</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="services.html">SERVICES</a>
-                            <ul class="sub-menu">
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="services-alt.html">Services Alt</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="landing.html">LANDING PAGE</a>
-                            <ul class="sub-menu">
-                                <li><a href="landing.html">Landing 1</a></li>
-                                <li><a href="landing-2.html">Landing 2</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="#">ABOUT</a>
-                            <ul class="sub-menu">
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="about-alt.html">About Alt</a></li>
-                                <li><a href="about-box.html">About Boxed</a></li>
-                            </ul><!-- /.submenu -->
-                        </li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="/" class="active">Home</a></li>
+                        @foreach(CustomWebsite::getMenu($id) as $menu)
+                        <li><a href="{{URL::to('/page/'.$menu->slug)}}">{{$menu->name}}</a></li>
+                        @endforeach
+
                         <li class="social twitter"><a href="#"><i class="icon-twitter-circled"></i></a></li>
                         <li class="social facebook"><a href="#"><i class="icon-facebook-circled"></i></a></li>
                     </ul><!-- /.menu -->
@@ -117,10 +33,10 @@
 <section class="head-slider default parallax">
     <div class="overlay"></div>
     <ul class="image-bg">
-        <li class="sleft"><img src="images/slider/1.jpg" alt="image"></li>
-        <li class="sright"><img src="images/slider/2.jpg" alt="image"></li>
-        <li class="stop"><img src="images/slider/1.jpg" alt="image"></li>
-        <li class="sbottom"><img src="images/slider/2.jpg" alt="image"></li>
+        <li class="sleft"><img src="{{Theme::asset()->url('images/slider/1.jpg')}}" alt="image"></li>
+        <li class="sright"><img src="{{Theme::asset()->url('images/slider/2.jpg')}}" alt="image"></li>
+        <li class="stop"><img src="{{Theme::asset()->url('images/slider/1.jpg')}}" alt="image"></li>
+        <li class="sbottom"><img src="{{Theme::asset()->url('images/slider/2.jpg')}}" alt="image"></li>
     </ul>
     <div class="container">
         <div class="row">
@@ -164,20 +80,20 @@
 
 <section class="roll-row main-page services-home roll-animation" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
     <div class="container">
-        <div class="row">
+        <div class="row" id="body">
             <div class="span12">
                 <div class="items">
-                    <img src="images/home/1.jpg" alt="image">
+                    <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
                     <h5 class="title">STELLAR BEHIND THE SCENES</h5>
                     <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
                 </div><!-- /.items -->
                 <div class="items">
-                    <img src="images/home/1.jpg" alt="image">
+                    <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
                     <h5 class="title">AWESOME, OUT OF THE BOX</h5>
                     <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
                 </div><!-- /.items -->
                 <div class="items">
-                    <img src="images/home/1.jpg" alt="image">
+                    <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
                     <h5 class="title">DREAM DEAL</h5>
                     <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
                 </div><!-- /.items -->
@@ -294,14 +210,14 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="images/widget/1.jpg" class="image" alt="image">
+                                    <img src="{{Theme::asset()->url('images/widget/1.jpg')}}" class="image" alt="image">
                                     <p>Mail-steamers, and those carrying travellers between </p>
                                     <span>NOVEMBER 20, 2013</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="images/widget/2.jpg" class="image" alt="image">
+                                    <img src="{{Theme::asset()->url('images/widget/2.jpg')}}" class="image" alt="image">
                                     <p>America, China, Japan, and the Oriental islands put in.</p>
                                     <span>NOVEMBER 20, 2013</span>
                                 </a>
@@ -333,22 +249,22 @@
                         <h5 class="title">RECENT PROJECTS</h5>
                         <ul>
                             <li>
-                                <a href="#"><img src="images/widget/3.jpg" alt="image"></a>
+                                <a href="#"><img src="{{Theme::asset()->url('images/widget/3.jpg')}}" alt="image"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="images/widget/4.jpg" alt="image"></a>
+                                <a href="#"><img src="{{Theme::asset()->url('images/widget/4.jpg')}}" alt="image"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="images/widget/5.jpg" alt="image"></a>
+                                <a href="#"><img src="{{Theme::asset()->url('images/widget/5.jpg')}}" alt="image"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="images/widget/6.jpg" alt="image"></a>
+                                <a href="#"><img src="{{Theme::asset()->url('images/widget/6.jpg')}}" alt="image"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="images/widget/7.jpg" alt="image"></a>
+                                <a href="#"><img src="{{Theme::asset()->url('images/widget/7.jpg')}}" alt="image"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="images/widget/8.jpg" alt="image"></a>
+                                <a href="#"><img src="{{Theme::asset()->url('images/widget/8.jpg')}}" alt="image"></a>
                             </li>
                         </ul>
                     </div><!-- /.widget-recent-project -->
@@ -362,10 +278,9 @@
                 <div class="span12">
                     <div class="copyright">&copy; 2014 Avent Inc.</div><!-- /.copyright -->
                     <div class="link">
-                        <a href="#">TERMS OF USE</a>
-                        <a href="#">PRIVACY POLICY</a>
-                        <a href="#">CONTACT</a>
-                        <a href="#">SUPPORT</a>
+                        @foreach(CustomWebsite::getMenu($id) as $menu)
+                        <a href="{{URL::to('/page/'.$menu->slug)}}">{{$menu->name}}</a>
+                        @endforeach
                     </div><!-- /.link -->
                     <div class="social">
                         <a href="#"><i class="icon-twitter-circled"></i></a>
