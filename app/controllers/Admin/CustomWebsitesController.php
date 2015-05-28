@@ -226,8 +226,7 @@ class CustomWebsitesController extends BaseController {
         );
         session_start();
         $_SESSION["RF"]["subfolder"] = "$id";
-        echo $path = public_path().'/uploads/images/' . $id;
-        \File::makeDirectory($path, $mode = 0777, true);
+        \File::makeDirectory($path, $mode = 0777, true, true);
         if(isset($pageId) && $pageId!=0){
             $data['data'] = \CustomWebsitePage::find($pageId);
             $custom_data = json_decode(\CustomWebsitePage::find($pageId)->custom_data);
