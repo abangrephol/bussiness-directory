@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'dev6_business_directory',
-			'username'  => 'dev6_business',
-			'password'  => 'businessdirectory',
+			'database'  => 'bussiness-directory',
+			'username'  => 'appbd',
+			'password'  => 'appbd',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
