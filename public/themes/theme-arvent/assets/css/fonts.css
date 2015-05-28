@@ -1,0 +1,13 @@
+/* ======================================================================== */
+/* ! Font
+/* ======================================================================== */
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?3557651');
+  src: url('../font/fontello.eot?3557651#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?3557651') format('woff'),
+       url('../font/fontello.ttf?3557651') format('truetype'),
+       url('../font/fontello.svg?3557651#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

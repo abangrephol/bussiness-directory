@@ -1,11 +1,11 @@
 <?php
 if($pageId!=0){
 ?>
-{{ Form::model($data, array('route' => array('admin.categories.update', $data->id),'method'=>'PUT','class'=>'form')) }}
+{{ Form::model($data, array('route' => array('admin.categories.update', $data->id),'method'=>'PUT','class'=>'form form-horizontal')) }}
 <?php
 }else{
 ?>
-{{ Form::open(array('route' => array('admin.custom-website.store'),'method'=>'POST','class'=>'form')) }}
+{{ Form::open(array('route' => array('admin.custom-website.store'),'method'=>'POST','class'=>'form form-horizontal')) }}
 <?php
 }
 ?>
@@ -21,11 +21,15 @@ if($pageId!=0){
                 <div class="toolbar">
                     <ul class="filemanager-options panel-primary">
                         <li class="">
-                    <span class="itemopt preview">
-                            <i class="fa fa-eye"></i>&nbsp;Preview
-                    </span>
+                            <span class="itemopt preview">
+                                    <i class="fa fa-eye"></i>&nbsp;Preview
+                            </span>
                         </li>
-
+                        <li class="">
+                            <span class="itemopt reload">
+                                    <i class="fa fa-refresh"></i>&nbsp;Reload
+                            </span>
+                        </li>
                         <li class="pull-right" style="  padding-bottom: 0px;   padding-top: 2px;">
                             <div class="">
                                 <div class="form-group {{ $errors->has('status')?'has-error':'' }}">
@@ -53,36 +57,129 @@ if($pageId!=0){
                 </div>
                 <iframe id="builder" width="100%" scrolling="no" class=""></iframe>
             </div>
-            <div class="tab-pane" id="site-setting" style="padding-top:15px">
+            <div class="tab-pane" id="site-setting" style="padding:15px">
                 <div class="row mb10">
-                    <div class="col-sm-4">
-                        <div class="form-group {{ $errors->has('name')?'has-error':'' }}">
-                            {{ Form::label('name', 'Page Name', array('class' => 'control-label required' )) }}
-                            {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page name')) }}
-                            <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb10">
-                    <div class="col-sm-4">
-                        <div class="form-group {{ $errors->has('title')?'has-error':'' }}">
-                            {{ Form::label('title', 'Page Title', array('class' => 'control-label required' )) }}
-                            {{ Form::text('title', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page title')) }}
-                            <label id='title_error' for='title' class='error' style='display: inline-block;'>{{ $errors->first('title') }}</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb10">
-                    <div class="col-sm-4">
-                        <div class="form-group {{ $errors->has('slug')?'has-error':'' }}">
-                            {{ Form::label('slug', 'Page Slug', array('class' => 'control-label required' )) }}
-                            {{ Form::text('slug', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page slug')) }}
-                            <label id='slug_error' for='slug' class='error' style='display: inline-block;'>{{ $errors->first('slug') }}</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <div class="col-sm-6">
+                        <div class="row mb10">
 
+                                <div class="form-group {{ $errors->has('name')?'has-error':'' }}">
+                                    {{ Form::label('name', 'Page Name', array('class' => 'col-sm-3 control-label required' )) }}
+                                    <div class="col-sm-8">
+                                        {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page name')) }}
+                                        <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group {{ $errors->has('title')?'has-error':'' }}">
+                                    {{ Form::label('title', 'Page Title', array('class' => 'col-sm-3 control-label required' )) }}
+                                    <div class="col-sm-8">
+                                        {{ Form::text('title', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page title')) }}
+                                        <label id='title_error' for='title' class='error' style='display: inline-block;'>{{ $errors->first('title') }}</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group {{ $errors->has('slug')?'has-error':'' }}">
+                                    {{ Form::label('slug', 'Page Slug', array('class' => 'col-sm-3 control-label required' )) }}
+                                    <div class="col-sm-8">
+                                        {{ Form::text('slug', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter page slug')) }}
+                                        <label id='slug_error' for='slug' class='error' style='display: inline-block;'>{{ $errors->first('slug') }}</label>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row mb20">
+
+                            <div class="form-group ">
+                                {{ Form::label('background-color', 'Background Color', array('class' => 'col-sm-3 control-label' )) }}
+                                <div class="col-sm-8">
+                                    {{ Form::text('background-color', $background_color , array('class'=>'form-control colorpicker-input','required'=>'required','placeholder'=>'Default')) }}
+                                    <span id="colorSelector" class="colorselector">
+                                        <span></span>
+                                    </span>
+                                    <label id='background-color_error' for='background-color' class='error' style='display: inline-block;'>{{ $errors->first('background-color') }}</label>
+                                </div>
+                            </div>
+
+                            <?php if (isset($banners)){
+
+                                ?>
+                                <div class="form-group ">
+                                    {{ Form::label('banners', 'Banners', array('class' => 'col-sm-3 control-label' )) }}
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            {{ Form::text('banner[]', $banners[0] , array('class'=>'form-control col-sm-9','required'=>'required','placeholder'=>'Select an image','id'=>'banner-1')) }}
+                                            <div class="input-group-btn">
+                                                <a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0&field_id=banner-1')}}" class="btn btn-default iframe-btn" type="button">Select File</a>
+                                                <a class="btn btn-default addButton"><i class="fa fa-plus"></i></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            <?php
+                                for ($i=1;$i <count($banners);$i++){
+
+                            ?>
+                                <div class="form-group">
+                                    <div class="col-sm-8 col-sm-offset-3">
+                                        <div class="input-group">
+                                            {{ Form::text('banner[]', $banners[$i] , array('class'=>'form-control col-sm-9','required'=>'required','placeholder'=>'Select an image')) }}
+                                            <div class="input-group-btn">
+                                                <a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0')}}" class="btn btn-default iframe-btn" type="button">Select File</a>
+                                                <a class="btn btn-default removeButton"><i class="fa fa-minus"></i></a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <?php }
+                            }else{ ?>
+                            <div class="form-group ">
+                                {{ Form::label('banners', 'Banners', array('class' => 'col-sm-3 control-label' )) }}
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        {{ Form::text('banner[]', null , array('class'=>'form-control col-sm-9','required'=>'required','placeholder'=>'Select an image','id'=>'banner-1')) }}
+                                        <div class="input-group-btn">
+                                            <a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0&field_id=banner-1')}}" class="btn btn-default iframe-btn" type="button">Select File</a>
+                                            <a class="btn btn-default addButton"><i class="fa fa-plus"></i></a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group hide" id="template">
+                                <div class="col-sm-8 col-sm-offset-3">
+                                    <div class="input-group">
+                                        {{ Form::text('banner[]', null , array('class'=>'form-control col-sm-9','required'=>'required','placeholder'=>'Select an image')) }}
+                                        <div class="input-group-btn">
+                                            <a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0')}}" class="btn btn-default iframe-btn" type="button">Select File</a>
+                                            <a class="btn btn-default removeButton"><i class="fa fa-minus"></i></a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <?php } ?>
+                            <div class="form-group ">
+                                {{ Form::label('body-font', 'Body Font', array('class' => 'col-sm-3 control-label' )) }}
+                                <div class="col-sm-8">
+                                    {{ Form::text('body-font', $body_font , array('class'=>'form-control','required'=>'required','placeholder'=>'Type font name from google fonts')) }}
+                                    <label id='body-font_error' for='body-font' class='error' style='display: inline-block;'>{{ $errors->first('body-font') }}</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
 
 
@@ -90,6 +187,10 @@ if($pageId!=0){
 </div>
 {{ Form::close() }}
 <script>
+    function responsive_filemanager_callback(field_id,data){
+        console.log(data);
+        //your code
+    }
     jQuery(document).ready(function(){
         $('#builder').iFrameResize();
 
@@ -118,6 +219,9 @@ if($pageId!=0){
                 $(this).html('<i class="fa fa-edit"></i>&nbsp;<span>Edit</span>');
             }
 
+        });
+        jQuery('.reload').live('click',function(){
+            $( '#builder' ).attr( 'src', function ( i, val ) { return val; });
         });
         jQuery('.save').live('click',function(){
             if(jQuery(this).find('a').hasClass('disabled')==false){
@@ -149,7 +253,52 @@ if($pageId!=0){
             }
 
         });
+        jQuery('#colorSelector').ColorPicker({
+            onShow: function (colpkr) {
+                jQuery(colpkr).fadeIn(500);
+                return false;
+            },
+            onHide: function (colpkr) {
+                jQuery(colpkr).fadeOut(500);
+                return false;
+            },
+            onChange: function (hsb, hex, rgb) {
+                jQuery('#colorSelector span').css('backgroundColor', '#' + hex);
+                jQuery('#colorSelector').prev().val('#'+hex);
+            }
+        });
+        var bannerIn = 1;
+        jQuery('.addButton').live('click', function() {
+            var $template = $('#template');
+            var $clone    = $template
+                    .clone()
+                    .removeClass('hide')
+                    .removeAttr('id');
+            bannerIn++;
+            $clone.find('input').attr('id','banner-'+bannerIn);
+            $clone.find('.iframe-btn').attr('href',$clone.find('.iframe-btn').attr('href')+'&field_id=banner-'+bannerIn);
+            $clone.insertBefore($template);
+            var $option   = $clone.find('[name="option[]"]');
 
+            // Add new field
+            //$('#surveyForm').formValidation('addField', $option);
+        });
+        jQuery('.removeButton').live('click', function() {
+            var $row    = $(this).parents('.form-group'),
+                $option = $row.find('[name="option[]"]');
+
+            // Remove element containing the option
+            $row.remove();
+        });
+        jQuery('.iframe-btn').live('click', function(e) {
+            jQuery(this).fancybox({
+                'width'		: 900,
+                'height'	: 600,
+                'type'		: 'iframe',
+                'autoScale'    	: false
+            });
+            e.preventDefault();
+        });
 
     });
     jQuery(window).load(function(){
@@ -172,8 +321,10 @@ if($pageId!=0){
     .filemanager-options li.btn {
         color: #fff;
     }
-    .save,.preview,.edit-page{
+    .save,.preview,.reload,.edit-page{
         cursor: pointer;
     }
-
+    .input-group-btn .btn {
+        line-height: 26px !important;
+    }
 </style>

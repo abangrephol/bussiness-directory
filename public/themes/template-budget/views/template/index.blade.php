@@ -6,8 +6,8 @@
         <!-- Top Bar Menu -->
         <div class="ten columns">
             <ul class="top-bar-menu">
-                <li><i class="fa fa-phone"></i> (564) 123 4567</li>
-                <li><i class="fa fa-envelope"></i> <a href="#">mail@example.com</a></li>
+                <li><i class="fa fa-phone"></i> {{ CustomWebsiteData::get_key($id,'header-phone')}}</li>
+                <li><i class="fa fa-envelope"></i> <a href="#">{{ CustomWebsiteData::get_key($id,'header-email')}}</a></li>
             </ul>
         </div>
 
@@ -35,7 +35,7 @@
     <!-- Logo -->
     <div class="four columns">
         <div id="logo">
-            <h1><a href="index.html"><img src="{{ Theme::asset()->url('images/logo.png')}}" alt="Wirednest" /></a></h1>
+            <h1><a href="index.html"><img src="{{ (CustomWebsiteData::get_key($id,'logo')) ?: Theme::asset()->url('images/logo.png')}}" alt="Wirednest" /></a></h1>
         </div>
     </div>
 
@@ -81,6 +81,13 @@
         <div class="tp-banner">
             <ul>
                 <!-- Slide 1  -->
+                @if(isset($banners))
+                    @foreach($banners as $banner)
+                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                        <img src="{{ $banner }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                    </li>
+                    @endforeach
+                @else
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
                     <img src="{{ Theme::asset()->url('images/slider2.jpg') }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                     <!--div class="caption description sfb fadeout" data-x="right" data-y="bottom" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
@@ -98,7 +105,7 @@
                         <a href="shop-with-sidebar.html" class="caption-btn">Get This Theme</a>
                     </div-->
                 </li>
-
+                @endif
             </ul>
         </div>
     </div>
@@ -162,27 +169,15 @@
     <!-- Container -->
     <div class="container">
 
-        <div class="four columns ">
-            <img src="{{ Theme::asset()->url('images/logo-footer.png') }}" alt="" class="margin-top-10"/>
-            <p class="margin-top-15 ">Nulla facilisis feugiat magna, ut molestie metus hendrerit vitae. Vivamus tristique lectus at varius rutrum. Integer lobortis mauris non consectetur eleifend.</p>
-        </div>
-
-        <div class="four columns ">
-
-            <!-- Headline -->
-            <h3 class="headline footer ">Customer Service</h3>
+        <div class="six columns ">
+            <h3 class="headline footer ">About</h3>
             <span class="line"></span>
             <div class="clearfix"></div>
-
-            <ul class="footer-links ">
-                <li><a href="#">Order Methods</a></li>
-                <li><a href="#">Payment Methods</a></li>
-                <li><a href="#">Delivery & Returns</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-
+            <p class="margin-top-15 ">
+                {{ CustomWebsiteData::get_key($id,'footer-about')}}
+            </p>
         </div>
+
 
         <div class="four columns ">
 
@@ -202,7 +197,7 @@
 
         </div>
 
-        <div class="four columns ">
+        <div class="six columns ">
 
             <!-- Headline -->
             <h3 class="headline footer ">Newsletter</h3>

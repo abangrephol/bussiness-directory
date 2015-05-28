@@ -63,61 +63,58 @@
                 {{ Form::close() }}
             </div>
             <div class="tab-pane" id="site-setting" style="padding-top:15px">
-                <div class="row mb20">
+                {{ Form::model($data, array('route' => array('admin.custom-website.update', $data->id),'method'=>'PUT','class'=>'form')) }}
+                {{ Form::hidden('setting-type','site')}}
+                <div class="row mb10">
                     <div class="col-sm-12">
                         <div class="form-group ">
-                            {{ Form::label('background-color', 'Background Color', array('class' => 'col-sm-offset-1 col-sm-3 control-label' )) }}
-                            <div class="col-sm-7">
-                                {{ Form::text('background-color', null , array('class'=>'form-control colorpicker-input','required'=>'required','placeholder'=>'Default')) }}
-                                <span id="colorSelector" class="colorselector">
-                                    <span></span>
-                                </span>
-                                <label id='background-color_error' for='background-color' class='error' style='display: inline-block;'>{{ $errors->first('background-color') }}</label>
+                            <h4 class="col-sm-12 subtitle mb5">Header Setting</h4>
+                        </div>
+                        <div class="form-group ">
+                            {{ Form::label('logo', 'Logo', array('class' => 'col-sm-offset-1 col-sm-3 control-label required' )) }}
+                            <div class="col-sm-5">
+                                <div class="input-group">
+                                    {{ Form::text('logo', CustomWebsiteData::get_key($id,'logo') , array('class'=>'form-control col-sm-9','required'=>'required','placeholder'=>'Select an image','id'=>'logo')) }}
+                                    <div class="input-group-btn">
+                                        <a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0&field_id=logo')}}" class="btn btn-default iframe-btn" type="button">Select File</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            {{ Form::label('header-email', 'Email (header)', array('class' => 'col-sm-offset-1 col-sm-3 control-label' )) }}
+                            <div class="col-sm-5">
+                                {{ Form::text('header-email', CustomWebsiteData::get_key($id,'header-email') , array('class'=>'form-control','placeholder'=>'Optional email for header')) }}
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            {{ Form::label('header-phone', 'Phone (header)', array('class' => 'col-sm-offset-1 col-sm-3 control-label' )) }}
+                            <div class="col-sm-5">
+                                {{ Form::text('header-phone', CustomWebsiteData::get_key($id,'header-phone') , array('class'=>'form-control','placeholder'=>'Optional phone for header')) }}
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="form-group ">
-                            {{ Form::label('banners', 'Banners', array('class' => 'col-sm-offset-1 col-sm-3 control-label' )) }}
-                            <div class="col-sm-7 fileupload fileupload-new" data-provides="fileupload">
-                                <div class="input-append">
-                                    <div class="uneditable-input">
-                                        <i class="glyphicon glyphicon-file fileupload-exists"></i>
-                                        <span class="fileupload-preview"></span>
-                                    </div>
-                                    <span class="btn btn-default btn-file">
-                                      <span class="fileupload-new">Select file</span>
-                                      <span class="fileupload-exists">Change</span>
-                                      {{ Form::file('banner[]') }}
-                                    </span>
-                                    <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
-                                    &nbsp;
-                                    <a class="btn btn-default"><i class="fa fa-plus"></i></a>
-                                </div>
-
-                            </div>
+                            <h4 class="col-sm-12 subtitle mb5">Footer Setting</h4>
                         </div>
-                    </div>
-                    <div class="col-sm-12 hide">
                         <div class="form-group ">
-                            {{ Form::label('banners', 'Banners', array('class' => 'col-sm-offset-1 col-sm-3 control-label' )) }}
-                            <div class="col-sm-7 fileupload fileupload-new" data-provides="fileupload">
-                                <div class="input-append">
-                                    <div class="uneditable-input">
-                                        <i class="glyphicon glyphicon-file fileupload-exists"></i>
-                                        <span class="fileupload-preview"></span>
-                                    </div>
-                                    <span class="btn btn-default btn-file">
-                                      <span class="fileupload-new">Select file</span>
-                                      <span class="fileupload-exists">Change</span>
-                                      {{ Form::file('banner[]') }}
-                                    </span>
-                                    <a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
-                                </div>
+                            {{ Form::label('footer-about', 'Footer About', array('class' => 'col-sm-offset-1 col-sm-3 control-label' )) }}
+                            <div class="col-sm-5">
+                                {{ Form::textarea('footer-about', CustomWebsiteData::get_key($id,'footer-about') , array('class'=>'form-control','placeholder'=>'Footer About Us')) }}
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-4">
+                            <button class="btn btn-primary">Update</button>
+                            <button type="reset" class="btn btn-default">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                {{ Form::close() }}
             </div>
         </div>
 
@@ -127,22 +124,15 @@
 
 <script>
     jQuery(document).ready(function(){
-        //if(jQuery('#colorpicker').length > 0) {
-            jQuery('#colorSelector').ColorPicker({
-                onShow: function (colpkr) {
-                    jQuery(colpkr).fadeIn(500);
-                    return false;
-                },
-                onHide: function (colpkr) {
-                    jQuery(colpkr).fadeOut(500);
-                    return false;
-                },
-                onChange: function (hsb, hex, rgb) {
-                    jQuery('#colorSelector span').css('backgroundColor', '#' + hex);
-                    jQuery('#colorSelector').prev().val('#'+hex);
-                }
+        jQuery('.iframe-btn').live('click', function(e) {
+            jQuery(this).fancybox({
+                'width'		: 900,
+                'height'	: 600,
+                'type'		: 'iframe',
+                'autoScale'    	: false
             });
-        //}
+            e.preventDefault();
+        });
         // Basic Form
         jQuery(".form").validate({
             highlight: function(element) {
@@ -174,7 +164,8 @@
                     error.insertBefore(element);
                 }
             }
-        });
+        })
+
         jQuery('#company_id').select2({width:'100%',allowClear:true});
         jQuery('#tld').select2({width:'100%',allowClear:true});
     });

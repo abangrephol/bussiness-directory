@@ -33,6 +33,7 @@ return array(
             $asset->cook('bootstrap',function($asset){
                 $asset->usePath()->add('default-css','css/style.default.css');
                 $asset->add('fa','//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
                 $asset->usePath()->add('jquery','js/jquery-1.10.2.min.js');
                 $asset->container('footer')->usePath()->add('jquery-migrate','js/jquery-migrate-1.2.1.min.js');
                 $asset->container('footer')->usePath()->add('jquery-ui','js/jquery-ui-1.10.3.min.js');
@@ -71,6 +72,8 @@ return array(
             $asset->cook('fileupload',function($asset){
                 $asset->container('style-after')->usePath()->add('fileupload-css','css/bootstrap-fileupload.min.css');
                 $asset->container('footer-after')->usePath()->add('fileupload-js','js/bootstrap-fileupload.min.js');
+                $asset->container('style-after')->usePath()->add('fancy-css','css/jquery.fancybox-1.3.4.css');
+                $asset->container('footer-after')->usePath()->add('fancy-js','js/jquery.fancybox-1.3.4.pack.js');
             });
             $asset->cook('builder',function($asset){
                 //$asset->add('aloha-css','3rdparty/alohaeditor/css/aloha.css');
@@ -81,11 +84,13 @@ return array(
                 $asset->container('footer-after')->usePath()->add('sticky','js/jquery.sticky.js');
                 $asset->container('footer-after')->usePath()->add('gritter','js/jquery.gritter.min.js');
                 $asset->container('footer-after')->usePath()->add('nestedSortable','js/jquery.mjs.nestedSortable.js');
+
             });
             $asset->cook('iframe',function($asset){
 
                 $asset->container('footer-after')->usePath()->add('iframe','js/iframeResizer.min.js');
             });
+
         },
         // Before event inherit from package config and the theme that call before,
         // you can use this event to set meta, breadcrumb template or anything

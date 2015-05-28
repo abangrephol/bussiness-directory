@@ -105,6 +105,39 @@ class CustomWebsitesController extends BaseController {
                 'templateId'=>\CustomWebsite::find($id)->template_id
             ));*/
     }
+
+    public function update($id){
+        $type = \Input::get('setting-type');
+        if(isset($type) && $type=='site'){
+            $logo = \CustomWebsiteData::set_key($id,'logo',\Input::get('logo'));
+            $header_email = \CustomWebsiteData::set_key($id,'header-email',\Input::get('header-email'));
+            $header_phone = \CustomWebsiteData::set_key($id,'header-phone',\Input::get('header-phone'));
+            $footer_about = \CustomWebsiteData::set_key($id,'footer-about',\Input::get('footer-about'));
+            return \Redirect::route('custom-website.pages',array(
+                'id'=>$id
+            ));
+        }else{
+            $customwebsite = \CustomWebsite::find($id);
+            if($customwebsite->validate()){
+                $customwebsite->save();
+                $messages = new \Illuminate\Support\MessageBag;
+                $messages->add('message', 'You have successfully create new Custom Website');
+                //return \Redirect::route('admin/custom-website/pages',array('id'=>$customwebsite->id))->with('messages',$messages);
+                return \Redirect::route('custom-website.pages',array(
+                    'id'=>$customwebsite->id
+                ))->with('messages',$messages);
+            }else{
+                $messages = new \Illuminate\Support\MessageBag;
+                $messages
+                    ->add('error',true)
+                    ->add('message', 'Failed to create new company');
+                return \Redirect::route('custom-website.pages')
+                    ->withErrors($customwebsite->errors())
+                    ->withInput()
+                    ->with('messages',$messages);
+            }
+        }
+    }
     public function chooseTemplates($id){
         $templateId = \Input::get('templateId');
         if(isset($templateId)){
@@ -130,8 +163,8 @@ class CustomWebsitesController extends BaseController {
 
     public function pages($id){
         $this->theme->asset()->serve('chosen');
-        $this->theme->asset()->serve('color-picker');
         $this->theme->asset()->serve('fileupload');
+
         $this->theme->asset()->serve('datatable');
         $this->theme->setPageTitle('Custom Websites - Pages');
 
@@ -157,23 +190,36 @@ class CustomWebsitesController extends BaseController {
         $this->theme->asset()->serve('iframe');
         $this->theme->asset()->serve('builder');
         $this->theme->asset()->serve('chosen');
+        $this->theme->asset()->serve('color-picker');
+        $this->theme->asset()->serve('fileupload');
         $this->theme->setPageTitle('Choose a Template');
         $pageId = \Input::get('pageId');
+        $pageData = isset($pageId)?\CustomWebsitePage::find($pageId):null ;
         $data = array(
             'id' => $id,
             'templateId' => $templateId,
-            'templates' => \CustomTemplate::getAll(),
+            'templates' => \CustomTheme::getAll(),
             'pageId' => isset($pageId)?$pageId:0,
-            'data' => isset($pageId)?\CustomWebsitePage::find($pageId):null
+            'data' => $pageData
         );
+        if($pageData!=null && isset($pageData->custom_data)){
+
+            $custom_data = json_decode($pageData->custom_data);
+            $data['banners'] = isset($custom_data->banners)?$custom_data->banners:null;
+            $data['background_color'] = isset($custom_data->background_color)?$custom_data->background_color:null;
+            $data['body_font'] = isset($custom_data->body_font)?$custom_data->body_font:null;
+            //$data = array_filter($data);
+        }
+
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
         return $this->theme->scope('custom-websites.builder',$data)->render();
     }
 
     public function builderEditor ($id,$templateId){
-        $this->theme = \Theme::uses(\CustomTemplate::find($templateId)->theme_name)->layout('default');
+        $this->theme = \Theme::uses(\CustomTheme::find($templateId)->theme_name)->layout('default');
         $this->theme->asset()->serve('editor');
         $pageId = \Input::get('pageId');
+
         $data = array(
             'id' => $id
         );
@@ -183,6 +229,15 @@ class CustomWebsitesController extends BaseController {
         \File::makeDirectory($path, $mode = 0777, true, true);
         if(isset($pageId) && $pageId!=0){
             $data['data'] = \CustomWebsitePage::find($pageId);
+            $custom_data = json_decode(\CustomWebsitePage::find($pageId)->custom_data);
+
+            if(isset($custom_data->body_font)){
+                $this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
+                $this->theme->asset()->writeStyle('inline-style', 'body,p { font-family: "'.$custom_data->body_font.'" !important; }', array());
+            }
+            if(isset($custom_data->banners)){
+                $data['banners'] = $custom_data->banners;
+            }
         }
         return $this->theme->scope('template.index',$data)->render();
     }
@@ -192,6 +247,13 @@ class CustomWebsitesController extends BaseController {
         if(isset($pageId) && $pageId!=0){
             $customwebsite = \CustomWebsitePage::find($pageId);
             parse_str(\Input::get('input'),$input);
+
+            $custom_data = array(
+                'background_color'=>$input['background-color'],
+                'banners' => array_filter($input['banner']),
+                'body_font' => $input['body-font']
+            );
+
             $customwebsite->custom_website_id = $id;
             $customwebsite->content = \Input::get('content');
             $customwebsite->isHome = isset($input['isHome'])?1:0;
@@ -199,6 +261,7 @@ class CustomWebsitesController extends BaseController {
             $customwebsite->title = $input['title'];
             $customwebsite->status = $input['status'];
             $customwebsite->name = $input['name'];
+            $customwebsite->custom_data = json_encode(array_filter($custom_data));
             if($customwebsite->validate()){
                 $customwebsite->save();
                 return \Response::json(array('result'=>'success','message'=>'Saved.'));
@@ -209,6 +272,11 @@ class CustomWebsitesController extends BaseController {
         }else{
             $customwebsite = new \CustomWebsitePage;
             parse_str(\Input::get('input'),$input);
+            $custom_data = array(
+                'background-color'=>$input['background-color'],
+                'banners' => array_filter($input['banner']),
+                'body-font' => $input['body-font']
+            );
             $customwebsite->custom_website_id = $id;
             $customwebsite->content = \Input::get('content');
             $customwebsite->isHome = isset($input['isHome'])?1:0;
@@ -216,6 +284,7 @@ class CustomWebsitesController extends BaseController {
             $customwebsite->title = $input['title'];
             $customwebsite->status = $input['status'];
             $customwebsite->name = $input['name'];
+            $customwebsite->custom_data = json_encode(array_filter($custom_data));
             if($customwebsite->validate()){
                 $customwebsite->save();
                 return \Response::json(array('result'=>'success','message'=>'Saved.'));

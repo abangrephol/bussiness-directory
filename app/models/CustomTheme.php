@@ -1,6 +1,6 @@
 <?php
 use \LaravelBook\Ardent\Ardent;
-class CustomTemplate extends  Ardent {
+class CustomTheme extends  Ardent {
     public $autoHydrateEntityFromInput = true;    // hydrates on new entries' validation
     public $forceEntityHydrationFromInput = true; // hydrates whenever validation is called
 
@@ -14,9 +14,9 @@ class CustomTemplate extends  Ardent {
         'name'                  => 'required|between:4,50',
     );
     public static function getAll(){
-        return CustomTemplate::all();
+        return CustomTheme::all();
     }
     public static function getLists(){
-        return CustomTemplate::all()->lists('name','id');
+        return CustomTheme::all()->lists('name','id');
     }
 }
