@@ -30,7 +30,7 @@ class CustomWebsitesController extends BaseController {
     }
     public function getWebsitePages()
     {
-        return \Datatable::collection(\CustomWebsitePage::get())
+        return \Datatable::collection(\CustomWebsitePage::where('custom_website_id',\Session::get('websiteId'))->get())
             ->showColumns('name','title')
             ->addColumn('action',function($model){
                 return \Theme::widget("buttonColumnPages", array("model" => $model))->render();
@@ -154,7 +154,7 @@ class CustomWebsitesController extends BaseController {
 
         $data = array(
             'id' => $id,
-            'templates' => \CustomTemplate::getAll()
+            'templates' => \CustomTheme::getAll()
         );
 
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
@@ -179,7 +179,7 @@ class CustomWebsitesController extends BaseController {
             'data' => isset($id)?\CustomWebsite::find($id):null,
             'companies' => \Company::getCompanyLists()
         );
-
+        \Session::put('websiteId', $id);
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
         return $this->theme->scope('custom-websites.pages',$data)->render();
     }

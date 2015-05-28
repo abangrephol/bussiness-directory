@@ -78,7 +78,7 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
             Route::get('company',array('as'=>'dt.company','uses'=>'CompaniesController@getDatatableAll'));
             Route::get('category',array('as'=>'dt.category','uses'=>'CategoriesController@getDatatableAll'));
             Route::get('custom-website',array('as'=>'dt.custom-website','uses'=>'CustomWebsitesController@getDatatableAll'));
-            Route::get('custom-website-pages',array('as'=>'dt.custom-website-pages','uses'=>'CustomWebsitesController@getWebsitePages'));
+            Route::get('custom-website-pages/{id}',array('as'=>'dt.custom-website-pages','uses'=>'CustomWebsitesController@getWebsitePages'));
         });
 
 

@@ -35,7 +35,7 @@
     <!-- Logo -->
     <div class="four columns">
         <div id="logo">
-            <h1><a href="index.html"><img src="{{ (CustomWebsiteData::get_key($id,'logo')) ?: Theme::asset()->url('images/logo.png')}}" alt="Wirednest" /></a></h1>
+            <h1><a><img src="{{ (CustomWebsiteData::get_key($id,'logo')) ?: Theme::asset()->url('images/logo.png')}}" alt="Wirednest" /></a></h1>
         </div>
     </div>
 
