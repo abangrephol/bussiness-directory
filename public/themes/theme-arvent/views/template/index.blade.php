@@ -80,118 +80,42 @@
 
 <section class="roll-row main-page services-home roll-animation" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
     <div class="container">
-        <div class="row" id="body">
-            <div class="span12">
-                <div class="items">
-                    <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
-                    <h5 class="title">STELLAR BEHIND THE SCENES</h5>
-                    <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
-                </div><!-- /.items -->
-                <div class="items">
-                    <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
-                    <h5 class="title">AWESOME, OUT OF THE BOX</h5>
-                    <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
-                </div><!-- /.items -->
-                <div class="items">
-                    <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
-                    <h5 class="title">DREAM DEAL</h5>
-                    <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
-                </div><!-- /.items -->
-            </div><!-- /.span12 -->
-        </div><!-- /.row -->
+        <div id="body">
+            @if (isset($data->content))
+            {{$data->content}}
+            @else
+            <div class="row">
+                <div class="span12">
+                    <div class="items">
+                        <div class="col-sm-12">
+                            <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
+                            <h5 class="title">STELLAR BEHIND THE SCENES</h5>
+                            <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
+                        </div>
+
+                    </div><!-- /.items -->
+                    <div class="items">
+                        <div class="col-sm-12">
+                            <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
+                            <h5 class="title">AWESOME, OUT OF THE BOX</h5>
+                            <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
+                        </div>
+                    </div><!-- /.items -->
+                    <div class="items">
+                        <div class="col-sm-12">
+                            <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
+                            <h5 class="title">DREAM DEAL</h5>
+                            <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
+                        </div>
+                    </div><!-- /.items -->
+                </div><!-- /.span12 -->
+            </div><!-- /.row -->
+            @endif
+        </div>
+
     </div><!-- /.container -->
 </section><!-- /.services-home -->
 
-<section class="roll-row withoutbox roll-animation"  data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%" style="padding-bottom: 48px; background-color: #f4f4f4;">
-    <div class="container">
-        <div class="row">
-            <div class="span3">
-                <div class="roll-withoutbox" style="padding-right: 15px;">
-                    <h6 class="title">BEARING THE FLAGS</h6>
-                    <p>This is an important port of call in the Pacific, where all the mail-steamers, and those carrying travellers between North America, China, Japan, and the Oriental </p>
-                </div>
-            </div><!-- /.span3 -->
-            <div class="span3">
-                <div class="roll-withoutbox" style="padding-right: 15px;">
-                    <h6 class="title">BEARING THE FLAGS</h6>
-                    <p>This is an important port of call in the Pacific, where all the mail-steamers, and those carrying travellers between North America, China, Japan, and the Oriental </p>
-                </div>
-            </div><!-- /.span3 -->
-            <div class="span3">
-                <div class="roll-withoutbox" style="padding-right: 15px;">
-                    <h6 class="title">BEARING THE FLAGS</h6>
-                    <p>This is an important port of call in the Pacific, where all the mail-steamers, and those carrying travellers between North America, China, Japan, and the Oriental </p>
-                </div>
-            </div><!-- /.span3 -->
-            <div class="span3">
-                <div class="roll-withoutbox" style="padding-right: 15px;">
-                    <h6 class="title">BEARING THE FLAGS</h6>
-                    <p>This is an important port of call in the Pacific, where all the mail-steamers, and those carrying travellers between North America, China, Japan, and the Oriental </p>
-                </div>
-            </div><!-- /.span3 -->
-            <div class="offset1 span10">
-                <div class="purchase-box" style="background-color: #fff; margin: 54px 0 40px 0;">
-                    <div class="detail">
-                        <h3>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important </h3>
-                        <a href="#" class="read-more">LEARN MORE ABOUT US</a>
-                    </div>
-                </div>
-            </div><!-- /.span10 -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</section><!-- /.withoutbox -->
-
-<section class="roll-row roll-animation"  data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%" style="padding: 40px 0 48px 0;">
-    <div class="container">
-        <div class="row">
-            <div class="span4">
-                <div class="progress-line">
-                    <h4 class="title">OUR SKILLS</h4>
-                    <div class="progress-single">
-                        <div class="icon icon-gauge"></div>
-                        <div class="perc">92%</div>
-                        <div class="progress-bar" data-percent="92" data-waypoint-active="yes">
-                            <div class="progress-animate"></div>
-                        </div>
-                    </div><!-- /.progress-single -->
-                    <div class="progress-single">
-                        <div class="icon icon-lifebuoy"></div>
-                        <div class="perc">60%</div>
-                        <div class="progress-bar" data-percent="60" data-waypoint-active="yes">
-                            <div class="progress-animate"></div>
-                        </div>
-                    </div><!-- /.progress-single -->
-                    <div class="progress-single">
-                        <div class="icon icon-camera"></div>
-                        <div class="perc">90%</div>
-                        <div class="progress-bar" data-percent="90" data-waypoint-active="yes">
-                            <div class="progress-animate"></div>
-                        </div>
-                    </div><!-- /.progress-single -->
-                </div><!-- /.progress-line -->
-            </div><!-- /.span4 -->
-            <div class="offset1 span7">
-                <div class="comment-respond home-getin">
-                    <h4 class="title">GET IN TOUCH</h4>
-                    <form class="comment-form" id="commentform" method="post" action="#">
-                        <div class="textarea-wrap">
-                            <textarea class="" tabindex="1" placeholder="Message" name="comment" required=""></textarea>
-                        </div>
-                        <div class="input-wrap name">
-                            <input type="text" size="14" value="" tabindex="2" placeholder="Name" name="name" required="">
-                        </div>
-                        <div class="input-wrap email">
-                            <input type="text" size="14" value="" tabindex="3" placeholder="E-mail" name="email" required="">
-                        </div>
-                        <div class="submit-wrap">
-                            <button type="submit" id="submitcomment" name="submitcomment" class="btn-submit">SUBMIT COMMENT</button>
-                        </div>
-                    </form>
-                </div><!-- /.comment-respond -->
-            </div><!-- /.span7 -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</section>
 
 <footer class="footer">
     <div class="footer-top">

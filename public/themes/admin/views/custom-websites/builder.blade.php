@@ -248,7 +248,8 @@ if($pageId!=0){
                             sticky: false,
                             time: ''
                         });
-
+                        if(data.type=="new")
+                            window.location = window.location+"?pageId="+data.id;
                     });
             }
 

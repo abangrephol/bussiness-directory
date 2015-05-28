@@ -3118,3 +3118,7 @@ input[type="color"],
 @media only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 
 }
+.span1tmptmp,.span2tmptmp,.span3tmptmp,.span4tmptmp,.span5tmptmp,.span6tmptmp,.span7tmptmp,.span8tmptmp
+,.span9tmptmp,.span10tmptmp,.span11tmptmp,.span12tmptmp {
+    margin-left: 0 !important;
+}

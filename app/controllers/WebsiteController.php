@@ -29,15 +29,18 @@ class WebsiteController extends BaseController {
 
         if(isset($id) && $id!=''){
             $home =$website->page()->where('isHome',1)->first() ;
-            $custom_data = json_decode($home->custom_data);
+            if(isset($home->custom_data)){
+                $custom_data = json_decode($home->custom_data);
 
-            if(isset($custom_data->body_font)){
-                $this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
-                $this->theme->asset()->writeStyle('inline-style', 'body,p { font-family: "'.$custom_data->body_font.'" !important; }', array());
+                if(isset($custom_data->body_font)){
+                    $this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
+                    $this->theme->asset()->writeStyle('inline-style', 'body,p { font-family: "'.$custom_data->body_font.'" !important; }', array());
+                }
+                if(isset($custom_data->banners)){
+                    $data['banners'] = $custom_data->banners;
+                }
             }
-            if(isset($custom_data->banners)){
-                $data['banners'] = $custom_data->banners;
-            }
+
             $data['data'] = $home;
         }
 
@@ -54,15 +57,17 @@ class WebsiteController extends BaseController {
         );
         if(isset($slug) && $slug!=''){
             $page = \CustomWebsitePage::where('slug',$slug)->first();
+            if(isset($page->custom_data)){
+                $custom_data = json_decode($page->custom_data);
+                if(isset($custom_data->body_font)){
+                    $this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
+                    $this->theme->asset()->writeStyle('inline-style', 'body,p { font-family: "'.$custom_data->body_font.'" !important; }', array());
+                }
+                if(isset($custom_data->banners)){
+                    $data['banners'] = $custom_data->banners;
+                }
+            }
 
-            $custom_data = json_decode($page->custom_data);
-            if(isset($custom_data->body_font)){
-                $this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
-                $this->theme->asset()->writeStyle('inline-style', 'body,p { font-family: "'.$custom_data->body_font.'" !important; }', array());
-            }
-            if(isset($custom_data->banners)){
-                $data['banners'] = $custom_data->banners;
-            }
             $data['data'] = $page;
         }
         return $this->theme->scope('template.index',$data)->render();

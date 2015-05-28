@@ -265,7 +265,7 @@ class CustomWebsitesController extends BaseController {
             $customwebsite->custom_data = json_encode(array_filter($custom_data));
             if($customwebsite->validate()){
                 $customwebsite->save();
-                return \Response::json(array('result'=>'success','message'=>'Saved.'));
+                return \Response::json(array('result'=>'success','message'=>'Saved.','type'=>'update'));
             }else{
                 return \Response::json(array('result'=>'fail','message'=>$customwebsite->errors()));
 
@@ -288,7 +288,7 @@ class CustomWebsitesController extends BaseController {
             $customwebsite->custom_data = json_encode(array_filter($custom_data));
             if($customwebsite->validate()){
                 $customwebsite->save();
-                return \Response::json(array('result'=>'success','message'=>'Saved.'));
+                return \Response::json(array('result'=>'success','message'=>'Saved.','type'=>'new','id'=>$customwebsite->id));
             }else{
                 return \Response::json(array('result'=>'fail','message'=>$customwebsite->errors()));
 

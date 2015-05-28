@@ -18,9 +18,9 @@
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-
-    {{ Theme::asset()->styles() }}
     {{ Theme::asset()->container('editor')->styles() }}
+    {{ Theme::asset()->styles() }}
+
     {{ Theme::asset()->scripts() }}
 
     <!-- Favicon and touch icons  -->
@@ -38,16 +38,11 @@
 
 <body>
 
-
-
-
     {{ Theme::partial('header') }}
     {{ Theme::content() }}
     {{ Theme::partial('footer') }}
-
-
-{{ Theme::asset()->container('editor')->scripts() }}
-{{ Theme::asset()->container('footer')->scripts() }}
+    {{ Theme::asset()->container('footer')->scripts() }}
+    {{ Theme::asset()->container('editor')->scripts() }}
 </body>
 
 </html>
