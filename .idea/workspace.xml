@@ -31,7 +31,7 @@
       <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="45" selection-start="9426" selection-end="9426" vertical-scroll-proportion="0.3761468" vertical-offset="3603" max-vertical-offset="5100">
+            <state line="228" column="8" selection-start="9435" selection-end="9435" vertical-scroll-proportion="0.40733945" vertical-offset="3603" max-vertical-offset="5117">
               <folding />
             </state>
           </provider>
@@ -1132,7 +1132,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="45" selection-start="9426" selection-end="9426" vertical-scroll-proportion="0.3761468" vertical-offset="3603" max-vertical-offset="5100">
+        <state line="228" column="8" selection-start="9435" selection-end="9435" vertical-scroll-proportion="0.40733945" vertical-offset="3603" max-vertical-offset="5117">
           <folding />
         </state>
       </provider>
