@@ -94,7 +94,7 @@ if($pageId!=0){
                             <div class="form-group ">
                                 {{ Form::label('background-color', 'Background Color', array('class' => 'col-sm-3 control-label' )) }}
                                 <div class="col-sm-8">
-                                    {{ Form::text('background-color', $background_color , array('class'=>'form-control colorpicker-input','required'=>'required','placeholder'=>'Default')) }}
+                                    {{ Form::text('background-color', isset($background_color)?$background_color:null , array('class'=>'form-control colorpicker-input','required'=>'required','placeholder'=>'Default')) }}
                                     <span id="colorSelector" class="colorselector">
                                         <span></span>
                                     </span>
@@ -169,7 +169,7 @@ if($pageId!=0){
                             <div class="form-group ">
                                 {{ Form::label('body-font', 'Body Font', array('class' => 'col-sm-3 control-label' )) }}
                                 <div class="col-sm-8">
-                                    {{ Form::text('body-font', $body_font , array('class'=>'form-control','required'=>'required','placeholder'=>'Type font name from google fonts')) }}
+                                    {{ Form::text('body-font', isset($body_font)?$body_font:null , array('class'=>'form-control','required'=>'required','placeholder'=>'Type font name from google fonts')) }}
                                     <label id='body-font_error' for='body-font' class='error' style='display: inline-block;'>{{ $errors->first('body-font') }}</label>
                                 </div>
                             </div>

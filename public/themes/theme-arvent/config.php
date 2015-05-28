@@ -32,13 +32,14 @@ return array(
         'assets' => function($asset)
         {
             $asset->cook('website',function($asset){
+
+
+            });
+            $asset->cook('bootstrap',function($asset){
                 $asset->usePath()->add('bootstrap-css','css/bootstrap.css');
                 $asset->usePath()->add('default-css','css/style.css');
                 $asset->usePath()->add('animate-css','css/animate.css');
                 $asset->container('footer')->add('jquery','js/jquery.min.js');
-
-            });
-            $asset->cook('bootstrap',function($asset){
                 $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
                 $asset->container('footer')->usePath()->add('j-easing','js/jquery.easing.js');
                 $asset->container('footer')->usePath()->add('j-waypoint','js/jquery-waypoints.js');
@@ -56,6 +57,7 @@ return array(
                 $asset->container('footer')->usePath()->add('jquery.animateNumber.js','js/jquery.animateNumber.js');
                 $asset->container('footer')->usePath()->add('smoothscroll.js','js/smoothscroll.js');
                 $asset->container('footer')->usePath()->add('main.js','js/main.js');
+                $asset->container('footer')->usePath()->add('iframe','js/iframeResizer.contentWindow.min.js');
             });
         },
         // Before event inherit from package config and the theme that call before,

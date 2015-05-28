@@ -216,6 +216,7 @@ class CustomWebsitesController extends BaseController {
     }
 
     public function builderEditor ($id,$templateId){
+
         $this->theme = \Theme::uses(\CustomTheme::find($templateId)->theme_name)->layout('default');
         $this->theme->asset()->serve('editor');
         $pageId = \Input::get('pageId');
