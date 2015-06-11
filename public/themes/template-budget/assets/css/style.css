@@ -3068,7 +3068,7 @@ blockquote {
 
 .icon-description {
 	float: left;
-	/*margin: -65px 0 0 82px;*/
+	margin: -65px 0 0 82px;
 }
 
 .icon-description h3 {
