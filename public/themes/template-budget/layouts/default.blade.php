@@ -17,7 +17,6 @@
     {{ Theme::asset()->styles() }}
     {{ Theme::asset()->container('editor')->styles() }}
     {{ Theme::asset()->scripts() }}
-
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -34,4 +33,5 @@
 
     {{ Theme::asset()->container('editor')->scripts() }}
     {{ Theme::asset()->container('footer')->scripts() }}
+
 </body>

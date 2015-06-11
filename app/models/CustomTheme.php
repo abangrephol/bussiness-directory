@@ -7,7 +7,7 @@ class CustomTheme extends  Ardent {
     protected $fillable = ['name','theme_name','author','thumbnail','preview']; //
     protected $guarded = ['id'];
     public static $customAttributes  = array(
-        'name'=>'Template name'
+        'name'=>'Theme name'
     );
 
     public static $rules = array(

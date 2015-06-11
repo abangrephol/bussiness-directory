@@ -38,7 +38,7 @@
                     'title' => 'Custom Websites List'
                 ),
                 array(
-                    'link' => 'custom-template',
+                    'link' => 'custom-theme',
                     'icon' => 'fa-building',
                     'title' => 'Themes  List'
                 ),

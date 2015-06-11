@@ -1,9 +1,8 @@
-<div class="loader">
+<!--div class="loader">
     <span class="loader1 block-loader"></span>
     <span class="loader2 block-loader"></span>
     <span class="loader3 block-loader"></span>
-</div>
-
+</div-->
 <header class="header">
     <div class="container">
         <div class="row">
@@ -44,7 +43,7 @@
                 <div class="flexslider">
                     <ul class="slides">
                         <li>
-                            <div class="content">
+                            <div class="content" >
                                 <h2 class="title captionDelay2 FromTop">Relax during workdays</h2>
                                 <p class="sub-title captionDelay2 FromBottom">At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of <br>call in the Pacific, where all the mail-steamers, and those carrying travellers between North </p>
                                 <a href="#" class="read-more captionDelay2 FromLeft">READ MORE</a>
@@ -79,7 +78,7 @@
 </section>
 
 <section class="roll-row main-page services-home roll-animation" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
-    <div class="container">
+    <div class="container" contenteditable="true">
         <div id="body">
             @if (isset($data->content))
             {{$data->content}}

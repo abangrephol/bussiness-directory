@@ -102,6 +102,7 @@ return array(
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
         'Pingpong\Widget\WidgetServiceProvider',
 
+
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -201,6 +202,7 @@ return array(
         'NestedSet' => 'Kalnoy\Nestedset\NestedSet',
         'Node' => 'Kalnoy\Nestedset\Node',
         'Widget' => 'Pingpong\Widget\Facades\Widget',
+        'Uuid' => 'Webpatser\Uuid\Uuid',
 	),
 
 );

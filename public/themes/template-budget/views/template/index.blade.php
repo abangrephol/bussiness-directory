@@ -1,6 +1,6 @@
 <!-- Top Bar
 ================================================== -->
-<div id="top-bar">
+<div id="top-bar" contenteditable="true">
     <div class="container">
 
         <!-- Top Bar Menu -->
@@ -84,7 +84,7 @@
                 @if(isset($banners))
                     @foreach($banners as $banner)
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
-                        <img src="{{ $banner }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+                        <img src="{{ $banner }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" class="mceNonEditable">
                     </li>
                     @endforeach
                 @else
@@ -114,57 +114,25 @@
 
 <!-- Featured
 ================================================== -->
-<div class="container" >
-    <div  id="body">
+<div class="container" id="body" contenteditable="true" >
+
         @if (isset($data->content))
         {{$data->content}}
         @else
         <div class="row">
-            <div class="col-sm-4 ">
-                <!-- Service -->
-                <div class="icon-box ">
-                    <div class="icon-description col-sm-12">
-                        <h3>Illustration</h3>
-                        <p>Nam condimentum nec mi aliquam accumsan phasellus nulla lorem gravida.</p>
-                        <a class="link" href="#">More Info</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 ">
-                <!-- Service -->
-                <div class="icon-box ">
-                    <div class="icon-description col-sm-12">
-                        <h3>Illustration</h3>
-                        <p>Nam condimentum nec mi aliquam accumsan phasellus nulla lorem gravida.</p>
-                        <a class="link" href="#">More Info</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-4 ">
-                <!-- Service -->
-                <div class="icon-box ">
-                    <div class="icon-description col-sm-12">
-                        <h3>Illustration</h3>
-                        <p>Nam condimentum nec mi aliquam accumsan phasellus nulla lorem gravida.</p>
-                        <a class="link" href="#">More Info</a>
-                    </div>
-                </div>
-            </div>
 
             <div class="clearfix"></div>
             <div class="margin-top-30"></div>
         </div>
         @endif
-    </div>
+
 
 
 </div>
 
 <!-- Footer
 ================================================== -->
-<div id="footer">
+<div id="footer" contenteditable="true">
 
     <!-- Container -->
     <div class="container">

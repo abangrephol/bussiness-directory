@@ -72,12 +72,18 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
         Route::post('custom-website/{id}/builder-save',array('as'=>'custom-website.builderSave','uses'=>'CustomWebsitesController@builderSave'));
         Route::get('custom-website/{id}/pages',array('as'=>'custom-website.pages','uses'=>'CustomWebsitesController@pages'));
         Route::get('custom-website/{id}/pages-delete/{pageId}',array('as'=>'custom-website.pages.delete','uses'=>'CustomWebsitesController@pagesDelete'));
+        Route::resource('custom-theme','CustomThemesController',array('names' => array('index'=>'admin/custom-theme')));
         Route::resource('custom-template','CustomTemplatesController',array('names' => array('index'=>'admin/custom-template')));
+        Route::get('template-list',array('as'=>'template-list','uses'=>'CustomTemplatesController@templateList'));
+        Route::resource('custom-widget','CustomWidgetsController',array('names' => array('index'=>'admin/custom-widget')));
 
         Route::group(array('prefix'=>'dt'),function(){
             Route::get('company',array('as'=>'dt.company','uses'=>'CompaniesController@getDatatableAll'));
             Route::get('category',array('as'=>'dt.category','uses'=>'CategoriesController@getDatatableAll'));
             Route::get('custom-website',array('as'=>'dt.custom-website','uses'=>'CustomWebsitesController@getDatatableAll'));
+            Route::get('custom-theme',array('as'=>'dt.custom-theme','uses'=>'CustomThemesController@getDatatableAll'));
+            Route::get('custom-template',array('as'=>'dt.custom-template','uses'=>'CustomTemplatesController@getDatatableAll'));
+            Route::get('custom-widget',array('as'=>'dt.custom-widget','uses'=>'CustomWidgetsController@getDatatableAll'));
             Route::get('custom-website-pages/{id}',array('as'=>'dt.custom-website-pages','uses'=>'CustomWebsitesController@getWebsitePages'));
         });
 

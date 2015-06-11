@@ -33,28 +33,20 @@ return array(
                 //$asset->cook('bootstrap',function($asset){
 
                     $asset->cook('editor',function($asset){
-                        $asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
                         $asset->usePath()->add('default-css','css/style.css');
-                        //$asset->usePath()->add('green-css','css/colors/green.css');
+                        $asset->container('footer')->add('editor','3rdparty/ckeditor/ckeditor.js');
+                        $asset->container('footer')->add('editor-filemanager','3rdparty/filemanager/js/plugins.js');
 
-                        //$asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
-
-                        $asset->container('editor')->add('grid-css','3rdparty/gridmanager/css/jquery.gridmanager.css');
-                        $asset->container('editor')->add('jq','3rdparty/gridmanager/js/jquery.js');
-                        $asset->container('editor')->add('bs','3rdparty/gridmanager/js/bootstrap.js');
-                        $asset->container('editor')->add('jui','3rdparty/gridmanager/js/jquery-ui.js');
-                        $asset->container('editor')->add('grid','3rdparty/gridmanager/js/jquery.gridmanager.js');
-
-                        $asset->container('editor')->add('builder','3rdparty/alohaeditor/builder.js');
-                        $asset->container('editor')->add('tinymce','//cdnjs.cloudflare.com/ajax/libs/tinymce/4.1.2/tinymce.min.js');
-                        $asset->container('editor')->add('jquery-tinymce','//cdnjs.cloudflare.com/ajax/libs/tinymce/4.1.2/jquery.tinymce.min.js');
                     });
                     $asset->cook('website',function($asset){
-                        $asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
+                        //$asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
                         $asset->usePath()->add('default-css','css/style.css');
-                        $asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
+                        //$asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
                     });
                     $asset->cook('bootstrap',function($asset){
+
+
+                        $asset->container('footer')->add('jquery-ui','//code.jquery.com/jquery-1.11.0.min.js');
                         $asset->container('footer')->add('jquery-migrate','//code.jquery.com/jquery-migrate-1.2.1.min.js');
                         $asset->container('footer')->usePath()->add('jpanelmenu','scripts/jquery.jpanelmenu.js');
                         $asset->container('footer')->usePath()->add('themepunch.plugins','scripts/jquery.themepunch.plugins.min.js');

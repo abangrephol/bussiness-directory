@@ -4,7 +4,7 @@
         <h4 class="panel-title-alt"><i class="fa fa-edit mr5"></i><span class="text-danger">Please enter template information</span></h4>
         <p>* = Required fields</p>
     </div>
-    {{ Form::model($data, array('route' =>  array('admin.custom-template.update', $data->id),'method'=>'PUT','class'=>'form form-horizontal')) }}
+    {{ Form::model($data, array('route' =>  array('admin.custom-widget.update', $data->id),'method'=>'PUT','class'=>'form form-horizontal')) }}
     <div class="panel-body">
 
         <div class="alert {{ Session::get('messages')? Session::get('messages')->has('error')?'alert-danger':'alert-success' :'hidden' }}">

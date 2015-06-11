@@ -56,6 +56,7 @@ if($pageId!=0){
                     </ul>
                 </div>
                 <iframe id="builder" width="100%" scrolling="no" class=""></iframe>
+
             </div>
             <div class="tab-pane" id="site-setting" style="padding:15px">
                 <div class="row mb10">
@@ -192,6 +193,88 @@ if($pageId!=0){
         //your code
     }
     jQuery(document).ready(function(){
+        /*$.ajax({
+            type: "GET",
+            dataType: 'html',
+            contentType: 'application/x-www-form-urlencoded',
+            url: "{{ route('custom-website.builderEditor',array('templateId'=>$templateId,'id'=>$id,'pageId'=>$pageId)) }}",
+            success: function (data, status, xhr) {
+                var $result = $.parseHTML(xhr.responseText,true),
+                    $data = xhr.responseText,
+                    $scripts = $($result).find("script").add($($result).filter("script")).detach(),
+                    $body = $($result).find("body").add($($result).filter("body")).detach();
+                $('#builder-tm').val(xhr.responseText);
+                /*var scriptArray = new Array();
+                $.each($scripts,function(i){
+                    scriptArray.push($(this).attr('src'));
+
+                })
+                CKEDITOR.scriptLoader.load( scriptArray, function( complete,failed ) {
+                    // Alerts true if the script has been properly loaded.
+                    // HTTP error 404 should return false.
+                    console.log( complete.length+" "+failed.length );
+                });
+
+
+                tinymce.init({
+                    mode: "textareas",
+                    schema: "html5",
+                    cleanup: false,
+                    remove_script_host : false,
+                    allow_script_urls: true,
+                    menubar:false,
+                    valid_elements : "*[*]",
+                    extended_valid_elements : "*[*],script[charset|defer|language|src|type],style",
+                    custom_elements: "*[*],script[charset|defer|language|src|type],style",
+                    valid_children : "+body[style],+body[script],+head[script]",
+                    verify_html : false,
+                    entity_encoding : "raw",
+                    media_strict: false,
+                    plugins: [
+                        "advlist autolink lists link image charmap print preview anchor",
+                        "searchreplace visualblocks code fullscreen",
+                        "insertdatetime media table  paste autoresize noneditable fullpage"
+                    ],
+                    //toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                    relative_urls: false,
+                    browser_spellcheck : false ,
+                    filemanager_title:"Responsive Filemanager",
+                    external_filemanager_path:"/3rdparty/filemanager/",
+                    external_plugins: { "filemanager" : "/3rdparty/filemanager/plugin.min.js"},
+                    codemirror: {
+                        indentOnInit: true, // Whether or not to indent code on init.
+                        path: 'CodeMirror'
+                    },
+
+                    image_advtab: true,
+                    toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+                    toolbar2: "| responsivefilemanager | image | media | link unlink anchor | print preview code  | youtube | qrcode | flickr | picasa | fullpage ",
+                    setup: function(editor) {
+                        editor.on('init',function(e){
+                            $(tinymce.activeEditor.getBody()).find('script[type="mce-no/type"]').remove();
+                            tinyMCE.activeEditor.setContent($data, {format : 'raw'});
+                        });
+                        editor.on('BeforeSetContent', function(e) {
+
+                            var scriptLoader = new tinymce.dom.ScriptLoader();
+                            $.each($scripts,function(i){
+
+                                scriptLoader.load($(this).attr('src'));
+                            })
+                            scriptLoader.loadQueue(function() {
+
+                            });
+
+
+                        });
+                    }
+
+                });
+
+            }
+        });*/
+
+
         $('#builder').iFrameResize();
 
         jQuery('body').addClass('leftpanel-collapsed');
@@ -229,7 +312,7 @@ if($pageId!=0){
                 var windowjQuery = $('#builder')[0].contentWindow.$;
                 var f = $('#builder').contents().find('#body');
                 var gm =windowjQuery.data(f[0], 'gridmanager');
-                gm.options['remoteURL'] ="{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}"
+                gm.options['remoteURL'] = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}"
                 gm.cleanup();
                 gm.deinitCanvas();
                 var canvas = gm.$el.find("#" + gm.options.canvasId);
@@ -302,6 +385,7 @@ if($pageId!=0){
         });
 
     });
+
     jQuery(window).load(function(){
         $('#builder').attr('src',"{{ route('custom-website.builderEditor',array('templateId'=>$templateId,'id'=>$id,'pageId'=>$pageId)) }}");
     })

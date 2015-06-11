@@ -58,6 +58,14 @@ return array(
                 $asset->container('footer-after')->usePath()->add('ckeditor','js/ckeditor/ckeditor.js');
                 $asset->container('footer-after')->usePath()->add('ckeditor-jquery','js/ckeditor/adapters/jquery.js');
             });
+            $asset->cook('codemirror',function($asset){
+                $asset->container('footer-after')->usePath()->add('codemirror','js/codemirror2/lib/codemirror.js');
+                $asset->container('footer-after')->usePath()->add('codemirror-xml','js/codemirror2/mode/xml/xml.js');
+                $asset->container('footer-after')->usePath()->add('codemirror-css','js/codemirror2/mode/css/css.js');
+                $asset->container('footer-after')->usePath()->add('codemirror-javascript','js/codemirror2/mode/javascript/javascript.js');
+                $asset->container('footer-after')->usePath()->add('codemirror-html','js/codemirror2/mode/htmlmixed/htmlmixed.js');
+                $asset->container('style-after')->usePath()->add('codemirror-css','js/codemirror2/lib/codemirror.css');
+            });
             $asset->cook('chosen',function($asset){
                 $asset->container('footer-after')->usePath()->add('chosen','js/select2.min.js');
             });
@@ -84,6 +92,7 @@ return array(
                 $asset->container('footer-after')->usePath()->add('sticky','js/jquery.sticky.js');
                 $asset->container('footer-after')->usePath()->add('gritter','js/jquery.gritter.min.js');
                 $asset->container('footer-after')->usePath()->add('nestedSortable','js/jquery.mjs.nestedSortable.js');
+                $asset->container('footer-after')->add('tinymce','3rdparty/ckeditor/ckeditor.js');
 
             });
             $asset->cook('iframe',function($asset){

@@ -22,7 +22,8 @@
         "chumper/datatable": "2.3",
         "cviebrock/eloquent-sluggable": "~2.0",
         "kalnoy/nestedset": "~2.0@beta",
-        "pingpong/widget": "1.2.0"
+        "pingpong/widget": "1.2.0",
+        "webpatser/laravel-uuid": "1.*"
 	},
 	"scripts":{
 		"post-update-cmd":[

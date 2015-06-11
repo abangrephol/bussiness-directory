@@ -217,6 +217,7 @@ class CustomWebsitesController extends BaseController {
 
     public function builderEditor ($id,$templateId){
 
+        \Session::set('thid-editor',$templateId);
         $this->theme = \Theme::uses(\CustomTheme::find($templateId)->theme_name)->layout('default');
         $this->theme->asset()->serve('editor');
         $pageId = \Input::get('pageId');
@@ -233,7 +234,7 @@ class CustomWebsitesController extends BaseController {
             $custom_data = json_decode(\CustomWebsitePage::find($pageId)->custom_data);
 
             if(isset($custom_data->body_font)){
-                $this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
+                //$this->theme->asset()->add('custom-font','//fonts.googleapis.com/css?family='.urlencode($custom_data->body_font));
                 $this->theme->asset()->writeStyle('inline-style', 'body,p { font-family: "'.$custom_data->body_font.'" !important; }', array());
             }
             if(isset($custom_data->banners)){

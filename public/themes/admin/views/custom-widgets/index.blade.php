@@ -2,7 +2,7 @@
     <div class="panel-body">
         <div class=" pull-right">
             <div class="btn-group">
-                <a class="btn btn-white" href="{{ URL::route('admin.custom-template.create') }}">Add New Template</a>
+                <a class="btn btn-white" href="{{ URL::route('admin.custom-widget.create') }}">Add New Widget</a>
             </div>
         </div>
         <h5 class="subtitle mb5">{{ Theme::get('pageTitle') }} list</h5>
