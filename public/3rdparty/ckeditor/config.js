@@ -56,4 +56,5 @@ CKEDITOR.editorConfig = function( config ) {
     config.filebrowserImageBrowseUrl = window.location.origin+'/3rdparty/filemanager/dialog.php?type=1&editor=ckeditor&fldr=';
 
     config.templates_files = [ window.location.origin+'/admin/template-list' ];
+    config.baseHref = window.location.origin;
 };

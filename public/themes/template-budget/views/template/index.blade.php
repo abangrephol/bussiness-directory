@@ -1,4 +1,4 @@
-<div id="sbheader" contenteditable="true">
+<div id="sbheader">
 <!-- Top Bar
 ================================================== -->
 <div id="top-bar">
@@ -76,7 +76,7 @@
 </div>
 <!-- Slider
 ================================================== -->
-<div class="container fullwidth-element home-slider wnwidgets">
+<div class="wnwidgets container fullwidth-element home-slider ">
 
     <div class="tp-banner-container">
         <div class="tp-banner">
@@ -113,7 +113,7 @@
 </div>
 
 
-<div id="sbbody" contenteditable="true">
+<div id="sbbody" >
 
 <!-- Featured
 ================================================== -->
@@ -134,7 +134,7 @@
 </div>
 </div>
 
-<div id="sbfooter" contenteditable="true">
+<div id="sbfooter">
 <!-- Footer
 ================================================== -->
 <div id="footer">

@@ -309,18 +309,22 @@ if($pageId!=0){
         jQuery('.save').live('click',function(){
             if(jQuery(this).find('a').hasClass('disabled')==false){
                 jQuery(this).find('a').addClass('disabled').html('Saving...');
-                var windowjQuery = $('#builder')[0].contentWindow.$;
-                var f = $('#builder').contents().find('#body');
-                var gm =windowjQuery.data(f[0], 'gridmanager');
-                gm.options['remoteURL'] = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}"
-                gm.cleanup();
-                gm.deinitCanvas();
-                var canvas = gm.$el.find("#" + gm.options.canvasId);
+                //var windowjQuery = $('#builder')[0].contentWindow.$;
+                var iframeWindow = $('#builder')[0].contentWindow;
+                //var f = $('#builder').contents().find('#body');
+                //var gm =windowjQuery.data(f[0], 'gridmanager');
+
+                var url = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}";
+
+                //gm.options['remoteURL'] = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}"
+                //gm.cleanup();
+                //gm.deinitCanvas();
+                //var canvas = gm.$el.find("#" + gm.options.canvasId);
                 $.ajax({
                     type: "POST",
-                    url:  gm.options.remoteURL,
+                    url:  url,
                     data: {
-                        content: canvas.html(),
+                        content: iframeWindow.CKEDITOR.instances.sbbody.getData(),
                         input: $('form').serialize()
                     }
                 }).done(function( data ) {

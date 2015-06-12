@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b311f6-bf26-49e5-94ca-f165ff82b18e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/CustomWidget.php" afterPath="$PROJECT_DIR$/app/models/CustomWidget.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/config.php" afterPath="$PROJECT_DIR$/public/themes/admin/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/template-budget/config.php" afterPath="$PROJECT_DIR$/public/themes/template-budget/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="8" selection-start="4953" selection-end="4953" vertical-scroll-proportion="0.8747698" vertical-offset="1888" max-vertical-offset="2516">
+            <state line="140" column="0" selection-start="4945" selection-end="4945" vertical-scroll-proportion="-20.23077" vertical-offset="1837" max-vertical-offset="2516">
               <folding />
             </state>
           </provider>
@@ -135,6 +126,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="0" selection-start="3889" selection-end="3889" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1122">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CompaniesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CompaniesController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,7 +156,7 @@
       <file leaf-file-name="builder.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="24" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+            <state line="5" column="35" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -174,16 +174,18 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="0" selection-start="4665" selection-end="4665" vertical-scroll-proportion="-9.490196" vertical-offset="1454" max-vertical-offset="3655">
-              <folding />
+            <state line="135" column="0" selection-start="5007" selection-end="5007" vertical-scroll-proportion="-3.0392158" vertical-offset="865" max-vertical-offset="2380">
+              <folding>
+                <element signature="tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="builder.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="builder.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="4" selection-start="11882" selection-end="11916" vertical-scroll-proportion="-8.346154" vertical-offset="3081" max-vertical-offset="7140">
+            <state line="311" column="18" selection-start="17727" selection-end="17727" vertical-scroll-proportion="0.022099448" vertical-offset="5275" max-vertical-offset="7208">
               <folding />
             </state>
           </provider>
@@ -326,8 +328,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomThemesController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/public/themes/template-budget/config.php" />
         <option value="$PROJECT_DIR$/app/models/CustomWidget.php" />
@@ -335,13 +335,15 @@
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/config.php" />
-        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/clipboard/dev/clipboard.html" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
-        <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
+        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
+        <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php" />
       </list>
     </option>
   </component>
@@ -640,6 +642,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3rdparty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ckeditor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -873,27 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="34" selection-start="3552" selection-end="3575" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="4" selection-start="11882" selection-end="11916" vertical-scroll-proportion="-8.346154" vertical-offset="3081" max-vertical-offset="7140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="24" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/assets/js/ckeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="850">
@@ -960,13 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="0" selection-start="4665" selection-end="4665" vertical-scroll-proportion="-9.490196" vertical-offset="1454" max-vertical-offset="3655">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomTemplatesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="95" selection-start="4919" selection-end="4981" vertical-scroll-proportion="-13.038462" vertical-offset="1871" max-vertical-offset="2414">
@@ -981,9 +977,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="3889" selection-end="3889" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="8" selection-start="4953" selection-end="4953" vertical-scroll-proportion="0.8747698" vertical-offset="1888" max-vertical-offset="2516">
+        <state line="140" column="0" selection-start="4945" selection-end="4945" vertical-scroll-proportion="-20.23077" vertical-offset="1837" max-vertical-offset="2516">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="0" selection-start="5007" selection-end="5007" vertical-scroll-proportion="-3.0392158" vertical-offset="865" max-vertical-offset="2380">
+          <folding>
+            <element signature="tag#div#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="35" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/builder.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="18" selection-start="17727" selection-end="17727" vertical-scroll-proportion="0.022099448" vertical-offset="5275" max-vertical-offset="7208">
           <folding />
         </state>
       </provider>

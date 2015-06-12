@@ -138,7 +138,7 @@ class CustomWidgetsController extends BaseController {
     }
     public function widgetData(){
         $widget = \CustomWidget::find(\Input::get('id'));
-        
+
         return $widget->template;
     }
 }
