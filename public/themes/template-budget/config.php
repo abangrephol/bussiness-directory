@@ -35,6 +35,7 @@ return array(
                     $asset->cook('editor',function($asset){
                         $asset->usePath()->add('default-css','css/style.css');
                         $asset->container('footer')->add('editor','3rdparty/ckeditor/ckeditor.js');
+                        $asset->container('footer')->add('editor-js','3rdparty/ckeditor/builder.js');
                         $asset->container('footer')->add('editor-filemanager','3rdparty/filemanager/js/plugins.js');
 
                     });

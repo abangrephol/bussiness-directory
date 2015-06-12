@@ -1,6 +1,7 @@
+<div id="sbheader" contenteditable="true">
 <!-- Top Bar
 ================================================== -->
-<div id="top-bar" contenteditable="true">
+<div id="top-bar">
     <div class="container">
 
         <!-- Top Bar Menu -->
@@ -72,21 +73,21 @@
         </nav>
     </div>
 </div>
-
+</div>
 <!-- Slider
 ================================================== -->
-<div class="container fullwidth-element home-slider">
+<div class="container fullwidth-element home-slider wnwidgets">
 
     <div class="tp-banner-container">
         <div class="tp-banner">
             <ul>
                 <!-- Slide 1  -->
                 @if(isset($banners))
-                    @foreach($banners as $banner)
-                    <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
-                        <img src="{{ $banner }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" class="mceNonEditable">
-                    </li>
-                    @endforeach
+                @foreach($banners as $banner)
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+                    <img src="{{ $banner }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" class="mceNonEditable">
+                </li>
+                @endforeach
                 @else
                 <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
                     <img src="{{ Theme::asset()->url('images/slider2.jpg') }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
@@ -112,9 +113,11 @@
 </div>
 
 
+<div id="sbbody" contenteditable="true">
+
 <!-- Featured
 ================================================== -->
-<div class="container" id="body" contenteditable="true" >
+<div class="container" id="body" >
 
         @if (isset($data->content))
         {{$data->content}}
@@ -129,10 +132,12 @@
 
 
 </div>
+</div>
 
+<div id="sbfooter" contenteditable="true">
 <!-- Footer
 ================================================== -->
-<div id="footer" contenteditable="true">
+<div id="footer">
 
     <!-- Container -->
     <div class="container">
@@ -199,6 +204,6 @@
 
 </div>
 <!-- Footer Bottom / End -->
-
+</div>
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>

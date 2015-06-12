@@ -79,13 +79,13 @@ class CustomWidgetsController extends BaseController {
     }
     public function edit($id)
     {
-        $this->theme->setPageTitle('Edit Template');
+        $this->theme->setPageTitle('Edit Widget');
         $this->theme->asset()->serve('chosen');
         $this->theme->asset()->serve('ckeditor');
         $this->theme->asset()->serve('codemirror');
 
         $data = array(
-            'data'=>\CustomTemplate::find($id),
+            'data'=>\CustomWidget::find($id),
             'thid'=>\Session::get('thid')
         );
 
@@ -94,23 +94,23 @@ class CustomWidgetsController extends BaseController {
             ->add('Companies', \URL::route('admin/companies'))
             ->add('Create');
 
-        return $this->theme->scope('custom-templates.edit',$data)->render();
+        return $this->theme->scope('custom-widgets.edit',$data)->render();
     }
     public function update($id)
     {
         //dd(\Input::get('categories'));
-        $template = \CustomTemplate::find($id);
+        $template = \CustomWidget::find($id);
         if($template->validate()){
             $template->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully update template');
-            return \Redirect::route('admin.custom-template.edit',array('id'=>$id))->with('messages',$messages);
+            return \Redirect::route('admin.custom-widget.edit',array('id'=>$id))->with('messages',$messages);
         }else{
             $messages = new \Illuminate\Support\MessageBag;
             $messages
                 ->add('error',true)
                 ->add('message', 'Failed to update company');
-            return \Redirect::route('admin.companies.edit',array('id'=>$id))
+            return \Redirect::route('admin.widget.edit',array('id'=>$id))
 
                 ->withErrors($template->errors())
                 ->withInput()
@@ -118,21 +118,27 @@ class CustomWidgetsController extends BaseController {
         }
 
     }
-    public function templateList()
+    public function widgetList()
     {
-        $templates = \CustomTemplate::where('theme_id',\Session::get('thid-editor'))->get();
-        $response = Response::make();
-        $response->header('Content-Type', 'application/javascript');
-        $content = "CKEDITOR.addTemplates( 'default', {";
-        $content .= "templates: [ ";
-        foreach($templates as $template){
-            $content .= "{";
-            $content .= "title: '$template->name',
-                        description: '$template->description',";
-            $content .= "html:'".addslashes(preg_replace( "/\r|\n/", "", $template->template ))."'";
-            $content .= "},";
-        }
-        $content .= "] } );";
-        return $content;
+        $widgets = \CustomWidget::where('theme_id',\Session::get('thid-editor'))->get();
+
+
+        $this->theme->asset()->serve('chosen');
+
+        $data = array(
+            'data'=>$widgets
+        );
+
+        $this->theme->breadcrumb()
+            ->add('Dashboard', \URL::route('admin/dashboard'))
+            ->add('Companies', \URL::route('admin/companies'))
+            ->add('Create');
+
+        return $this->theme->layout('widgets')->scope('custom-widgets.widgetList',$data)->render();
+    }
+    public function widgetData(){
+        $widget = \CustomWidget::find(\Input::get('id'));
+        
+        return $widget->template;
     }
 }

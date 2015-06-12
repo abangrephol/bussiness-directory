@@ -4,7 +4,7 @@ class CustomWidget extends  Ardent {
     public $autoHydrateEntityFromInput = true;    // hydrates on new entries' validation
     public $forceEntityHydrationFromInput = true; // hydrates whenever validation is called
 
-    protected $fillable = ['theme_id','name','description','type','template','data']; //
+    protected $fillable = ['theme_id','name','type','template','data']; //
     protected $guarded = ['id'];
     public static $customAttributes  = array(
         'name'=>'Widget name'

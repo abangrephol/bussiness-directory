@@ -1,6 +1,6 @@
 <div class="panel panel-alt panel-default">
     <div class="panel-heading">
-        <a class="btn btn-danger pull-right mr10 mt5" href="{{ URL::route('admin/custom-template') }}">Back to list</a>
+        <a class="btn btn-danger pull-right mr10 mt5" href="{{ URL::route('admin/custom-widget') }}">Back to list</a>
         <h4 class="panel-title-alt"><i class="fa fa-edit mr5"></i><span class="text-danger">Please enter template information</span></h4>
         <p>* = Required fields</p>
     </div>
@@ -19,13 +19,6 @@
                     <div class="col-sm-7">
                         {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter template name')) }}
                         <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                    </div>
-                </div>
-                <div class="form-group {{ $errors->has('description')?'has-error':'' }}">
-                    {{ Form::label('description', 'Description', array('class' => ' col-sm-3 control-label required' )) }}
-                    <div class="col-sm-7">
-                        {{ Form::textarea('description', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter description')) }}
-                        <label id='name_description' for='description' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>
                 <div class="form-group {{ $errors->has('template')?'has-error':'' }}">

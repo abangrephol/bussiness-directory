@@ -165,6 +165,10 @@ return array(
             {
                 $theme->asset()->serve('bootstrap');
             },
+            'widgets' => function($theme)
+            {
+                $theme->asset()->serve('bootstrap');
+            },
 
         )
 
