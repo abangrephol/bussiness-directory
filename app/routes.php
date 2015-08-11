@@ -22,11 +22,9 @@ HTML::macro('clever_link', function($route, $text,$iconClass) {
     return '<li ' . $active . '><a href="' . URL::route($route).'"><i class="'.$iconClass.'"></i><span>' . $text
         . '</span></a></li>';
 });
-
-Route::group(['domain' => '{projectSlug}.{tld}'], function()
+$appRoute = function()
 {
     // Routes within each website
-
     Route::get('/', function($projectSlug) {
         $app = app();
         if(gettype($projectSlug)=='object'){
@@ -49,7 +47,11 @@ Route::group(['domain' => '{projectSlug}.{tld}'], function()
             return $controller->callAction('index', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
         }
     });
-});
+
+};
+Route::group(['domain' => 'www.{projectSlug}.{tld}'], $appRoute);
+Route::group(['domain' => '{projectSlug}.{tld}'], $appRoute);
+
 Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
     Route::get('/login',array('as'=>'admin/login','uses'=>'SiteController@login'));
     Route::get('/logout',array('as'=>'admin/logout','uses'=>'SiteController@logout'));
