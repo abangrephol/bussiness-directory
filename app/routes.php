@@ -29,7 +29,7 @@ Route::group(['domain' => '{projectSlug}.{tld}'], function()
 
     Route::get('/', function($projectSlug) {
         $app = app();
-
+        echo $projectSlug;
         if(gettype($projectSlug)=='object'){
             $controller = $app->make('WebsiteController');
             return $controller->callAction('website', $parameters = array('id'=>$projectSlug->id));
