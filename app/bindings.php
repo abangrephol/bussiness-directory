@@ -3,9 +3,9 @@
 Route::bind('projectSlug', function($value, $route)
 {
     $tld = $route->getParameter('tld');
-    $value = str_replace('www.','',$value);
-    $project = CustomWebsite::where('domain',  $value)
-        ->where('tld',  $tld)
+    $domain = explode('.',Request::getHost());
+    $project = CustomWebsite::where('domain',  $domain[0])
+        ->where('tld',  $domain[1])
         ->first();
 
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b311f6-bf26-49e5-94ca-f165ff82b18e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/bindings.php" afterPath="$PROJECT_DIR$/app/bindings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
     </list>
     <ignored path="bussiness-directory.iws" />
@@ -46,19 +47,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.7513812" vertical-offset="272" max-vertical-offset="1955">
+            <state line="25" column="40" selection-start="883" selection-end="889" vertical-scroll-proportion="-9.807693" vertical-offset="170" max-vertical-offset="1938">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bindings.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bindings.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/bindings.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="43" selection-start="144" selection-end="144" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="391">
+            <state line="7" column="33" selection-start="240" selection-end="240" vertical-scroll-proportion="0.21402878" vertical-offset="0" max-vertical-offset="556">
               <folding />
             </state>
           </provider>
@@ -322,9 +323,9 @@
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
         <option value="$PROJECT_DIR$/public/themes/sitebuilder/layouts/interface.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/create.blade.php" />
-        <option value="$PROJECT_DIR$/app/bindings.php" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/bindings.php" />
       </list>
     </option>
   </component>
@@ -1208,13 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/bindings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="43" selection-start="144" selection-end="144" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/filters.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="39.423077" vertical-offset="1025" max-vertical-offset="1581">
@@ -1224,7 +1218,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.7513812" vertical-offset="272" max-vertical-offset="1955">
+        <state line="25" column="40" selection-start="883" selection-end="889" vertical-scroll-proportion="-9.807693" vertical-offset="170" max-vertical-offset="1938">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bindings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="240" selection-end="240" vertical-scroll-proportion="0.21402878" vertical-offset="0" max-vertical-offset="556">
           <folding />
         </state>
       </provider>
