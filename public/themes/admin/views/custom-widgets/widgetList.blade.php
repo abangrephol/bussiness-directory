@@ -19,7 +19,7 @@
     var CKEDITOR   = window.parent.CKEDITOR;
     var editor = window.parent.CKEDITOR.editor;
     var oEditor   = CKEDITOR.currentInstance;
-    var okListener = function(ev) {
+    /*var okListener = function(ev) {
         var dialog = this, data = {}, customwidget = new CKEDITOR.dom.element( 'widget' );
         var ed = this._.editor;
         this.commitContent( data );
@@ -42,6 +42,6 @@
     };
 
     CKEDITOR.event.implementOn(CKEDITOR.dialog.getCurrent());
-    CKEDITOR.dialog.getCurrent().on("ok", okListener);
-    CKEDITOR.dialog.getCurrent().on("cancel", cancelListener);
+    //CKEDITOR.dialog.getCurrent().on("ok", okListener);
+    CKEDITOR.dialog.getCurrent().on("cancel", cancelListener);*/
 </script>

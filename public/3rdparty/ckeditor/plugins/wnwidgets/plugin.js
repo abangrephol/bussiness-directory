@@ -1,22 +1,50 @@
 (function() {
     CKEDITOR.plugins.add('wnwidgets', {
         requires: ['iframedialog','fakeobjects'],
-        init: function(a) {
-            CKEDITOR.dialog.addIframe('youtube_dialog', 'Insert Widgets', window.location.origin + '/admin/widget-list', 550, 200, function() { /*oniframeload*/ });
-            a.addCommand('youtube', {
+        init: function(editor) {
+            CKEDITOR.dialog.addIframe('youtube_dialog', 'Insert Widgets', window.location.origin + '/admin/widget-list', 550, 200,
+                function() {
+                    iframeid=this._.frameId;/*get the iframe*/
+                },
+                {
+                    onOk : function(){
+                        //texttoadd=$('#return', $('#' + iframeid).contents()).html();
+                        var dialog = this, data = {id:{name:'id',value:'val'}}, customwidget = new CKEDITOR.dom.element( 'div' );
+                        var ed = this._.editor;
+                        this.commitContent( data );
+
+                        Object.keys(data).forEach(function(key) {
+                            customwidget.setAttribute(data[key].name,data[key].value);
+                        });
+
+
+                        var newFakeImage = ed.createFakeElement( customwidget, 'wnwidgets', 'widget', true );
+                        $(newFakeImage).attr('title',data.title);
+                        $(newFakeImage).attr('alt',data.title);
+                        ed.insertElement( newFakeImage );
+                    }
+                }
+            );
+            editor.addCommand('youtube', {
                 exec: function(e) {
                     e.openDialog('youtube_dialog');
                 }
             });
-            a.ui.addButton('youtube', {
+            editor.ui.addButton('youtube', {
                 label: 'Insert Widgets',
                 command: 'youtube',
                 //icon: this.path + 'images/redo.png',
                 toolbar: 'mode,10'
             });
-            a.widgets.add('widgets',{
+            editor.widgets.add('widgets',{
                 upcast: function( element ) {
                     return element.name == 'div' && element.hasClass( 'wnwidgets' );
+                },
+                init : function (){
+                    console.log('ok');
+                },
+                data :function(){
+
                 }
             });
             CKEDITOR.addCss(

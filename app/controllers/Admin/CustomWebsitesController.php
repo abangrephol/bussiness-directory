@@ -187,6 +187,8 @@ class CustomWebsitesController extends BaseController {
         if(!isset($id) || !isset($templateId))
             return \Redirect::route('admin.custom-website.pages',compact('id'));
 
+        $this->theme = \Theme::uses('sitebuilder')->layout('interface');
+
         $this->theme->asset()->serve('iframe');
         $this->theme->asset()->serve('builder');
         $this->theme->asset()->serve('chosen');
@@ -212,7 +214,7 @@ class CustomWebsitesController extends BaseController {
         }
 
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
-        return $this->theme->scope('custom-websites.builder',$data)->render();
+        return $this->theme->scope('editor.index',$data)->render();
     }
 
     public function builderEditor ($id,$templateId){

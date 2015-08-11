@@ -117,7 +117,7 @@
 
 <!-- Featured
 ================================================== -->
-<div class="container" id="body" >
+<div class="container">
 
         @if (isset($data->content))
         {{$data->content}}
