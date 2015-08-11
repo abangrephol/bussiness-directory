@@ -204,6 +204,7 @@ class CustomWebsitesController extends BaseController {
             'pageId' => isset($pageId)?$pageId:0,
             'data' => $pageData
         );
+        $this->theme->setId($id);
         if($pageData!=null && isset($pageData->custom_data)){
 
             $custom_data = json_decode($pageData->custom_data);
@@ -227,6 +228,7 @@ class CustomWebsitesController extends BaseController {
         $data = array(
             'id' => $id
         );
+
         session_start();
         $_SESSION["RF"]["subfolder"] = "$id";
         $path = public_path().'/uploads/images/' . $id;

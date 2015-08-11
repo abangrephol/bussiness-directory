@@ -27,14 +27,15 @@ Author : Shinta RE
                     </button>
                     <a class="navbar-brand" href="#"><img src="{{ Theme::asset()->url('img/logointerface.png'); }}"/></a>
                     <div class="pull-left header-button">
-                        <a class="btn btn-blue" href="#" data-toggle="modal" data-target="#mod">General Setting</a><a class="btn btn-grey" href="#">Ok Sip</a>
+                        <a class="btn btn-blue" href="#" data-toggle="modal" data-target="#mod">General Setting</a>
+                        <!--a class="btn btn-grey" href="#">Ok Sip</a-->
                     </div>
                 </div>
                 <div  class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right navbar-header">
                         <li><a href="#" title="Fullscreen"><i class="fa fa-arrows-alt"></i></a></li>
                         <li><a href="#"><i class="fa fa-save"></i><span>Save</span></a></li>
-                        <li><a href="#"><span>Exit</span><i class="fa fa-arrow-right"></i></a></li>
+                        <li><a href="{{ URL::route('custom-website.pages',array('id'=>Theme::place('id'))) }}"><span>Exit</span><i class="fa fa-arrow-right"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -59,7 +60,7 @@ Author : Shinta RE
         </div>
         <div class="sidebar">
             <nav>
-                <ul >
+                <!--ul>
                     <li> 
                         <a href="#"><i class="fa fa-home"></i> 
                             <span class="menu-item-parent">Widgets & Template Panel</span>
@@ -91,7 +92,7 @@ Author : Shinta RE
                     <li><a ><i class="fa fa-whatsapp "></i></a></li>
                     <li><a ><i class="fa fa-facebook"></i></a></li>
                     <li><a ><i class="fa fa-youtube"></i></a></li>
-                </ul>
+                </ul-->
             </nav>
         </div>
 

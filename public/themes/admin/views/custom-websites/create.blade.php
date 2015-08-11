@@ -20,7 +20,7 @@
                 <div class="form-group {{ $errors->has('name')?'has-error':'' }}">
                     {{ Form::label('name', 'Website Name', array('class' => 'col-sm-offset-1 col-sm-3 control-label required' )) }}
                     <div class="col-sm-7">
-                        {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter domain name without tld')) }}
+                        {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter website name')) }}
                         <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>

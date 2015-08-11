@@ -39,8 +39,6 @@ Route::group(['domain' => '{projectSlug}.{tld}'], function()
         }
     });
 
-
-
     Route::get('/page/{slug}', function($projectSlug,$tld,$slug) {
         $app = app();
         if(gettype($projectSlug)=='object'){
