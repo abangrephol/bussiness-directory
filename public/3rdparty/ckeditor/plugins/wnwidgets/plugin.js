@@ -25,23 +25,23 @@
                     }
                 }
             );
-            editor.addCommand('youtube', {
+            editor.addCommand('wnwidgets', {
                 exec: function(e) {
                     e.openDialog('youtube_dialog');
                 }
             });
-            editor.ui.addButton('youtube', {
+            editor.ui.addButton('wnwidgets', {
                 label: 'Insert Widgets',
-                command: 'youtube',
-                //icon: this.path + 'images/redo.png',
+                command: 'wnwidgets',
+                //icon: this.path + 'icons/redo.png',
                 toolbar: 'mode,10'
             });
             editor.widgets.add('widgets',{
                 upcast: function( element ) {
-                    return element.name == 'div' && element.hasClass( 'wnwidgets' );
+                    return element.hasClass( 'wnwidgets' );
                 },
                 init : function (){
-                    console.log('ok');
+
                 },
                 data :function(){
 
@@ -76,6 +76,7 @@
 
                                 if ($(element).hasClass('wnwidgets')) {
 
+                                    console.log('ok');
                                     returnedElement =  createFakeElement( editor, element );
                                 }
 
@@ -84,6 +85,7 @@
                             'widget' : function( element )
                             {
                                 var returnedElement = element;
+
 
                                 return returnedElement;
                             }

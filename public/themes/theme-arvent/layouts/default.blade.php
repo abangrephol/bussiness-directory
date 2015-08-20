@@ -41,8 +41,9 @@
     {{ Theme::partial('header') }}
     {{ Theme::content() }}
     {{ Theme::partial('footer') }}
-    {{ Theme::asset()->container('footer')->scripts() }}
     {{ Theme::asset()->container('editor')->scripts() }}
+    {{ Theme::asset()->container('footer')->scripts() }}
+
 </body>
 
 </html>

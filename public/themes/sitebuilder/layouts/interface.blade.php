@@ -34,7 +34,7 @@ Author : Shinta RE
                 <div  class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right navbar-header">
                         <li><a href="#" title="Fullscreen"><i class="fa fa-arrows-alt"></i></a></li>
-                        <li><a href="#"><i class="fa fa-save"></i><span>Save</span></a></li>
+                        <li><a href="#" class="save"><i class="fa fa-save"></i><span>Save</span></a></li>
                         <li><a href="{{ URL::route('custom-website.pages',array('id'=>Theme::place('id'))) }}"><span>Exit</span><i class="fa fa-arrow-right"></i></a></li>
                     </ul>
                 </div>
@@ -102,6 +102,7 @@ Author : Shinta RE
             <div class="panel pan">
                 <div class="panel-body pan-bod">
                     Toolbox
+                    <div id="toolbar"></div>
                 </div>
             </div>
             {{ Theme::content() }}

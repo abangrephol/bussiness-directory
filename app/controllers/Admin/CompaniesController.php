@@ -1,6 +1,8 @@
 <?php
 namespace Admin;
 
+use Illuminate\Support\Facades\Redirect;
+
 class CompaniesController extends BaseController {
     /**
      * Display a listing of the resource.
@@ -28,6 +30,16 @@ class CompaniesController extends BaseController {
 	 */
 	public function index()
 	{
+        $group = \Sentry::getUser()->getGroups()->first()->name;
+        if($group=='User'){
+            $owner = \Owner::where('owner_id','=',\Sentry::getUser()->id);
+            if($owner->count()>0){
+                $ownerData = $owner->first();
+                return \Redirect::route('admin.companies.edit',array('id'=>$ownerData->company_id));
+            }
+        }
+
+
         $this->theme->asset()->serve('datatable');
         $this->theme->setPageTitle('Companies');
 
@@ -78,6 +90,13 @@ class CompaniesController extends BaseController {
 		$company = new \Company;
         if($company->validate()){
             $company->save();
+            $owner = new \Owner;
+            $owner->owner_id = \Sentry::getUser()->id;
+            $owner->company_id = $company->id;
+            if($owner->validate()){
+                $owner->save();
+            }
+
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully create new company');
             return \Redirect::route('admin.companies.edit',array('id'=>$company->id))->with('messages',$messages);

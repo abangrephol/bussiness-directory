@@ -1,6 +1,6 @@
 <ul class="filemanager-options">
     <li>
-        <span>Choose one template</span>
+        <span>Choose one theme</span>
     </li>
 </ul>
 <div class="row">

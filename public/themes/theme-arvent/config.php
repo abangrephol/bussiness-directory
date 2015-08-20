@@ -33,8 +33,10 @@ return array(
         {
             $asset->cook('editor',function($asset){
                 // $asset->container('editor')->add('bs-css','3rdparty/gridmanager/css/bootstrap.css');
-                $asset->container('footer')->usePath()->add('iframe','js/iframeResizer.contentWindow.min.js');
+                //$asset->container('footer')->usePath()->add('iframe','js/iframeResizer.contentWindow.min.js');
                 $asset->container('footer')->add('editor','3rdparty/ckeditor/ckeditor.js');
+                $asset->container('footer')->add('editor-js','3rdparty/ckeditor/builder.js');
+                $asset->container('footer')->add('editor-filemanager','3rdparty/filemanager/js/plugins.js');
                 //$asset->usePath()->add('default-css','css/style.css');
                 //$asset->usePath()->add('green-css','css/colors/green.css');
 

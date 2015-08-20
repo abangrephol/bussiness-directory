@@ -19,6 +19,14 @@ class Company extends  Ardent {
         'name'                  => 'required|between:4,50',
     );
     public static function getCompanyLists(){
-        return Company::all()->lists('name','id');
+        $user = Sentry::getUser();
+        $group = $user->getGroups()->first()->name;
+
+        if($group=='Admin'){
+            return Company::all()->lists('name','id');
+        }else{
+            $owner = Owner::where('owner_id','=',$user->id)->first();
+            return Company::where('id','=',$owner->company_id)->lists('name','id');
+        }
     }
 }

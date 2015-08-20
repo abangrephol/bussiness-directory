@@ -63,6 +63,7 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
         Route::get('dashboard',array('as'=>'admin/dashboard','uses'=>'SiteController@index'));
         Route::resource('companies','CompaniesController',array('names' => array('index'=>'admin/companies')));
         Route::resource('categories','CategoriesController',array('names' => array('index'=>'admin/categories')));
+        Route::resource('users','UsersController',array('names' => array('index'=>'admin/users')));
 
         Route::resource('custom-website','CustomWebsitesController',array('names' => array('index'=>'admin/custom-website')));
         Route::get('custom-website/{id}/choose-templates',array('as'=>'custom-website.chooseTemplate','uses'=>'CustomWebsitesController@chooseTemplates'));
@@ -80,6 +81,7 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
 
         Route::group(array('prefix'=>'dt'),function(){
             Route::get('company',array('as'=>'dt.company','uses'=>'CompaniesController@getDatatableAll'));
+            Route::get('user',array('as'=>'dt.user','uses'=>'UsersController@getDatatableAll'));
             Route::get('category',array('as'=>'dt.category','uses'=>'CategoriesController@getDatatableAll'));
             Route::get('custom-website',array('as'=>'dt.custom-website','uses'=>'CustomWebsitesController@getDatatableAll'));
             Route::get('custom-theme',array('as'=>'dt.custom-theme','uses'=>'CustomThemesController@getDatatableAll'));

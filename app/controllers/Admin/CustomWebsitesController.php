@@ -46,6 +46,24 @@ class CustomWebsitesController extends BaseController {
      */
     public function index()
     {
+        $group = \Sentry::getUser()->getGroups()->first()->name;
+        if($group=='User'){
+            $owner = \Owner::where('owner_id','=',\Sentry::getUser()->id);
+            if($owner->count()>0){
+                $ownerData = $owner->first();
+                $customWebsite = \CustomWebsite::where('company_id','=',$ownerData->company_id);
+                if($customWebsite->count()>0){
+                    $customWebsiteData = $customWebsite->first();
+                    return \Redirect::route('custom-website.pages',array('id'=>$customWebsiteData->id));
+                }
+
+                else
+                    return \Redirect::route('admin.custom-website.create');
+            }else{
+                return \Redirect::route('admin.companies.create');
+            }
+        }
+
         $this->theme->asset()->serve('datatable');
         $this->theme->setPageTitle('Custom Websites');
 
@@ -66,7 +84,7 @@ class CustomWebsitesController extends BaseController {
             'companies' => \Company::getCompanyLists()
         );
 
-        $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
+            $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-website'))->add('Custom Websites', \URL::current());
         return $this->theme->scope('custom-websites.create',$data)->render();
     }
     public function store(){
@@ -150,7 +168,7 @@ class CustomWebsitesController extends BaseController {
             return \Redirect::route('admin.custom-website');
 
         $this->theme->asset()->serve('chosen');
-        $this->theme->setPageTitle('Choose a Template');
+        $this->theme->setPageTitle('Choose a Theme');
 
         $data = array(
             'id' => $id,

@@ -3,7 +3,7 @@
     <span class="loader2 block-loader"></span>
     <span class="loader3 block-loader"></span>
 </div-->
-<header class="header">
+<header class="header" id="sbheader">
     <div class="container">
         <div class="row">
             <div class="span2">
@@ -13,7 +13,7 @@
             </div><!-- /.roll-col2 -->
             <div class="span10">
                 <div class="btn-menu"></div><!-- //mobile menu button -->
-                <nav id="mainnav" class="mainnav">
+                <nav id="mainnav" class="mainnav wnwidgets">
                     <ul class="menu">
                         <li><a href="/" class="active">Home</a></li>
                         @foreach(CustomWebsite::getMenu($id) as $menu)
@@ -78,8 +78,8 @@
 </section>
 
 <section class="roll-row main-page services-home roll-animation" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
-    <div class="container" contenteditable="true">
-        <div id="body">
+    <div class="container" >
+        <div id="sbbody">
             @if (isset($data->content))
             {{$data->content}}
             @else
@@ -116,7 +116,7 @@
 </section><!-- /.services-home -->
 
 
-<footer class="footer">
+<footer class="footer" id="sbfooter">
     <div class="footer-top">
         <div class="container">
             <div class="row">

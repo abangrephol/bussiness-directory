@@ -1,4 +1,4 @@
-<iframe class="editor-iframe"></iframe>
+<div id="editor-container" class="editor-iframe"></div>
 <script type = "text/javascript">
 
     (function (window) {
@@ -61,6 +61,52 @@
         classie.toggle(menuRight, 'cbp-spmenu-open');
     };
     jQuery(window).load(function(){
-        $('.editor-iframe').attr('src',"{{ route('custom-website.builderEditor',array('templateId'=>$templateId,'id'=>$id,'pageId'=>$pageId)) }}");
+        var iframe = document.createElement("iframe");
+        $(iframe).addClass('editor-iframe');
+        iframe.style.display = "none";
+        iframe.src ="{{ route('custom-website.builderEditor',array('templateId'=>$templateId,'id'=>$id,'pageId'=>$pageId)) }}";
+        iframe.onload = (function(){
+            iframe.style.display = "block";
+            $(iframe).contents().find('body').prepend('<div id="toolbar"></div>').css('padding-top','70px');
+            $(iframe).contents().find('head').append("<style>" +
+                "#toolbar {position:fixed;top:0;z-index:1000;left:0;}" +
+                "</style>");
+        });
+        document.getElementById("editor-container").appendChild(iframe);
     })
+    jQuery('.save').on('click',function(){
+        if(jQuery(this).find('a').hasClass('disabled')==false){
+            jQuery(this).find('a').addClass('disabled').html('Saving...');
+            //var windowjQuery = $('#builder')[0].contentWindow.$;
+            var iframeWindow = $('#editor-container').find('iframe')[0].contentWindow;
+            //var f = $('#builder').contents().find('#body');
+            //var gm =windowjQuery.data(f[0], 'gridmanager');
+
+            var url = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}";
+
+            //gm.options['remoteURL'] = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}"
+            //gm.cleanup();
+            //gm.deinitCanvas();
+            //var canvas = gm.$el.find("#" + gm.options.canvasId);
+            $.ajax({
+                type: "POST",
+                url:  url,
+                data: {
+                    content: iframeWindow.CKEDITOR.instances.sbbody.getData(),
+                    input: $('form').serialize()
+                }
+            }).done(function( data ) {
+                    jQuery('.save').find('a').html('<i class="fa fa-file-text"></i>&nbsp;Save').removeClass('disabled');
+                    jQuery.gritter.add({
+                        title: 'Notification',
+                        text: 'Page Successfully saved.',
+                        sticky: false,
+                        time: ''
+                    });
+                    if(data.type=="new")
+                        window.location = window.location+"?pageId="+data.id;
+                });
+        }
+
+    });
 </script>

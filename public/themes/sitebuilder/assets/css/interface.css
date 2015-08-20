@@ -684,3 +684,8 @@ fieldset[disabled] .btn-grey.active {
     float:left;
     border: none;
 }
+.navbar-header > li > a.disabled {
+    background: gray;
+    cursor: not-allowed;
+    border: 1px solid #000000;
+}

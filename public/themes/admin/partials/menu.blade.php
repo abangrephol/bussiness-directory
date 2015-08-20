@@ -60,12 +60,12 @@
         'companies' => array(
             'link' => 'companies',
             'icon' => 'fa-building',
-            'title' => 'Edit Companies'
+            'title' => 'Company Data'
         ),
         'custom-website' => array(
             'link' => 'custom-website',
-            'icon' => 'fa-building',
-            'title' => 'Custom Websites'
+            'icon' => 'fa-anchor',
+            'title' => 'Custom Website'
         )
     );
 
