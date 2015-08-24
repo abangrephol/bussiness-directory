@@ -76,10 +76,11 @@
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section>
-
-<section class="roll-row main-page services-home roll-animation" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
+<div id="sbbody">
+<!-- roll-row main-page services-home roll-animation -->
+<section class="wnwidgets main-page services-home" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
     <div class="container" >
-        <div id="sbbody">
+
             @if (isset($data->content))
             {{$data->content}}
             @else
@@ -95,7 +96,7 @@
                     </div><!-- /.items -->
                     <div class="items">
                         <div class="col-sm-12">
-                            <img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image">
+                            <span><img src="{{Theme::asset()->url('images/home/1.jpg')}}" alt="image"></span>
                             <h5 class="title">AWESOME, OUT OF THE BOX</h5>
                             <p>At dawn on the 13th the Carnatic entered the port of Yokohama.  This is an important port of call in the Pacific, where all the mail-steamers, and those </p>
                         </div>
@@ -110,11 +111,11 @@
                 </div><!-- /.span12 -->
             </div><!-- /.row -->
             @endif
-        </div>
+
 
     </div><!-- /.container -->
 </section><!-- /.services-home -->
-
+</div>
 
 <footer class="footer" id="sbfooter">
     <div class="footer-top">

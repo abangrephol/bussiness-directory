@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
@@ -87,11 +87,13 @@ CKEDITOR.skin.chameleon = ( function() {
 	// where -1 is black, 1 is white and 0 is the original colour.
 	var colorBrightness = ( function() {
 		function channelBrightness( channel, ratio ) {
-			return ( '0' + ( ratio < 0 ?
+			var brighten = ratio < 0 ? (
 					0 | channel * ( 1 + ratio )
-				:
-					0 | channel + ( 255 - channel ) * ratio ).toString( 16 )
-				).slice( -2 );
+				) : (
+					0 | channel + ( 255 - channel ) * ratio
+				);
+
+			return ( '0' + brighten.toString( 16 ) ).slice( -2 );
 		}
 
 		return function( hexColor, ratio ) {
@@ -108,12 +110,7 @@ CKEDITOR.skin.chameleon = ( function() {
 	// several places of our template.
 	verticalGradient = ( function() {
 		var template = new CKEDITOR.template( 'background:#{to};' +
-			'background-image:-webkit-gradient(linear,lefttop,leftbottom,from({from}),to({to}));' +
-			'background-image:-moz-linear-gradient(top,{from},{to});' +
-			'background-image:-webkit-linear-gradient(top,{from},{to});' +
-			'background-image:-o-linear-gradient(top,{from},{to});' +
-			'background-image:-ms-linear-gradient(top,{from},{to});' +
-			'background-image:linear-gradient(top,{from},{to});' +
+			'background-image:linear-gradient(to bottom,{from},{to});' +
 			'filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0,startColorstr=\'{from}\',endColorstr=\'{to}\');' );
 
 		return function( from, to ) {

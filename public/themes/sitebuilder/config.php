@@ -81,6 +81,7 @@ return array(
                 $theme->asset()->usePath()->add('interface', 'css/interface.css');
                 $theme->asset()->usePath()->add('jquery', 'js/jquery.min.js');
                 $theme->asset()->usePath()->add('bootstrap', 'js/bootstrap.min.js');
+                $theme->asset()->add('deserialize', '3rdparty/jquery/jquery.deserialize.min.js');
             }
 
         )

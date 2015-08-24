@@ -15,7 +15,8 @@ CKEDITOR.plugins.setLang( 'forms', 'eo', {
 		checkboxTitle: 'Markobutonaj Atributoj',
 		radioTitle: 'Radiobutonaj Atributoj',
 		value: 'Valoro',
-		selected: 'Selektita'
+		selected: 'Selektita',
+		required: 'Postulata'
 	},
 	form: {
 		title: 'Formularaj Atributoj',
@@ -37,6 +38,7 @@ CKEDITOR.plugins.setLang( 'forms', 'eo', {
 		size: 'Grando',
 		lines: 'Linioj',
 		chkMulti: 'Permesi Plurajn Elektojn',
+		required: 'Postulata',
 		opText: 'Teksto',
 		opValue: 'Valoro',
 		btnAdd: 'Aldoni',
@@ -57,6 +59,7 @@ CKEDITOR.plugins.setLang( 'forms', 'eo', {
 		value: 'Valoro',
 		charWidth: 'Signolarĝo',
 		maxChars: 'Maksimuma Nombro da Signoj',
+		required: 'Postulata',
 		type: 'Tipo',
 		typeText: 'Teksto',
 		typePass: 'Pasvorto',

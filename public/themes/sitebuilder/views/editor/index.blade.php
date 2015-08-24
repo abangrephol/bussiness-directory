@@ -75,8 +75,9 @@
         document.getElementById("editor-container").appendChild(iframe);
     })
     jQuery('.save').on('click',function(){
-        if(jQuery(this).find('a').hasClass('disabled')==false){
-            jQuery(this).find('a').addClass('disabled').html('Saving...');
+        if(jQuery(this).hasClass('disabled')==false){
+            jQuery(this).addClass('disabled').find('span').html('Saving...');
+
             //var windowjQuery = $('#builder')[0].contentWindow.$;
             var iframeWindow = $('#editor-container').find('iframe')[0].contentWindow;
             //var f = $('#builder').contents().find('#body');
@@ -96,7 +97,7 @@
                     input: $('form').serialize()
                 }
             }).done(function( data ) {
-                    jQuery('.save').find('a').html('<i class="fa fa-file-text"></i>&nbsp;Save').removeClass('disabled');
+                    jQuery('.save').removeClass('disabled').find('span').html('Save');
                     jQuery.gritter.add({
                         title: 'Notification',
                         text: 'Page Successfully saved.',

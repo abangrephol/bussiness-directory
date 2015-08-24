@@ -28,6 +28,33 @@
                         <label id='name_template' for='template' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>
+                <div class="form-group {{ $errors->has('template')?'has-error':'' }}">
+                    {{ Form::label('location', 'Location', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::select('location', array('sbheader'=>'Header','sbbody'=>'Body','sbfooter'=>'Footer','none'=>'No Restriction') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                        <label id='name_template' for='template' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                    </div>
+                </div>
+                <div class="form-group {{ $errors->has('template')?'has-error':'' }}">
+                    {{ Form::label('type', 'Type', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::select('type', array('single'=>'Single Widget','multi'=>'Multiple Widget') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                        <label id='name_template' for='template' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                    </div>
+                </div>
+                <div class="form-group {{ $errors->has('template')?'has-error':'' }}">
+                    {{ Form::label('form', 'Form Data', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        <div class="mb10">
+                            <a class="btn btn-primary" id="addInput">Add Input</a>
+                        </div>
+
+                        <div id="formData">
+
+                        </div>
+                        <label id='name_template' for='template' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -42,6 +69,24 @@
         </div>
     </div>
     {{ Form::close() }}
+    <div id="tpl" style="display: none" class="formInput">
+        <div class="row mb20">
+            <div class="col-sm-4">
+                <input type="text" name="formName[]" class="form-control col-sm-3" placeholder="Enter Input Name"/>
+            </div>
+            <div class="col-sm-3">
+                {{ Form::select('formType[]', array('text'=>'Text','textarea'=>'Textarea') ,null , array('class'=>'select2tmp','required'=>'required','placeholder'=>'Select widget type')) }}
+            </div>
+            <div class="col-sm-3">
+                {{ Form::select('formMulti[]', array('single'=>'Single','multi'=>'Multiple') ,null , array('class'=>'select2tmp','required'=>'required','placeholder'=>'Select widget type')) }}
+            </div>
+
+            <div class="col-sm-2 pull-right">
+                <a class="btn btn-danger removeInput"><i class="fa fa-trash"></i></a>
+            </div>
+        </div>
+
+    </div>
 </div>
 <script>
     jQuery(document).ready(function(){
@@ -80,6 +125,18 @@
             lineNumbers: true,
             viewportMargin: Infinity,
             mode: "htmlmixed"
+        });
+
+        jQuery('.select2').select2({width:'100%',allowClear:true});
+        jQuery('#addInput').on('click',function(){
+            var newForm = $('#tpl').clone().css('display','block').removeAttr('id');
+            $.each(newForm.find('.select2tmp'),function(i,v){
+                $(v).select2({width:'100%',allowClear:true});
+            })
+            newForm.appendTo('#formData');
+        });
+        $( document ).on( "click", ".removeInput", function() {
+            $(this).closest('.formInput').remove();
         });
         /*
         jQuery('#icon').select2({

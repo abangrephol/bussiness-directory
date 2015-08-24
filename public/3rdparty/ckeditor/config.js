@@ -7,15 +7,15 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// %REMOVE_START%
 	// The configuration options below are needed when running CKEditor from source files.
-	config.plugins = 'dialogui,dialog,a11yhelp,dialogadvtab,basicstyles,bidi,blockquote,clipboard,button,panelbutton,panel,floatpanel,colorbutton,colordialog,templates,menu,div,resize,toolbar,elementspath,enterkey,entities,popup,filebrowser,find,fakeobjects,flash,floatingspace,listblock,richcombo,font,forms,format,horizontalrule,htmlwriter,iframe,wysiwygarea,image,indent,indentblock,indentlist,smiley,justify,menubutton,language,link,list,liststyle,magicline,maximize,newpage,pagebreak,pastetext,pastefromword,preview,print,removeformat,save,selectall,showblocks,showborders,sourcearea,specialchar,scayt,stylescombo,tab,table,tabletools,undo,wsc';
-	config.extraPlugins = 'autogrow,sourcedialog,image2,wnwidgets,sharedspace';
-    config.removePlugins= 'sourcearea';
+	config.plugins = 'image,dialogui,dialog,a11yhelp,dialogadvtab,basicstyles,bidi,blockquote,clipboard,button,panelbutton,panel,floatpanel,colorbutton,colordialog,templates,menu,div,resize,toolbar,elementspath,enterkey,entities,popup,filebrowser,find,fakeobjects,flash,floatingspace,listblock,richcombo,font,forms,format,horizontalrule,htmlwriter,iframe,wysiwygarea,image,indent,indentblock,indentlist,smiley,justify,menubutton,language,link,list,liststyle,magicline,maximize,newpage,pagebreak,pastetext,pastefromword,preview,print,removeformat,save,selectall,showblocks,showborders,sourcearea,specialchar,scayt,stylescombo,tab,table,tabletools,undo,wsc';
+	config.extraPlugins = 'autogrow,sourcedialog,wnwidgets,sharedspace';
+    config.removePlugins= 'sourcearea,image2';
     config.autoGrow_bottomSpace = 50;
     config.sharedSpaces = {
         'top' : 'toolbar'
     };
-
-	config.skin = 'moono';
+    config.startupOutlineBlocks = true;
+    config.skin = 'moono';
 	config.fullPage = true;
 	config.extraAllowedContent = 'p(*)[*]{*};div(*)[*]{*};li(*)[*]{*};ul(*)[*]{*}';
     CKEDITOR.dtd.$removeEmpty.i = 0;

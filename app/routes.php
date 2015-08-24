@@ -76,8 +76,9 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
         Route::resource('custom-template','CustomTemplatesController',array('names' => array('index'=>'admin/custom-template')));
         Route::get('template-list',array('as'=>'template-list','uses'=>'CustomTemplatesController@templateList'));
         Route::resource('custom-widget','CustomWidgetsController',array('names' => array('index'=>'admin/custom-widget')));
-        Route::get('widget-list',array('as'=>'widget-list','uses'=>'CustomWidgetsController@widgetList'));
+        Route::get('widget-list/{editor}',array('as'=>'widget-list','uses'=>'CustomWidgetsController@widgetList'));
         Route::get('widget-data',array('as'=>'widget-data','uses'=>'CustomWidgetsController@widgetData'));
+        Route::get('widget-form/{id}',array('as'=>'widget-form','uses'=>'CustomWidgetsController@widgetForm'));
 
         Route::group(array('prefix'=>'dt'),function(){
             Route::get('company',array('as'=>'dt.company','uses'=>'CompaniesController@getDatatableAll'));

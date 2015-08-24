@@ -62,6 +62,20 @@ class CustomWidgetsController extends BaseController {
     {
         $widget = new \CustomWidget();
         if($widget->validate()){
+            $formData = [];
+            $inputName = \Input::get('formName');
+            $inputType = \Input::get('formType');
+            $inputMulti = \Input::get('formMulti');
+            for($i=0; $i < count($inputName) ; $i++){
+                if(isset($inputName[$i])){
+                    $formData[] = [
+                        'name'=>$inputName[$i],
+                        'type'=>$inputType[$i],
+                        'multi'=>$inputMulti[$i]
+                    ];
+                }
+            }
+            $widget->data = json_encode(['form'=>$formData]);
             $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully create new widget');
@@ -83,9 +97,9 @@ class CustomWidgetsController extends BaseController {
         $this->theme->asset()->serve('chosen');
         $this->theme->asset()->serve('ckeditor');
         $this->theme->asset()->serve('codemirror');
-
+        $widget = \CustomWidget::find($id);
         $data = array(
-            'data'=>\CustomWidget::find($id),
+            'data'=> $widget,
             'thid'=>\Session::get('thid')
         );
 
@@ -99,9 +113,23 @@ class CustomWidgetsController extends BaseController {
     public function update($id)
     {
         //dd(\Input::get('categories'));
-        $template = \CustomWidget::find($id);
-        if($template->validate()){
-            $template->save();
+        $widget = \CustomWidget::find($id);
+        if($widget->validate()){
+            $formData = [];
+            $inputName = \Input::get('formName');
+            $inputType = \Input::get('formType');
+            $inputMulti = \Input::get('formMulti');
+            for($i=0; $i < count($inputName) ; $i++){
+                if(isset($inputName[$i])){
+                    $formData[] = [
+                        'name'=>$inputName[$i],
+                        'type'=>$inputType[$i],
+                        'multi'=>$inputMulti[$i]
+                    ];
+                }
+            }
+            $widget->data = json_encode(['form'=>$formData]);
+            $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully update template');
             return \Redirect::route('admin.custom-widget.edit',array('id'=>$id))->with('messages',$messages);
@@ -112,18 +140,18 @@ class CustomWidgetsController extends BaseController {
                 ->add('message', 'Failed to update company');
             return \Redirect::route('admin.widget.edit',array('id'=>$id))
 
-                ->withErrors($template->errors())
+                ->withErrors($widget->errors())
                 ->withInput()
                 ->with('messages',$messages);
         }
 
     }
-    public function widgetList()
+    public function widgetList($editor)
     {
         $widgets = \CustomWidget::where('theme_id',\Session::get('thid-editor'))->get();
 
 
-        $this->theme->asset()->serve('chosen');
+
 
         $data = array(
             'data'=>$widgets
@@ -140,5 +168,24 @@ class CustomWidgetsController extends BaseController {
         $widget = \CustomWidget::find(\Input::get('id'));
 
         return $widget->template;
+    }
+    public function widgetForm($id)
+    {
+        $widgets = \CustomWidget::find($id);
+
+
+        $this->theme->asset()->serve('chosen');
+        $this->theme->asset()->serve('mustache');
+
+        $data = array(
+            'data'=>$widgets
+        );
+
+        $this->theme->breadcrumb()
+            ->add('Dashboard', \URL::route('admin/dashboard'))
+            ->add('Companies', \URL::route('admin/companies'))
+            ->add('Create');
+
+        return $this->theme->layout('widgets')->scope('custom-widgets.widgetForm',$data)->render();
     }
 }

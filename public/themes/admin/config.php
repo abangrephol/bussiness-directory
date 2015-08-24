@@ -100,6 +100,11 @@ return array(
                 $asset->container('footer-after')->usePath()->add('iframe','js/iframeResizer.min.js');
             });
 
+            $asset->cook('mustache',function($asset){
+
+                $asset->container('footer')->add('mustache','3rdparty/mustache/mustache.min.js');
+            });
+
         },
         // Before event inherit from package config and the theme that call before,
         // you can use this event to set meta, breadcrumb template or anything
@@ -168,6 +173,7 @@ return array(
             'widgets' => function($theme)
             {
                 $theme->asset()->serve('bootstrap');
+                $theme->asset()->serve('mustache');
             },
 
         )

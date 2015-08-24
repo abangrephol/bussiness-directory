@@ -66,20 +66,20 @@
 			// .cke_show_blocks p { ... }
 			cssStd += '{' +
 				'background-repeat:no-repeat;' +
-				'border:1px dotted gray;' +
-				'padding-top:8px' +
+                'box-shadow: inset 0 0 1px #2280b9;' +
+				'padding-top:0' +
 			'}';
 
 			// .cke_show_blocks.cke_contents_ltr p { ... }
 			cssLtr += '{' +
 				'background-position:top left;' +
-				'padding-left:8px' +
+				'padding-left:0' +
 			'}';
 
 			// .cke_show_blocks.cke_contents_rtl p { ... }
 			cssRtl += '{' +
 				'background-position:top right;' +
-				'padding-right:8px' +
+				'padding-right:0' +
 			'}';
 
 			CKEDITOR.addCss( cssStd.concat( cssImg, cssLtr, cssRtl ) );
