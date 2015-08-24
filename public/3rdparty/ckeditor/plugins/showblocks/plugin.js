@@ -67,19 +67,16 @@
 			cssStd += '{' +
 				'background-repeat:no-repeat;' +
                 'box-shadow: inset 0 0 1px #2280b9;' +
-				'padding-top:0' +
 			'}';
 
 			// .cke_show_blocks.cke_contents_ltr p { ... }
 			cssLtr += '{' +
 				'background-position:top left;' +
-				'padding-left:0' +
 			'}';
 
 			// .cke_show_blocks.cke_contents_rtl p { ... }
 			cssRtl += '{' +
 				'background-position:top right;' +
-				'padding-right:0' +
 			'}';
 
 			CKEDITOR.addCss( cssStd.concat( cssImg, cssLtr, cssRtl ) );
@@ -90,14 +87,14 @@
 				CKEDITOR.addCss(
 					'.cke_show_blocks [contenteditable=false],.cke_show_blocks .cke_show_blocks_off{' +
 						'border:none;' +
-						'padding-top:0;' +
+						//'padding-top:0;' +
 						'background-image:none' +
 					'}' +
 					'.cke_show_blocks.cke_contents_rtl [contenteditable=false],.cke_show_blocks.cke_contents_rtl .cke_show_blocks_off{' +
-						'padding-right:0' +
+						//'padding-right:0' +
 					'}' +
 					'.cke_show_blocks.cke_contents_ltr [contenteditable=false],.cke_show_blocks.cke_contents_ltr .cke_show_blocks_off{' +
-						'padding-left:0' +
+						//'padding-left:0' +
 					'}'
 				);
 			}
