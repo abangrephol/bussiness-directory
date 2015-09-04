@@ -79,10 +79,7 @@ var curWidget = null;
                         curWidget.setData('wId',data.wId);
                         curWidget.setData('template',template);
                         curWidget.element.setHtml($(template).html());
-                        console.log(curWidget.initEditable('text',{
-                            selector : 'p,h1,h2,h3,h4,h5,img',
-                            multi:true
-                        }));
+
                     }
                 }
             );

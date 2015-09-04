@@ -58,7 +58,7 @@
 				cssStd += '.cke_show_blocks ' + tag + notDisabled + trailing;
 				cssLtr += '.cke_show_blocks.cke_contents_ltr ' + tag + notDisabled + trailing;
 				cssRtl += '.cke_show_blocks.cke_contents_rtl ' + tag + notDisabled + trailing;
-				cssImg += '.cke_show_blocks ' + tag + notDisabled + '{' +
+				cssImg += '.cke_show_blocks:focus ' + tag + notDisabled + '{' +
 					'background-image:url(' + CKEDITOR.getUrl( path + 'images/block_' + tag + '.png' ) + ')' +
 				'}';
 			}

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/config.php" afterPath="$PROJECT_DIR$/public/themes/admin/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +34,7 @@
       <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="27" selection-start="376" selection-end="376" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="1190">
+            <state line="9" column="27" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1190">
               <folding />
             </state>
           </provider>
@@ -37,10 +43,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="102" selection-start="6002" selection-end="6002" vertical-scroll-proportion="-8.039216" vertical-offset="1256" max-vertical-offset="3876">
-              <folding>
-                <element signature="n#style#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="98" column="102" selection-start="6002" selection-end="6002" vertical-scroll-proportion="0.0" vertical-offset="1256" max-vertical-offset="3876">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -48,7 +52,7 @@
       <file leaf-file-name="plugin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="56" selection-start="6522" selection-end="6522" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="3502">
+            <state line="91" column="27" selection-start="4608" selection-end="4608" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="3451">
               <folding />
             </state>
           </provider>
@@ -63,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="plugin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="26" selection-start="3762" selection-end="3762" vertical-scroll-proportion="-0.71704745" vertical-offset="1989" max-vertical-offset="2601">
+            <state line="84" column="39" selection-start="3204" selection-end="3204" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2652">
               <folding />
             </state>
           </provider>
@@ -75,7 +79,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="39" selection-start="4406" selection-end="4406" vertical-scroll-proportion="-9.807693" vertical-offset="1071" max-vertical-offset="2023">
+            <state line="72" column="43" selection-start="3639" selection-end="3639" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2023">
               <folding />
             </state>
           </provider>
@@ -84,11 +88,8 @@
       <file leaf-file-name="widgetForm.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="60" selection-start="3765" selection-end="3769" vertical-scroll-proportion="-3.372549" vertical-offset="1528" max-vertical-offset="2210">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="100" column="60" selection-start="3765" selection-end="3769" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2210">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,7 +97,7 @@
       <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="26" selection-start="1142" selection-end="1597" vertical-scroll-proportion="-11.769231" vertical-offset="51" max-vertical-offset="2669">
+            <state line="71" column="4" selection-start="4624" selection-end="17055" vertical-scroll-proportion="-2.2207792" vertical-offset="1036" max-vertical-offset="5304">
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -104,6 +105,12 @@
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,7 +119,7 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="32" selection-start="4144" selection-end="4175" vertical-scroll-proportion="-4.5384617" vertical-offset="817" max-vertical-offset="3060">
+            <state line="72" column="0" selection-start="5380" selection-end="5380" vertical-scroll-proportion="-19.653847" vertical-offset="713" max-vertical-offset="5695">
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -120,14 +127,14 @@
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <marker date="1440377299623" expanded="true" signature="4274:4630" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="4337:4630" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="5400:5569" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="6417:6686" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="6448:6686" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="6483:6618" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="6653:6686" placeholder="..." />
-                <marker date="1440377299623" expanded="true" signature="6898:6931" placeholder="..." />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <marker date="1441356777418" expanded="true" signature="6137:6201" placeholder="..." />
+                <marker date="1441356777418" expanded="true" signature="6168:6201" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -136,16 +143,16 @@
       <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="8" selection-start="4470" selection-end="4532" vertical-scroll-proportion="-15.0" vertical-offset="1208" max-vertical-offset="1751">
+            <state line="94" column="8" selection-start="4470" selection-end="4532" vertical-scroll-proportion="0.0" vertical-offset="1208" max-vertical-offset="1751">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="28" selection-start="6346" selection-end="6354" vertical-scroll-proportion="-57.5" vertical-offset="1548" max-vertical-offset="3315">
+            <state line="125" column="57" selection-start="4762" selection-end="4762" vertical-scroll-proportion="0.11376147" vertical-offset="2046" max-vertical-offset="3077">
               <folding />
             </state>
           </provider>
@@ -154,7 +161,7 @@
       <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="37.26923" vertical-offset="969" max-vertical-offset="5508">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5559">
               <folding />
             </state>
           </provider>
@@ -163,7 +170,7 @@
       <file leaf-file-name="widgets.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="36" selection-start="204" selection-end="210" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="323">
+            <state line="11" column="24" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
@@ -172,9 +179,9 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="48" selection-start="9171" selection-end="9171" vertical-scroll-proportion="-13.038462" vertical-offset="2636" max-vertical-offset="3196">
+            <state line="106" column="26" selection-start="6439" selection-end="6455" vertical-scroll-proportion="0.0" vertical-offset="1412" max-vertical-offset="3264">
               <folding>
-                <marker date="1440361495596" expanded="true" signature="7427:7790" placeholder="..." />
+                <marker date="1441335552712" expanded="true" signature="7739:8102" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -183,7 +190,7 @@
       <file leaf-file-name="widgetList.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="10.076923" vertical-offset="568" max-vertical-offset="1496">
+            <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
@@ -208,19 +215,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/drag.js" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/config.php" />
         <option value="$PROJECT_DIR$/public/themes/sitebuilder/config.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/widget/plugin.js" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
-        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/config.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
       </list>
     </option>
   </component>
@@ -255,7 +262,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -398,28 +404,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -494,62 +478,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom-websites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="3rdparty" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -572,63 +500,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3rdparty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3rdparty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image2" />
+              <option name="myItemId" value="jquery" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -688,10 +560,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -765,7 +639,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18335901" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18952234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -792,86 +666,27 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/image2/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="37.26923" vertical-offset="969" max-vertical-offset="5508">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.44815466" vertical-offset="255" max-vertical-offset="27574" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1190">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/create.blade.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/applications.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="8" selection-start="4470" selection-end="4532" vertical-scroll-proportion="-15.0" vertical-offset="1208" max-vertical-offset="1751">
+        <state line="29" column="18" selection-start="746" selection-end="746" vertical-scroll-proportion="0.3321617" vertical-offset="304" max-vertical-offset="6290" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="102" selection-start="6002" selection-end="6002" vertical-scroll-proportion="0.0" vertical-offset="1256" max-vertical-offset="3876">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="26" selection-start="1142" selection-end="1597" vertical-scroll-proportion="-11.769231" vertical-offset="51" max-vertical-offset="2669">
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="32" selection-start="4144" selection-end="4175" vertical-scroll-proportion="-4.5384617" vertical-offset="817" max-vertical-offset="3060">
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <marker date="1440377299623" expanded="true" signature="4274:4630" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="4337:4630" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="5400:5569" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="6417:6686" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="6448:6686" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="6483:6618" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="6653:6686" placeholder="..." />
-            <marker date="1440377299623" expanded="true" signature="6898:6931" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="28" selection-start="6346" selection-end="6354" vertical-scroll-proportion="-57.5" vertical-offset="1548" max-vertical-offset="3315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="60" selection-start="3765" selection-end="3769" vertical-scroll-proportion="-3.372549" vertical-offset="1528" max-vertical-offset="2210">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="10.076923" vertical-offset="568" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/widget/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3861" column="3" selection-start="151066" selection-end="151066" vertical-scroll-proportion="0.9375" vertical-offset="65127" max-vertical-offset="65739">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,46 +697,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/image2/plugin.js">
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.44815466" vertical-offset="255" max-vertical-offset="27574">
+        <state line="84" column="39" selection-start="3204" selection-end="3204" vertical-scroll-proportion="0.0" vertical-offset="1428" max-vertical-offset="2652">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="376" selection-end="376" vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="1190">
+        <state line="72" column="43" selection-start="3639" selection-end="3639" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2023">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/jquery/jquery.serializeObject.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="569" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="26" selection-start="6439" selection-end="6455" vertical-scroll-proportion="0.0" vertical-offset="1412" max-vertical-offset="3264">
+          <folding>
+            <marker date="1441335552712" expanded="true" signature="7739:8102" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="24" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="60" selection-start="3765" selection-end="3769" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="56" selection-start="6522" selection-end="6522" vertical-scroll-proportion="0.0" vertical-offset="2066" max-vertical-offset="3502">
+        <state line="91" column="27" selection-start="4608" selection-end="4608" vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="3451">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/applications.rnc">
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="18" selection-start="746" selection-end="746" vertical-scroll-proportion="0.3321617" vertical-offset="304" max-vertical-offset="6290">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="102" selection-start="6002" selection-end="6002" vertical-scroll-proportion="-8.039216" vertical-offset="1256" max-vertical-offset="3876">
+        <state line="71" column="4" selection-start="4624" selection-end="17055" vertical-scroll-proportion="-2.2207792" vertical-offset="1036" max-vertical-offset="5304">
           <folding>
-            <element signature="n#style#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js">
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="26" selection-start="3762" selection-end="3762" vertical-scroll-proportion="-0.71704745" vertical-offset="1989" max-vertical-offset="2601">
+        <state line="72" column="0" selection-start="5380" selection-end="5380" vertical-scroll-proportion="-19.653847" vertical-offset="713" max-vertical-offset="5695">
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <marker date="1441356777418" expanded="true" signature="6137:6201" placeholder="..." />
+            <marker date="1441356777418" expanded="true" signature="6168:6201" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="57" selection-start="4762" selection-end="4762" vertical-scroll-proportion="0.11376147" vertical-offset="2046" max-vertical-offset="3077">
           <folding />
         </state>
       </provider>

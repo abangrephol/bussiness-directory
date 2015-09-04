@@ -104,6 +104,10 @@ return array(
 
                 $asset->container('footer')->add('mustache','3rdparty/mustache/mustache.min.js');
             });
+            $asset->cook('jquery.serialize',function($asset){
+                $asset->container('footer')->add('jquery.deserialize','3rdparty/jquery/jquery.deserialize.min.js');
+                $asset->container('footer')->add('jquery.serialize','3rdparty/jquery/jquery.serializeObject.min.js');
+            });
 
         },
         // Before event inherit from package config and the theme that call before,

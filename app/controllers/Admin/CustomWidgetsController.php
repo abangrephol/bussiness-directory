@@ -48,6 +48,7 @@ class CustomWidgetsController extends BaseController {
         $this->theme->asset()->serve('chosen');
         $this->theme->asset()->serve('ckeditor');
         $this->theme->asset()->serve('codemirror');
+        $this->theme->asset()->serve('jquery.serialize');
 
         $data = array('thid'=>\Session::get('thid'));
 
@@ -63,17 +64,9 @@ class CustomWidgetsController extends BaseController {
         $widget = new \CustomWidget();
         if($widget->validate()){
             $formData = [];
-            $inputName = \Input::get('formName');
-            $inputType = \Input::get('formType');
-            $inputMulti = \Input::get('formMulti');
-            for($i=0; $i < count($inputName) ; $i++){
-                if(isset($inputName[$i])){
-                    $formData[] = [
-                        'name'=>$inputName[$i],
-                        'type'=>$inputType[$i],
-                        'multi'=>$inputMulti[$i]
-                    ];
-                }
+            $inputData = \Input::get('inputData');
+            for($i=0; $i < count($inputData) ; $i++){
+                $formData[] = json_decode($inputData[$i]) ;
             }
             $widget->data = json_encode(['form'=>$formData]);
             $widget->save();
@@ -84,7 +77,7 @@ class CustomWidgetsController extends BaseController {
             $messages = new \Illuminate\Support\MessageBag;
             $messages
                 ->add('error',true)
-                ->add('message', 'Failed to create new company');
+                ->add('message', 'Failed to create new widget');
             return \Redirect::route('admin.widget.create')
                 ->withErrors($widget->errors())
                 ->withInput()
@@ -97,6 +90,7 @@ class CustomWidgetsController extends BaseController {
         $this->theme->asset()->serve('chosen');
         $this->theme->asset()->serve('ckeditor');
         $this->theme->asset()->serve('codemirror');
+        $this->theme->asset()->serve('jquery.serialize');
         $widget = \CustomWidget::find($id);
         $data = array(
             'data'=> $widget,
@@ -116,28 +110,20 @@ class CustomWidgetsController extends BaseController {
         $widget = \CustomWidget::find($id);
         if($widget->validate()){
             $formData = [];
-            $inputName = \Input::get('formName');
-            $inputType = \Input::get('formType');
-            $inputMulti = \Input::get('formMulti');
-            for($i=0; $i < count($inputName) ; $i++){
-                if(isset($inputName[$i])){
-                    $formData[] = [
-                        'name'=>$inputName[$i],
-                        'type'=>$inputType[$i],
-                        'multi'=>$inputMulti[$i]
-                    ];
-                }
+            $inputData = \Input::get('inputData');
+            for($i=0; $i < count($inputData) ; $i++){
+                $formData[] = json_decode($inputData[$i]) ;
             }
             $widget->data = json_encode(['form'=>$formData]);
             $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
-            $messages->add('message', 'You have successfully update template');
+            $messages->add('message', 'You have successfully update widget');
             return \Redirect::route('admin.custom-widget.edit',array('id'=>$id))->with('messages',$messages);
         }else{
             $messages = new \Illuminate\Support\MessageBag;
             $messages
                 ->add('error',true)
-                ->add('message', 'Failed to update company');
+                ->add('message', 'Failed to update widget');
             return \Redirect::route('admin.widget.edit',array('id'=>$id))
 
                 ->withErrors($widget->errors())
