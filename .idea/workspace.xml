@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="54" selection-start="9841" selection-end="9841" vertical-scroll-proportion="0.57575756" vertical-offset="2146" max-vertical-offset="5304">
+            <state line="143" column="39" selection-start="9835" selection-end="9839" vertical-scroll-proportion="-3.3921568" vertical-offset="2258" max-vertical-offset="5304">
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -111,10 +111,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="edit.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="16" selection-start="15015" selection-end="15015" vertical-scroll-proportion="-31.80392" vertical-offset="2475" max-vertical-offset="5695">
+            <state line="252" column="17" selection-start="15375" selection-end="15375" vertical-scroll-proportion="0.63461536" vertical-offset="3954" max-vertical-offset="5695">
               <folding>
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -128,8 +128,8 @@
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <marker date="1441359376031" expanded="true" signature="6137:6201" placeholder="..." />
-                <marker date="1441359376031" expanded="true" signature="6168:6201" placeholder="..." />
+                <marker date="1441359613235" expanded="true" signature="6137:6201" placeholder="..." />
+                <marker date="1441359613235" expanded="true" signature="6168:6201" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -757,9 +757,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="16" selection-start="15015" selection-end="15015" vertical-scroll-proportion="-31.80392" vertical-offset="2475" max-vertical-offset="5695">
+        <state line="143" column="39" selection-start="9835" selection-end="9839" vertical-scroll-proportion="-3.3921568" vertical-offset="2258" max-vertical-offset="5304">
           <folding>
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -773,15 +773,13 @@
             <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <marker date="1441359376031" expanded="true" signature="6137:6201" placeholder="..." />
-            <marker date="1441359376031" expanded="true" signature="6168:6201" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="54" selection-start="9841" selection-end="9841" vertical-scroll-proportion="0.57575756" vertical-offset="2146" max-vertical-offset="5304">
+        <state line="252" column="17" selection-start="15375" selection-end="15375" vertical-scroll-proportion="0.63461536" vertical-offset="3954" max-vertical-offset="5695">
           <folding>
             <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -795,6 +793,8 @@
             <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#label#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <marker date="1441359613235" expanded="true" signature="6137:6201" placeholder="..." />
+            <marker date="1441359613235" expanded="true" signature="6168:6201" placeholder="..." />
           </folding>
         </state>
       </provider>

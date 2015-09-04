@@ -133,7 +133,7 @@
                         <div class="form-group">
                             {{ Form::label('type', 'Type', array('class' => ' col-sm-3 control-label required' )) }}
                             <div class="col-sm-7">
-                                {{ Form::select('type', array('text'=>'Text','textarea'=>'Textarea','select'=>'Combo Box','option'=>'Options','date'=>'Datepicker','file'=>'Files','icon'=>'Icons Font Awesome') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
+                                {{ Form::select('type', array('text'=>'Text','textarea'=>'Textarea','select'=>'Combo Box','option'=>'Options','date'=>'Datepicker','file'=>'Files','icon'=>'Icons Font Awesome') ,null , array('id'=>'type','class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
                                 <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                         <div class="form-group">
                             {{ Form::label('multi', 'Mulitple', array('class' => ' col-sm-3 control-label required' )) }}
                             <div class="col-sm-7">
-                                {{ Form::select('formMulti', array('single'=>'Single','multi'=>'Multiple') ,null , array('id'=>'formMulti','class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                                {{ Form::select('multi', array('single'=>'Single','multi'=>'Multiple') ,null , array('id'=>'multi','class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
                                 <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
@@ -250,7 +250,7 @@
                     break;
             }
         });
-        $('#formMulti').on('change',function(){
+        $('#multi').on('change',function(){
             switch($(this).val()){
                 case 'single':
                     $('#multiple').addClass('hide');
