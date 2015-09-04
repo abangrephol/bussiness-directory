@@ -131,10 +131,10 @@ var curWidget = null;
                     });
                 },
                 data :function(){
-                    console.log(this.initEditable('text',{
+                    /*console.log(this.initEditable('text',{
                         selector : 'p,h1,h2,h3,h4,h5,img',
                         multi:true
-                    }));
+                    }));*/
                 },
                 downcast: function (element){
 
