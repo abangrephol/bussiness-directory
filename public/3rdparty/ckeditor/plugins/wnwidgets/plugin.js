@@ -1,27 +1,13 @@
 var editorName = null;
-$.fn.serializeObject = function()
-{
-    var o = {};
-    var a = this.serializeArray();
-    $.each(a, function() {
-        if (o[this.name] !== undefined) {
-            if (!o[this.name].push) {
-                o[this.name] = [o[this.name]];
-            }
-            o[this.name].push(this.value || '');
-        } else {
-            o[this.name] = this.value || '';
-        }
-    });
-    return o;
-};
+
+
 var curWidget = null;
 (function() {
     var iframeWindow = null,iframeid=null,iframe = null;
     CKEDITOR.plugins.add('wnwidgets', {
         requires: ['iframedialog','fakeobjects','widget'],
         init: function(editor) {
-            CKEDITOR.dialog.addIframe('selectWidget', 'Insert Widgets', window.location.origin + '/admin/widget-list/', 550, 200,
+            CKEDITOR.dialog.addIframe('selectWidget', 'Insert Widgets', window.location.origin + '/admin/widget-list/', 850, 400,
                 function() {
                     iframeid=this._.frameId;/*get the iframe*/
                     iframe = document.getElementById( this._.frameId );
@@ -33,10 +19,22 @@ var curWidget = null;
                             data = {'formData':form.serializeObject(),'wId':form.data('wid')},
                             template = $(iframe).contents().find('#template').html();
                         template = Mustache.to_html(template,data.formData);
+                        console.log(form.serializeJSON());
                         var customwidget = new CKEDITOR.dom.element.createFromHtml( template );
                         var ed = this._.editor;
-                        ed.insertElement( customwidget );
-                        ed.widgets.initOn(customwidget,'widgets',data);
+                        if(form.data('type')=='html'){
+                            ed.insertElement( customwidget );
+                            ed.widgets.initOn(customwidget,'widgets',data);
+                        }else{
+                            var newFakeImage = ed.createFakeElement( customwidget, 'wnwidgets', 'widgets-fake', true );
+                            $(newFakeImage).attr('title',data.title);
+                            $(newFakeImage).attr('alt',data.title);
+
+                            ed.insertElement( newFakeImage );
+                            ed.widgets.initOn(newFakeImage,'widgets-fake',data);
+
+                        }
+
 
                         /*$.get($(e).data('link'),function(data){
 
@@ -61,7 +59,7 @@ var curWidget = null;
                     }
                 }
             );
-            CKEDITOR.dialog.addIframe('editWidget', 'Edit Widgets', window.location.origin + '/admin/widget-form/', 550, 200,
+            CKEDITOR.dialog.addIframe('editWidget', 'Edit Widgets', window.location.origin + '/admin/widget-form/', 850, 400,
                 function() {
                     iframeid=this._.frameId;/*get the iframe*/
                     iframe = document.getElementById( this._.frameId );
@@ -111,6 +109,7 @@ var curWidget = null;
             });
             editor.widgets.add('widgets',{
                 upcast: function( element ) {
+
                     return element.hasClass( 'wnwidgets' );
                 },
                 init : function (){
@@ -138,6 +137,31 @@ var curWidget = null;
                 },
                 downcast: function (element){
 
+                },
+                edit: function(evt){
+                    curWidget = this;
+                    //evt.data.dialog = 'selectWidget';
+                    var editDialog = editor.openDialog( 'editWidget' );
+                    editDialog.definition.contents[0].elements[0].src = window.location.origin + '/admin/widget-form/'+this.data.wId;
+                }
+            });
+            editor.widgets.add('widgets-fake',{
+                upcast: function( element ) {
+                    console.log('oke');
+                    return element.hasClass( 'wnwidgets' );
+                },
+                init : function (){
+                    editor.widgets.on( 'instanceCreated', function( evt ) {
+                        var widget = evt.data;
+                        widget.on('data', function(evt){
+
+                        });
+                    });
+                },
+                data :function(){
+                },
+                downcast: function (element){
+                    element.setHTML
                 },
                 edit: function(evt){
                     curWidget = this;

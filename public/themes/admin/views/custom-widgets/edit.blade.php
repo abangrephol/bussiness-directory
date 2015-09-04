@@ -38,7 +38,7 @@
                 <div class="form-group {{ $errors->has('template')?'has-error':'' }}">
                     {{ Form::label('type', 'Type', array('class' => ' col-sm-3 control-label required' )) }}
                     <div class="col-sm-7">
-                        {{ Form::select('type', array('single'=>'Single Widget','multi'=>'Multiple Widget') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                        {{ Form::select('type', array('html'=>'HTML Widget','object'=>'Object Widget') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
                         <label id='name_template' for='template' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>
@@ -274,6 +274,7 @@
             $('.select2').trigger('change');
             $('#combobox_items div.row:not(#combobox_item)').remove();
             $('#combobox_items div.row input').val('');
+            $('#formDialog').modal('show');
         })
         $('#saveInput').on('click',function(){
             var type = {'text':'Text','textarea':'Textarea','select':'Combo Box','option':'Options','date':'Datepicker','file':'Files','icon':'Icons Font Awesome'};

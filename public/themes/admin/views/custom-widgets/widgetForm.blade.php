@@ -11,19 +11,34 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div id="template" style="display: none">{{$data->template}}</div>
-            <form id="widgetAdd" action="" class="form form-horizontal" method="post" data-wid="{{$data->id}}">
+            <form id="widgetAdd" action="" class="form form-horizontal" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}">
                 <?php
                 $wdata = json_decode($data->data);
                 $forms = $wdata->form;
                 foreach($forms as $form){
                 ?>
                     <div class="form-group">
-                        {{ Form::label('name', $form->name, array('class' => ' col-sm-3 control-label required' )) }}
+                        {{ Form::label('name', $form->label, array('class' => ' col-sm-3 control-label required' )) }}
                         <div class="col-sm-7">
                             <?php
                                 switch($form->type){
                                     case 'text' :
-                                        echo Form::text($form->name, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->name));
+                                        if($form->multi=="multi"){
+                                            $formArr = explode('.',$form->name);
+                                            $formName = $form->name;
+                                            if(count($formArr)>1){
+                                                $formNameLast = $formArr[count($formArr)-1];
+                                                array_pop($formArr);
+                                                $formName = implode('.',$formArr);
+
+                                            }
+
+
+                                            for($i=0;$i<$form->multiNumber;$i++){
+                                                echo Form::text($formName.".$i.".$formNameLast, $form->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->name));
+                                            }
+                                        }
+
                                         break;
                                     case 'textarea' :
                                         echo Form::textarea($form->name, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->name));

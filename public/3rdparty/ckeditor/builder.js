@@ -9,6 +9,7 @@
     document.getElementById('sbfooter').setAttribute( 'contenteditable', true );
 CKEDITOR.on('instanceReady', function(event) {
     CKEDITOR.scriptLoader.load( window.location.origin+'/3rdparty/mustache/mustache.min.js' );
-    CKEDITOR.scriptLoader.load( window.location.origin+'/3rdparty/jquery/jquery.deserialize.min.js' );
+    CKEDITOR.scriptLoader.load( window.location.origin+'/3rdparty/jquery/jquery.deserialize.js' );
+    CKEDITOR.scriptLoader.load( window.location.origin+'/3rdparty/jquery/jquery.serialize-object.js' );
 });
 //} );
