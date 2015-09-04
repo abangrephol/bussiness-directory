@@ -239,7 +239,7 @@
         });
 
         jQuery('.select2').select2({width:'100%',allowClear:true});
-        $('#formType').on('change',function(){
+        $('#type').on('change',function(){
             switch($(this).val()){
                 case 'option':
                 case 'select':

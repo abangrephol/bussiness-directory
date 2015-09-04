@@ -141,7 +141,7 @@
                         <div class="form-group">
                             {{ Form::label('multi', 'Mulitple', array('class' => ' col-sm-3 control-label required' )) }}
                             <div class="col-sm-7">
-                                {{ Form::select('formMulti', array('single'=>'Single','multi'=>'Multiple') ,null , array('id'=>'formMulti','class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                                {{ Form::select('nulti', array('single'=>'Single','multi'=>'Multiple') ,null , array('id'=>'formMulti','class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
                                 <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
@@ -216,7 +216,7 @@
         });
 
         jQuery('.select2').select2({width:'100%',allowClear:true});
-        $('#formType').on('change',function(){
+        $('#type').on('change',function(){
             switch($(this).val()){
                 case 'option':
                 case 'select':
@@ -227,7 +227,7 @@
                     break;
             }
         });
-        $('#formMulti').on('change',function(){
+        $('#multi').on('change',function(){
             switch($(this).val()){
                 case 'single':
                     $('#multiple').addClass('hide');
