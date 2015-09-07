@@ -10,7 +10,7 @@
 <div class="container" style="margin-top:10px; background:none;">
     <div class="panel panel-default">
         <div class="panel-body">
-            <div id="template" style="display: none">{{$data->template}}</div>
+            <div id="template" style="display: none"><div class="wnwidgets">{{$data->template}}</div></div>
             <form id="widgetAdd" action="" class="form form-horizontal" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}">
                 <?php
                 $wdata = json_decode($data->data);
