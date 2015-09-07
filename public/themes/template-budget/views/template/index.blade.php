@@ -74,64 +74,25 @@
     </div>
 </div>
 </div>
-<!-- Slider
-================================================== -->
-<div class="wnwidgets container fullwidth-element home-slider ">
-
-    <div class="tp-banner-container">
-        <div class="tp-banner">
-            <ul>
-                <!-- Slide 1  -->
-                @if(isset($banners))
-                @foreach($banners as $banner)
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
-                    <img src="{{ $banner }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" class="mceNonEditable">
-                </li>
-                @endforeach
-                @else
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
-                    <img src="{{ Theme::asset()->url('images/slider2.jpg') }}"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                    <!--div class="caption description sfb fadeout" data-x="right" data-y="bottom" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
-                        <h3>The New Way To Success</h3>
-                        <p>Donec scelerisque aliquet mi, non venenatis urnas iaculis. Utea id nila ante cras est massa, interdum  ateal imperdiet hendrerit posuere.</p>
-                    </div-->
-                </li>
-
-                <!-- Slide 2  -->
-                <li data-transition="zoomout" data-slotamount="7" data-masterspeed="1000">
-                    <img src="{{ Theme::asset()->url('images/slider.jpg') }}"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-                    <!--div class="caption dark sfb fadeout" style="text-align: center" data-x="center" data-y="165" data-speed="400" data-start="800"  data-easing="Power4.easeOut">
-                        <h2>Pixel Perfect</h2>
-                        <h3>High attention to Design and Code</h3>
-                        <a href="shop-with-sidebar.html" class="caption-btn">Get This Theme</a>
-                    </div-->
-                </li>
-                @endif
-            </ul>
-        </div>
-    </div>
-</div>
 
 
 <div id="sbbody" >
 
 <!-- Featured
 ================================================== -->
-<div class="container">
+    <div class="container">
 
-        @if (isset($data->content))
-        {{$data->content}}
-        @else
-        <div class="row">
+            @if (isset($data->content))
+            {{$data->content}}
+            @else
+            <div class="row">
 
-            <div class="clearfix"></div>
-            <div class="margin-top-30"></div>
-        </div>
-        @endif
+                <div class="clearfix"></div>
+                <div class="margin-top-30"></div>
+            </div>
+            @endif
 
-
-
-</div>
+    </div>
 </div>
 
 <div id="sbfooter">

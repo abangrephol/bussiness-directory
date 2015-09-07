@@ -21,27 +21,36 @@
                         {{ Form::label('name', $form->label, array('class' => ' col-sm-3 control-label required' )) }}
                         <div class="col-sm-7">
                             <?php
+                            if($form->multi=="multi"){
+                                $formArr = explode('.',$form->name);
+                                $formName = $form->name;
+                                if(count($formArr)>1){
+                                    $formNameLast = $formArr[count($formArr)-1];
+                                    array_pop($formArr);
+                                    $formName = implode('.',$formArr);
+
+                                }
+                            }
                                 switch($form->type){
+                                    case 'date':
+                                    case 'file':
                                     case 'text' :
                                         if($form->multi=="multi"){
-                                            $formArr = explode('.',$form->name);
-                                            $formName = $form->name;
-                                            if(count($formArr)>1){
-                                                $formNameLast = $formArr[count($formArr)-1];
-                                                array_pop($formArr);
-                                                $formName = implode('.',$formArr);
-
-                                            }
-
-
                                             for($i=0;$i<$form->multiNumber;$i++){
-                                                echo Form::text($formName.".$i.".$formNameLast, $form->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->name));
+                                                echo Form::text($formName.".$i.".$formNameLast, $form->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
                                             }
+                                        }else{
+                                            echo Form::text($form->name, $form->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
                                         }
-
                                         break;
                                     case 'textarea' :
-                                        echo Form::textarea($form->name, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->name));
+                                        if($form->multi=="multi"){
+                                            for($i=0;$i<$form->multiNumber;$i++){
+                                                echo Form::textarea($formName.".$i.".$formNameLast, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
+                                            }
+                                        }else{
+                                            echo Form::textarea($form->name, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
+                                        }
                                         break;
                                 }
                             ?>
