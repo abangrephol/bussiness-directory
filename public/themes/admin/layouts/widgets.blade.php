@@ -10,5 +10,6 @@
 </section>
 
 {{ Theme::asset()->container('footer')->scripts() }}
+{{ Theme::asset()->container('footer-after')->scripts() }}
 </body>
 </html>

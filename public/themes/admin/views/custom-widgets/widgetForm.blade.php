@@ -11,7 +11,7 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <div id="template" style="display: none"><div class="wnwidgets">{{$data->template}}</div></div>
-            <form id="widgetAdd" action="" class="form form-horizontal" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}">
+            <form id="widgetAdd" action="" class="form form-horizontal" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}" data-name="{{$data->name}}">
                 <?php
                 $wdata = json_decode($data->data);
                 $forms = $wdata->form;
@@ -52,6 +52,16 @@
                                             echo Form::textarea($form->name, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
                                         }
                                         break;
+                                    case 'select':
+                                        $cbArray = [];
+                                        for($i=0;$i<count($form->{'cb_label[]'});$i++){
+                                            $cbArray[$form->{'cb_value[]'}[$i]] = $form->{'cb_label[]'}[$i];
+                                        }
+                                        echo Form::select($form->name, $cbArray ,$form->default , array('class'=>'select2','required'=>'required','placeholder'=>'Select '.$form->label));
+                                        break;
+                                    case 'icon':
+                                        echo Form::select($form->name, \Category::$completeIcons ,$form->default , array('id'=>'icon','required'=>'required','placeholder'=>'Select '.$form->label));
+                                        break;
                                 }
                             ?>
                         </div>
@@ -65,7 +75,7 @@
 </div>
 
 <script>
-    console.log();
+
     $.fn.serializeObject = function()
     {
         var o = {};
@@ -120,30 +130,31 @@
     var oEditor   = CKEDITOR.currentInstance;
 
     CKEDITOR.event.implementOn(CKEDITOR.dialog.getCurrent());
-    //CKEDITOR.dialog.getCurrent().on("ok", addWidget);
-    /*var okListener = function(ev) {
-     var dialog = this, data = {}, customwidget = new CKEDITOR.dom.element( 'widget' );
-     var ed = this._.editor;
-     this.commitContent( data );
-     customwidget.setAttribute( 'id', data.id );
-     customwidget.setAttribute( 'title', data.title );
+    function formatResult(item) {
+        if(!item.id) {
+            // return `text` for optgroup
+            return item.text;
+        }
+        // return item template
 
-     var newFakeImage = ed.createFakeElement( customwidget, 'wnwidgets', 'widget', true );
-     $(newFakeImage).attr('title',data.title);
-     $(newFakeImage).attr('alt',data.title);
-     ed.insertElement( newFakeImage );
-     // remove the listeners to avoid any JS exceptions
-     CKEDITOR.dialog.getCurrent().removeListener("ok", okListener);
-     CKEDITOR.dialog.getCurrent().removeListener("cancel", cancelListener);
-     };
-     var cancelListener = function(ev) {
+        return '<i class="fa '+item.id+' mr10"></i>' + item.text + '';
+    }
 
-     // remove the listeners to avoid any JS exceptions
-     CKEDITOR.dialog.getCurrent().removeListener("ok", okListener);
-     CKEDITOR.dialog.getCurrent().removeListener("cancel", cancelListener);
-     };
+    function formatSelection(item) {
+        // return selection template
+        return '<i class="fa '+item.id+' mr10"></i>' + item.text + '';
+    }
+    jQuery(document).ready(function(){
+        jQuery('.select2').select2({width:'100%',allowClear:true});
+        jQuery('#icon').select2({
+            width:'100%',
+            allowClear:true,
+            // Specify format function for dropdown item
+            formatResult: formatResult,
+            // Specify format function for selected item
+            formatSelection: formatSelection
+        });
 
-     CKEDITOR.event.implementOn(CKEDITOR.dialog.getCurrent());
-     //CKEDITOR.dialog.getCurrent().on("ok", okListener);
-     CKEDITOR.dialog.getCurrent().on("cancel", cancelListener);*/
+    });
+
 </script>

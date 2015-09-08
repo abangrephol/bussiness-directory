@@ -29,13 +29,16 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                     onOk : function(){
                         var form = $(iframe).contents().find('form'),
                             template = $(iframe).contents().find('#template').html(),
-                            data = {'formData':form.serializeObject(),'wId':form.data('wid'),
+                            data = {
+                                'formData':form.serializeObject(),
+                                'wId':form.data('wid'),
                                 'type':form.data('type'),
+                                'name':form.data('name'),
                                 'template': template
                             };
                         var templateM = '';
                         if(data.type=='object'){
-                            templateM = Mustache.to_html(templateObject,{widgetName:'Widget'});
+                            templateM = Mustache.to_html(templateObject,{widgetName:data.name});
                         }else{
                             templateM = Mustache.to_html(template,data.formData);
                         }
@@ -94,11 +97,16 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                 {
                     onOk : function(){
                         var form = $(iframe).contents().find('form'),
-                            data = {'formData':form.serializeObject(),'wId':form.data('wid'),'type':form.data('type')},
+                            data = {
+                                'formData':form.serializeObject(),
+                                'wId':form.data('wid'),
+                                'type':form.data('type'),
+                                'name':form.data('name')
+                            },
                             template = $(iframe).contents().find('#template').html();
                         var templateM = '';
                         if(data.type=='object'){
-                            templateM = Mustache.to_html(templateObject,{widgetName:'Widget'});
+                            templateM = Mustache.to_html(templateObject,{widgetName:data.name});
                         }else{
                             templateM = Mustache.to_html(template,data.formData);
                         }

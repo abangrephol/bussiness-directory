@@ -65,10 +65,14 @@ class CustomWidgetsController extends BaseController {
         if($widget->validate()){
             $formData = [];
             $inputData = \Input::get('inputData');
+            $inputDataGroup = \Input::get('inputDataGroup');
             for($i=0; $i < count($inputData) ; $i++){
                 $formData[] = json_decode($inputData[$i]) ;
             }
-            $widget->data = json_encode(['form'=>$formData]);
+            for($i=0; $i < count($inputDataGroup) ; $i++){
+                $formDataGroup[] = json_decode($inputDataGroup[$i]) ;
+            }
+            $widget->data = json_encode(['form'=>$formData,'group'=>$formDataGroup]);
             $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully create new widget');
@@ -111,10 +115,14 @@ class CustomWidgetsController extends BaseController {
         if($widget->validate()){
             $formData = [];
             $inputData = \Input::get('inputData');
+            $inputDataGroup = \Input::get('inputDataGroup');
             for($i=0; $i < count($inputData) ; $i++){
                 $formData[] = json_decode($inputData[$i]) ;
             }
-            $widget->data = json_encode(['form'=>$formData]);
+            for($i=0; $i < count($inputDataGroup) ; $i++){
+                $formDataGroup[] = json_decode($inputDataGroup[$i]) ;
+            }
+            $widget->data = json_encode(['form'=>$formData,'group'=>$formDataGroup]);
             $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully update widget');

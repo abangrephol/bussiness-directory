@@ -47,18 +47,39 @@
                     <div class="col-sm-7">
                         <div class="mb10">
                             <a class="btn btn-primary" data-toggle="modal" data-target="#formDialog" id="addInput">Add Input</a>
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#formDialogGroup" id="addInputGroup">Add Group</a>
                         </div>
+                        <table class="table table-bordered" id="formDataGroup">
+                            <thead>
+                            <tr>
+                                <th>Group Label</th>
+                                <th>Group Name</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-                        <div id="formData">
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered" id="formData">
+                            <thead>
+                                <tr>
+                                    <th>Input Label</th>
+                                    <th>Input Name</th>
+                                    <th>Input Type</th>
+                                    <th>Input Group</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                        </div>
+                            </tbody>
+                        </table>
                         <label id='name_template' for='form' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
     <div class="panel-footer">
         <div class="row">
@@ -70,16 +91,75 @@
     </div>
     {{ Form::close() }}
     <div id="tpl" style="display: none" class="formInput">
-        <div class="row mb20">
-            <div class="col-sm-7">
+        <table>
+        <tr>
+            <td>
                 <label class="mr10 padding10" id="inputLabel"></label>
+            </td>
+            <td>
                 <label class="mr10 padding10" id="inputName"></label>
+            </td>
+            <td>
                 <label class="mr10 padding10" id="inputType"></label>
-            </div>
-            <div class="col-sm-4 pull-right">
+            </td>
+            <td>
+                <label class="mr10 padding10" id="inputGroup"></label>
+            </td>
+            <td>
                 {{ Form::hidden('inputData[]', null , array()) }}
                 <a class="btn btn-success editInput"><i class="fa fa-pencil"></i></a>
                 <a class="btn btn-danger removeInput"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+        </table>
+    </div>
+    <div id="tplGroup" style="display: none" class="formInput">
+        <table>
+            <tr>
+                <td>
+                    <label class="mr10 padding10" id="inputLabel"></label>
+                </td>
+                <td>
+                    <label class="mr10 padding10" id="inputName"></label>
+                </td>
+                </td>
+                <td>
+                    {{ Form::hidden('inputDataGroup[]', null , array()) }}
+                    <a class="btn btn-success editInputGroup"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-danger removeInput"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal fade" id="formDialogGroup" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Add Form Group</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="formInputGroup" class="form form-horizontal">
+                        <div class="form-group">
+                            {{ Form::label('label', 'Label', array('class' => ' col-sm-3 control-label required' )) }}
+                            <div class="col-sm-7">
+                                {{ Form::text('label', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter input label')) }}
+                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('name', 'Name', array('class' => ' col-sm-3 control-label required' )) }}
+                            <div class="col-sm-7">
+                                {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter input name')) }}
+                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="saveInputGroup" type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
     </div>
@@ -93,13 +173,7 @@
                 <div class="modal-body">
 
                     <form id="formInput" class="form form-horizontal">
-                        <div class="form-group">
-                            {{ Form::label('name', 'Name', array('class' => ' col-sm-3 control-label required' )) }}
-                            <div class="col-sm-7">
-                                {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter input name')) }}
-                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                            </div>
-                        </div>
+
                         <div class="form-group">
                             {{ Form::label('label', 'Label', array('class' => ' col-sm-3 control-label required' )) }}
                             <div class="col-sm-7">
@@ -108,9 +182,24 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            {{ Form::label('name', 'Name', array('class' => ' col-sm-3 control-label required' )) }}
+                            <div class="col-sm-7">
+                                {{ Form::text('name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter input name')) }}
+                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('group', 'Group', array('class' => ' col-sm-3 control-label required' )) }}
+                            <div class="col-sm-7">
+                                {{ Form::select('group', array('none'=>'None') ,null , array('id'=>'group','class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
+                                <label class="help-block small">Add input group for another option.</label>
+                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
                             {{ Form::label('type', 'Type', array('class' => ' col-sm-3 control-label required' )) }}
                             <div class="col-sm-7">
-                                {{ Form::select('type', array('text'=>'Text','textarea'=>'Textarea','select'=>'Combo Box','option'=>'Options','date'=>'Datepicker','file'=>'Files','icon'=>'Icons Font Awesome') ,null , array('id'=>'type','class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
+                                {{ Form::select('type', array('text'=>'Text','textarea'=>'Textarea','select'=>'Combo Box','option'=>'Options','date'=>'Datepicker','file'=>'Files','icon'=>'Icons Font Awesome') ,null , array('id'=>'intype','class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
                                 <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
@@ -188,11 +277,7 @@
                 jQuery(element).closest('.form-group').removeClass('has-error');
             }
         });
-        jQuery('#parent_id').select2({
-            placeholder: "Select a parent",
-            width:'100%',
-            allowClear:true
-        });
+
         function formatResult(item) {
             if(!item.id) {
                 // return `text` for optgroup
@@ -216,7 +301,8 @@
         });
 
         jQuery('.select2').select2({width:'100%',allowClear:true});
-        $('#type').on('change',function(){
+        $('#intype').on('change',function(){
+            console.log($(this).val());
             switch($(this).val()){
                 case 'option':
                 case 'select':
@@ -244,6 +330,10 @@
         $( document ).on( "click", ".removeCbox", function() {
             $(this).closest('.row').remove();
         });
+        $('#addInputGroup').on('click',function(){
+            method = 'add';
+            $('#formInputGroup').trigger("reset");
+        })
         $('#addInput').on('click',function(){
             method = 'add';
             $('#formInput').trigger("reset");
@@ -252,43 +342,77 @@
             $('#combobox_items div.row:not(#combobox_item)').remove();
             $('#combobox_items div.row input').val('');
         })
+        $('#saveInputGroup').on('click',function(){
+            var newForm;
+            if(method=='add'){
+                newForm = $('#tplGroup tr').clone();//.css('display','block').removeAttr('id');
+            }else{
+                newForm = editPointer;
+            }
+            console.log(newForm);
+            var object = $('#formInputGroup').serializeObject();
+            var data = JSON.stringify(object);
+            newForm.find('input').val(data);
+            newForm.find('#inputLabel').html(object.label);
+            newForm.find('#inputName').html(object.name);
+            if(method=='add'){
+                newForm.appendTo('#formDataGroup tbody');
+            }
+
+            $('#formDialogGroup').modal('hide');
+            manipulateGroup();
+        });
+        function manipulateGroup() {
+            var options = $('form input[name="inputDataGroup[]"]');
+            var groupInput = $('#group');
+            $('#group option:not([value="none"])').remove();
+            $.each(options,function(i,el){
+                var optionData = JSON.parse($(el).val()) ;
+                var newOption = '<option value="'+optionData.name+'">'+optionData.label+'</option>';
+                $(newOption).appendTo(groupInput);
+                //optionArr =optionArr.push({optionData.name:optionData.label});
+            })
+        }
         $('#saveInput').on('click',function(){
             var type = {'text':'Text','textarea':'Textarea','select':'Combo Box','option':'Options','date':'Datepicker','file':'Files','icon':'Icons Font Awesome'};
 
             var newForm;
             if(method=='add'){
-                newForm = $('#tpl').clone().css('display','block').removeAttr('id');
+                newForm = $('#tpl tr').clone();//.css('display','block').removeAttr('id');
             }else{
                 newForm = editPointer;
             }
+
             var object = $('#formInput').serializeObject();
             var data = JSON.stringify(object);
             newForm.find('input').val(data);
             newForm.find('#inputLabel').html(object.label);
             newForm.find('#inputName').html(object.name);
             newForm.find('#inputType').html(type[object.type]);
+            newForm.find('#inputGroup').html(object.group);
             if(method=='add'){
-                newForm.appendTo('#formData');
+                newForm.appendTo('#formData tbody');
             }
             $('#formDialog').modal('hide');
         });
-//        jQuery('#addInput').on('click',function(){
-//
-//            var newForm = $('#tpl').clone().css('display','block').removeAttr('id');
-//            $.each(newForm.find('.select2tmp'),function(i,v){
-//                $(v).select2({width:'100%',allowClear:true});
-//            })
-//            newForm.appendTo('#formData');
-//        });
+
         var method = 'add';
         var editPointer = null;
         $( document ).on( "click", ".removeInput", function() {
-            $(this).closest('.formInput').remove();
+            $(this).closest('tr').remove();
+            manipulateGroup();
+        });
+        $( document ).on( "click", ".editInputGroup", function() {
+            method = 'edit';
+            editPointer = $(this).closest('tr');
+            var data = JSON.parse($(this).closest('tr').find('input').val()) ;
+            $('#formInputGroup').deserialize(data);
+            $('#formDialogGroup').modal('show');
         });
         $( document ).on( "click", ".editInput", function() {
             method = 'edit';
-            editPointer = $(this).closest('.formInput');
-            var data = JSON.parse($(this).closest('div').find('input').val()) ;
+            editPointer = $(this).closest('tr');
+            var data = JSON.parse($(this).closest('tr').find('input').val()) ;
             $('#formInput').deserialize(data);
             $('.select2').trigger('change');
             $('#formDialog').modal('show');
