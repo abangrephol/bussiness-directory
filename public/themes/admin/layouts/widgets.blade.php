@@ -2,6 +2,7 @@
 <html>
 <head>
     {{ Theme::asset()->styles() }}
+    {{ Theme::asset()->container('style-after')->styles() }}
     {{ Theme::asset()->scripts() }}
 </head>
 <body class="">

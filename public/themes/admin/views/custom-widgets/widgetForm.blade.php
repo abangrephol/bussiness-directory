@@ -1,13 +1,14 @@
 <?php
 function formCreate($groupName,$input,$index=0){
     $inputName = $groupName=='none'? $input->name : $groupName.".$index.".$input->name;
+    $inputNameFile = str_replace('.','',$inputName);
     switch($input->type){
         case 'date':
         case 'file':
             echo '<div class="input-group">';
-            echo Form::text($inputName, $input->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$input->label));
+            echo Form::text($inputName, $input->default , array('id'=>$inputNameFile,'class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$input->label));
             ?>
-            <div class="input-group-btn"><a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0&field_id=logo')}}" class="btn btn-default iframe-btn" type="button">Select File</a></div>
+            <div class="input-group-btn"><a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0&field_id='.$inputNameFile)}}" class="btn btn-default iframe-btn" type="button">Select File</a></div>
             <?php
             echo '</div>';
             break;
@@ -19,9 +20,14 @@ function formCreate($groupName,$input,$index=0){
             break;
         case 'select':
             $cbArray = [];
-            for($i=0;$i<count($input->{'cb_label[]'});$i++){
-                $cbArray[$input->{'cb_value[]'}[$i]] = $input->{'cb_label[]'}[$i];
+            if(count($input->{'cb_label[]'})==1){
+                $cbArray[$input->{'cb_value[]'}] = $input->{'cb_label[]'};
+            }else{
+                for($i=0;$i<count($input->{'cb_label[]'});$i++){
+                    $cbArray[$input->{'cb_value[]'}[$i]] = $input->{'cb_label[]'}[$i];
+                }
             }
+
             echo Form::select($inputName, $cbArray ,$input->default , array('class'=>'select2','required'=>'required','placeholder'=>'Select '.$input->label));
             break;
         case 'icon':
@@ -37,12 +43,26 @@ function formCreate($groupName,$input,$index=0){
     .panel {
         border:1px solid #aaa;
     }
+    #fancybox-wrap,#fancybox-content{
+        width:100% !important;
+        height:100% !important;
+        top:0!important;
+        left:0!important;
+    }
+    #fancybox-wrap{
+        position: fixed;
+    }
 </style>
 
 <div class="container" style="margin-top:10px; background:none;">
     <div class="panel panel-default">
         <div class="panel-body panel-body-nopadding">
-            <div id="template" style="display: none"><div class="wnwidgets">{{$data->template}}</div></div>
+            <div id="template" style="display: none"><?php
+                $tmplt = $data->template;
+                if($data->type!='raw')
+                    $tmplt = '<div class="wnwidgets">'.$tmplt.'</div>';
+                echo $tmplt;
+                ?></div>
             <form id="widgetAdd" action="" class="form form-horizontal form-bordered" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}" data-name="{{$data->name}}">
                 <?php
                 $wdata = json_decode($data->data);
@@ -214,10 +234,9 @@ function formCreate($groupName,$input,$index=0){
         });
         jQuery('.iframe-btn').live('click', function(e) {
             jQuery(this).fancybox({
-                'width'		: 900,
-                'height'	: 600,
+                'width'		: '100%',
                 'type'		: 'iframe',
-                'autoScale'    	: false
+                'centerOnScroll' : true
             });
             e.preventDefault();
         });

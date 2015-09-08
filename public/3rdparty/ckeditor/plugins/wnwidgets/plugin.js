@@ -44,22 +44,15 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                         }
 
                         //console.log(form.serializeJSON());
-                        var customwidget = new CKEDITOR.dom.element.createFromHtml( templateM );
                         var ed = this._.editor;
-                        if(form.data('type')=='html'){
-                            ed.insertElement( customwidget );
-                            ed.widgets.initOn(customwidget,'widgets',data);
-                        }else{
-//                            ed.widgets.initOn(customwidget,'widgets',data);
-//                            var newFakeImage = ed.createFakeElement( customwidget, 'wnwidgets', 'widgets', true );
-//
-//
-//                            ed.insertElement( newFakeImage );
-//
-                            ed.insertElement( customwidget );
-                            ed.widgets.initOn(customwidget,'widgets',data);
+                        var customwidget = new CKEDITOR.dom.element.createFromHtml( templateM ,ed.document);
 
+
+                        ed.insertElement( customwidget );
+                        if(data.type!='raw'){
+                            ed.widgets.initOn(customwidget,'widgets',data);
                         }
+
 
 
                         /*$.get($(e).data('link'),function(data){
