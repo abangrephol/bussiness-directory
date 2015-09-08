@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +47,7 @@
       <file leaf-file-name="plugin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="75" selection-start="2175" selection-end="2175" vertical-scroll-proportion="-15.64" vertical-offset="408" max-vertical-offset="4845">
+            <state line="47" column="75" selection-start="2175" selection-end="2175" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4845">
               <folding />
             </state>
           </provider>
@@ -59,7 +56,7 @@
       <file leaf-file-name="pages.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="11" selection-start="8466" selection-end="8466" vertical-scroll-proportion="-5.1153846" vertical-offset="2145" max-vertical-offset="3026">
+            <state line="134" column="11" selection-start="8466" selection-end="8466" vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="3026">
               <folding />
             </state>
           </provider>
@@ -128,18 +125,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widgetForm.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="widgetForm.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="84" selection-start="394" selection-end="394" vertical-scroll-proportion="0.25046042" vertical-offset="0" max-vertical-offset="4267">
+            <state line="48" column="19" selection-start="2164" selection-end="2164" vertical-scroll-proportion="-13.076923" vertical-offset="476" max-vertical-offset="4267">
               <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
                 <marker date="1441696547316" expanded="true" signature="6390:6731" placeholder="..." />
                 <marker date="1441696547316" expanded="true" signature="6435:6731" placeholder="{...}" />
                 <marker date="1441696547316" expanded="true" signature="6525:6731" placeholder="{...}" />
                 <marker date="1441696547316" expanded="true" signature="6571:6731" placeholder="{...}" />
-                <marker date="1441696547316" expanded="true" signature="6613:6683" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -149,9 +143,7 @@
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/widget/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="45" column="42" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="65739">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,7 +151,7 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/categories/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="11" selection-start="3339" selection-end="3630" vertical-scroll-proportion="-47.73077" vertical-offset="102" max-vertical-offset="1530">
+            <state line="79" column="11" selection-start="3339" selection-end="3630" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1530">
               <folding />
             </state>
           </provider>
@@ -168,7 +160,7 @@
       <file leaf-file-name="CategoriesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CategoriesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="32" selection-start="4764" selection-end="4781" vertical-scroll-proportion="-8.5" vertical-offset="2142" max-vertical-offset="3417">
+            <state line="139" column="32" selection-start="4764" selection-end="4781" vertical-scroll-proportion="0.0" vertical-offset="2142" max-vertical-offset="3417">
               <folding>
                 <marker date="1422881309857" expanded="false" signature="1153:1169" placeholder="..." />
               </folding>
@@ -179,10 +171,8 @@
       <file leaf-file-name="Category.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="630" column="50" selection-start="25738" selection-end="25738" vertical-scroll-proportion="-362.23077" vertical-offset="1292" max-vertical-offset="11322">
-              <folding>
-                <element signature="e#6#57#0" expanded="true" />
-              </folding>
+            <state line="630" column="50" selection-start="25738" selection-end="25738" vertical-scroll-proportion="0.0" vertical-offset="1292" max-vertical-offset="11322">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -190,7 +180,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="5" selection-start="2482" selection-end="2493" vertical-scroll-proportion="-2.5769231" vertical-offset="1259" max-vertical-offset="2992">
+            <state line="78" column="5" selection-start="2482" selection-end="2493" vertical-scroll-proportion="0.0" vertical-offset="1259" max-vertical-offset="2992">
               <folding />
             </state>
           </provider>
@@ -199,25 +189,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="101" selection-start="3243" selection-end="3261" vertical-scroll-proportion="-8.039216" vertical-offset="270" max-vertical-offset="7446">
-              <folding>
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="40" column="101" selection-start="3243" selection-end="3261" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="7446">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,25 +198,8 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="119" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-5.607843" vertical-offset="394" max-vertical-offset="8432">
-              <folding>
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="40" column="119" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="8432">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -257,10 +213,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="51" selection-start="6210" selection-end="6210" vertical-scroll-proportion="-12.384615" vertical-offset="2534" max-vertical-offset="3213">
+            <state line="117" column="30" selection-start="4345" selection-end="4345" vertical-scroll-proportion="0.31376147" vertical-offset="1801" max-vertical-offset="3230">
               <folding />
             </state>
           </provider>
@@ -269,7 +225,7 @@
       <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="183" column="8" selection-start="7487" selection-end="7530" vertical-scroll-proportion="-7.8461537" vertical-offset="2856" max-vertical-offset="5508">
+            <state line="183" column="8" selection-start="7487" selection-end="7530" vertical-scroll-proportion="1.9615384" vertical-offset="3111" max-vertical-offset="5508">
               <folding />
             </state>
           </provider>
@@ -278,7 +234,7 @@
       <file leaf-file-name="widgets.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="60" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357">
+            <state line="4" column="60" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -287,7 +243,7 @@
       <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/default.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="307" selection-end="363" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="969">
+            <state line="8" column="8" selection-start="307" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="969">
               <folding />
             </state>
           </provider>
@@ -296,7 +252,7 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="36" selection-start="4464" selection-end="4474" vertical-scroll-proportion="-3.372549" vertical-offset="1171" max-vertical-offset="3264">
+            <state line="79" column="36" selection-start="4464" selection-end="4474" vertical-scroll-proportion="0.0" vertical-offset="1171" max-vertical-offset="3264">
               <folding>
                 <marker date="1441362012354" expanded="true" signature="7739:8102" placeholder="..." />
               </folding>
@@ -341,12 +297,12 @@
         <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Category.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
       </list>
     </option>
   </component>
@@ -831,7 +787,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.192604" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19568567" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -858,13 +814,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="39" selection-start="3204" selection-end="3204" vertical-scroll-proportion="-0.08963093" vertical-offset="1428" max-vertical-offset="2601">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/skins/moono/toolbar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7480">
@@ -874,9 +823,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="510" column="13" selection-start="9182" selection-end="9182" vertical-scroll-proportion="0.34892085" vertical-offset="8459" max-vertical-offset="17646">
-          <folding />
-        </state>
+        <state line="510" column="13" selection-start="9182" selection-end="9182" vertical-scroll-proportion="0.34892085" vertical-offset="8459" max-vertical-offset="17646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/fakeobjects/plugin.js">
@@ -888,106 +835,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="36" selection-start="4464" selection-end="4474" vertical-scroll-proportion="-3.372549" vertical-offset="1171" max-vertical-offset="3264">
+        <state line="79" column="36" selection-start="4464" selection-end="4474" vertical-scroll-proportion="0.0" vertical-offset="1171" max-vertical-offset="3264">
           <folding>
             <marker date="1441362012354" expanded="true" signature="7739:8102" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="51" selection-start="6210" selection-end="6210" vertical-scroll-proportion="-12.384615" vertical-offset="2534" max-vertical-offset="3213">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="183" column="8" selection-start="7487" selection-end="7530" vertical-scroll-proportion="-7.8461537" vertical-offset="2856" max-vertical-offset="5508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/core/dom/element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="21" selection-start="2630" selection-end="2630" vertical-scroll-proportion="0.3321617" vertical-offset="967" max-vertical-offset="35802">
-          <folding />
-        </state>
+        <state line="71" column="21" selection-start="2630" selection-end="2630" vertical-scroll-proportion="0.3321617" vertical-offset="967" max-vertical-offset="35802" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="307" selection-end="363" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="969">
+        <state line="8" column="8" selection-start="307" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="969">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="60" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="357">
+        <state line="4" column="60" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="101" selection-start="3243" selection-end="3261" vertical-scroll-proportion="-8.039216" vertical-offset="270" max-vertical-offset="7446">
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="40" column="101" selection-start="3243" selection-end="3261" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="7446">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="119" selection-start="3281" selection-end="3281" vertical-scroll-proportion="-5.607843" vertical-offset="394" max-vertical-offset="8432">
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#3;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#form#0;n#div#1;n#div#0;n#div#0;n#div#6;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="40" column="119" selection-start="3281" selection-end="3281" vertical-scroll-proportion="0.0" vertical-offset="394" max-vertical-offset="8432">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="75" selection-start="2175" selection-end="2175" vertical-scroll-proportion="-15.64" vertical-offset="408" max-vertical-offset="4845">
+        <state line="47" column="75" selection-start="2175" selection-end="2175" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4845">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="11" selection-start="8466" selection-end="8466" vertical-scroll-proportion="-5.1153846" vertical-offset="2145" max-vertical-offset="3026">
+        <state line="134" column="11" selection-start="8466" selection-end="8466" vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="3026">
           <folding />
         </state>
       </provider>
@@ -995,24 +892,40 @@
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/widget/plugin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="42" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="65739">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1496">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="84" selection-start="394" selection-end="394" vertical-scroll-proportion="0.25046042" vertical-offset="0" max-vertical-offset="4267">
+        <state line="48" column="19" selection-start="2164" selection-end="2164" vertical-scroll-proportion="-13.076923" vertical-offset="476" max-vertical-offset="4267">
           <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
             <marker date="1441696547316" expanded="true" signature="6390:6731" placeholder="..." />
             <marker date="1441696547316" expanded="true" signature="6435:6731" placeholder="{...}" />
             <marker date="1441696547316" expanded="true" signature="6525:6731" placeholder="{...}" />
             <marker date="1441696547316" expanded="true" signature="6571:6731" placeholder="{...}" />
-            <marker date="1441696547316" expanded="true" signature="6613:6683" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="8" selection-start="7487" selection-end="7530" vertical-scroll-proportion="1.9615384" vertical-offset="3111" max-vertical-offset="5508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="30" selection-start="4345" selection-end="4345" vertical-scroll-proportion="0.31376147" vertical-offset="1801" max-vertical-offset="3230">
+          <folding />
         </state>
       </provider>
     </entry>

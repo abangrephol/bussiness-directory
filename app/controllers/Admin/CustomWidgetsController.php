@@ -114,6 +114,7 @@ class CustomWidgetsController extends BaseController {
         $widget = \CustomWidget::find($id);
         if($widget->validate()){
             $formData = [];
+            $formDataGroup = [];
             $inputData = \Input::get('inputData');
             $inputDataGroup = \Input::get('inputDataGroup');
             for($i=0; $i < count($inputData) ; $i++){
