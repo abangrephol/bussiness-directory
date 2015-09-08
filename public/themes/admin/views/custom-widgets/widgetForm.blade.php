@@ -1,3 +1,35 @@
+<?php
+function formCreate($groupName,$input,$index=0){
+    $inputName = $groupName=='none'? $input->name : $groupName.".$index.".$input->name;
+    switch($input->type){
+        case 'date':
+        case 'file':
+            echo '<div class="input-group">';
+            echo Form::text($inputName, $input->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$input->label));
+            ?>
+            <div class="input-group-btn"><a href="{{URL::to('3rdparty/filemanager/dialog.php?type=0&field_id=logo')}}" class="btn btn-default iframe-btn" type="button">Select File</a></div>
+            <?php
+            echo '</div>';
+            break;
+        case 'text' :
+            echo Form::text($inputName, $input->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$input->label));
+            break;
+        case 'textarea' :
+            echo Form::textarea($inputName, $input->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$input->label));
+            break;
+        case 'select':
+            $cbArray = [];
+            for($i=0;$i<count($input->{'cb_label[]'});$i++){
+                $cbArray[$input->{'cb_value[]'}[$i]] = $input->{'cb_label[]'}[$i];
+            }
+            echo Form::select($inputName, $cbArray ,$input->default , array('class'=>'select2','required'=>'required','placeholder'=>'Select '.$input->label));
+            break;
+        case 'icon':
+            echo Form::select($inputName, \Category::$completeIcons ,$input->default , array('id'=>'icon','required'=>'required','placeholder'=>'Select '.$input->label));
+            break;
+    }
+}
+?>
 <style>
     body{
         background: transparent;
@@ -9,65 +41,91 @@
 
 <div class="container" style="margin-top:10px; background:none;">
     <div class="panel panel-default">
-        <div class="panel-body">
+        <div class="panel-body panel-body-nopadding">
             <div id="template" style="display: none"><div class="wnwidgets">{{$data->template}}</div></div>
-            <form id="widgetAdd" action="" class="form form-horizontal" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}" data-name="{{$data->name}}">
+            <form id="widgetAdd" action="" class="form form-horizontal form-bordered" method="post" data-wid="{{$data->id}}" data-type="{{$data->type}}" data-name="{{$data->name}}">
                 <?php
                 $wdata = json_decode($data->data);
+                $groups = $wdata->group;
+                array_push($groups,(object)['name'=>'none','label'=>'','multi'=>'single']);
+
                 $forms = $wdata->form;
-                foreach($forms as $form){
-                ?>
+                if(count($groups)>0){
+                    foreach($groups as $group){
+                        foreach($forms as $form){
+                            if($form->group == $group->name){
+                                $group->input[] = $form;
+                            }
+                        }
+                    }
+                }
+                //dd($groups);
+                foreach($groups as $group){
+                    //dd($group->input);
+                    if($group->multi=='single'){
+                        $groupName = $group->name=='none'?'none':$group->name;
+                        if(isset($group->input)):
+                    ?>
                     <div class="form-group">
-                        {{ Form::label('name', $form->label, array('class' => ' col-sm-3 control-label required' )) }}
+                        {{ Form::label('name', $group->label, array('class' => ' col-sm-3 control-label required' )) }}
                         <div class="col-sm-7">
                             <?php
-                            if($form->multi=="multi"){
-                                $formArr = explode('.',$form->name);
-                                $formName = $form->name;
-                                if(count($formArr)>1){
-                                    $formNameLast = $formArr[count($formArr)-1];
-                                    array_pop($formArr);
-                                    $formName = implode('.',$formArr);
-
-                                }
-                            }
-                                switch($form->type){
-                                    case 'date':
-                                    case 'file':
-                                    case 'text' :
-                                        if($form->multi=="multi"){
-                                            for($i=0;$i<$form->multiNumber;$i++){
-                                                echo Form::text($formName.".$i.".$formNameLast, $form->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
-                                            }
-                                        }else{
-                                            echo Form::text($form->name, $form->default , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
-                                        }
-                                        break;
-                                    case 'textarea' :
-                                        if($form->multi=="multi"){
-                                            for($i=0;$i<$form->multiNumber;$i++){
-                                                echo Form::textarea($formName.".$i.".$formNameLast, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
-                                            }
-                                        }else{
-                                            echo Form::textarea($form->name, null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter '.$form->label));
-                                        }
-                                        break;
-                                    case 'select':
-                                        $cbArray = [];
-                                        for($i=0;$i<count($form->{'cb_label[]'});$i++){
-                                            $cbArray[$form->{'cb_value[]'}[$i]] = $form->{'cb_label[]'}[$i];
-                                        }
-                                        echo Form::select($form->name, $cbArray ,$form->default , array('class'=>'select2','required'=>'required','placeholder'=>'Select '.$form->label));
-                                        break;
-                                    case 'icon':
-                                        echo Form::select($form->name, \Category::$completeIcons ,$form->default , array('id'=>'icon','required'=>'required','placeholder'=>'Select '.$form->label));
-                                        break;
-                                }
+                            foreach($group->input as $input){
                             ?>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        {{ Form::label('name', $input->label, array('class' => '' )) }}
+                                        <?php
+                                        formCreate($groupName,$input,0);
+                                        ?>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+
+                            ?>
+
                         </div>
                     </div>
-                <?php
+                    <?php
+
+                        endif;
+                    }else if($group->multi=='multi'){
+
+                        $groupName = $group->name=='none'?'none':$group->name;
+                        if(isset($group->input)){
+                            ?>
+                            <div class="form-group">
+                                {{ Form::label($group->name, $group->label, array('class' => ' col-sm-3 control-label required' )) }}
+                                <div class="col-sm-7">
+                                    <?php
+                            for($i=0;$i<$group->multiNumber;$i++){
+
+                                foreach($group->input as $input){
+                                    ?>
+                                    <div class="row">
+                                        <div class="col-sm-12 mb20">
+                                            {{ Form::label('name', $input->label." ".($i+1), array('class' => '' )) }}
+                                            <?php
+                                            formCreate($groupName,$input,$i);
+                                            ?>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+                            }
+                            ?>
+
+                                </div>
+                            </div>
+                            <?php
+                        }
+
+                    }else{
+
+                    }
                 }
+
                 ?>
             </form>
         </div>
@@ -153,6 +211,15 @@
             formatResult: formatResult,
             // Specify format function for selected item
             formatSelection: formatSelection
+        });
+        jQuery('.iframe-btn').live('click', function(e) {
+            jQuery(this).fancybox({
+                'width'		: 900,
+                'height'	: 600,
+                'type'		: 'iframe',
+                'autoScale'    	: false
+            });
+            e.preventDefault();
         });
 
     });

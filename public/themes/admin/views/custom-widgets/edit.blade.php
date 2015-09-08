@@ -210,6 +210,21 @@
                                 <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            {{ Form::label('multi', 'Mulitple', array('class' => ' col-sm-3 control-label required' )) }}
+                            <div class="col-sm-7">
+                                {{ Form::select('multi', array('single'=>'Single','multi'=>'Multiple','unlimit'=>'Multiple Unlimited') ,null , array('id'=>'multi','class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                            </div>
+                        </div>
+                        <div id="multiple" class="hide form-group">
+                            {{ Form::label('multiNumber', 'Multiple Number', array('class' => ' col-sm-3 control-label required' )) }}
+                            <div class="col-sm-7">
+                                {{ Form::text('multiNumber', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter number')) }}
+                                <label id='multiNumber_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -280,21 +295,6 @@
                                         <a id="addCbox" class=" col-sm-3 btn btn-sm btn-primary"><i class="fa fa-plus"></i></a>
                                     </div>
                                 </div>
-                            </div>
-
-                        </div>
-                        <div class="form-group">
-                            {{ Form::label('multi', 'Mulitple', array('class' => ' col-sm-3 control-label required' )) }}
-                            <div class="col-sm-7">
-                                {{ Form::select('multi', array('single'=>'Single','multi'=>'Multiple') ,null , array('id'=>'multi','class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
-                                <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                            </div>
-                        </div>
-                        <div id="multiple" class="hide form-group">
-                            {{ Form::label('multiNumber', 'Multiple Number', array('class' => ' col-sm-3 control-label required' )) }}
-                            <div class="col-sm-7">
-                                {{ Form::text('multiNumber', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter number')) }}
-                                <label id='multiNumber_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
                     </form>
@@ -388,12 +388,14 @@
         });
         $('#addInputGroup').on('click',function(){
             method = 'add';
+
+            $('.select2').trigger('change');
             $('#formInputGroup').trigger("reset");
+            spinner.spinner('value', 1);
         })
         $('#addInput').on('click',function(){
             method = 'add';
             $('#formInput').trigger("reset");
-            spinner.spinner('value', 1);
             $('.select2').trigger('change');
             $('#combobox_items div.row:not(#combobox_item)').remove();
             $('#combobox_items div.row input').val('');
@@ -463,6 +465,7 @@
             editPointer = $(this).closest('tr');
             var data = JSON.parse($(this).closest('tr').find('input').val()) ;
             $('#formInputGroup').deserialize(data);
+            $('.select2').trigger('change');
             $('#formDialogGroup').modal('show');
         });
         $( document ).on( "click", ".editInput", function() {

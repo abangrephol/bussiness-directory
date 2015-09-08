@@ -167,7 +167,7 @@ class CustomWidgetsController extends BaseController {
     {
         $widgets = \CustomWidget::find($id);
 
-
+        $this->theme->asset()->serve('fileupload');
         $this->theme->asset()->serve('chosen');
         $this->theme->asset()->serve('mustache');
 

@@ -152,12 +152,14 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                     e.openDialog('selectWidget');
                 }
             });
-            editor.ui.addButton('wnwidgets', {
-                label: 'Insert Widgets',
-                command: 'wnwidgets',
-                //icon: this.path + 'icons/redo.png',
-                toolbar: 'mode,10'
-            });
+            if ( editor.ui.addButton ) {
+                editor.ui.addButton('wnwidgets', {
+                    label: 'Insert Widgets',
+                    command: 'wnwidgets',
+                    //icon: this.path + 'icons/redo.png',
+                    toolbar: 'mode,10'
+                });
+            }
             editor.widgets.add('widgets',{
                 upcast: function( element ) {
 

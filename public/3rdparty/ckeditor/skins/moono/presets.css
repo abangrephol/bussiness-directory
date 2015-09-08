@@ -3,6 +3,12 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 
+/* "Widget" button label */
+.cke_button__wnwidgets_label,
+.cke_button__sourcedialog_label
+{
+	display: inline;
+}
 /* "Source" button label */
 .cke_button__source_label,
 .cke_button__sourcedialog_label
