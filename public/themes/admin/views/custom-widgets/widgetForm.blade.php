@@ -33,6 +33,11 @@ function formCreate($groupName,$input,$index=0){
         case 'icon':
             echo Form::select($inputName, \Category::$completeIcons ,$input->default , array('id'=>'icon','required'=>'required','placeholder'=>'Select '.$input->label));
             break;
+        case 'checkbox' :
+            echo '<div class="checkbox block"><label>';
+            echo Form::checkbox($inputName,$input->{'cb_value[]'});
+            echo $input->{'cb_label[]'}.'</label></div>';
+            break;
     }
 }
 ?>

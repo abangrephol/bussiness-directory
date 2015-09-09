@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="63" selection-start="4301" selection-end="4306" vertical-scroll-proportion="0.4383057" vertical-offset="1071" max-vertical-offset="2125">
+            <state line="77" column="63" selection-start="4301" selection-end="4306" vertical-scroll-proportion="-9.153846" vertical-offset="1071" max-vertical-offset="2125">
               <folding />
             </state>
           </provider>
@@ -132,12 +130,14 @@
       <file leaf-file-name="widgetForm.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="19" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="4267">
+            <state line="38" column="57" selection-start="2133" selection-end="2133" vertical-scroll-proportion="-16.961538" vertical-offset="205" max-vertical-offset="4352">
               <folding>
-                <marker date="1441696547316" expanded="true" signature="6390:6731" placeholder="..." />
-                <marker date="1441696547316" expanded="true" signature="6435:6731" placeholder="{...}" />
-                <marker date="1441696547316" expanded="true" signature="6525:6731" placeholder="{...}" />
-                <marker date="1441696547316" expanded="true" signature="6571:6731" placeholder="{...}" />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1441789069343" expanded="true" signature="6617:6958" placeholder="..." />
+                <marker date="1441789069343" expanded="true" signature="6662:6958" placeholder="{...}" />
+                <marker date="1441789069343" expanded="true" signature="6752:6958" placeholder="{...}" />
+                <marker date="1441789069343" expanded="true" signature="6798:6958" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -181,10 +181,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="5" selection-start="2482" selection-end="2493" vertical-scroll-proportion="0.0" vertical-offset="1259" max-vertical-offset="2992">
+            <state line="78" column="18" selection-start="2495" selection-end="2495" vertical-scroll-proportion="0.31123388" vertical-offset="1157" max-vertical-offset="2873">
               <folding />
             </state>
           </provider>
@@ -193,7 +193,7 @@
       <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="44" selection-start="1684" selection-end="1684" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="7446">
+            <state line="315" column="26" selection-start="18470" selection-end="18818" vertical-scroll-proportion="-15.0" vertical-offset="4965" max-vertical-offset="7531">
               <folding />
             </state>
           </provider>
@@ -202,7 +202,7 @@
       <file leaf-file-name="edit.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="113" selection-start="189" selection-end="189" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="8432">
+            <state line="372" column="40" selection-start="22046" selection-end="22046" vertical-scroll-proportion="-20.26923" vertical-offset="5797" max-vertical-offset="8517">
               <folding />
             </state>
           </provider>
@@ -239,7 +239,10 @@
         <entry file="file://$PROJECT_DIR$/public/themes/admin/widgets/buttonColumn.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="0" selection-start="0" selection-end="585" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-              <folding />
+              <folding>
+                <marker date="1422467643251" expanded="true" signature="46:296" placeholder="..." />
+                <marker date="1422467643251" expanded="true" signature="343:583" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -331,18 +334,18 @@
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/builder.js" />
         <option value="$PROJECT_DIR$/public/3rdparty/jquery/jquery.serialize-object.js" />
         <option value="$PROJECT_DIR$/public/3rdparty/jquery/jquery.deserialize.js" />
-        <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Category.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/index.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/widgets/buttonColumnWidget.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
       </list>
     </option>
   </component>
@@ -425,6 +428,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-budget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-budget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-budget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -802,20 +883,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/layouts/widgets.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="60" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="357">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="75" selection-start="2175" selection-end="2175" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4845">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="11" selection-start="8466" selection-end="8466" vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="3026">
@@ -834,18 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1496">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="19" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="4267">
-          <folding>
-            <marker date="1441696547316" expanded="true" signature="6390:6731" placeholder="..." />
-            <marker date="1441696547316" expanded="true" signature="6435:6731" placeholder="{...}" />
-            <marker date="1441696547316" expanded="true" signature="6525:6731" placeholder="{...}" />
-            <marker date="1441696547316" expanded="true" signature="6571:6731" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,27 +937,16 @@
     <entry file="file://$PROJECT_DIR$/public/themes/admin/widgets/buttonColumn.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="0" selection-end="585" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="113" selection-start="189" selection-end="189" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="8432">
-          <folding />
+          <folding>
+            <marker date="1422467643251" expanded="true" signature="46:296" placeholder="..." />
+            <marker date="1422467643251" expanded="true" signature="343:583" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="148" column="39" selection-start="5724" selection-end="5724" vertical-scroll-proportion="-13.730769" vertical-offset="2142" max-vertical-offset="3349">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="44" selection-start="1684" selection-end="1684" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="7446">
           <folding />
         </state>
       </provider>
@@ -916,7 +960,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="63" selection-start="4301" selection-end="4306" vertical-scroll-proportion="0.4383057" vertical-offset="1071" max-vertical-offset="2125">
+        <state line="77" column="63" selection-start="4301" selection-end="4306" vertical-scroll-proportion="-9.153846" vertical-offset="1071" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="75" selection-start="2175" selection-end="2175" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="4845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="57" selection-start="2133" selection-end="2133" vertical-scroll-proportion="-16.961538" vertical-offset="205" max-vertical-offset="4352">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1441789069343" expanded="true" signature="6617:6958" placeholder="..." />
+            <marker date="1441789069343" expanded="true" signature="6662:6958" placeholder="{...}" />
+            <marker date="1441789069343" expanded="true" signature="6752:6958" placeholder="{...}" />
+            <marker date="1441789069343" expanded="true" signature="6798:6958" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="315" column="26" selection-start="18470" selection-end="18818" vertical-scroll-proportion="-15.0" vertical-offset="4965" max-vertical-offset="7531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="372" column="40" selection-start="22046" selection-end="22046" vertical-scroll-proportion="-20.26923" vertical-offset="5797" max-vertical-offset="8517">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="18" selection-start="2495" selection-end="2495" vertical-scroll-proportion="0.31123388" vertical-offset="1157" max-vertical-offset="2873">
           <folding />
         </state>
       </provider>

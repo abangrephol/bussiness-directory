@@ -270,7 +270,7 @@
                         <div class="form-group">
                             {{ Form::label('type', 'Type', array('class' => ' col-sm-3 control-label required' )) }}
                             <div class="col-sm-7">
-                                {{ Form::select('type', array('text'=>'Text','textarea'=>'Textarea','select'=>'Combo Box','option'=>'Options','date'=>'Datepicker','file'=>'Files','icon'=>'Icons Font Awesome') ,null , array('id'=>'intype','class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
+                                {{ Form::select('type', array('text'=>'Text','textarea'=>'Textarea','select'=>'Combo Box','option'=>'Options','checkbox'=>'Checkbox','date'=>'Datepicker','file'=>'Files','icon'=>'Icons Font Awesome') ,null , array('id'=>'intype','class'=>'select2','required'=>'required','placeholder'=>'Select input type')) }}
                                 <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                             </div>
                         </div>
@@ -291,7 +291,7 @@
                                     <div class="col-xs-4">
                                         {{ Form::text('cb_value[]', null , array('class'=>'form-control col-sm-3','required'=>'required','placeholder'=>'Enter value')) }}
                                     </div>
-                                    <div class="col-xs-4">
+                                    <div class="col-xs-4 comboboxAdd">
                                         <a id="addCbox" class=" col-sm-3 btn btn-sm btn-primary"><i class="fa fa-plus"></i></a>
                                     </div>
                                 </div>
@@ -363,6 +363,11 @@
                 case 'option':
                 case 'select':
                     $('#combobox').removeClass('hide');
+                    $('#combobox .comboboxAdd').removeClass('hide');
+                    break;
+                case 'checkbox':
+                    $('#combobox').removeClass('hide');
+                    $('#combobox .comboboxAdd').addClass('hide');
                     break;
                 default:
                     $('#combobox').addClass('hide');

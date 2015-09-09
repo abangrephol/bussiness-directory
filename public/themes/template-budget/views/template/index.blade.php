@@ -77,22 +77,15 @@
 
 
 <div id="sbbody" >
+    @if (isset($data->content))
+    {{$data->content}}
+    @else
+    <div class="row">
 
-<!-- Featured
-================================================== -->
-    <div class="container">
-
-            @if (isset($data->content))
-            {{$data->content}}
-            @else
-            <div class="row">
-
-                <div class="clearfix"></div>
-                <div class="margin-top-30"></div>
-            </div>
-            @endif
-
+        <div class="clearfix"></div>
+        <div class="margin-top-30"></div>
     </div>
+    @endif
 </div>
 
 <div id="sbfooter">
