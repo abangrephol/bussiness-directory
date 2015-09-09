@@ -1,10 +1,10 @@
 <div class="panel panel-alt panel-default">
     <div class="panel-heading">
-        <a class="btn btn-danger pull-right mr10 mt5" href="{{ URL::route('admin/custom-widget') }}">Back to list</a>
+        <a class="btn btn-danger pull-right mr10 mt5" href="{{ URL::route('admin/custom-widget',['themeId'=>$thid]) }}">Back to list</a>
         <h4 class="panel-title-alt"><i class="fa fa-edit mr5"></i><span class="text-danger">Please enter template information</span></h4>
         <p>* = Required fields</p>
     </div>
-    {{ Form::open(array('route' => array('admin.custom-widget.store'),'method'=>'POST','class'=>'form form-horizontal')) }}
+    {{ Form::open(array('route' => array('custom-widget.store',$thid),'method'=>'POST','class'=>'form form-horizontal')) }}
     <div class="panel-body">
 
         <div class="alert {{ Session::get('messages')? Session::get('messages')->has('error')?'alert-danger':'alert-success' :'hidden' }}">

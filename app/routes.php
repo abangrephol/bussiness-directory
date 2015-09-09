@@ -75,7 +75,13 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
         Route::resource('custom-theme','CustomThemesController',array('names' => array('index'=>'admin/custom-theme')));
         Route::resource('custom-template','CustomTemplatesController',array('names' => array('index'=>'admin/custom-template')));
         Route::get('template-list',array('as'=>'template-list','uses'=>'CustomTemplatesController@templateList'));
-        Route::resource('custom-widget','CustomWidgetsController',array('names' => array('index'=>'admin/custom-widget')));
+        Route::get('custom-widget/{themeId}',array('as'=>'admin/custom-widget','uses'=>'CustomWidgetsController@index'));
+        Route::get('custom-widget/{themeId}/create',array('as'=>'custom-widget.create','uses'=>'CustomWidgetsController@create'));
+        Route::post('custom-widget/{themeId}/store',array('as'=>'custom-widget.store','uses'=>'CustomWidgetsController@store'));
+        Route::get('custom-widget/{themeId}/{id}/edit',array('as'=>'custom-widget.edit','uses'=>'CustomWidgetsController@edit'));
+        Route::put('custom-widget/{themeId}/{id}/update',array('as'=>'custom-widget.update','uses'=>'CustomWidgetsController@update'));
+        Route::get('custom-widget/{themeId}/{id}/destroy',array('as'=>'custom-widget.destroy','uses'=>'CustomWidgetsController@destroy'));
+        //Route::resource('custom-widget','CustomWidgetsController',array('names' => array('index'=>'admin/custom-widget')));
         Route::get('widget-list/{editor}',array('as'=>'widget-list','uses'=>'CustomWidgetsController@widgetList'));
         Route::get('widget-data',array('as'=>'widget-data','uses'=>'CustomWidgetsController@widgetData'));
         Route::get('widget-form/{id}',array('as'=>'widget-form','uses'=>'CustomWidgetsController@widgetForm'));

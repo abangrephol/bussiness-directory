@@ -17,7 +17,7 @@ class CustomWidgetsController extends BaseController {
         return \Datatable::collection(\CustomWidget::where('theme_id' ,\Session::get('thid'))->get())
             ->showColumns('name')
             ->addColumn('action',function($model){
-                return \Theme::widget("buttonColumn", array("model" => $model,'route'=>'admin.custom-widget'))->render();
+                return \Theme::widget("buttonColumnWidget", array("model" => $model,'route'=>'custom-widget'))->render();
             })
             ->searchColumns('name')
             ->orderColumns('id')
@@ -28,21 +28,21 @@ class CustomWidgetsController extends BaseController {
      *
      * @return Response
      */
-    public function index()
+    public function index($themeId)
     {
         $this->theme->asset()->serve('datatable');
         $this->theme->setPageTitle('Custom Widgets');
 
-        \Session::put('thid', \Input::get('thid'));
+        \Session::put('thid', $themeId);
         $routeUrl = 'dt.custom-widget';
         $columns = array('Name','Actions');
 
-        $data = array("columns" => $columns,'routeUrl'=>$routeUrl);
+        $data = array("columns" => $columns,'routeUrl'=>$routeUrl,'thid'=> $themeId);
 
         $this->theme->breadcrumb()->add('Dashboard', \URL::route('admin/custom-widget'))->add('Custom Widget', \URL::current());
         return $this->theme->scope('custom-widgets.index',$data)->render();
     }
-    public function create()
+    public function create($themeId)
     {
         $this->theme->setPageTitle('Create New Widgets');
         $this->theme->asset()->serve('chosen');
@@ -50,7 +50,7 @@ class CustomWidgetsController extends BaseController {
         $this->theme->asset()->serve('codemirror');
         $this->theme->asset()->serve('jquery.serialize');
 
-        $data = array('thid'=>\Session::get('thid'));
+        $data = array('thid'=>$themeId);
 
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))
@@ -59,11 +59,12 @@ class CustomWidgetsController extends BaseController {
 
         return $this->theme->scope('custom-widgets.create',$data)->render();
     }
-    public function store()
+    public function store($themeId)
     {
         $widget = new \CustomWidget();
         if($widget->validate()){
             $formData = [];
+            $formDataGroup = [];
             $inputData = \Input::get('inputData');
             $inputDataGroup = \Input::get('inputDataGroup');
             for($i=0; $i < count($inputData) ; $i++){
@@ -76,19 +77,19 @@ class CustomWidgetsController extends BaseController {
             $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully create new widget');
-            return \Redirect::route('admin.custom-widget.edit',array('id'=>$widget->id))->with('messages',$messages);
+            return \Redirect::route('custom-widget.edit',array('themeId'=>$themeId,'id'=>$widget->id))->with('messages',$messages);
         }else{
             $messages = new \Illuminate\Support\MessageBag;
             $messages
                 ->add('error',true)
                 ->add('message', 'Failed to create new widget');
-            return \Redirect::route('admin.widget.create')
+            return \Redirect::route('custom-widget.create',['themeId'=>$themeId])
                 ->withErrors($widget->errors())
                 ->withInput()
                 ->with('messages',$messages);
         }
     }
-    public function edit($id)
+    public function edit($themeId,$id)
     {
         $this->theme->setPageTitle('Edit Widget');
         $this->theme->asset()->serve('chosen');
@@ -98,7 +99,7 @@ class CustomWidgetsController extends BaseController {
         $widget = \CustomWidget::find($id);
         $data = array(
             'data'=> $widget,
-            'thid'=>\Session::get('thid')
+            'thid'=>$themeId
         );
 
         $this->theme->breadcrumb()
@@ -108,7 +109,7 @@ class CustomWidgetsController extends BaseController {
 
         return $this->theme->scope('custom-widgets.edit',$data)->render();
     }
-    public function update($id)
+    public function update($themeId,$id)
     {
         //dd(\Input::get('categories'));
         $widget = \CustomWidget::find($id);
@@ -127,19 +128,25 @@ class CustomWidgetsController extends BaseController {
             $widget->save();
             $messages = new \Illuminate\Support\MessageBag;
             $messages->add('message', 'You have successfully update widget');
-            return \Redirect::route('admin.custom-widget.edit',array('id'=>$id))->with('messages',$messages);
+            return \Redirect::route('custom-widget.edit',array('themeId'=>$themeId,'id'=>$id))->with('messages',$messages);
         }else{
             $messages = new \Illuminate\Support\MessageBag;
             $messages
                 ->add('error',true)
                 ->add('message', 'Failed to update widget');
-            return \Redirect::route('admin.widget.edit',array('id'=>$id))
+            return \Redirect::route('custom-widget.edit',array('themeId'=>$themeId,'id'=>$id))
 
                 ->withErrors($widget->errors())
                 ->withInput()
                 ->with('messages',$messages);
         }
 
+    }
+    public function destroy($themeId,$id)
+    {
+        \CustomWidget::destroy($id);
+
+        return \Redirect::route('admin/custom-widget',['themeId'=>$themeId]);
     }
     public function widgetList($editor)
     {
