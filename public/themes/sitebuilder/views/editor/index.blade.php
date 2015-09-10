@@ -173,7 +173,7 @@
         iframe.src ="{{ route('custom-website.builderEditor',array('templateId'=>$templateId,'id'=>$id,'pageId'=>$pageId)) }}";
         iframe.onload = (function(){
             iframe.style.display = "block";
-            $(iframe).contents().find('body').prepend('<div id="toolbar"></div>').css('padding-top','70px');
+            $(iframe).contents().find('body').prepend('<div id="toolbar"></div>').css('padding-top','90px').css('padding-bottom','50px');
             $(iframe).contents().find('head').append("<style>" +
                 "#toolbar {position:fixed;top:0;z-index:1000;left:0;}" +
                 "</style>");
