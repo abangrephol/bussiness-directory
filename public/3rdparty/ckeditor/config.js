@@ -17,9 +17,11 @@ CKEDITOR.editorConfig = function( config ) {
     config.startupOutlineBlocks = true;
     config.skin = 'moono';
 	config.fullPage = true;
-	config.extraAllowedContent = 'p(*)[*]{*};div(*)[*]{*};li(*)[*]{*};ul(*)[*]{*}';
+	config.extraAllowedContent = 'p(*)[*]{*};div(*)[*]{*};li(*)[*]{*};ul(*)[*]{*};span(*)[*]{*}';
     CKEDITOR.dtd.$removeEmpty.i = 0;
+    CKEDITOR.dtd.$removeEmpty.span = 0;
 	config.allowedContent = true;
+    config.title = false;
     config.toolbar = [
         { name: 'document', groups: [ 'mode', 'document', 'doctools','sourcedialog' ], items: [ 'Sourcedialog', '-', 'Save', 'Preview' ] },
         { name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },

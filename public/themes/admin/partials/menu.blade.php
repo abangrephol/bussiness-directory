@@ -49,6 +49,11 @@
             'icon' => 'fa-bookmark',
             'title' => 'Categories'
         ),
+        'users' => array(
+            'link' => 'users',
+            'icon' => 'fa-user',
+            'title' => 'Users'
+        ),
     );
     $menusUser = array(
         'dashboard' => array(
@@ -73,6 +78,8 @@
     // Get the user groups
     $group = $user->getGroups()->first()->name;
     if($group=='Admin'){
+        $menus = $menusAdmin;
+    }elseif($group=='Reseller'){
         $menus = $menusAdmin;
     }elseif($group=="User"){
         $menus = $menusUser;

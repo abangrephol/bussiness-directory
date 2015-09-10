@@ -2,8 +2,8 @@
     <ul class="nav nav-tabs">
         <li class="active"><a href="#pages" data-toggle="tab"><strong>Page List</strong></a></li>
         <li><a href="#custom-website" data-toggle="tab"><strong>Custom Website Data</strong></a></li>
-        <li><a href="#site-setting" data-toggle="tab"><strong>Site Setting</strong></a></li>
-        <!--li class="pull-right save"><a><i class="fa fa-file-text"></i>&nbsp;Save</a></li-->
+        <!--li><a href="#site-setting" data-toggle="tab"><strong>Site Setting</strong></a></li>
+        <li class="pull-right save"><a><i class="fa fa-file-text"></i>&nbsp;Save</a></li-->
     </ul>
     <div class="panel-body-nopadding">
         <div class="tab-content">

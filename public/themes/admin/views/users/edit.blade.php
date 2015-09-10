@@ -4,7 +4,7 @@
         <h4 class="panel-title-alt"><i class="fa fa-edit mr5"></i><span class="text-danger">Please enter category information</span></h4>
         <p>* = Required fields</p>
     </div>
-    {{ Form::open(array('route' => array('admin.users.store'),'method'=>'POST','class'=>'form form-horizontal')) }}
+    {{ Form::model($data,array('route' => array('admin.users.update',$data->id),'method'=>'PUT','class'=>'form form-horizontal')) }}
     <div class="panel-body">
 
         <div class="alert {{ Session::get('messages')? Session::get('messages')->has('error')?'alert-danger':'alert-success' :'hidden' }}">
@@ -20,41 +20,41 @@
                         <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>
-                    <div class="form-group">
-                        {{ Form::label('last_name', 'Last Name', array('class' => ' col-sm-3 control-label required' )) }}
-                        <div class="col-sm-7">
-                            {{ Form::text('last_name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter last name')) }}
-                            <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                        </div>
+                <div class="form-group">
+                    {{ Form::label('last_name', 'Last Name', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::text('last_name', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter last name')) }}
+                        <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
-                    <div class="form-group">
-                        {{ Form::label('email', 'Email', array('class' => ' col-sm-3 control-label required' )) }}
-                        <div class="col-sm-7">
-                            {{ Form::text('email', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter email')) }}
-                            <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                        </div>
+                </div>
+                <div class="form-group">
+                    {{ Form::label('email', 'Email', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::text('email', null , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter email')) }}
+                        <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
-                    <div class="form-group">
-                        {{ Form::label('password', 'Password', array('class' => ' col-sm-3 control-label required' )) }}
-                        <div class="col-sm-7">
-                            {{ Form::password('password', array('class'=>'form-control','required'=>'required','placeholder'=>'Enter password')) }}
-                            <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                        </div>
+                </div>
+                <div class="form-group">
+                    {{ Form::label('password', 'Password', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::password('password', array('class'=>'form-control','placeholder'=>'Enter password')) }}
+                        <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
-                    <div class="form-group">
-                        {{ Form::label('conf_password', 'Confirm Password', array('class' => ' col-sm-3 control-label required' )) }}
-                        <div class="col-sm-7">
-                            {{ Form::password('conf_password' , array('class'=>'form-control','required'=>'required','placeholder'=>'Enter confirm password')) }}
-                            <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                        </div>
+                </div>
+                <div class="form-group">
+                    {{ Form::label('conf_password', 'Confirm Password', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::password('conf_password' , array('class'=>'form-control','placeholder'=>'Enter confirm password')) }}
+                        <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
-                    <div class="form-group">
-                        {{ Form::label('group', 'Group', array('class' => ' col-sm-3 control-label required' )) }}
-                        <div class="col-sm-7">
-                            {{ Form::select('group',$groups, null , array('class'=>'select2','required'=>'required','placeholder'=>'Group')) }}
-                            <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
-                        </div>
+                </div>
+                <div class="form-group">
+                    {{ Form::label('group', 'Group', array('class' => ' col-sm-3 control-label required' )) }}
+                    <div class="col-sm-7">
+                        {{ Form::select('group',$groups, $data->group_id , array('class'=>'select2','required'=>'required','placeholder'=>'Group')) }}
+                        <label id='name_error' for='name' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
+                </div>
 
             </div>
         </div>

@@ -59,15 +59,19 @@ class UsersController extends BaseController {
      */
     public function create()
     {
-        $this->theme->setPageTitle('Create New Category');
+        $this->theme->setPageTitle('Create New User');
         $this->theme->asset()->serve('chosen');
+        $groupsData = Sentry::findAllGroups();
+        $groups = [];
+        foreach($groupsData as $group){
+            $groups[$group->id] = $group->name;
+        }
         $data = array(
-            'selectValue'=>\Category::withDepth()->having('depth','=',0)->lists('name','id'),
-            'icons' => [''=>'']+\Category::$icons
+            'groups'=> $groups
         );
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))
-            ->add('Categories', \URL::route('admin/categories'))
+            ->add('Users', \URL::route('admin/users'))
             ->add('Create');
 
         return $this->theme->scope('users.create',$data)->render();
@@ -80,7 +84,55 @@ class UsersController extends BaseController {
      */
     public function store()
     {
-        $validator = \Validator::make($data = Input::all(), \Category::$rules);
+        try
+        {
+            // Create the user
+            $user = Sentry::createUser(array(
+                'email'     => Input::get('email'),
+                'password'  => Input::get('password'),
+                'first_name' => Input::get('first_name'),
+                'last_name' => Input::get('last_name'),
+                'activated' => true,
+            ));
+
+            // Find the group using the group id
+            $group = Sentry::findGroupById(Input::get('group'));
+
+            // Assign the group to the user
+            $user->addGroup($group);
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'You have successfully create new user');
+            return \Redirect::route('admin.users.edit',array('id'=>$user->id))->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Users\LoginRequiredException $e)
+        {
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'Login field is required.');
+            return \Redirect::route('admin.users.create')->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Users\PasswordRequiredException $e)
+        {
+
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'Password field is required.');
+            return \Redirect::route('admin.users.create')->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Users\UserExistsException $e)
+        {
+            $message = 'User with this login already exists.';
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'User with this login already exists.');
+            return \Redirect::route('admin.users.create')->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Groups\GroupNotFoundException $e)
+        {
+            $message = 'Group was not found.';
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'Group was not found.');
+            return \Redirect::route('admin.users.create')->with('messages',$messages);
+        }
+
+        /*$validator = \Validator::make($data = Input::all(), \Category::$rules);
         if($validator->valid()){
             $attributes = array(
                 'name'=>Input::get('name')
@@ -104,7 +156,7 @@ class UsersController extends BaseController {
                 ->withErrors($validator)
                 ->withInput()
                 ->with('messages',$messages);
-        }
+        }*/
     }
 
     /**
@@ -128,22 +180,27 @@ class UsersController extends BaseController {
      */
     public function edit($id)
     {
-        $category = \Category::find($id);
-        $this->theme->setPageTitle('Update Category')->setPageSubTitle($category->name);
+        $user = Sentry::findUserById($id);
+        $user->group_id = $user->getGroups()->first()->id;
+        $this->theme->setPageTitle('Update User')->setPageSubTitle($user->first_name);
 
         $this->theme->asset()->serve('chosen');
+        $groupsData = Sentry::findAllGroups();
+        $groups = [];
+        foreach($groupsData as $group){
+            $groups[$group->id] = $group->name;
+        }
         $data = array(
-            'selectValue'=>[''=>'']+\Category::withDepth()->having('depth','=',0)->where('id','!=',$id)->lists('name','id'),
-            'data'=>$category,
-            'icons' => [''=>'']+\Category::$icons
+            'data'=>$user,
+            'groups'=> $groups
         );
 
         $this->theme->breadcrumb()
             ->add('Dashboard', \URL::route('admin/dashboard'))
             ->add('Categories', \URL::route('admin/categories'))
-            ->add($category->name);
+            ->add($user->first_name);
 
-        return $this->theme->scope('categories.edit',$data)->render();
+        return $this->theme->scope('users.edit',$data)->render();
     }
 
     /**
@@ -154,26 +211,60 @@ class UsersController extends BaseController {
      */
     public function update($id)
     {
-        $validator = \Validator::make($data = Input::all(), \Category::$rules);
-        if($validator->valid()){
-            $attributes = array(
-                'name'=>Input::get('name')
-            );
+        try
+        {
+            // Create the user
+            $user = Sentry::findUserById($id);
 
-            $category = \Category::find($id);
-            $category->update(Input::all());
+
+            $user->email     = Input::get('email');
+            $user->password  = Input::get('password');
+            $user->first_name = Input::get('first_name');
+            $user->last_name = Input::get('last_name');
+
+
+
+            // Find the group using the group id
+            $curGroup = $user->getGroups()->first();
+
+            $group = Sentry::findGroupById(Input::get('group'));
+
+            // Assign the group to the user
+
+            if ($user->removeGroup($curGroup))
+            {
+                $user->addGroup($group);
+            }
             $messages = new \Illuminate\Support\MessageBag;
-            $messages->add('message', 'You have successfully create new category');
-            return \Redirect::route('admin.categories.edit',array('id'=>$category->id))->with('messages',$messages);
-        }else{
+            $messages->add('message', 'You have successfully update user');
+            return \Redirect::route('admin.users.edit',array('id'=>$user->id))->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Users\LoginRequiredException $e)
+        {
             $messages = new \Illuminate\Support\MessageBag;
-            $messages
-                ->add('error',true)
-                ->add('message', 'Failed to create new category');
-            return \Redirect::route('admin.categories.create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with('messages',$messages);
+            $messages->add('message', 'Login field is required.')->add('error',true);
+            return \Redirect::route('admin.users.edit',array('id'=>$user->id))->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Users\PasswordRequiredException $e)
+        {
+
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'Password field is required.')->add('error',true);
+            return \Redirect::route('admin.users.edit',array('id'=>$user->id))->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Users\UserExistsException $e)
+        {
+            $message = 'User with this login already exists.';
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'User with this login already exists.')->add('error',true);
+            return \Redirect::route('admin.users.edit',array('id'=>$user->id))->with('messages',$messages);
+        }
+        catch (\Cartalyst\Sentry\Groups\GroupNotFoundException $e)
+        {
+            $message = 'Group was not found.';
+            $messages = new \Illuminate\Support\MessageBag;
+            $messages->add('message', 'Group was not found.')->add('error',true);
+            return \Redirect::route('admin.users.edit',array('id'=>$user->id))->with('messages',$messages);
         }
     }
 

@@ -82,8 +82,19 @@ return array(
                 $theme->asset()->usePath()->add('jquery', 'js/jquery.min.js');
                 $theme->asset()->usePath()->add('bootstrap', 'js/bootstrap.min.js');
                 $theme->asset()->add('deserialize', '3rdparty/jquery/jquery.deserialize.min.js');
+                $theme->asset()->usePath()->add('chosencss','css/select2.css');
+                $theme->asset()->usePath()->add('chosen','js/select2.min.js');
+                $theme->asset()->usePath()->add('gritter-css','css/jquery.gritter.css');
+                $theme->asset()->usePath()->add('gritter','js/jquery.gritter.min.js');
             }
 
+        ),
+        'events' => array(
+            'asset' => function($asset){
+                    $asset->cook('chosen',function($asset){
+
+                    });
+                }
         )
 
     )

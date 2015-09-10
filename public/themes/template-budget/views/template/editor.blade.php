@@ -1,12 +1,9 @@
+<div id="sbheader">
 <?php
 if(isset($content->head)){
     echo $content->head;
 }else{
 ?>
-<div id="sbheader">
-
-<!-- Top Bar
-================================================== -->
 <div id="top-bar">
     <div class="container">
 
@@ -79,31 +76,34 @@ if(isset($content->head)){
         </nav>
     </div>
 </div>
-
-</div>
 <?php
 }
 ?>
+</div>
+<div id="sbbody" >
 <?php
 if(isset($content->body)){
     echo $content->body;
 }else{
 ?>
-<div id="sbbody" >
+
 
     <div class="container">
         <div></div>
     </div>
 
-</div>
+
 <?php
 }
-
+?>
+</div>
+<div id="sbfooter">
+<?php
 if(isset($content->foot)){
     echo $content->foot;
 }else{
 ?>
-<div id="sbfooter">
+
 <!-- Footer
 ================================================== -->
 <div id="footer">
@@ -175,7 +175,8 @@ if(isset($content->foot)){
 <!-- Footer Bottom / End -->
 </div>
 <!-- Back To Top Button -->
-<div id="backtotop"><a href="#"></a></div>
+<div id="backtotop"><a href="#"></a>
 <?php
 }
 ?>
+</div>

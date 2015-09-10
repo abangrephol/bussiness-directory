@@ -67,9 +67,9 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
 
         Route::resource('custom-website','CustomWebsitesController',array('names' => array('index'=>'admin/custom-website')));
         Route::get('custom-website/{id}/choose-templates',array('as'=>'custom-website.chooseTemplate','uses'=>'CustomWebsitesController@chooseTemplates'));
-        Route::get('custom-website/{id}/builder/{templateId}',array('as'=>'custom-website.builder','uses'=>'CustomWebsitesController@builder'));
-        Route::get('custom-website/{id}/builder-editor/{templateId}',array('as'=>'custom-website.builderEditor','uses'=>'CustomWebsitesController@builderEditor'));
-        Route::post('custom-website/{id}/builder-save',array('as'=>'custom-website.builderSave','uses'=>'CustomWebsitesController@builderSave'));
+        Route::get('custom-website/{id}/builder/{templateId}/{pageId?}',array('as'=>'custom-website.builder','uses'=>'CustomWebsitesController@builder'));
+        Route::get('custom-website/{id}/builder-editor/{templateId}/{pageId?}',array('as'=>'custom-website.builderEditor','uses'=>'CustomWebsitesController@builderEditor'));
+        Route::post('custom-website/{id}/builder-save/{pageId?}',array('as'=>'custom-website.builderSave','uses'=>'CustomWebsitesController@builderSave'));
         Route::get('custom-website/{id}/pages',array('as'=>'custom-website.pages','uses'=>'CustomWebsitesController@pages'));
         Route::get('custom-website/{id}/pages-delete/{pageId}',array('as'=>'custom-website.pages.delete','uses'=>'CustomWebsitesController@pagesDelete'));
         Route::resource('custom-theme','CustomThemesController',array('names' => array('index'=>'admin/custom-theme')));
