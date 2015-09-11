@@ -420,6 +420,12 @@
             method = 'edit';
             editPointer = $(this).closest('tr');
             var data = JSON.parse($(this).closest('tr').find('input').val()) ;
+            if(data.type=='select'){
+                $('#combobox_items div.row:not(#combobox_item)').remove();
+                for(var i = 0 ; i<data['cb_label[]'].length-1; i++){
+                    $('#combobox_item_tpl').clone().removeClass('hide').removeAttr('id').appendTo('#combobox_items');
+                }
+            }
             $('#formInput').deserialize(data);
             $('.select2').trigger('change');
             $('#formDialog').modal('show');
