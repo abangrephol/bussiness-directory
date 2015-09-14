@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 8, 2015, 10:24:35 AM
+    Author     : ShintaRE
+*/
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oxygen Light'), local('Oxygen-Light'), url(../fonts/AwBqWF2kjhlybWamaKMPcVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(../fonts/AwBqWF2kjhlybWamaKMPcT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oxygen'), local('Oxygen-Regular'), url(../fonts/78wGxsHfFBzG7bRkpfRnCQ.woff2) format('woff2'), url(../fonts/RzoNiRR1p2Mqyyz2RwqSMw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oxygen Bold'), local('Oxygen-Bold'), url(../fonts/yVHpdQrmTj9Kax1tmFSx2ltXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(../fonts/yVHpdQrmTj9Kax1tmFSx2j8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}

@@ -1,9 +1,10 @@
+<?php
+if(isset($content->head)){
+    echo $content->head;
+}else{
+?>
 <div id="sbheader">
-    <?php
-    if(isset($content->head)){
-        echo $content->head;
-    }else{
-        ?>
+
         <header class="header">
             <div class="container">
                 <div class="row">
@@ -29,17 +30,18 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </header>
-    <?php
-    }
-    ?>
-</div>
 
+</div>
+<?php
+}
+?>
+<?php
+if(isset($content->body)){
+    echo $content->body;
+}else{
+?>
 <div id="sbbody">
-    <?php
-    if(isset($content->body)){
-        echo $content->body;
-    }else{
-        ?>
+
         <section class="main-page services-home" style="padding: 52px 0 28px 0;" data-portfolio-effect="fadeInDown" data-animation-delay="0" data-animation-offset="75%">
             <div class="container" >
                 <div class="row">
@@ -73,11 +75,11 @@
 
             </div><!-- /.container -->
         </section><!-- /.services-home -->
-    <?php
-    }
-    ?>
-</div>
 
+</div>
+<?php
+}
+?>
 <footer class="footer" id="sbfooter">
     <?php
     if(isset($content->body)){

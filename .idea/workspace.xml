@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/Modules/Widgets/NavbarEventHandler.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bussiness-directory.iws" />
@@ -34,133 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="48" selection-start="9792" selection-end="9792" vertical-scroll-proportion="-12.384615" vertical-offset="3537" max-vertical-offset="4233">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugin.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="89" selection-start="5585" selection-end="5585" vertical-scroll-proportion="34.0" vertical-offset="2788" max-vertical-offset="5695">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgetForm.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="33.346153" vertical-offset="867" max-vertical-offset="4352">
-              <folding>
-                <marker date="1441789069343" expanded="true" signature="2170:2487" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="2180:2220" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="2232:2270" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="2307:2428" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="2447:2479" placeholder="{...}" />
-                <marker date="1441789069343" expanded="false" signature="2520:2553" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="2554:6607" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="2592:6600" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="2646:6589" placeholder="..." />
-                <marker date="1441789069343" expanded="false" signature="2686:2699" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="2700:2912" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="3094:6574" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="4053:4960" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="4220:4933" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="4397:4805" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="4457:4766" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="5286:6405" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="5475:6370" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="5744:6197" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="5813:6154" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="6617:9609" placeholder="..." />
-                <marker date="1441789069343" expanded="true" signature="6662:7083" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="6752:7057" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="6798:6977" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="6840:6910" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="6983:7047" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="7117:8315" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="7313:7440" placeholder="//..." />
-                <marker date="1441789069343" expanded="true" signature="7701:7835" placeholder="//..." />
-                <marker date="1441789069343" expanded="true" signature="7943:8040" placeholder="//..." />
-                <marker date="1441789069343" expanded="true" signature="8204:8246" placeholder="//..." />
-                <marker date="1441789069343" expanded="true" signature="8550:8766" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="8573:8656" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="8803:8918" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="8956:9597" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="9058:9323" placeholder="{&quot;width&quot;: '100%'...}" />
-                <marker date="1441789069343" expanded="true" signature="9382:9588" placeholder="{...}" />
-                <marker date="1441789069343" expanded="true" signature="9418:9544" placeholder="{&quot;width&quot;: '100%'...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomWebsiteData.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/CustomWebsiteData.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.038462" vertical-offset="209" max-vertical-offset="816">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavbarEventHandler.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/Modules/Widgets/NavbarEventHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="8" selection-start="104" selection-end="104" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="374">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/start/global.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="44" selection-start="550" selection-end="550" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1377">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.menu.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/events/admin.menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="119">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interface.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/layouts/interface.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="44.5" vertical-offset="1157" max-vertical-offset="1700">
-              <folding>
-                <marker date="1441851469550" expanded="true" signature="20:40" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="59:3881" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="70:489" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="500:3873" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="554:2081" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="596:2066" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="640:1473" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="805:1054" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="1234:1450" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="1529:2047" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="1604:2024" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="1745:1761" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="2113:3602" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="2131:3587" placeholder="..." />
-                <marker date="1441851469550" expanded="true" signature="2153:3566" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="InputForm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/widgets/InputForm.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -197,10 +64,86 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="4" selection-start="3818" selection-end="3905" vertical-scroll-proportion="32.03846" vertical-offset="2244" max-vertical-offset="3383">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="create.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="305" column="0" selection-start="18348" selection-end="18348" vertical-scroll-proportion="0.61538464" vertical-offset="5201" max-vertical-offset="7650">
+            <state line="326" column="26" selection-start="19181" selection-end="19181" vertical-scroll-proportion="-13.115385" vertical-offset="5201" max-vertical-offset="7650">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="429" column="57" selection-start="0" selection-end="27146" vertical-scroll-proportion="-9.807693" vertical-offset="7038" max-vertical-offset="8602">
+              <folding>
+                <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="3417">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="500" column="0" selection-start="26542" selection-end="26542" vertical-scroll-proportion="3.8195212" vertical-offset="6426" max-vertical-offset="8602">
+              <folding>
+                <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/layouts/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="6" selection-start="1957" selection-end="1957" vertical-scroll-proportion="-19.576923" vertical-offset="137" max-vertical-offset="918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/layouts/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="544">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="93" column="48" selection-start="4743" selection-end="4743" vertical-scroll-proportion="-9.115385" vertical-offset="1344" max-vertical-offset="2125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="12" selection-start="5440" selection-end="5476" vertical-scroll-proportion="-5.8461537" vertical-offset="1480" max-vertical-offset="2176">
               <folding />
             </state>
           </provider>
@@ -215,10 +158,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CustomWidgetsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="10" selection-start="6466" selection-end="6466" vertical-scroll-proportion="0.17953669" vertical-offset="2865" max-vertical-offset="4063">
+            <state line="199" column="21" selection-start="7290" selection-end="7290" vertical-scroll-proportion="-9.823529" vertical-offset="2865" max-vertical-offset="4063">
               <folding />
             </state>
           </provider>
@@ -311,7 +254,16 @@
       <file leaf-file-name="editor.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/editor.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="2468" selection-end="2485" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="3179">
+            <state line="78" column="0" selection-start="2468" selection-end="2485" vertical-scroll-proportion="-51.0" vertical-offset="0" max-vertical-offset="3179">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3162">
               <folding />
             </state>
           </provider>
@@ -371,14 +323,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
-        <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php" />
-        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/showblocks/plugin.js" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
@@ -387,6 +331,14 @@
         <option value="$PROJECT_DIR$/app/controllers/Modules/Widgets/NavbarEventHandler.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-arvent/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/partials/footer.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/partials/header.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/config.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
       </list>
     </option>
   </component>
@@ -450,6 +402,266 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-tinycolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-tinycolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-tinycolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-tinycolor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-budget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template-budget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -670,6 +882,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\theme-tinycolor\views\template" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\sitebuilder\assets\css" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\sitebuilder\assets\js" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\template-budget\views\template" />
@@ -780,137 +993,26 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/CustomWidget.php">
+    <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/layouts/interface.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="48" selection-start="9792" selection-end="9792" vertical-scroll-proportion="-12.384615" vertical-offset="3537" max-vertical-offset="4233">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="305" column="0" selection-start="18348" selection-end="18348" vertical-scroll-proportion="0.61538464" vertical-offset="5201" max-vertical-offset="7650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetForm.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="33.346153" vertical-offset="867" max-vertical-offset="4352">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="44.5" vertical-offset="1157" max-vertical-offset="1700">
           <folding>
-            <marker date="1441789069343" expanded="true" signature="2170:2487" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="2180:2220" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="2232:2270" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="2307:2428" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="2447:2479" placeholder="{...}" />
-            <marker date="1441789069343" expanded="false" signature="2520:2553" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="2554:6607" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="2592:6600" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="2646:6589" placeholder="..." />
-            <marker date="1441789069343" expanded="false" signature="2686:2699" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="2700:2912" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="3094:6574" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="4053:4960" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="4220:4933" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="4397:4805" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="4457:4766" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="5286:6405" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="5475:6370" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="5744:6197" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="5813:6154" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="6617:9609" placeholder="..." />
-            <marker date="1441789069343" expanded="true" signature="6662:7083" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="6752:7057" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="6798:6977" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="6840:6910" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="6983:7047" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="7117:8315" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="7313:7440" placeholder="//..." />
-            <marker date="1441789069343" expanded="true" signature="7701:7835" placeholder="//..." />
-            <marker date="1441789069343" expanded="true" signature="7943:8040" placeholder="//..." />
-            <marker date="1441789069343" expanded="true" signature="8204:8246" placeholder="//..." />
-            <marker date="1441789069343" expanded="true" signature="8550:8766" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="8573:8656" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="8803:8918" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="8956:9597" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="9058:9323" placeholder="{&quot;width&quot;: '100%'...}" />
-            <marker date="1441789069343" expanded="true" signature="9382:9588" placeholder="{...}" />
-            <marker date="1441789069343" expanded="true" signature="9418:9544" placeholder="{&quot;width&quot;: '100%'...}" />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="22" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/events/admin.menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-websites/pages.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="276" selection-end="276" vertical-scroll-proportion="-0.0" vertical-offset="68" max-vertical-offset="3026">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="44" selection-start="550" selection-end="550" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="1377">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="42" selection-start="8793" selection-end="8793" vertical-scroll-proportion="-9.115385" vertical-offset="3367" max-vertical-offset="5644">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="27" selection-start="3709" selection-end="3709" vertical-scroll-proportion="0.0" vertical-offset="2719" max-vertical-offset="3417">
-          <folding>
-            <marker date="1441861315464" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441861315464" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1441861315464" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper/src/Alias.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="926" selection-end="953" vertical-scroll-proportion="0.65745854" vertical-offset="102" max-vertical-offset="4811">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="388" column="29" selection-start="22593" selection-end="22593" vertical-scroll-proportion="-12.461538" vertical-offset="6272" max-vertical-offset="8636">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="46" selection-start="5703" selection-end="5703" vertical-scroll-proportion="-14.384615" vertical-offset="1122" max-vertical-offset="2159">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,10 +1030,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/structural.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="10" selection-start="6466" selection-end="6466" vertical-scroll-proportion="0.17953669" vertical-offset="2865" max-vertical-offset="4063">
+        <state line="108" column="23" selection-start="0" selection-end="3133" vertical-scroll-proportion="0.33333334" vertical-offset="1642" max-vertical-offset="2397">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/partials/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="556">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/partials/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="582">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="12" selection-start="5440" selection-end="5476" vertical-scroll-proportion="-5.8461537" vertical-offset="1480" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="48" selection-start="4743" selection-end="4743" vertical-scroll-proportion="-9.115385" vertical-offset="1344" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="429" column="57" selection-start="0" selection-end="27146" vertical-scroll-proportion="-9.807693" vertical-offset="7038" max-vertical-offset="8602">
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="3417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/editor.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="2468" selection-end="2485" vertical-scroll-proportion="-51.0" vertical-offset="0" max-vertical-offset="3179">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3162">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="4" selection-start="3818" selection-end="3905" vertical-scroll-proportion="32.03846" vertical-offset="2244" max-vertical-offset="3383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="500" column="0" selection-start="26542" selection-end="26542" vertical-scroll-proportion="3.8195212" vertical-offset="6426" max-vertical-offset="8602">
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
