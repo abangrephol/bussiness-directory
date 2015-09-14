@@ -171,8 +171,12 @@ class CustomWidgetsController extends BaseController {
 
         return $widget->template;
     }
-    public function widgetForm($id)
+    public function widgetForm($id,$widgetId=0)
     {
+        //$subscriber = new \Modules\Widgets\NavbarEventHandler;
+
+        //$event = \Event::fire('widget.navbar', array());
+
         $widgets = \CustomWidget::find($id);
 
         $this->theme->asset()->serve('fileupload');
@@ -189,5 +193,42 @@ class CustomWidgetsController extends BaseController {
             ->add('Create');
 
         return $this->theme->layout('widgets')->scope('custom-widgets.widgetForm',$data)->render();
+    }
+    public function widgetDataSave($widgetId=0){
+        $formData = \Input::get('formData');
+        $wId = \Input::get('wId');
+        $type = \Input::get('type');
+        if($widgetId!=false){
+            $data = [
+                'formData' => $formData,
+                'wId' => $wId,
+                'type' => $type,
+                'template' => \Input::get('template'),
+                'name' => \Input::get('name')
+            ];
+            \CustomWebsiteData::set_key(\Session::get('webid-editor'),$widgetId,json_encode($data));
+        }else{
+            $widgetId = 'widget-'.$wId.'-'.time();
+            $data = [
+                'formData' => $formData,
+                'wId' => $wId,
+                'type' => $type,
+                'template' => \Input::get('template'),
+                'name' => \Input::get('name')
+            ];
+            \CustomWebsiteData::set_key(\Session::get('webid-editor'),$widgetId,json_encode($data));
+        }
+        return $widgetId;
+    }
+    public function widgetDataGet($widgetId=0){
+        $data = [];
+
+        if($widgetId!=false){
+            $data = json_decode(\CustomWebsiteData::get_key(\Session::get('webid-editor'),$widgetId));
+        }else{
+
+
+        }
+        return \Response::json($data);
     }
 }

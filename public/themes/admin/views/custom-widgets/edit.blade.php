@@ -368,6 +368,7 @@
                 case 'checkbox':
                     $('#combobox').removeClass('hide');
                     $('#combobox .comboboxAdd').addClass('hide');
+                    $('#combobox_items div.row:not(#combobox_item)').remove();
                     break;
                 default:
                     $('#combobox').addClass('hide');

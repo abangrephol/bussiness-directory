@@ -183,6 +183,7 @@
     jQuery('#saveSetting').on('click',function(){
         $('#mod').modal('hide');
     })
+
     function checkSetting(){
         if(!$('form #name').val()) {
             $('#mod').modal('show');
@@ -214,15 +215,15 @@
             var iframeWindow = $('#editor-container').find('iframe')[0].contentWindow;
 
             var url = "{{URL::route('custom-website.builderSave',array('id'=>$id,'pageId'=>$pageId))}}";
-
+            var instances = iframeWindow.CKEDITOR.instances;
             $.ajax({
                 type: "POST",
                 url:  url,
                 data: {
                     content: {
-                        'head':iframeWindow.CKEDITOR.instances.sbheader.getData(),
-                        'body':iframeWindow.CKEDITOR.instances.sbbody.getData(),
-                        'foot':iframeWindow.CKEDITOR.instances.sbfooter.getData()
+                        'head':instances.sbheader.getData(),
+                        'body':instances.sbbody.getData(),
+                        'foot':instances.sbfooter.getData()
                     },
                     input: $('form').serialize()
                 }

@@ -1,6 +1,5 @@
 var editorName = null;
 
-
 var curWidget = null;
 var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}</span></div>";
 (function() {
@@ -36,22 +35,35 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                                 'name':form.data('name'),
                                 'template': template
                             };
-                        var templateM = '';
-                        if(data.type=='object'){
-                            templateM = Mustache.to_html(templateObject,{widgetName:data.name});
-                        }else{
-                            templateM = Mustache.to_html(template,data.formData);
-                        }
-
-                        //console.log(form.serializeJSON());
+                        var widgetId = 0;
                         var ed = this._.editor;
-                        var customwidget = new CKEDITOR.dom.element.createFromHtml( templateM ,ed.document);
+                        $.ajax({
+                            type: "POST",
+                            url:  window.location.origin + '/admin/widget-save/',
+                            data: data
+                        }).done(function( result ) {
+                                widgetId = result;
+                                var templateM = '';
+                                if(data.type=='object'){
+                                    templateM = Mustache.to_html(templateObject,{widgetName:data.name});
+                                }else{
+                                    templateM = Mustache.to_html(template,data.formData);
+                                }
 
+                                //console.log(form.serializeJSON());
 
-                        ed.insertElement( customwidget );
-                        if(data.type!='raw'){
-                            ed.widgets.initOn(customwidget,'widgets',data);
-                        }
+                                var customwidget = new CKEDITOR.dom.element.createFromHtml( templateM ,ed.document);
+
+                                $(customwidget).attr('widget-id',widgetId);
+
+                                ed.insertElement( customwidget );
+
+                                if(data.type!='raw'){
+                                    ed.widgets.initOn(customwidget,'widgets',data);
+                                }
+                            }
+                        );
+
 
 
 
@@ -97,6 +109,15 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                                 'name':form.data('name')
                             },
                             template = $(iframe).contents().find('#template').html();
+                        var widgetId = $(curWidget.element).attr('widget-id');
+                        $.ajax({
+                            type: "POST",
+                            url:  window.location.origin + '/admin/widget-save/'+widgetId,
+                            data: data
+                        }).done(function( result ) {
+                                widgetId = result;
+                            }
+                        );
                         var templateM = '';
                         if(data.type=='object'){
                             templateM = Mustache.to_html(templateObject,{widgetName:data.name});
@@ -142,6 +163,7 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
             });*/
             editor.addCommand('wnwidgets', {
                 exec: function(e) {
+
                     e.openDialog('selectWidget');
                 }
             });
@@ -155,13 +177,39 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
             }
             editor.widgets.add('widgets',{
                 upcast: function( element ) {
-
                     return element.hasClass( 'wnwidgets' );
                 },
                 init : function (){
-                    //if(this.element.hasClass( 'wnwidgets' )){
-                    //    html = editor.dataProcessor.toDataFormat( this.element.getHtml() );
-                    //}
+                    if(this.element.hasClass( 'wnwidgets' ) && $(this.element).attr('widget-id')!=null){
+                        var widget = this;
+                        $.ajax({
+                            type: "GET",
+                            url:  window.location.origin + '/admin/widget-form-data/'+$(this.element).attr('widget-id')
+                        }).done(function( result ) {
+                                var data = {
+                                    'formData':result.formData,
+                                    'wId':result.wId,
+                                    'type':result.type,
+                                    'name':result.name
+                                };
+                                var templateM = '';
+                                if(data.type=='object'){
+                                    templateM = Mustache.to_html(templateObject,{widgetName:data.name});
+                                    widget.element.addClass('widget-object');
+                                }else{
+                                    templateM = Mustache.to_html(result.template,data.formData);
+                                }
+                                widget.setData('formData',data.formData);
+                                widget.setData('wId',data.wId);
+                                widget.setData('template',result.template);
+                                widget.setData('type',result.type);
+                                widget.setData('name',result.name);
+                                widget.element.setHtml($(templateM).html());
+
+                            }
+                        );
+                        //html = editor.dataProcessor.toDataFormat( this.element.getHtml() );
+                    }
 
                     editor.widgets.on( 'instanceCreated', function( evt ) {
 
@@ -195,6 +243,8 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                     curWidget = this;
                     //evt.data.dialog = 'selectWidget';
                     var editDialog = editor.openDialog( 'editWidget' );
+                    var widgetId = $(this.element).attr('widget-id');
+
                     editDialog.definition.contents[0].elements[0].src = window.location.origin + '/admin/widget-form/'+this.data.wId;
                 }
             });

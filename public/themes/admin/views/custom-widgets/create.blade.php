@@ -303,7 +303,7 @@
 
         jQuery('.select2').select2({width:'100%',allowClear:true});
         $('#intype').on('change',function(){
-            console.log($(this).val());
+
             switch($(this).val()){
                 case 'option':
                 case 'select':
@@ -313,6 +313,7 @@
                 case 'checkbox':
                     $('#combobox').removeClass('hide');
                     $('#combobox .comboboxAdd').addClass('hide');
+                    $('#combobox_items div.row:not(#combobox_item)').remove();
                     break;
                 default:
                     $('#combobox').addClass('hide');

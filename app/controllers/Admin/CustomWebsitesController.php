@@ -213,7 +213,7 @@ class CustomWebsitesController extends BaseController {
 
         $this->theme = \Theme::uses('sitebuilder')->layout('interface');
 
-
+        \Session::set('webid-editor',$id);
         $this->theme->asset()->serve('chosen');
         $this->theme->setPageTitle('Choose a Template');
         //$pageId = \Input::get('pageId');
@@ -241,6 +241,7 @@ class CustomWebsitesController extends BaseController {
     }
 
     public function builderEditor ($id,$templateId,$pageId=0){
+
 
         \Session::set('thid-editor',$templateId);
         $this->theme = \Theme::uses(\CustomTheme::find($templateId)->theme_name)->layout('default');
