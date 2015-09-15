@@ -175,7 +175,7 @@
             iframe.style.display = "block";
             $(iframe).contents().find('body').prepend('<div id="toolbar"></div>').css('padding-top','90px').css('padding-bottom','50px');
             $(iframe).contents().find('head').append("<style>" +
-                "#toolbar {position:fixed;top:0;z-index:1000;left:0;}" +
+                "#toolbar {position:fixed;top:0;z-index:10000;left:0;}" +
                 "</style>");
         });
         document.getElementById("editor-container").appendChild(iframe);
