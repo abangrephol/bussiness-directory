@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CustomWidget.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/CustomWidget.php">
+      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="459">
+            <state line="19" column="155" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.56766254" vertical-offset="0" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -164,10 +164,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="30" selection-start="5633" selection-end="5633" vertical-scroll-proportion="0.59300184" vertical-offset="1191" max-vertical-offset="2193">
+            <state line="89" column="28" selection-start="5631" selection-end="5631" vertical-scroll-proportion="-12.384615" vertical-offset="1191" max-vertical-offset="2193">
               <folding />
             </state>
           </provider>
@@ -320,7 +320,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/events/Widgets/NavbarEventHandler.php" />
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/controllers/Modules/Widgets/NavbarEventHandler.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWidgetsController.php" />
@@ -336,6 +335,7 @@
         <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
       </list>
     </option>
   </component>
@@ -752,62 +752,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3rdparty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3rdparty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ckeditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wnwidgets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1086,22 +1030,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="344" selection-end="344" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="429" column="57" selection-start="0" selection-end="27146" vertical-scroll-proportion="-9.807693" vertical-offset="7038" max-vertical-offset="8602">
-          <folding>
-            <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="3417">
@@ -1197,7 +1125,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="30" selection-start="5633" selection-end="5633" vertical-scroll-proportion="0.59300184" vertical-offset="1191" max-vertical-offset="2193">
+        <state line="89" column="28" selection-start="5631" selection-end="5631" vertical-scroll-proportion="-12.384615" vertical-offset="1191" max-vertical-offset="2193">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CustomWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="155" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.56766254" vertical-offset="0" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
