@@ -20,6 +20,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.extraAllowedContent = 'p(*)[*]{*};div(*)[*]{*};li(*)[*]{*};ul(*)[*]{*};span(*)[*]{*};section(*)[*]{*};header(*)[*]{*};footer(*)[*]{*};a(*){*}[*]';
     CKEDITOR.dtd.$removeEmpty.i = 0;
     CKEDITOR.dtd.$removeEmpty.span = 0;
+    CKEDITOR.dtd.$removeEmpty.a = 0;
 	config.allowedContent = true;
     config.title = false;
     config.toolbar = [

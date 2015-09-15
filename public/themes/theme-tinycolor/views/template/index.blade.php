@@ -498,3 +498,49 @@ if(isset($content->body)){
     ?>
 </div>
 
+
+<script>
+    $('.responsive').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 766,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: true
+                }
+            }
+        ]
+    });
+
+
+
+    $(function () {
+        $('#dl-menu').dlmenu();
+    });
+
+
+    function initMap() {
+        var myLatLng = {lat: 1.4633704, lng: 103.7448317};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Sedap Corner Sdn Bhd'
+        });
+    }
+
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" afterPath="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/theme-tinycolor/config.php" afterPath="$PROJECT_DIR$/public/themes/theme-tinycolor/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
     </list>
     <ignored path="bussiness-directory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="config.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="155" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.56766254" vertical-offset="0" max-vertical-offset="1224">
+            <state line="22" column="31" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
               <folding />
             </state>
           </provider>
@@ -46,8 +48,11 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="4" selection-start="3818" selection-end="3905" vertical-scroll-proportion="32.03846" vertical-offset="2244" max-vertical-offset="3383">
-              <folding />
+            <state line="83" column="4" selection-start="3818" selection-end="3905" vertical-scroll-proportion="47.115383" vertical-offset="2636" max-vertical-offset="3383">
+              <folding>
+                <marker date="1442274179471" expanded="true" signature="1598:1624" placeholder="..." />
+                <marker date="1442274179471" expanded="true" signature="1630:3771" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="500" column="0" selection-start="26542" selection-end="26542" vertical-scroll-proportion="-79.76923" vertical-offset="6426" max-vertical-offset="8602">
+            <state line="500" column="0" selection-start="26542" selection-end="26542" vertical-scroll-proportion="0.09208103" vertical-offset="8450" max-vertical-offset="9367">
               <folding>
                 <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
               </folding>
@@ -113,7 +118,7 @@
       <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="48" selection-start="4743" selection-end="4743" vertical-scroll-proportion="-9.115385" vertical-offset="1344" max-vertical-offset="2125">
+            <state line="52" column="89" selection-start="2449" selection-end="2458" vertical-scroll-proportion="-9.769231" vertical-offset="630" max-vertical-offset="2244">
               <folding />
             </state>
           </provider>
@@ -149,7 +154,7 @@
       <file leaf-file-name="plugin.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1683" max-vertical-offset="5695">
+            <state line="57" column="0" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="3417" max-vertical-offset="5695">
               <folding />
             </state>
           </provider>
@@ -167,7 +172,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="28" selection-start="5631" selection-end="5631" vertical-scroll-proportion="-12.384615" vertical-offset="1191" max-vertical-offset="2193">
+            <state line="89" column="28" selection-start="5631" selection-end="5631" vertical-scroll-proportion="-43.76923" vertical-offset="375" max-vertical-offset="2193">
               <folding />
             </state>
           </provider>
@@ -326,16 +331,16 @@
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/partials/header.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/config.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php" />
-        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/WebsiteController.php" />
         <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/public/3rdparty/ckeditor/config.js" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/config.php" />
       </list>
     </option>
   </component>
@@ -1030,40 +1035,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="3417">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/editor.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2468" selection-end="2485" vertical-scroll-proportion="-51.0" vertical-offset="0" max-vertical-offset="3179">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3162">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="4" selection-start="3818" selection-end="3905" vertical-scroll-proportion="32.03846" vertical-offset="2244" max-vertical-offset="3383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="500" column="0" selection-start="26542" selection-end="26542" vertical-scroll-proportion="-79.76923" vertical-offset="6426" max-vertical-offset="8602">
-          <folding>
-            <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,20 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="1683" max-vertical-offset="5695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="28" selection-start="5631" selection-end="5631" vertical-scroll-proportion="-12.384615" vertical-offset="1191" max-vertical-offset="2193">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/CustomWidget.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="459">
@@ -1137,10 +1098,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/plugins/wnwidgets/plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="0" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0" vertical-offset="3417" max-vertical-offset="5695">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/3rdparty/ckeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="155" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.56766254" vertical-offset="0" max-vertical-offset="1224">
+        <state line="22" column="31" selection-start="1577" selection-end="1577" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1241">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="28" selection-start="5631" selection-end="5631" vertical-scroll-proportion="-43.76923" vertical-offset="375" max-vertical-offset="2193">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231" vertical-offset="306" max-vertical-offset="3417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="4" selection-start="3818" selection-end="3905" vertical-scroll-proportion="47.115383" vertical-offset="2636" max-vertical-offset="3383">
+          <folding>
+            <marker date="1442274179471" expanded="true" signature="1598:1624" placeholder="..." />
+            <marker date="1442274179471" expanded="true" signature="1630:3771" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="89" selection-start="2449" selection-end="2458" vertical-scroll-proportion="-9.769231" vertical-offset="630" max-vertical-offset="2244">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="500" column="0" selection-start="26542" selection-end="26542" vertical-scroll-proportion="0.09208103" vertical-offset="8450" max-vertical-offset="9367">
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

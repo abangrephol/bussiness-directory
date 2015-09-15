@@ -51,7 +51,14 @@ return array(
                     $asset->usePath()->add('component-css','css/component.css');
                     $asset->container('footer')->usePath()->add('jquery','js/jquery.min.js');
                     $asset->container('footer')->usePath()->add('modernizr','js/modernizr.custom.js');
+                    $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
+                    $asset->container('footer')->usePath()->add('slick','js/slick.js');
+                    $asset->container('footer')->usePath()->add('dlmenu','js/jquery.dlmenu.js');
+
                 });
+                //                    <script src="aset/js/bootstrap.min.js"></script>
+//<script src="aset/js/slick.js"></script>
+//<script src="aset/js/jquery.dlmenu.js"></script>
 //                <link href="aset/css/bootstrap.css" type="text/css" media="screen"  rel="stylesheet">
 //                <link href="aset/css/tinycolor.css" type="text/css" media="screen" rel="stylesheet">
 //                <link href="aset/css/ani.css" type="text/css" media="screen" rel="stylesheet">
