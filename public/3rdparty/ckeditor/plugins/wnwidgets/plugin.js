@@ -39,7 +39,7 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                         var ed = this._.editor;
                         $.ajax({
                             type: "POST",
-                            url:  window.location.origin + '/admin/widget-save/',
+                            url:  window.location.origin + '/admin/widget-save',
                             data: data
                         }).done(function( result ) {
                                 widgetId = result;
