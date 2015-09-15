@@ -36,7 +36,7 @@ $appRoute = function()
         }
     });
 
-    Route::get('/page/{slug}', function($projectSlug,$tld,$slug) {
+    Route::get('/{slug}', function($projectSlug,$slug) {
         $app = app();
         if(gettype($projectSlug)=='object'){
 
