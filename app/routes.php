@@ -36,17 +36,19 @@ $appRoute = function()
         }
     });
 
-    Route::get('/{slug}', function($projectSlug,$slug) {
-        $app = app();
-        if(gettype($projectSlug)=='object'){
+    Route::get('/{slug}', array('before'=>'admin',
+        function($projectSlug,$tld,$slug) {
+            $app = app();
+            if(gettype($projectSlug)=='object'){
 
-            $controller = $app->make('WebsiteController');
-            return $controller->callAction('websitePage', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
-        }else{
-            $controller = $app->make('HomeController');
-            return $controller->callAction('index', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
+                $controller = $app->make('WebsiteController');
+                return $controller->callAction('websitePage', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
+            }else{
+                $controller = $app->make('HomeController');
+                return $controller->callAction('index', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
+            }
         }
-    });
+    ));
 
 };
 Route::group(['domain' => 'www.{projectSlug}.{tld}'], $appRoute);

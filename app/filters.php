@@ -34,7 +34,12 @@ App::after(function($request, $response)
 | integrates HTTP Basic authentication for quick, simple checking.
 |
 */
-
+Route::filter('admin',function($route, $request){
+    if($route->getParameter( 'slug' )=='admin')
+        return Redirect::route('admin/login');
+    elseif ($route->getParameter( 'slug' )=='404')
+        return Redirect::to('/');
+});
 Route::filter('auth', function()
 {
 	if (Auth::guest())

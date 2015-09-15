@@ -68,9 +68,15 @@ class WebsiteController extends BaseController {
                     $data['banners'] = $custom_data->banners;
                 }
             }
+            if(isset($page)){
+                $data['data'] = $page;
+                $data['content'] = json_decode($page->content);
+            }else{
+                return Redirect::to('404');
+            }
 
-            $data['data'] = $page;
-            $data['content'] = json_decode($page->content);
+        }else{
+            return Redirect::to('404');
         }
         return $this->theme->scope('template.index',$data)->render();
     }
