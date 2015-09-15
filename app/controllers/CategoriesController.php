@@ -15,7 +15,7 @@ class CategoriesController extends BaseController {
     |
     */
 
-    public function index()
+    public function index($slug='')
     {
         $companies = Company::all();
         $mapMarker = array();
@@ -27,7 +27,10 @@ class CategoriesController extends BaseController {
                 .'id : "company-'.$company->id .'" }';
         }
         $mapMarker = join(',',$mapMarker);
-        $data = array('marker'=>$mapMarker);
+        $data = array(
+            'marker'=>$mapMarker,
+            'slug'=>$slug
+        );
         return $this->theme->layout('map')->scope('categories.index',$data)->render();
     }
     public function slug($slug)

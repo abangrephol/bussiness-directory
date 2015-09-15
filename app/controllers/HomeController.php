@@ -17,6 +17,7 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+        $slug = '';
         $companies = Company::all();
         $mapMarker = array();
         foreach($companies as $company){
@@ -27,7 +28,10 @@ class HomeController extends BaseController {
                             .'id : "company-'.$company->id .'" }';
         }
         $mapMarker = join(',',$mapMarker);
-        return $this->theme->scope('home.index',array('marker'=>$mapMarker))->render();
+        return $this->theme->scope('home.index',array(
+            'marker'=>$mapMarker,
+            'slug' => $slug
+        ))->render();
 	}
     public function about()
     {

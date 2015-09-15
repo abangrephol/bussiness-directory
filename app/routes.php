@@ -37,7 +37,7 @@ $appRoute = function()
     });
 
     Route::get('/{slug}', array('before'=>'admin',
-        function($projectSlug,$tld,$slug) {
+        function($projectSlug,$tld,$slug='') {
             $app = app();
             if(gettype($projectSlug)=='object'){
 
@@ -45,14 +45,24 @@ $appRoute = function()
                 return $controller->callAction('websitePage', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
             }else{
                 $controller = $app->make('HomeController');
-                return $controller->callAction('index', $parameters = array('id'=>$projectSlug->id,'slug'=>$slug));
+                return $controller->callAction('index', $parameters = array('slug'=>$slug));
             }
         }
     ));
 
 };
-Route::group(['domain' => 'www.{projectSlug}.{tld}'], $appRoute);
-Route::group(['domain' => '{projectSlug}.{tld}'], $appRoute);
+$wnRoute = function()
+{
+    Route::get('/contact-us','HomeController@contact');
+    Route::get('/about','HomeController@about');
+    Route::get('/price-listing','HomeController@pricelisting');
+    Route::group(array('prefix'=>'companies'),function(){
+        //Route::get('/','CategoriesController@index');
+        Route::get('/','CategoriesController@index');
+        Route::get('{categorySlug}','CategoriesController@slug');
+        Route::get('detail/{id}','CompaniesController@index');
+    });
+};
 
 Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
     Route::get('/login',array('as'=>'admin/login','uses'=>'SiteController@login'));
@@ -110,14 +120,10 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
 //Route::get('/website/{id}','WebsiteController@website');
 
 //Route::get('/','HomeController@index');
-Route::get('/contact-us','HomeController@contact');
-Route::get('/about-us','HomeController@about');
-Route::get('/price-listing','HomeController@pricelisting');
-Route::group(array('prefix'=>'companies'),function(){
-    //Route::get('/','CategoriesController@index');
-    Route::get('/','CategoriesController@index');
-    Route::get('{categorySlug}','CategoriesController@slug');
-    Route::get('detail/{id}','CompaniesController@index');
-});
 
-
+Route::group(['domain' => 'www.tredmaker.com'], $wnRoute);
+Route::group(['domain' => 'tredmaker.com'], $wnRoute);
+Route::group(['domain' => 'bd.app'], $wnRoute);
+Route::group(['domain' => 'www.bd.app'], $wnRoute);
+Route::group(['domain' => 'www.{projectSlug}.{tld}'], $appRoute);
+Route::group(['domain' => '{projectSlug}.{tld}'], $appRoute);

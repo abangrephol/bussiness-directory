@@ -3,6 +3,9 @@
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 CKEDITOR.config.allowedContent = true;
+CKEDITOR.config.fillEmptyBlocks = function (element) {
+    return true; // DON'T DO ANYTHING!!!!!
+};
 CKEDITOR.editorConfig = function( config ) {
 
 	// %REMOVE_START%
@@ -14,10 +17,11 @@ CKEDITOR.editorConfig = function( config ) {
     config.sharedSpaces = {
         'top' : 'toolbar'
     };
+
     config.startupOutlineBlocks = true;
     config.skin = 'moono';
 	config.fullPage = true;
-	config.extraAllowedContent = 'p(*)[*]{*};div(*)[*]{*};li(*)[*]{*};ul(*)[*]{*};span(*)[*]{*};section(*)[*]{*};header(*)[*]{*};footer(*)[*]{*};a(*){*}[*]';
+	config.extraAllowedContent = 'p(*)[*]{*};div(*)[*]{*};li(*)[*]{*};ul(*)[*]{*};span(*)[*]{*};section(*)[*]{*};header(*)[*]{*};footer(*)[*]{*};figcaption(*){*}[*]';
     CKEDITOR.dtd.$removeEmpty.i = 0;
     CKEDITOR.dtd.$removeEmpty.span = 0;
     CKEDITOR.dtd.$removeEmpty.a = 0;
