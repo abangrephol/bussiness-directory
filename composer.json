@@ -23,7 +23,8 @@
         "cviebrock/eloquent-sluggable": "~2.0",
         "kalnoy/nestedset": "~2.0@beta",
         "pingpong/widget": "1.2.0",
-        "webpatser/laravel-uuid": "1.*"
+        "webpatser/laravel-uuid": "1.*",
+        "pingpong/modules": "~1.0"
 	},
 	"scripts":{
 		"post-update-cmd":[
@@ -39,6 +40,9 @@
             "app/models",
             "app/database/migrations",
             "app/database/seeds"
-        ]
+        ],
+        "psr-4": {
+            "Modules\\" : "Modules"
+        }
     }
 }

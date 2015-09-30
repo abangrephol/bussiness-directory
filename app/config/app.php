@@ -101,7 +101,7 @@ return array(
         'Chumper\Datatable\DatatableServiceProvider',
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
         'Pingpong\Widget\WidgetServiceProvider',
-
+        'Pingpong\Modules\ModulesServiceProvider',
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -203,6 +203,7 @@ return array(
         'Node' => 'Kalnoy\Nestedset\Node',
         'Widget' => 'Pingpong\Widget\Facades\Widget',
         'Uuid' => 'Webpatser\Uuid\Uuid',
+        'Module' => 'Pingpong\Modules\Facades\Module',
 	),
 
 );

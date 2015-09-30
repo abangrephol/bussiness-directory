@@ -1,3 +1,11 @@
+function loadScript(srcURL) {
+    var deferred = new $.Deferred();
+    var e = document.createElement('script');
+    e.onload = function () { deferred.resolve(); };
+    e.src = srcURL;
+    document.getElementsByTagName("head")[0].appendChild(e);
+    return deferred.promise();
+}
 var editorName = null;
 
 var curWidget = null;
@@ -18,6 +26,9 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
     CKEDITOR.plugins.add('wnwidgets', {
         requires: ['iframedialog','fakeobjects','widget'],
         init: function(editor) {
+            loadScript( window.location.origin+'/3rdparty/mustache/mustache.min.js' );
+            loadScript( window.location.origin+'/3rdparty/jquery/jquery.deserialize.js' );
+            loadScript( window.location.origin+'/3rdparty/jquery/jquery.serialize-object.js' );
             CKEDITOR.dialog.addIframe('selectWidget', 'Insert Widgets', window.location.origin + '/admin/widget-list/', 850, 400,
                 function() {
                     iframeid=this._.frameId;/*get the iframe*/

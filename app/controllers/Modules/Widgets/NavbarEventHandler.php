@@ -7,11 +7,20 @@ class NavbarEventHandler {
     }
 
     public function navbar($params=[]){
-        echo "oke";
+        $menuAdd = array(
+            'aafa' => array(
+                'link' => 'shop',
+                'icon' => 'fa-home',
+                'title' => 'Ecommerce',
+            )
+        );
+        //dd(array_merge($params,$menuAdd));
+
+        return $menuAdd;
     }
 
     public function subscribe($events)
     {
-        $events->listen('widget.navbar', 'Modules\Widgets\NavbarEventHandler@navbar');
+        $events->listen('admin.menus', 'Modules\Widgets\NavbarEventHandler@navbar');
     }
 }

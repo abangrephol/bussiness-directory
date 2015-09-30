@@ -92,7 +92,14 @@ if(isset($content->body)){
 <div id="sbbody" >
 
     <div class="container">
-        <div></div>
+
+        <div class="sixteen columns">
+            <section id="not-found">
+                <h2>404 <i class="fa fa-question-circle"></i></h2>
+                <p>We're sorry, but the page you were looking for doesn't exist.</p>
+            </section>
+        </div>
+
     </div>
 
 </div>

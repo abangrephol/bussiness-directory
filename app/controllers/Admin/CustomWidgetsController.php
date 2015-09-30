@@ -222,9 +222,12 @@ class CustomWidgetsController extends BaseController {
     }
     public function widgetDataGet($widgetId=0){
         $data = [];
-
         if($widgetId!=false){
             $data = json_decode(\CustomWebsiteData::get_key(\Session::get('webid-editor'),$widgetId));
+            if($data->template == null){
+                $widget = \CustomWidget::find($data->wId)->first();
+                $data->template = $widget->template;
+            }
         }else{
 
 

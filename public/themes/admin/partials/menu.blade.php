@@ -84,6 +84,14 @@
     }elseif($group=="User"){
         $menus = $menusUser;
     }
+
+    $addonMenu = Event::fire('admin.menus');
+    if(count($addonMenu)>0){
+        foreach($addonMenu as $addon){
+            $menus = array_merge($menus,$addon);
+        }
+    }
+
     foreach($menus as $menu){
         $childShow = 'display:none';
 
@@ -96,7 +104,7 @@
         }
         $parent = '';
         if(array_key_exists('items',$menu) && count($menu['items'])>0) $parent = 'nav-parent';
-        echo '<li class="' . $active .' '.$parent. '"><a href="' . URL::route("admin/".$menu['link']).'">'
+        echo '<li class="' . $active .' '.$parent. '"><a href="' . URL::to("admin/".$menu['link']).'">'
         .'<i class="fa '.$menu['icon'].'"></i><span>' . $menu['title']
         . '</span></a>';
         //echo HTML::clever_link("admin/".$menu['link'], $menu['title'],'fa '.$menu['icon'] );

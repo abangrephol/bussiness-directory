@@ -5,7 +5,7 @@
             <div id="toolbar"></div>
         </div>
     </div>
-    <div id="editor-container" class="editor-iframe"></div>
+    <div id="editor-container" style="height:100%;"></div>
     <div class="right-sidebar cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="push">
 
         <ul class="nav nav-tabs">
@@ -169,14 +169,29 @@
         jQuery('.select2').select2({width:'100%',allowClear:true});
         var iframe = document.createElement("iframe");
         $(iframe).addClass('editor-iframe');
-        iframe.style.display = "none";
+        $(iframe).hide();
+        iframe.style.zIndex = 10;
+        iframe.id="sbed";
+        iframe.name="sbed";
         iframe.src ="{{ route('custom-website.builderEditor',array('templateId'=>$templateId,'id'=>$id,'pageId'=>$pageId)) }}";
         iframe.onload = (function(){
-            iframe.style.display = "block";
+            var sbedWindow = document.getElementById('sbed').contentWindow;
             $(iframe).contents().find('body').prepend('<div id="toolbar"></div>').css('padding-top','90px').css('padding-bottom','50px');
             $(iframe).contents().find('head').append("<style>" +
                 "#toolbar {position:fixed;top:0;z-index:10000;left:0;}" +
                 "</style>");
+            sbedWindow.CKEDITOR.disableAutoInline = true;
+            sbedWindow.CKEDITOR.inline( 'sbheader' );
+            sbedWindow.document.getElementById('sbheader').setAttribute( 'contenteditable', true );
+            sbedWindow.CKEDITOR.inline( 'sbbody' );
+            sbedWindow.document.getElementById('sbbody').setAttribute( 'contenteditable', true );
+            sbedWindow.CKEDITOR.inline( 'sbfooter' );
+            sbedWindow.document.getElementById('sbfooter').setAttribute( 'contenteditable', true );
+            sbedWindow.CKEDITOR.on('instanceReady', function(event) {
+                sbedWindow.document.getElementById('sbbody').focus();
+                sbedWindow.parent.document.getElementById(sbedWindow.window.name).removeAttribute("style");
+            });
+
         });
         document.getElementById("editor-container").appendChild(iframe);
     })

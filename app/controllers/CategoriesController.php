@@ -38,7 +38,15 @@ class CategoriesController extends BaseController {
         $category = Category::getBySlug($slug)->first();
 
         $companies = Category::find($category->id)->companies;
-        $data = array('companies'=>$companies,'slug'=>$slug);
+        foreach($companies as $company){
+            $mapMarker [] = '{ address : "'.$company->address_1.' , '.$company->city.'",'
+                .'icon: "'.URL::to("/themes/default/assets").'/img/content/map-marker-company.png",'
+                .'html: "'.$company->name.'",'
+                .'title: "'.$company->name .'",'
+                .'id : "company-'.$company->id .'" }';
+        }
+        $mapMarker = join(',',$mapMarker);
+        $data = array('companies'=>$companies,'marker'=>$mapMarker,'slug'=>$slug);
         return $this->theme->layout('map')->scope('categories.index',$data)->render();
     }
 

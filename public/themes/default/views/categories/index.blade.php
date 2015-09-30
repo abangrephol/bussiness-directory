@@ -75,7 +75,12 @@
 
                                             <h4><a href="{{ URL::to('/companies/detail/'.$company->id)}}">{{ $company->name }}</a></h4>
 
-                                            <h5><a href="#">Category</a>, <a href="#">Another Category</a></h5>
+                                            <h5>
+                                                @foreach ($company->categories as $category)
+                                                <a href="{{URL::to('/companies/'.$category->slug)}}">{{$category->name}}</a>
+                                                @endforeach
+
+                                            </h5>
 
                                             <p>{{ $company->short_description }}</p>
 
@@ -97,7 +102,7 @@
 
             </div>
             <div class="col-md-3 col-md-pull-9 category-toggle">
-                {{ Theme::partial('sidebarAccordion') }}
+                {{ Theme::partial('sidebarAccordion',['slug'=>$slug]) }}
             </div>
         </div>
     </div>

@@ -41,8 +41,12 @@ class WebsiteController extends BaseController {
                 }
             }
 
-            $data['data'] = $home;
-            $data['content'] = json_decode($home->content);
+
+            if(isset($home)){
+                $data['data'] = $home;
+                $data['content'] = json_decode($home->content);
+            }
+
         }
 
         return $this->theme->scope('template.index',$data)->render();
@@ -71,7 +75,8 @@ class WebsiteController extends BaseController {
             if(isset($page)){
                 $data['data'] = $page;
                 $data['content'] = json_decode($page->content);
-            }else{
+            }
+            else{
                 return Redirect::to('404');
             }
 
