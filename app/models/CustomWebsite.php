@@ -19,6 +19,8 @@ class CustomWebsite extends  Ardent {
         'state' => array(self::BELONGS_TO,'States'),
         'company' => array(self::BELONGS_TO,'Company'),
         'page' => array(self::HAS_MANY,'CustomWebsitePage'),
+        'data' => array(self::HAS_MANY,'CustomWebsiteData'),
+
     );
     public static $rules = array(
         'name'                  => 'required|between:4,50',

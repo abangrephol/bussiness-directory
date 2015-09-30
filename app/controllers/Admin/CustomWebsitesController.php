@@ -156,6 +156,14 @@ class CustomWebsitesController extends BaseController {
             }
         }
     }
+
+    public function destroy($id){
+        \CustomWebsite::find($id)->data()->delete();
+        \CustomWebsite::find($id)->page()->delete();
+        \CustomWebsite::destroy($id);
+        return \Redirect::route('admin/custom-website');
+    }
+
     public function chooseTemplates($id){
         $templateId = \Input::get('templateId');
         if(isset($templateId)){

@@ -77,7 +77,9 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
         Route::resource('categories','CategoriesController',array('names' => array('index'=>'admin/categories')));
         Route::resource('users','UsersController',array('names' => array('index'=>'admin/users')));
 
-        Route::resource('custom-website','CustomWebsitesController',array('names' => array('index'=>'admin/custom-website')));
+        Route::get('custom-website/{id}/delete',array('as'=>'admin.custom-website.destroy','uses'=>'CustomWebsitesController@destroy'));
+        Route::resource('custom-website','CustomWebsitesController',array('names' => array('index'=>'admin/custom-website'),'except' => array('destroy')));
+
         Route::get('custom-website/{id}/choose-templates',array('as'=>'custom-website.chooseTemplate','uses'=>'CustomWebsitesController@chooseTemplates'));
         Route::get('custom-website/{id}/builder/{templateId}/{pageId?}',array('as'=>'custom-website.builder','uses'=>'CustomWebsitesController@builder'));
         Route::get('custom-website/{id}/builder-editor/{templateId}/{pageId?}',array('as'=>'custom-website.builderEditor','uses'=>'CustomWebsitesController@builderEditor'));
