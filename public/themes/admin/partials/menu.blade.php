@@ -85,12 +85,12 @@
         $menus = $menusUser;
     }
 
-    $addonMenu = Event::fire('admin.menus');
+    /*$addonMenu = Event::fire('admin.menus');
     if(count($addonMenu)>0){
         foreach($addonMenu as $addon){
             $menus = array_merge($menus,$addon);
         }
-    }
+    }*/
 
     foreach($menus as $menu){
         $childShow = 'display:none';

@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9fb1aa2-6c06-4cd5-8be0-7dda0b1803ca" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/themes/theme-oem/views/template/editor.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/themes/theme-oem/views/template/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/CustomWebsite.php" afterPath="$PROJECT_DIR$/app/models/CustomWebsite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" afterPath="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/CustomWebsitePage.php" afterPath="$PROJECT_DIR$/app/models/CustomWebsitePage.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php" afterPath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" afterPath="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php" afterPath="$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bussiness-directory.iws" />
@@ -28,120 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/Http/routes.php">
+      <file leaf-file-name="menu.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="117" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="101" selection-start="3519" selection-end="3539" vertical-scroll-proportion="-8.5" vertical-offset="1139" max-vertical-offset="2329">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppEcommerceServiceProvider.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/Providers/AppEcommerceServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="91" selection-start="563" selection-end="646" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="765">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/module.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/Plugins/Http/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="33" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/Plugins/Http/Controllers/PluginsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="18" selection-start="846" selection-end="846" vertical-scroll-proportion="-6.6153846" vertical-offset="338" max-vertical-offset="731">
-              <folding>
-                <element signature="e#51#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginsServiceProvider.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/Plugins/Providers/PluginsServiceProvider.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="68" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/Plugins/module.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="323">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="50" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0" vertical-offset="1581" max-vertical-offset="3655">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/Config/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="69" selection-start="54" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="187">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="27" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1003">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/themes/default/views/categories/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="67" selection-start="5808" selection-end="5808" vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="2193">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebarAccordion.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/themes/default/partials/sidebarAccordion.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="22" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="476">
+            <state line="87" column="6" selection-start="2483" selection-end="2660" vertical-scroll-proportion="-7.8461537" vertical-offset="1275" max-vertical-offset="2499">
               <folding />
             </state>
           </provider>
@@ -177,7 +72,7 @@
       <file leaf-file-name="buttonColumn.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/widgets/buttonColumn.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="0" selection-end="585" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
+            <state line="8" column="0" selection-start="0" selection-end="585" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="238">
               <folding />
             </state>
           </provider>
@@ -186,7 +81,7 @@
       <file leaf-file-name="buttonColumnPages.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/widgets/buttonColumnPages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="209" selection-start="516" selection-end="516" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="187">
+            <state line="2" column="209" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
@@ -201,19 +96,146 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CustomWebsitesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="54" selection-start="6782" selection-end="6782" vertical-scroll-proportion="0.8449848" vertical-offset="2442" max-vertical-offset="5780">
+            <state line="195" column="0" selection-start="7889" selection-end="7889" vertical-scroll-proportion="70.61539" vertical-offset="5100" max-vertical-offset="5780">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomWebsite.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="interface.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/layouts/interface.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="43.923077" vertical-offset="1142" max-vertical-offset="1700">
+              <folding>
+                <marker date="1441851469550" expanded="true" signature="20:40" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="59:3881" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="70:489" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="500:3873" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="554:2081" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="596:2066" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="640:1473" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="805:1054" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="1234:1450" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="1529:2047" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="1604:2024" placeholder="..." />
+                <marker date="1441851469550" expanded="false" signature="1745:1761" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="2113:3602" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="2131:3587" placeholder="..." />
+                <marker date="1441851469550" expanded="true" signature="2153:3566" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/layouts/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="459">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="216" column="11" selection-start="9642" selection-end="9642" vertical-scroll-proportion="-13.615385" vertical-offset="3318" max-vertical-offset="4488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-oem/views/template/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="31" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="3043">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/layouts/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="4" selection-start="1149" selection-end="1200" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="918">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-oem/layouts/default.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="38" selection-start="476" selection-end="476" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-oem/views/template/editor.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="56" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2346">
+              <folding>
+                <marker date="1445490351462" expanded="true" signature="3694:3728" placeholder="..." />
+                <marker date="1445490351462" expanded="true" signature="3734:6047" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-oem/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="48" selection-start="5248" selection-end="5248" vertical-scroll-proportion="0.0" vertical-offset="1448" max-vertical-offset="2227">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="12" selection-start="5440" selection-end="5476" vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="2176">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomWebsite.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/CustomWebsite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="858" selection-end="858" vertical-scroll-proportion="-8.5" vertical-offset="153" max-vertical-offset="663">
+            <state line="31" column="66" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.7618214" vertical-offset="92" max-vertical-offset="663">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editor.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="35" selection-start="5879" selection-end="5879" vertical-scroll-proportion="20.26923" vertical-offset="2550" max-vertical-offset="8279">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="39" selection-start="5479" selection-end="5479" vertical-scroll-proportion="-9.153846" vertical-offset="1326" max-vertical-offset="9214">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomWebsitePage.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/CustomWebsitePage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="10" selection-start="727" selection-end="727" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -240,7 +262,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="10" selection-start="2949" selection-end="2949" vertical-scroll-proportion="-9.807693" vertical-offset="1479" max-vertical-offset="3281">
+            <state line="102" column="10" selection-start="2949" selection-end="2949" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3281">
               <folding />
             </state>
           </provider>
@@ -249,7 +271,7 @@
       <file leaf-file-name="WebsiteController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/WebsiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="12" selection-start="3024" selection-end="3086" vertical-scroll-proportion="-9.692307" vertical-offset="1108" max-vertical-offset="1632">
+            <state line="80" column="12" selection-start="3024" selection-end="3086" vertical-scroll-proportion="0.0" vertical-offset="1108" max-vertical-offset="1632">
               <folding />
             </state>
           </provider>
@@ -258,7 +280,7 @@
       <file leaf-file-name="editor.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="37" selection-start="441" selection-end="441" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3417">
+            <state line="19" column="24" selection-start="770" selection-end="949" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="3417">
               <folding />
             </state>
           </provider>
@@ -267,7 +289,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="18" selection-start="2278" selection-end="2278" vertical-scroll-proportion="7.1923075" vertical-offset="1122" max-vertical-offset="3043">
+            <state line="16" column="48" selection-start="635" selection-end="635" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="3043">
               <folding />
             </state>
           </provider>
@@ -294,7 +316,7 @@
       <file leaf-file-name="widgetList.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1496">
+            <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="-11.5" vertical-offset="7" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
@@ -318,22 +340,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/Modules/Widgets/NavbarEventHandler.php" />
-        <option value="$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php" />
-        <option value="$PROJECT_DIR$/Modules/Plugins/Http/routes.php" />
-        <option value="$PROJECT_DIR$/Modules/AppEcommerce/Http/Controllers/AppEcommerceController.php" />
-        <option value="$PROJECT_DIR$/Modules/Plugins/Providers/PluginsServiceProvider.php" />
-        <option value="$PROJECT_DIR$/Modules/AppEcommerce/module.json" />
-        <option value="$PROJECT_DIR$/Modules/Plugins/module.json" />
-        <option value="$PROJECT_DIR$/Modules/AppEcommerce/Http/routes.php" />
         <option value="$PROJECT_DIR$/Modules/Plugins/Http/Controllers/PluginsController.php" />
         <option value="$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/WebsiteController.php" />
         <option value="$PROJECT_DIR$/public/themes/admin/widgets/buttonColumnPages.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/models/CustomWebsite.php" />
         <option value="$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-oem/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-oem/views/template/editor.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-oem/config.php" />
+        <option value="$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/CustomWebsitePage.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/CustomWebsite.php" />
       </list>
     </option>
   </component>
@@ -341,7 +363,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
+    <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -370,7 +392,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -420,26 +441,8 @@
               <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bussiness-directory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="theme-tinycolor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,11 +464,337 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="theme-tinycolor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="widgets" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-oem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-oem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-oem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme-arvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="editor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sitebuilder" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bussiness-directory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -543,11 +872,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/themes/theme-oem/views" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="PublishConfig">
@@ -584,11 +914,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\theme-oem\views" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\theme-tinycolor\views\template" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\sitebuilder\assets\css" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\sitebuilder\assets\js" />
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\themes\template-budget\views\template" />
-      <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\public\3rdparty\ckeditor\skins\moono" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Programs\xampp\htdocs\Wirednest\bussiness-directory\app\controllers\Modules" />
@@ -658,16 +988,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34442595" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34280938" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290938" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22526637" sideWeight="0.655574" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2439394" sideWeight="0.6571906" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -698,9 +1028,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20801233" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -715,6 +1045,85 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="195" column="0" selection-start="7889" selection-end="7889" vertical-scroll-proportion="70.61539" vertical-offset="5100" max-vertical-offset="5780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/Config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="69" selection-start="54" selection-end="115" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/layouts/interface.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="43.923077" vertical-offset="1142" max-vertical-offset="1700">
+          <folding>
+            <marker date="1441851469550" expanded="true" signature="20:40" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="59:3881" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="70:489" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="500:3873" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="554:2081" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="596:2066" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="640:1473" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="805:1054" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="1234:1450" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="1529:2047" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="1604:2024" placeholder="..." />
+            <marker date="1441851469550" expanded="false" signature="1745:1761" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="2113:3602" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="2131:3587" placeholder="..." />
+            <marker date="1441851469550" expanded="true" signature="2153:3566" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="27" selection-start="1232" selection-end="1232" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/default/views/categories/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="67" selection-start="5808" selection-end="5808" vertical-scroll-proportion="0.0" vertical-offset="1768" max-vertical-offset="2193">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/sitebuilder/views/editor/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="11" selection-start="9642" selection-end="9642" vertical-scroll-proportion="-13.615385" vertical-offset="3318" max-vertical-offset="4488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/themes/default/partials/sidebarAccordion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CustomWebsitePage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="10" selection-start="727" selection-end="727" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Modules/Plugins/module.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="20" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="323">
@@ -722,109 +1131,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-oem/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="117" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/views/custom-widgets/widgetList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/Plugins/Http/Controllers/PluginsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="18" selection-start="846" selection-end="846" vertical-scroll-proportion="-6.6153846" vertical-offset="338" max-vertical-offset="731">
-          <folding>
-            <element signature="e#51#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/partials/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="5" selection-start="2656" selection-end="2656" vertical-scroll-proportion="0.0" vertical-offset="1246" max-vertical-offset="2499">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Modules/Widgets/NavbarEventHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="527">
+        <state line="8" column="38" selection-start="476" selection-end="476" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/editor.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="37" selection-start="441" selection-end="441" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="3417">
+        <state line="19" column="24" selection-start="770" selection-end="949" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="3417">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/template-budget/views/template/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/Modules/Plugins/Providers/PluginsServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="10" selection-start="2949" selection-end="2949" vertical-scroll-proportion="-9.807693" vertical-offset="1479" max-vertical-offset="3281">
+        <state line="25" column="6" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/theme-arvent/views/template/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="18" selection-start="2278" selection-end="2278" vertical-scroll-proportion="7.1923075" vertical-offset="1122" max-vertical-offset="3043">
+        <state line="92" column="39" selection-start="5479" selection-end="5479" vertical-scroll-proportion="-9.153846" vertical-offset="1326" max-vertical-offset="9214">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/WebsiteController.php">
+    <entry file="file://$PROJECT_DIR$/public/themes/theme-tinycolor/views/template/editor.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="12" selection-start="3024" selection-end="3086" vertical-scroll-proportion="-9.692307" vertical-offset="1108" max-vertical-offset="1632">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/widgets/buttonColumnPages.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="209" selection-start="516" selection-end="516" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="187">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/themes/admin/widgets/buttonColumn.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="0" selection-end="585" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modules/AppEcommerce/Http/Controllers/AppEcommerceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="663">
+        <state line="119" column="35" selection-start="5879" selection-end="5879" vertical-scroll-proportion="20.26923" vertical-offset="2550" max-vertical-offset="8279">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/CustomWebsite.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="858" selection-end="858" vertical-scroll-proportion="-8.5" vertical-offset="153" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="101" selection-start="3519" selection-end="3539" vertical-scroll-proportion="-8.5" vertical-offset="1139" max-vertical-offset="2329">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Admin/CustomWebsitesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="54" selection-start="6782" selection-end="6782" vertical-scroll-proportion="0.8449848" vertical-offset="2442" max-vertical-offset="5780">
+        <state line="31" column="66" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.7618214" vertical-offset="92" max-vertical-offset="663">
           <folding />
         </state>
       </provider>

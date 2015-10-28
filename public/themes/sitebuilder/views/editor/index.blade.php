@@ -210,11 +210,11 @@
             $('form #title').focus();
             return false;
         }
-        if(!$('form #slug').val()) {
+        /*if(!$('form #slug').val()) {
             $('#mod').modal('show');
             $('form #slug').focus();
             return false;
-        }
+        }*/
         if(!$('form #status').val()) {
             $('#mod').modal('show');
             $('form #status').focus();

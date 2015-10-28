@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 8, 2015, 10:24:35 AM
+    Author     : ShintaRE
+*/
+
+@font-face {
+    font-family:"Bender";
+    src:url("../fonts/Bender.eot?") format("eot"),
+        url("../fonts/Bender.woff") format("woff"),
+        url("../fonts/Bender.ttf") format("truetype"),
+        url("../fonts/Bender.svg#Bender") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+ @font-face {
+     font-family:"Bender-Bold";
+     src:url("../fonts/Bender_Bold.eot?") format("eot"),
+         url("../fonts/Bender_Bold.woff") format("woff"),
+         url("../fonts/Bender_Bold.ttf") format("truetype"),
+         url("../fonts/Bender_Bold.svg#Bender-Bold") format("svg");
+     font-weight:normal;
+     font-style:normal;
+ }
+ @font-face {
+    font-family:"Bender-Italic";
+    src:url("../fonts/Bender_Italic.eot?") format("eot"),
+        url("../fonts/Bender_Italic.woff") format("woff"),
+        url("../fonts/Bender_Italic.ttf") format("truetype"),
+        url("../fonts/Bender_Italic.svg#Bender-Italic") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:"Intro";
+    src:url("../fonts/Intro.eot?") format("eot"),
+        url("../fonts/Intro.woff") format("woff"),
+        url("../fonts/Intro.ttf") format("truetype"),
+        url("../fonts/Intro.svg#Intro") format("svg");
+    font-weight:normal;
+    font-style:normal;
+}
+ @font-face {
+     font-family:"Josefin Slab";
+     src:url("../fonts/JosefinSlab-Regular.eot?") format("eot"),
+         url("../fonts/JosefinSlab-Regular.woff") format("woff"),
+         url("../fonts/JosefinSlab-Regular.ttf") format("truetype"),
+         url("../fonts/JosefinSlab-Regular.svg#JosefinSlab") format("svg");
+     font-weight:normal;
+     font-style:normal;}
+

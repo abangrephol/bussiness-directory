@@ -29,6 +29,6 @@ class CustomWebsite extends  Ardent {
         'company_id'            => 'required'
     );
     public static function getMenu($id){
-        return \CustomWebsite::find($id)->page()->where('isHome',0)->get();
+        return \CustomWebsite::find($id)->page()->where('slug','!=','')->get();
     }
 }

@@ -16,7 +16,7 @@ class CustomWebsitePage extends  Ardent {
     public static $rules = array(
         'name'                  => 'required|between:4,50',
         'title'                  => 'required|between:4,50',
-        'slug'                  => 'required|between:4,50',
+        //'slug'                  => 'required|between:4,50',
         'content'                  => 'required',
         'custom_website_id'                => 'required',
     );

@@ -86,20 +86,11 @@ if(isset($content->head)){
                     <button class="dl-trigger">Open Menu</button>
                     <ul class="dl-menu">
                         <li>
-                            <a href="index.html">HOME</a>
+                            <a href="/">HOME</a>
                         </li>
-
-                        <li>
-                            <a href="about.html">ABOUT</a>
-                        <li>
-                            <a href="reseller.html">RESELLER</a>
-                        </li>
-                        <li>
-                            <a href="partner.html">PARTNER</a>
-                        </li>
-                        <li>
-                            <a href="kontak.html">CONTACT</a>
-                        </li>
+                        @foreach(CustomWebsite::getMenu($id) as $menu)
+                        <li><a href="{{URL::to('/page/'.$menu->slug)}}">{{$menu->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -122,21 +113,11 @@ if(isset($content->head)){
 
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="index.html">HOME</a>
+                            <a href="/">HOME</a>
                         </li>
-
-                        <li>
-                            <a href="about.html">ABOUT</a><em>•</em>
-                        </li>
-                        <li>
-                            <a href="reseller.html">RESELLER</a><em>•</em>
-                        </li>
-                        <li>
-                            <a href="partner.html">PARTNER</a><em>•</em>
-                        </li>
-                        <li>
-                            <a href="kontak.html">CONTACT</a><em>•</em>
-                        </li>
+                        @foreach(CustomWebsite::getMenu($id) as $menu)
+                        <li><a href="{{URL::to('/page/'.$menu->slug)}}">{{$menu->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
