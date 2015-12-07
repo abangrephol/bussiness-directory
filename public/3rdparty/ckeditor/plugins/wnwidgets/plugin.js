@@ -251,12 +251,15 @@ var templateObject = "<div class='wnwidgets widget-object'><span>{{widgetName}}<
                     }
                 },
                 edit: function(evt){
-                    curWidget = this;
-                    //evt.data.dialog = 'selectWidget';
-                    var editDialog = editor.openDialog( 'editWidget' );
-                    var widgetId = $(this.element).attr('widget-id');
+                    if(this.element.hasClass( 'wnwidgets' ) && $(this.element).attr('widget-id')!=null){
+                        curWidget = this;
+                        //evt.data.dialog = 'selectWidget';
+                        var editDialog = editor.openDialog( 'editWidget' );
+                        var widgetId = $(this.element).attr('widget-id');
 
-                    editDialog.definition.contents[0].elements[0].src = window.location.origin + '/admin/widget-form/'+this.data.wId;
+                        editDialog.definition.contents[0].elements[0].src = window.location.origin + '/admin/widget-form/'+this.data.wId;
+                    }
+
                 }
             });
 //            editor.widgets.add('widgets-fake',{

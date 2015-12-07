@@ -49,7 +49,7 @@ return array(
                     $asset->usePath()->add('slick-css','css/slick.css');
                     $asset->usePath()->add('slick-theme-css','css/slick-theme.css');
                     $asset->usePath()->add('component-css','css/component.css');
-                    $asset->container('footer')->usePath()->add('jquery','js/jquery.min.js');
+                    $asset->usePath()->add('jquery','js/jquery.min.js');
                     $asset->container('footer')->usePath()->add('modernizr','js/modernizr.custom.js');
                     $asset->container('footer')->usePath()->add('bootstrap','js/bootstrap.min.js');
                     $asset->container('footer')->usePath()->add('slick','js/slick.js');

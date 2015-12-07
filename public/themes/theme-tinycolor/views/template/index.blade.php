@@ -491,24 +491,27 @@ if(isset($content->body)){
 
 
 <script>
-    $('.responsive').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 766,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true,
-                    arrows: true
+    $(function () {
+        $('.responsive').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 766,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: true
+                    }
                 }
-            }
-        ]
-    });
+            ]
+        });
+    })
+
 
 
 

@@ -38,7 +38,7 @@
                 <div class="form-group {{ $errors->has('template')?'has-error':'' }}">
                     {{ Form::label('type', 'Type', array('class' => ' col-sm-3 control-label required' )) }}
                     <div class="col-sm-7">
-                        {{ Form::select('type', array('html'=>'HTML Widget','object'=>'Object Widget','raw'=>'HTML Raw') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
+                        {{ Form::select('type', array('html'=>'HTML Widget','object'=>'Object Widget','raw'=>'HTML Raw','menu'=>'Navigation') ,null , array('class'=>'select2','required'=>'required','placeholder'=>'Select widget type')) }}
                         <label id='name_template' for='template' class='error' style='display: inline-block;'>{{ $errors->first('name') }}</label>
                     </div>
                 </div>

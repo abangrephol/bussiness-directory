@@ -44,7 +44,14 @@ class WebsiteController extends BaseController {
 
             if(isset($home)){
                 $data['data'] = $home;
-                $data['content'] = json_decode($home->content);
+                $content = json_decode($home->content);
+
+                foreach($content as $contentData => $oldData){
+                    $content->$contentData = \Shortcode::compile($oldData);
+
+                }
+                $data['content'] = $content;
+
             }
 
         }
@@ -74,7 +81,13 @@ class WebsiteController extends BaseController {
             }
             if(isset($page)){
                 $data['data'] = $page;
-                $data['content'] = json_decode($page->content);
+                $content = json_decode($page->content);
+
+                foreach($content as $contentData => $oldData){
+                    $content->$contentData = \Shortcode::compile($oldData);
+
+                }
+                $data['content'] = $content;
             }
             else{
                 return Redirect::to('404');

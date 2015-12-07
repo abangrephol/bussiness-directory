@@ -259,6 +259,7 @@ class CustomWebsitesController extends BaseController {
         $data = array(
             'id' => $id
         );
+        \Cookie::forever("wId",$id);
 
         session_start();
         $_SESSION["RF"]["subfolder"] = "$id";

@@ -152,9 +152,6 @@ class CustomWidgetsController extends BaseController {
     {
         $widgets = \CustomWidget::where('theme_id',\Session::get('thid-editor'))->get();
 
-
-
-
         $data = array(
             'data'=>$widgets
         );

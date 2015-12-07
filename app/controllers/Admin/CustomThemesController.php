@@ -18,6 +18,7 @@ class CustomThemesController extends BaseController {
                 $buttons = '<div class="btn-group btn-group-sm ">'
                                 .'<a href="'.\URL::route('admin/custom-template', array('thid'=>$model->id)).'" class="btn btn-primary"><i class="fa fa-edit mr5"></i>Templates</a>'
                                 .'<a href="'.\URL::route('admin/custom-widget', array('thid'=>$model->id)).'" class="btn btn-primary"><i class="fa fa-edit mr5"></i>Widgets</a>'
+                                .'<a href="'.\URL::route('admin/custom-component', array('thid'=>$model->id)).'" class="btn btn-primary"><i class="fa fa-edit mr5"></i>Components</a>'
                                 .'<a href="'.\URL::route('admin.custom-theme.edit', array()).'" class="btn btn-primary"><i class="fa fa-edit mr5"></i>Edit</a>'
                                 .'<a href="'. \URL::route('admin.custom-theme.destroy', array()) .'" class="btn btn-danger"><i class="fa fa-trash-o mr5"></i>Delete</a>'
                             .'</div>';

@@ -108,6 +108,9 @@ return array(
                 $asset->container('footer')->add('jquery.deserialize','3rdparty/jquery/jquery.deserialize.min.js');
                 $asset->container('footer')->add('jquery.serialize','3rdparty/jquery/jquery.serializeObject.min.js');
             });
+            $asset->cook('sortable',function($asset){
+                $asset->container('footer')->usePath()->add('sortable','js/jquery.mjs.nestedSortable.js');
+            });
 
         },
         // Before event inherit from package config and the theme that call before,
@@ -178,6 +181,7 @@ return array(
             {
                 $theme->asset()->serve('bootstrap');
                 $theme->asset()->serve('mustache');
+                $theme->asset()->serve('sortable');
             },
 
         )

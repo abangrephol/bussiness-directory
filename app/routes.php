@@ -95,6 +95,14 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
         Route::get('custom-widget/{themeId}/{id}/edit',array('as'=>'custom-widget.edit','uses'=>'CustomWidgetsController@edit'));
         Route::put('custom-widget/{themeId}/{id}/update',array('as'=>'custom-widget.update','uses'=>'CustomWidgetsController@update'));
         Route::get('custom-widget/{themeId}/{id}/destroy',array('as'=>'custom-widget.destroy','uses'=>'CustomWidgetsController@destroy'));
+
+        Route::get('custom-component/{themeId}',array('as'=>'admin/custom-component','uses'=>'CustomComponentsController@index'));
+        Route::get('custom-component/{themeId}/create',array('as'=>'custom-component.create','uses'=>'CustomComponentsController@create'));
+        Route::post('custom-component/{themeId}/store',array('as'=>'custom-component.store','uses'=>'CustomComponentsController@store'));
+        Route::get('custom-component/{themeId}/{id}/edit',array('as'=>'custom-component.edit','uses'=>'CustomComponentsController@edit'));
+        Route::put('custom-component/{themeId}/{id}/update',array('as'=>'custom-component.update','uses'=>'CustomComponentsController@update'));
+        Route::get('custom-component/{themeId}/{id}/destroy',array('as'=>'custom-component.destroy','uses'=>'CustomComponentsController@destroy'));
+
         //Route::resource('custom-widget','CustomWidgetsController',array('names' => array('index'=>'admin/custom-widget')));
         Route::get('widget-list/{editor}',array('as'=>'widget-list','uses'=>'CustomWidgetsController@widgetList'));
         Route::get('widget-data',array('as'=>'widget-data','uses'=>'CustomWidgetsController@widgetData'));
@@ -110,6 +118,7 @@ Route::group(array('namespace'=>'Admin', 'prefix'=>'admin'),function(){
             Route::get('custom-theme',array('as'=>'dt.custom-theme','uses'=>'CustomThemesController@getDatatableAll'));
             Route::get('custom-template',array('as'=>'dt.custom-template','uses'=>'CustomTemplatesController@getDatatableAll'));
             Route::get('custom-widget',array('as'=>'dt.custom-widget','uses'=>'CustomWidgetsController@getDatatableAll'));
+            Route::get('custom-component',array('as'=>'dt.custom-component','uses'=>'CustomComponentsController@getDatatableAll'));
             Route::get('custom-website-pages/{id}',array('as'=>'dt.custom-website-pages','uses'=>'CustomWebsitesController@getWebsitePages'));
         });
 

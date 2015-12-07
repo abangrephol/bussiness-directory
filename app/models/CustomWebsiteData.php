@@ -18,7 +18,14 @@ class CustomWebsiteData extends  Ardent {
         'data_value'                  => '',
         'custom_website_id'                => 'required',
     );
-
+    public static function get_key1($key){
+        $data = CustomWebsiteData::where('data_key',$key)
+            ->get();
+        if($data->count()>0)
+            return $data->first()->data_value;
+        else
+            return false;
+    }
     public static function get_key($id,$key){
         $data = CustomWebsiteData::where('custom_website_id',$id)
                 ->where('data_key',$key)

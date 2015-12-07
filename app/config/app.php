@@ -102,6 +102,7 @@ return array(
         'Cviebrock\EloquentSluggable\SluggableServiceProvider',
         'Pingpong\Widget\WidgetServiceProvider',
         'Pingpong\Modules\ModulesServiceProvider',
+        'Pingpong\Shortcode\ShortcodeServiceProvider',
 
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
@@ -204,6 +205,7 @@ return array(
         'Widget' => 'Pingpong\Widget\Facades\Widget',
         'Uuid' => 'Webpatser\Uuid\Uuid',
         'Module' => 'Pingpong\Modules\Facades\Module',
+        'Shortcode'       => 'Pingpong\Shortcode\Facades\Shortcode',
 	),
 
 );
