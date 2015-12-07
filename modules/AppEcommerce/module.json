@@ -1,0 +1,14 @@
+{
+    "name": "eCommerce App",
+    "alias": "AppEcommerce",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "priority": 2,
+    "providers": [
+        "Modules\\AppEcommerce\\Providers\\AppEcommerceServiceProvider"
+    ],
+    "files": [
+        "start.php"
+    ]
+}
