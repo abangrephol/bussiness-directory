@@ -23,7 +23,7 @@ class NavigationWidgetsController extends BaseController{
             $data['menus'] = $menuData->menus ;
 
         }
-        return $this->theme->layout('widgets')->load("modules.widgets.resources.views.index",$data)->render();
+        return $this->theme->layout('widgets')->load("modules.Widgets.Resources.Views.index",$data)->render();
     }
 
     public function navigationSave($menuId=0){
