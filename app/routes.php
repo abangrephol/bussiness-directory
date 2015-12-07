@@ -37,7 +37,7 @@ $appRoute = function()
     });
 
     Route::get('/{slug}', array('before'=>'admin',
-        function($projectSlug,$tld,$slug='') {
+        function($projectSlug,$slug='') {
             $app = app();
             if(gettype($projectSlug)=='object'){
 
