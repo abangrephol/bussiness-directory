@@ -1,4 +1,4 @@
-<?php namespace Modules\Appecommerce\Http\Controllers;
+<?php namespace Modules\AppEcommerce\Http\Controllers;
 
 use Admin\BaseController;
 use Illuminate\Routing\Controller;

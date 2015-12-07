@@ -1,4 +1,4 @@
-<?php namespace Modules\appecommerce\Providers;
+<?php namespace Modules\AppEcommerce\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Events;
