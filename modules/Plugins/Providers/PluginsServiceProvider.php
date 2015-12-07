@@ -32,7 +32,7 @@ class PluginsServiceProvider extends ServiceProvider {
 	}
 
     public function boot(){
-        \Event::subscribe('\Modules\Plugins\HTTP\Controllers\PluginsController');
+
     }
 
 }
