@@ -34,6 +34,6 @@ class AppEcommerceServiceProvider extends ServiceProvider {
     public function boot()
     {
 
-        \Event::subscribe('\Modules\appecommerce\HTTP\Controllers\AppEcommerceController');
+        //\Event::subscribe('\Modules\appecommerce\HTTP\Controllers\AppEcommerceController');
     }
 }
