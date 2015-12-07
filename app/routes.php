@@ -26,12 +26,13 @@ $appRoute = function()
 {
     // Routes within each website
     Route::get('/', function($projectSlug) {
-        $app = app();
+
+        //$app = $this->app;
         if(gettype($projectSlug)=='object'){
-            $controller = $app->make('WebsiteController');
+            $controller = App::make('WebsiteController');
             return $controller->callAction('website', $parameters = array('id'=>$projectSlug->id));
         }else{
-            $controller = $app->make('HomeController');
+            $controller = App::make('HomeController');
             return $controller->callAction('index', $parameters = array());
         }
     });

@@ -1,5 +1,6 @@
 /bootstrap/compiled.php
 /vendor
+/modules/*/vendor
 /public/.htaccess
 composer.phar
 composer.lock
