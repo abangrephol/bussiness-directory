@@ -44,7 +44,7 @@
             "app/database/seeds"
         ],
         "psr-4": {
-            "modules\\" : "Modules"
+            "Modules\\" : "modules"
         }
     }
 }
