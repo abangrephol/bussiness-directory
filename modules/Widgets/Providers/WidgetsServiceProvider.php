@@ -20,7 +20,7 @@ class WidgetsServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
-        \Shortcode::register('nav', '\Modules\widgets\HTTP\Controllers\WidgetsController@nav');
+        \Shortcode::register('nav', '\modules\Widgets\HTTP\Controllers\WidgetsController@nav');
 	}
 
 	/**
