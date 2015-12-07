@@ -138,3 +138,4 @@ Route::group(['domain' => 'bd.app'], $wnRoute);
 Route::group(['domain' => 'www.bd.app'], $wnRoute);
 Route::group(['domain' => 'www.{projectSlug}.{tld}'], $appRoute);
 Route::group(['domain' => '{projectSlug}.{tld}'], $appRoute);
+Route::group(['domain' => '{projectSlug}.bd.app'], $appRoute);
